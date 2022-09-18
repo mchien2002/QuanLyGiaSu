@@ -1,0 +1,9 @@
+C:\Users\HP\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.csproj.AssemblyReference.cache
+C:\Users\HP\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.Properties.Resources.resources
+C:\Users\HP\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.csproj.GenerateResource.cache
+C:\Users\HP\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\QuanLyGiaSu\QuanLyGiaSu\bin\Debug\QuanLyGiaSu.exe.config
+C:\Users\HP\Desktop\QuanLyGiaSu\QuanLyGiaSu\bin\Debug\QuanLyGiaSu.exe
+C:\Users\HP\Desktop\QuanLyGiaSu\QuanLyGiaSu\bin\Debug\QuanLyGiaSu.pdb
+C:\Users\HP\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.exe
+C:\Users\HP\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.pdb
