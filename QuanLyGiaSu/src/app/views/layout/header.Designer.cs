@@ -1,5 +1,5 @@
 ﻿
-namespace QuanLyGiaSu.src.app.views.Admin
+namespace QuanLyGiaSu.src.app.views.layout
 {
     partial class header
     {

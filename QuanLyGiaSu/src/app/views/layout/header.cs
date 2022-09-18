@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QuanLyGiaSu.src.app.views.Admin
+namespace QuanLyGiaSu.src.app.views.layout
 {
     public partial class header : Form
     {

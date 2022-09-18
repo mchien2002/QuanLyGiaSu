@@ -7,3 +7,4 @@ C:\Users\HP\Desktop\QuanLyGiaSu\QuanLyGiaSu\bin\Debug\QuanLyGiaSu.exe
 C:\Users\HP\Desktop\QuanLyGiaSu\QuanLyGiaSu\bin\Debug\QuanLyGiaSu.pdb
 C:\Users\HP\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.exe
 C:\Users\HP\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.pdb
+C:\Users\HP\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.formMain.resources

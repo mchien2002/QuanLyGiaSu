@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QuanLyGiaSu.src.app.views.Admin.layout
+namespace QuanLyGiaSu.src.app.views.layout
 {
     public partial class footer : Form
     {
