@@ -54,6 +54,51 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\app\views\Admin\layout\footer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\app\views\Admin\layout\footer.Designer.cs">
+      <DependentUpon>footer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\app\views\Admin\layout\header.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\app\views\Admin\layout\header.Designer.cs">
+      <DependentUpon>header.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\app\views\Admin\layout\sidebar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\app\views\Admin\layout\sidebar.Designer.cs">
+      <DependentUpon>sidebar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\app\views\layout\footer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\app\views\layout\footer.Designer.cs">
+      <DependentUpon>footer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\app\views\layout\header.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\app\views\layout\header.Designer.cs">
+      <DependentUpon>header.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\app\views\layout\sidebar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\app\views\layout\sidebar.Designer.cs">
+      <DependentUpon>sidebar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\controllers\Admin\AuthController.cs" />
+    <Compile Include="src\controllers\Parent\ClassController.cs" />
+    <Compile Include="src\controllers\Tutor\ClassController.cs" />
+    <Compile Include="src\models\ClassModel.cs" />
+    <Compile Include="src\models\FeedBack.cs" />
+    <Compile Include="src\models\ParentModel.cs" />
+    <Compile Include="src\models\PostModel.cs" />
+    <Compile Include="src\models\SubjectModel.cs" />
+    <Compile Include="src\models\TutorModel.cs" />
     <EmbeddedResource Include="formMain.resx">
       <DependentUpon>formMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -79,13 +124,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="src\app\views\Admin\layout\" />
-    <Folder Include="src\app\views\layout\" />
-    <Folder Include="src\controllers\Admin\" />
-    <Folder Include="src\controllers\Parent\" />
-    <Folder Include="src\controllers\Tutor\" />
-    <Folder Include="src\models\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
