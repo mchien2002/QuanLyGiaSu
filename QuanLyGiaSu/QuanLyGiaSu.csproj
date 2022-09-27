@@ -72,6 +72,42 @@
     <Compile Include="src\app\views\Admin\layout\sidebar.Designer.cs">
       <DependentUpon>sidebar.cs</DependentUpon>
     </Compile>
+    <Compile Include="src\app\views\layer\UC_LienHe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\app\views\layer\UC_LienHe.Designer.cs">
+      <DependentUpon>UC_LienHe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\app\views\layer\UC_LopMoi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\app\views\layer\UC_LopMoi.Designer.cs">
+      <DependentUpon>UC_LopMoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\app\views\layer\UC_GiaSu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\app\views\layer\UC_GiaSu.Designer.cs">
+      <DependentUpon>UC_GiaSu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\app\views\layer\UC_PhuHuynh.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\app\views\layer\UC_PhuHuynh.Designer.cs">
+      <DependentUpon>UC_PhuHuynh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\app\views\layer\UC_TrangChu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\app\views\layer\UC_TrangChu.Designer.cs">
+      <DependentUpon>UC_TrangChu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\app\views\layer\UC_TuyenDung.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\app\views\layer\UC_TuyenDung.Designer.cs">
+      <DependentUpon>UC_TuyenDung.cs</DependentUpon>
+    </Compile>
     <Compile Include="src\app\views\layout\footer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +147,24 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="src\app\views\layer\UC_LienHe.resx">
+      <DependentUpon>UC_LienHe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\app\views\layer\UC_LopMoi.resx">
+      <DependentUpon>UC_LopMoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\app\views\layer\UC_GiaSu.resx">
+      <DependentUpon>UC_GiaSu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\app\views\layer\UC_PhuHuynh.resx">
+      <DependentUpon>UC_PhuHuynh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\app\views\layer\UC_TrangChu.resx">
+      <DependentUpon>UC_TrangChu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\app\views\layer\UC_TuyenDung.resx">
+      <DependentUpon>UC_TuyenDung.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
