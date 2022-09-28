@@ -72,11 +72,53 @@
     <Compile Include="src\app\views\Admin\layout\sidebar.Designer.cs">
       <DependentUpon>sidebar.cs</DependentUpon>
     </Compile>
+    <Compile Include="src\app\views\layer\DangKyDay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\app\views\layer\DangKyDay.Designer.cs">
+      <DependentUpon>DangKyDay.cs</DependentUpon>
+    </Compile>
     <Compile Include="src\app\views\layer\Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="src\app\views\layer\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\app\views\layer\SuaGiaSu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\app\views\layer\SuaGiaSu.Designer.cs">
+      <DependentUpon>SuaGiaSu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\app\views\layer\SuaPhuHuynh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\app\views\layer\SuaPhuHuynh.Designer.cs">
+      <DependentUpon>SuaPhuHuynh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\app\views\layer\SuaTTLop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\app\views\layer\SuaTTLop.Designer.cs">
+      <DependentUpon>SuaTTLop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\app\views\layer\UC_QuanLyGiaSu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\app\views\layer\UC_QuanLyGiaSu.Designer.cs">
+      <DependentUpon>UC_QuanLyGiaSu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\app\views\layer\UC_QuanLyLop.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\app\views\layer\UC_QuanLyLop.Designer.cs">
+      <DependentUpon>UC_QuanLyLop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\app\views\layer\UC_QuanLyPhuHuynh.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\app\views\layer\UC_QuanLyPhuHuynh.Designer.cs">
+      <DependentUpon>UC_QuanLyPhuHuynh.cs</DependentUpon>
     </Compile>
     <Compile Include="src\app\views\layer\UC_Register.cs">
       <SubType>UserControl</SubType>
@@ -166,8 +208,29 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="src\app\views\layer\DangKyDay.resx">
+      <DependentUpon>DangKyDay.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="src\app\views\layer\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\app\views\layer\SuaGiaSu.resx">
+      <DependentUpon>SuaGiaSu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\app\views\layer\SuaPhuHuynh.resx">
+      <DependentUpon>SuaPhuHuynh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\app\views\layer\SuaTTLop.resx">
+      <DependentUpon>SuaTTLop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\app\views\layer\UC_QuanLyGiaSu.resx">
+      <DependentUpon>UC_QuanLyGiaSu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\app\views\layer\UC_QuanLyLop.resx">
+      <DependentUpon>UC_QuanLyLop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\app\views\layer\UC_QuanLyPhuHuynh.resx">
+      <DependentUpon>UC_QuanLyPhuHuynh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\app\views\layer\UC_Register.resx">
       <DependentUpon>UC_Register.cs</DependentUpon>

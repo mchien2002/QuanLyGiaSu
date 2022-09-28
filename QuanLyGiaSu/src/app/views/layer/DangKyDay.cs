@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace QuanLyGiaSu.src.app.views.layer
 {
-    public partial class UC_LopMoi : UserControl
+    public partial class DangKyDay : Form
     {
-        public UC_LopMoi()
+        public DangKyDay()
         {
             InitializeComponent();
-        }
-
-        private void đăngKýDạyToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            DangKyDay dangKyDay = new DangKyDay();
-            dangKyDay.Show();
         }
     }
 }

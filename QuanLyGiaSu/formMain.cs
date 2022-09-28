@@ -52,5 +52,20 @@ namespace QuanLyGiaSu
         {
             uC_LienHe1.BringToFront();
         }
+
+        private void btn_QlyLop_Click(object sender, EventArgs e)
+        {
+            uC_QuanLyLop1.BringToFront();
+        }
+
+        private void btn_QlyGiaSu_Click(object sender, EventArgs e)
+        {
+            uC_QuanLyGiaSu1.BringToFront();
+        }
+
+        private void btn_QlyPhuHuynh_Click(object sender, EventArgs e)
+        {
+            uC_QuanLyPhuHuynh1.BringToFront();
+        }
     }
 }

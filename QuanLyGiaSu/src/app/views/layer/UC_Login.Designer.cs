@@ -31,8 +31,6 @@
             this.cb_GiaSu = new System.Windows.Forms.CheckBox();
             this.cb_PhuHuynh = new System.Windows.Forms.CheckBox();
             this.cb_Admin = new System.Windows.Forms.CheckBox();
-            this.btn_Register = new System.Windows.Forms.Button();
-            this.btn_Login = new System.Windows.Forms.Button();
             this.tb_Pass = new System.Windows.Forms.TextBox();
             this.tb_user = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -67,25 +65,6 @@
             this.cb_Admin.TabIndex = 9;
             this.cb_Admin.Text = "Admin";
             this.cb_Admin.UseVisualStyleBackColor = true;
-            // 
-            // btn_Register
-            // 
-            this.btn_Register.Location = new System.Drawing.Point(264, 231);
-            this.btn_Register.Name = "btn_Register";
-            this.btn_Register.Size = new System.Drawing.Size(75, 23);
-            this.btn_Register.TabIndex = 5;
-            this.btn_Register.Text = "Register";
-            this.btn_Register.UseVisualStyleBackColor = true;
-            this.btn_Register.Click += new System.EventHandler(this.btn_Register_Click);
-            // 
-            // btn_Login
-            // 
-            this.btn_Login.Location = new System.Drawing.Point(107, 231);
-            this.btn_Login.Name = "btn_Login";
-            this.btn_Login.Size = new System.Drawing.Size(75, 23);
-            this.btn_Login.TabIndex = 6;
-            this.btn_Login.Text = "Login";
-            this.btn_Login.UseVisualStyleBackColor = true;
             // 
             // tb_Pass
             // 
@@ -122,12 +101,10 @@
             this.Controls.Add(this.cb_GiaSu);
             this.Controls.Add(this.cb_PhuHuynh);
             this.Controls.Add(this.cb_Admin);
-            this.Controls.Add(this.btn_Register);
-            this.Controls.Add(this.btn_Login);
             this.Controls.Add(this.tb_Pass);
             this.Controls.Add(this.tb_user);
             this.Name = "UC_Login";
-            this.Size = new System.Drawing.Size(445, 322);
+            this.Size = new System.Drawing.Size(445, 242);
             this.Load += new System.EventHandler(this.UC_Login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -139,8 +116,6 @@
         private System.Windows.Forms.CheckBox cb_GiaSu;
         private System.Windows.Forms.CheckBox cb_PhuHuynh;
         private System.Windows.Forms.CheckBox cb_Admin;
-        private System.Windows.Forms.Button btn_Register;
-        private System.Windows.Forms.Button btn_Login;
         private System.Windows.Forms.TextBox tb_Pass;
         private System.Windows.Forms.TextBox tb_user;
         private System.Windows.Forms.Label label1;

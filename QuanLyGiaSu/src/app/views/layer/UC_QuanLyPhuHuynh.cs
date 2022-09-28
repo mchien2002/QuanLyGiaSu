@@ -10,21 +10,22 @@ using System.Windows.Forms;
 
 namespace QuanLyGiaSu.src.app.views.layer
 {
-    public partial class UC_Register : UserControl
+    public partial class UC_QuanLyPhuHuynh : UserControl
     {
-        public UC_Register()
+        public UC_QuanLyPhuHuynh()
         {
             InitializeComponent();
         }
 
-        private void tb_Pass_TextChanged(object sender, EventArgs e)
+        private void sửaThôngTinPhụHuynhToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            SuaPhuHuynh suaPhuHuynh = new SuaPhuHuynh();
+            suaPhuHuynh.Show();
         }
 
-        private void UC_Register_Load(object sender, EventArgs e)
+        private void UC_QuanLyPhuHuynh_Load(object sender, EventArgs e)
         {
-            tb_Pass1 = (TextBox)sender;
+
         }
     }
 }
