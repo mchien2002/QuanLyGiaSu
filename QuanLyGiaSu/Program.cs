@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyGiaSu.src.app.views.layer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace QuanLyGiaSu
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new formMain());
+            Application.Run(new Login());
         }
     }
 }
