@@ -67,5 +67,10 @@ namespace QuanLyGiaSu
         {
             uC_QuanLyPhuHuynh1.BringToFront();
         }
+
+        private void btn_QlyDSLOP_Click(object sender, EventArgs e)
+        {
+            uC_DanhSachLopDaDangKy1.BringToFront();
+        }
     }
 }

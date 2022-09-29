@@ -30,7 +30,7 @@ namespace QuanLyGiaSu
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_QlyMonHoc = new System.Windows.Forms.Button();
+            this.btn_QlyDSLOP = new System.Windows.Forms.Button();
             this.btn_QlyPhuHuynh = new System.Windows.Forms.Button();
             this.btn_QlyGiaSu = new System.Windows.Forms.Button();
             this.btn_QlyLop = new System.Windows.Forms.Button();
@@ -41,6 +41,7 @@ namespace QuanLyGiaSu
             this.btnPhuhuynh = new System.Windows.Forms.Button();
             this.btnTrangchu = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.uC_TrangChu1 = new DoAnCuoiKy_Nhom13.UC_TrangChu();
             this.uC_GiaSu1 = new DoAnCuoiKy_Nhom13.UC_GiaSu();
             this.uC_PhuHuynh1 = new DoAnCuoiKy_Nhom13.UC_PhuHuynh();
@@ -49,8 +50,8 @@ namespace QuanLyGiaSu
             this.uC_LienHe1 = new QuanLyGiaSu.src.app.views.layer.UC_LienHe();
             this.uC_QuanLyLop1 = new QuanLyGiaSu.src.app.views.layer.UC_QuanLyLop();
             this.uC_QuanLyGiaSu1 = new QuanLyGiaSu.src.app.views.layer.UC_QuanLyGiaSu();
-            this.label1 = new System.Windows.Forms.Label();
             this.uC_QuanLyPhuHuynh1 = new QuanLyGiaSu.src.app.views.layer.UC_QuanLyPhuHuynh();
+            this.uC_DanhSachLopDaDangKy1 = new QuanLyGiaSu.src.app.views.layer.UC_DanhSachLopDaDangKy();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -58,7 +59,7 @@ namespace QuanLyGiaSu
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel1.Controls.Add(this.btn_QlyMonHoc);
+            this.panel1.Controls.Add(this.btn_QlyDSLOP);
             this.panel1.Controls.Add(this.btn_QlyPhuHuynh);
             this.panel1.Controls.Add(this.btn_QlyGiaSu);
             this.panel1.Controls.Add(this.btn_QlyLop);
@@ -74,16 +75,17 @@ namespace QuanLyGiaSu
             this.panel1.Size = new System.Drawing.Size(917, 50);
             this.panel1.TabIndex = 0;
             // 
-            // btn_QlyMonHoc
+            // btn_QlyDSLOP
             // 
-            this.btn_QlyMonHoc.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btn_QlyMonHoc.Location = new System.Drawing.Point(720, 0);
-            this.btn_QlyMonHoc.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_QlyMonHoc.Name = "btn_QlyMonHoc";
-            this.btn_QlyMonHoc.Size = new System.Drawing.Size(80, 50);
-            this.btn_QlyMonHoc.TabIndex = 8;
-            this.btn_QlyMonHoc.Text = "Quản Lý Môn Học";
-            this.btn_QlyMonHoc.UseVisualStyleBackColor = true;
+            this.btn_QlyDSLOP.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btn_QlyDSLOP.Location = new System.Drawing.Point(720, 0);
+            this.btn_QlyDSLOP.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_QlyDSLOP.Name = "btn_QlyDSLOP";
+            this.btn_QlyDSLOP.Size = new System.Drawing.Size(80, 50);
+            this.btn_QlyDSLOP.TabIndex = 8;
+            this.btn_QlyDSLOP.Text = "Danh Sách Lớp Đã Đăng Ký Dạy";
+            this.btn_QlyDSLOP.UseVisualStyleBackColor = true;
+            this.btn_QlyDSLOP.Click += new System.EventHandler(this.btn_QlyDSLOP_Click);
             // 
             // btn_QlyPhuHuynh
             // 
@@ -204,11 +206,21 @@ namespace QuanLyGiaSu
             this.panel2.Controls.Add(this.uC_QuanLyLop1);
             this.panel2.Controls.Add(this.uC_QuanLyGiaSu1);
             this.panel2.Controls.Add(this.uC_QuanLyPhuHuynh1);
+            this.panel2.Controls.Add(this.uC_DanhSachLopDaDangKy1);
             this.panel2.Location = new System.Drawing.Point(9, 65);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(982, 433);
             this.panel2.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(953, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "label1";
             // 
             // uC_TrangChu1
             // 
@@ -241,7 +253,7 @@ namespace QuanLyGiaSu
             // uC_LopMoi1
             // 
             this.uC_LopMoi1.Location = new System.Drawing.Point(-2, 2);
-            this.uC_LopMoi1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.uC_LopMoi1.Margin = new System.Windows.Forms.Padding(2);
             this.uC_LopMoi1.Name = "uC_LopMoi1";
             this.uC_LopMoi1.Size = new System.Drawing.Size(982, 433);
             this.uC_LopMoi1.TabIndex = 2;
@@ -276,21 +288,19 @@ namespace QuanLyGiaSu
             this.uC_QuanLyGiaSu1.Size = new System.Drawing.Size(982, 433);
             this.uC_QuanLyGiaSu1.TabIndex = 6;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(953, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "label1";
-            // 
             // uC_QuanLyPhuHuynh1
             // 
             this.uC_QuanLyPhuHuynh1.Location = new System.Drawing.Point(0, 2);
             this.uC_QuanLyPhuHuynh1.Name = "uC_QuanLyPhuHuynh1";
             this.uC_QuanLyPhuHuynh1.Size = new System.Drawing.Size(982, 433);
             this.uC_QuanLyPhuHuynh1.TabIndex = 7;
+            // 
+            // uC_DanhSachLopDaDangKy1
+            // 
+            this.uC_DanhSachLopDaDangKy1.Location = new System.Drawing.Point(0, 0);
+            this.uC_DanhSachLopDaDangKy1.Name = "uC_DanhSachLopDaDangKy1";
+            this.uC_DanhSachLopDaDangKy1.Size = new System.Drawing.Size(982, 433);
+            this.uC_DanhSachLopDaDangKy1.TabIndex = 8;
             // 
             // formMain
             // 
@@ -328,13 +338,14 @@ namespace QuanLyGiaSu
         private src.app.views.layer.UC_TuyenDung uC_TuyenDung1;
         private src.app.views.layer.UC_LienHe uC_LienHe1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btn_QlyMonHoc;
+        private System.Windows.Forms.Button btn_QlyDSLOP;
         private System.Windows.Forms.Button btn_QlyPhuHuynh;
         private System.Windows.Forms.Button btn_QlyGiaSu;
         private System.Windows.Forms.Button btn_QlyLop;
         private src.app.views.layer.UC_QuanLyLop uC_QuanLyLop1;
         private src.app.views.layer.UC_QuanLyGiaSu uC_QuanLyGiaSu1;
         private src.app.views.layer.UC_QuanLyPhuHuynh uC_QuanLyPhuHuynh1;
+        private src.app.views.layer.UC_DanhSachLopDaDangKy uC_DanhSachLopDaDangKy1;
     }
 }
 

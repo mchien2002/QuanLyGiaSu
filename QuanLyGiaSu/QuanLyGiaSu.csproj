@@ -102,6 +102,12 @@
     <Compile Include="src\app\views\layer\SuaTTLop.Designer.cs">
       <DependentUpon>SuaTTLop.cs</DependentUpon>
     </Compile>
+    <Compile Include="src\app\views\layer\UC_DanhSachLopDaDangKy.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\app\views\layer\UC_DanhSachLopDaDangKy.Designer.cs">
+      <DependentUpon>UC_DanhSachLopDaDangKy.cs</DependentUpon>
+    </Compile>
     <Compile Include="src\app\views\layer\UC_QuanLyGiaSu.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -222,6 +228,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="src\app\views\layer\SuaTTLop.resx">
       <DependentUpon>SuaTTLop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\app\views\layer\UC_DanhSachLopDaDangKy.resx">
+      <DependentUpon>UC_DanhSachLopDaDangKy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\app\views\layer\UC_QuanLyGiaSu.resx">
       <DependentUpon>UC_QuanLyGiaSu.cs</DependentUpon>
