@@ -15,12 +15,37 @@ namespace QuanLyGiaSu.src.app.views.layer
         public UC_QuanLyGiaSu()
         {
             InitializeComponent();
+            comboBox1.Text = comboBox1.Items[0].ToString();
         }
 
         private void sửaThôngTinGiaSưToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SuaGiaSu suaGiaSu = new SuaGiaSu();
             suaGiaSu.Show();
+        }
+
+        private void thêmGiaSưToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(comboBox1.Text == "Lớp Dạy")
+            {
+               tb_TimKiem.Hide();
+                cbb_TimKiem.Visible = true;
+            }
+            else
+            {
+                cbb_TimKiem.Hide();
+                tb_TimKiem.Visible = true;
+            }
+        }
+
+        private void UC_QuanLyGiaSu_Load(object sender, EventArgs e)
+        {
+            cbb_TimKiem.Hide();
         }
     }
 }

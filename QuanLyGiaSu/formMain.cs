@@ -32,11 +32,6 @@ namespace QuanLyGiaSu
             uC_GiaSu1.BringToFront();
         }
 
-        private void btnPhuhuynh_Click(object sender, EventArgs e)
-        {
-            uC_PhuHuynh1.BringToFront();
-        }
-
         private void btn_LopMoi_Click(object sender, EventArgs e)
         {
             uC_LopMoi1.BringToFront();
@@ -71,6 +66,11 @@ namespace QuanLyGiaSu
         private void btn_QlyDSLOP_Click(object sender, EventArgs e)
         {
             uC_DanhSachLopDaDangKy1.BringToFront();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            uC_PhuHuynh1.BringToFront();
         }
     }
 }

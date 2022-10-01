@@ -15,6 +15,8 @@ namespace QuanLyGiaSu.src.app.views.layer
         public UC_QuanLyPhuHuynh()
         {
             InitializeComponent();
+            comboBox1.Text = comboBox1.Items[0].ToString();
+
         }
 
         private void sửaThôngTinPhụHuynhToolStripMenuItem_Click(object sender, EventArgs e)

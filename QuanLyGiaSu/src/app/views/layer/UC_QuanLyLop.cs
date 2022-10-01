@@ -15,6 +15,7 @@ namespace QuanLyGiaSu.src.app.views.layer
         public UC_QuanLyLop()
         {
             InitializeComponent();
+            comboBox1.Text = comboBox1.Items[0].ToString();
         }
 
         private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -29,6 +30,11 @@ namespace QuanLyGiaSu.src.app.views.layer
         }
 
         private void UC_QuanLyLop_Load(object sender, EventArgs e)
+        {
+            cbb_TimKiem.Hide();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

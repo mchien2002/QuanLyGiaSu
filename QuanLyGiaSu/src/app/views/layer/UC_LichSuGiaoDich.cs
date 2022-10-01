@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DoAnCuoiKy_Nhom13
 {
-    public partial class UC_PhuHuynh : UserControl
+    public partial class UC_LichSuGiaoDich : UserControl
     {
-        public UC_PhuHuynh()
+        public UC_LichSuGiaoDich()
         {
             InitializeComponent();
         }
