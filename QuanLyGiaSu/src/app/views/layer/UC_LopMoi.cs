@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyGiaSu.database;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,11 +13,12 @@ namespace QuanLyGiaSu.src.app.views.layer
 {
     public partial class UC_LopMoi : UserControl
     {
+        TRUNGTAMGIASUDataContext db;
         public UC_LopMoi()
         {
             InitializeComponent();
-            comboBox1.Text = comboBox1.Items[0].ToString();
-
+            cbbSearchType.Text = cbbSearchType.Items[0].ToString();
+            db = new TRUNGTAMGIASUDataContext();
         }
 
         private void đăngKýDạyToolStripMenuItem_Click(object sender, EventArgs e)
@@ -27,27 +29,28 @@ namespace QuanLyGiaSu.src.app.views.layer
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(comboBox1.Text == "Lớp Học")
+            if(cbbSearchType.Text == "Lớp Học")
             {
                 tb_TimKiem.Hide();
-                cbb_TimKiem.Visible = true;
+                cbbSearch.Visible = true;
                 //cbb_TimKiem.Hide();
             }
-            else if(comboBox1.Text == "Mã Lớp")
+            else if(cbbSearchType.Text == "Mã Lớp")
             {
-                cbb_TimKiem.Hide();
+                cbbSearch.Hide();
                 tb_TimKiem.Visible=true;
             }
             else
             {
-                cbb_TimKiem.Hide();
+                cbbSearch.Hide();
                 tb_TimKiem.Visible = true;
             }
         }
 
         private void UC_LopMoi_Load(object sender, EventArgs e)
         {
-            cbb_TimKiem.Hide();
+            cbbSearch.Hide();
+            dgvTHONGTINLOPMOI.DataSource = db.THONGTINLOPMOIs.Select(p => p);
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -59,6 +62,11 @@ namespace QuanLyGiaSu.src.app.views.layer
         {
             DangKyMoLop dangKyMoLop = new DangKyMoLop();
             dangKyMoLop.Show();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

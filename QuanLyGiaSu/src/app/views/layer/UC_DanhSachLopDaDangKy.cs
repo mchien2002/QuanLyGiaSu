@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyGiaSu.database;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,10 @@ namespace QuanLyGiaSu.src.app.views.layer
         public UC_DanhSachLopDaDangKy()
         {
             InitializeComponent();
+        }
+
+        private void UC_DanhSachLopDaDangKy_Load(object sender, EventArgs e)
+        {
         }
     }
 }

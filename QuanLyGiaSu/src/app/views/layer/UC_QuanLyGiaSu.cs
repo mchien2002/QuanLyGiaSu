@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyGiaSu.database;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,11 @@ namespace QuanLyGiaSu.src.app.views.layer
 {
     public partial class UC_QuanLyGiaSu : UserControl
     {
+        TRUNGTAMGIASUDataContext db;
         public UC_QuanLyGiaSu()
         {
             InitializeComponent();
+            db = new TRUNGTAMGIASUDataContext();
             comboBox1.Text = comboBox1.Items[0].ToString();
         }
 
@@ -46,6 +49,7 @@ namespace QuanLyGiaSu.src.app.views.layer
         private void UC_QuanLyGiaSu_Load(object sender, EventArgs e)
         {
             cbb_TimKiem.Hide();
+            dataGridView1.DataSource = db.THONGTINGIASUs.Select(p => p);
         }
     }
 }

@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,6 +47,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="database\TRUNGTAMGIASU.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TRUNGTAMGIASU.dbml</DependentUpon>
+    </Compile>
     <Compile Include="formMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -274,6 +280,14 @@
     <EmbeddedResource Include="src\app\views\layer\UC_TuyenDung.resx">
       <DependentUpon>UC_TuyenDung.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="database\TRUNGTAMGIASU.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>TRUNGTAMGIASU.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="database\TRUNGTAMGIASU.dbml.layout">
+      <DependentUpon>TRUNGTAMGIASU.dbml</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -287,7 +301,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\user_male_30px.png" />
   </ItemGroup>

@@ -29,33 +29,34 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvTHONGTINLOPMOI = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.đăngKýDạyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngKýMởLớpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tb_TimKiem = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.cbb_TimKiem = new System.Windows.Forms.ComboBox();
-            this.btn_Tim = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.cbbSearchType = new System.Windows.Forms.ComboBox();
+            this.cbbSearch = new System.Windows.Forms.ComboBox();
+            this.btnTim = new System.Windows.Forms.Button();
+            this.btnDangKyMoLop = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTHONGTINLOPMOI)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvTHONGTINLOPMOI
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.ContextMenuStrip = this.contextMenuStrip1;
-            this.dataGridView1.Location = new System.Drawing.Point(16, 60);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1277, 453);
-            this.dataGridView1.TabIndex = 5;
+            this.dgvTHONGTINLOPMOI.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgvTHONGTINLOPMOI.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTHONGTINLOPMOI.ContextMenuStrip = this.contextMenuStrip1;
+            this.dgvTHONGTINLOPMOI.Location = new System.Drawing.Point(16, 60);
+            this.dgvTHONGTINLOPMOI.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvTHONGTINLOPMOI.Name = "dgvTHONGTINLOPMOI";
+            this.dgvTHONGTINLOPMOI.RowHeadersWidth = 51;
+            this.dgvTHONGTINLOPMOI.RowTemplate.Height = 24;
+            this.dgvTHONGTINLOPMOI.Size = new System.Drawing.Size(1277, 453);
+            this.dgvTHONGTINLOPMOI.TabIndex = 5;
+            this.dgvTHONGTINLOPMOI.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // contextMenuStrip1
             // 
@@ -108,68 +109,68 @@
             this.tb_TimKiem.Size = new System.Drawing.Size(256, 30);
             this.tb_TimKiem.TabIndex = 7;
             // 
-            // comboBox1
+            // cbbSearchType
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbbSearchType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbSearchType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbSearchType.FormattingEnabled = true;
+            this.cbbSearchType.Items.AddRange(new object[] {
             "Mã Lớp",
             "Môn Học",
             "Lớp Học"});
-            this.comboBox1.Location = new System.Drawing.Point(625, 22);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(192, 33);
-            this.comboBox1.TabIndex = 8;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.cbbSearchType.Location = new System.Drawing.Point(625, 22);
+            this.cbbSearchType.Name = "cbbSearchType";
+            this.cbbSearchType.Size = new System.Drawing.Size(192, 33);
+            this.cbbSearchType.TabIndex = 8;
+            this.cbbSearchType.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // cbb_TimKiem
+            // cbbSearch
             // 
-            this.cbb_TimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbb_TimKiem.FormattingEnabled = true;
-            this.cbb_TimKiem.Location = new System.Drawing.Point(823, 23);
-            this.cbb_TimKiem.Name = "cbb_TimKiem";
-            this.cbb_TimKiem.Size = new System.Drawing.Size(256, 33);
-            this.cbb_TimKiem.TabIndex = 9;
+            this.cbbSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbSearch.FormattingEnabled = true;
+            this.cbbSearch.Location = new System.Drawing.Point(823, 23);
+            this.cbbSearch.Name = "cbbSearch";
+            this.cbbSearch.Size = new System.Drawing.Size(256, 33);
+            this.cbbSearch.TabIndex = 9;
             // 
-            // btn_Tim
+            // btnTim
             // 
-            this.btn_Tim.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Tim.Location = new System.Drawing.Point(1109, 22);
-            this.btn_Tim.Name = "btn_Tim";
-            this.btn_Tim.Size = new System.Drawing.Size(75, 33);
-            this.btn_Tim.TabIndex = 10;
-            this.btn_Tim.Text = "Tìm";
-            this.btn_Tim.UseVisualStyleBackColor = true;
+            this.btnTim.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTim.Location = new System.Drawing.Point(1109, 22);
+            this.btnTim.Name = "btnTim";
+            this.btnTim.Size = new System.Drawing.Size(75, 33);
+            this.btnTim.TabIndex = 10;
+            this.btnTim.Text = "Tìm";
+            this.btnTim.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnDangKyMoLop
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(261, 23);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(187, 33);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "Đăng Ký Mở Lớp";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnDangKyMoLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangKyMoLop.Location = new System.Drawing.Point(261, 23);
+            this.btnDangKyMoLop.Name = "btnDangKyMoLop";
+            this.btnDangKyMoLop.Size = new System.Drawing.Size(187, 33);
+            this.btnDangKyMoLop.TabIndex = 12;
+            this.btnDangKyMoLop.Text = "Đăng Ký Mở Lớp";
+            this.btnDangKyMoLop.UseVisualStyleBackColor = true;
+            this.btnDangKyMoLop.Click += new System.EventHandler(this.button2_Click);
             // 
             // UC_LopMoi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.btn_Tim);
-            this.Controls.Add(this.cbb_TimKiem);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.btnDangKyMoLop);
+            this.Controls.Add(this.btnTim);
+            this.Controls.Add(this.cbbSearch);
+            this.Controls.Add(this.cbbSearchType);
             this.Controls.Add(this.tb_TimKiem);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvTHONGTINLOPMOI);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UC_LopMoi";
             this.Size = new System.Drawing.Size(1309, 533);
             this.Load += new System.EventHandler(this.UC_LopMoi_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTHONGTINLOPMOI)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -178,16 +179,16 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvTHONGTINLOPMOI;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem đăngKýDạyToolStripMenuItem;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tb_TimKiem;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox cbb_TimKiem;
-        private System.Windows.Forms.Button btn_Tim;
+        private System.Windows.Forms.ComboBox cbbSearchType;
+        private System.Windows.Forms.ComboBox cbbSearch;
+        private System.Windows.Forms.Button btnTim;
         private System.Windows.Forms.ToolStripMenuItem đăngKýMởLớpToolStripMenuItem;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnDangKyMoLop;
     }
 }
