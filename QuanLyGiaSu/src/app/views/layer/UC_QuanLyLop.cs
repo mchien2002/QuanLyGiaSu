@@ -18,17 +18,6 @@ namespace QuanLyGiaSu.src.app.views.layer
             comboBox1.Text = comboBox1.Items[0].ToString();
         }
 
-        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void sửaThôngTinLớpToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            SuaThongTinLop suaThongTinLop = new SuaThongTinLop();
-            suaThongTinLop.Show();
-        }
-
         private void UC_QuanLyLop_Load(object sender, EventArgs e)
         {
             cbb_TimKiem.Hide();
@@ -37,6 +26,12 @@ namespace QuanLyGiaSu.src.app.views.layer
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void SuaThongTinLop_Click(object sender, EventArgs e)
+        {
+            SuaThongTinLop suaThongTinLop = new SuaThongTinLop();
+            suaThongTinLop.Show();
         }
     }
 }

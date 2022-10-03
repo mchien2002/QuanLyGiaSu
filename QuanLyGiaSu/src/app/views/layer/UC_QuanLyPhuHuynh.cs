@@ -29,5 +29,11 @@ namespace QuanLyGiaSu.src.app.views.layer
         {
 
         }
+
+        private void ThemPhuHuynh_Click(object sender, EventArgs e)
+        {
+            ThemAccount themAccount = new ThemAccount("THÊM PHỤ HUYNH");
+            themAccount.Show();
+        }
     }
 }

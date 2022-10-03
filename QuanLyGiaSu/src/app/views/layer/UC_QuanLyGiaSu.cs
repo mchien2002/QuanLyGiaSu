@@ -21,16 +21,6 @@ namespace QuanLyGiaSu.src.app.views.layer
             comboBox1.Text = comboBox1.Items[0].ToString();
         }
 
-        private void sửaThôngTinGiaSưToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            SuaGiaSu suaGiaSu = new SuaGiaSu();
-            suaGiaSu.Show();
-        }
-
-        private void thêmGiaSưToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -49,7 +39,19 @@ namespace QuanLyGiaSu.src.app.views.layer
         private void UC_QuanLyGiaSu_Load(object sender, EventArgs e)
         {
             cbb_TimKiem.Hide();
-            dataGridView1.DataSource = db.THONGTINGIASUs.Select(p => p);
+            //dataGridView1.DataSource = db.THONGTINGIASUs.Select(p => p);
+        }
+
+        private void SuaThongTinGiaSu_Click(object sender, EventArgs e)
+        {
+            SuaGiaSu suaGiaSu = new SuaGiaSu();
+            suaGiaSu.Show();
+        }
+
+        private void ThemGiaSu_Click(object sender, EventArgs e)
+        {
+            ThemAccount themAccount = new ThemAccount();
+            themAccount.Show();
         }
     }
 }

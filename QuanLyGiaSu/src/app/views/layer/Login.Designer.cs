@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.cb_GiaSu = new System.Windows.Forms.CheckBox();
-            this.cb_PhuHuynh = new System.Windows.Forms.CheckBox();
-            this.cb_Admin = new System.Windows.Forms.CheckBox();
             this.btn_Login = new System.Windows.Forms.Button();
             this.tb_Pass = new System.Windows.Forms.TextBox();
             this.tb_user = new System.Windows.Forms.TextBox();
@@ -39,6 +36,9 @@
             this.đăngNhậpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngKýLàmPhụHuynhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngKýLàmGiaSưToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rb_Admin = new System.Windows.Forms.RadioButton();
+            this.rb_PhuHuynh = new System.Windows.Forms.RadioButton();
+            this.rb_GiaSu = new System.Windows.Forms.RadioButton();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,44 +52,15 @@
             this.label1.TabIndex = 18;
             this.label1.Text = "Login";
             // 
-            // cb_GiaSu
-            // 
-            this.cb_GiaSu.AutoSize = true;
-            this.cb_GiaSu.Location = new System.Drawing.Point(277, 191);
-            this.cb_GiaSu.Name = "cb_GiaSu";
-            this.cb_GiaSu.Size = new System.Drawing.Size(58, 17);
-            this.cb_GiaSu.TabIndex = 15;
-            this.cb_GiaSu.Text = "Gia Sư";
-            this.cb_GiaSu.UseVisualStyleBackColor = true;
-            // 
-            // cb_PhuHuynh
-            // 
-            this.cb_PhuHuynh.AutoSize = true;
-            this.cb_PhuHuynh.Location = new System.Drawing.Point(182, 191);
-            this.cb_PhuHuynh.Name = "cb_PhuHuynh";
-            this.cb_PhuHuynh.Size = new System.Drawing.Size(79, 17);
-            this.cb_PhuHuynh.TabIndex = 16;
-            this.cb_PhuHuynh.Text = "Phụ Huynh";
-            this.cb_PhuHuynh.UseVisualStyleBackColor = true;
-            // 
-            // cb_Admin
-            // 
-            this.cb_Admin.AutoSize = true;
-            this.cb_Admin.Location = new System.Drawing.Point(103, 191);
-            this.cb_Admin.Name = "cb_Admin";
-            this.cb_Admin.Size = new System.Drawing.Size(55, 17);
-            this.cb_Admin.TabIndex = 17;
-            this.cb_Admin.Text = "Admin";
-            this.cb_Admin.UseVisualStyleBackColor = true;
-            // 
             // btn_Login
             // 
-            this.btn_Login.Location = new System.Drawing.Point(103, 223);
+            this.btn_Login.Location = new System.Drawing.Point(260, 223);
             this.btn_Login.Name = "btn_Login";
             this.btn_Login.Size = new System.Drawing.Size(75, 23);
             this.btn_Login.TabIndex = 14;
             this.btn_Login.Text = "Login";
             this.btn_Login.UseVisualStyleBackColor = true;
+            this.btn_Login.Click += new System.EventHandler(this.btn_Login_Click_1);
             // 
             // tb_Pass
             // 
@@ -138,15 +109,48 @@
             this.đăngKýLàmGiaSưToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.đăngKýLàmGiaSưToolStripMenuItem.Text = "đăng ký làm gia sư";
             // 
+            // rb_Admin
+            // 
+            this.rb_Admin.AutoSize = true;
+            this.rb_Admin.Location = new System.Drawing.Point(103, 190);
+            this.rb_Admin.Name = "rb_Admin";
+            this.rb_Admin.Size = new System.Drawing.Size(54, 17);
+            this.rb_Admin.TabIndex = 20;
+            this.rb_Admin.TabStop = true;
+            this.rb_Admin.Text = "Admin";
+            this.rb_Admin.UseVisualStyleBackColor = true;
+            // 
+            // rb_PhuHuynh
+            // 
+            this.rb_PhuHuynh.AutoSize = true;
+            this.rb_PhuHuynh.Location = new System.Drawing.Point(181, 190);
+            this.rb_PhuHuynh.Name = "rb_PhuHuynh";
+            this.rb_PhuHuynh.Size = new System.Drawing.Size(78, 17);
+            this.rb_PhuHuynh.TabIndex = 20;
+            this.rb_PhuHuynh.TabStop = true;
+            this.rb_PhuHuynh.Text = "Phụ Huynh";
+            this.rb_PhuHuynh.UseVisualStyleBackColor = true;
+            // 
+            // rb_GiaSu
+            // 
+            this.rb_GiaSu.AutoSize = true;
+            this.rb_GiaSu.Location = new System.Drawing.Point(278, 190);
+            this.rb_GiaSu.Name = "rb_GiaSu";
+            this.rb_GiaSu.Size = new System.Drawing.Size(57, 17);
+            this.rb_GiaSu.TabIndex = 20;
+            this.rb_GiaSu.TabStop = true;
+            this.rb_GiaSu.Text = "Gia Sư";
+            this.rb_GiaSu.UseVisualStyleBackColor = true;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(440, 318);
+            this.Controls.Add(this.rb_GiaSu);
+            this.Controls.Add(this.rb_PhuHuynh);
+            this.Controls.Add(this.rb_Admin);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.cb_GiaSu);
-            this.Controls.Add(this.cb_PhuHuynh);
-            this.Controls.Add(this.cb_Admin);
             this.Controls.Add(this.btn_Login);
             this.Controls.Add(this.tb_Pass);
             this.Controls.Add(this.tb_user);
@@ -165,9 +169,6 @@
         #endregion
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.CheckBox cb_GiaSu;
-        private System.Windows.Forms.CheckBox cb_PhuHuynh;
-        private System.Windows.Forms.CheckBox cb_Admin;
         private System.Windows.Forms.Button btn_Login;
         private System.Windows.Forms.TextBox tb_Pass;
         private System.Windows.Forms.TextBox tb_user;
@@ -175,5 +176,8 @@
         private System.Windows.Forms.ToolStripMenuItem đăngNhậpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem đăngKýLàmPhụHuynhToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem đăngKýLàmGiaSưToolStripMenuItem;
+        private System.Windows.Forms.RadioButton rb_Admin;
+        private System.Windows.Forms.RadioButton rb_PhuHuynh;
+        private System.Windows.Forms.RadioButton rb_GiaSu;
     }
 }

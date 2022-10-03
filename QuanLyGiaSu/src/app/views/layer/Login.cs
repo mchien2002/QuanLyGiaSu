@@ -27,5 +27,31 @@ namespace QuanLyGiaSu.src.app.views.layer
         {
 
         }
+
+        private void btn_Login_Click_1(object sender, EventArgs e)
+        {
+            if(rb_Admin.Checked == true)
+            {
+                this.Hide();
+                formMain formMain = new formMain();
+                formMain.ShowDialog();
+                this.Close();
+            }    
+            else if (rb_GiaSu.Checked == true)
+            {
+                this.Hide();
+                formMainGiaSu formMainGiaSu = new formMainGiaSu();
+                formMainGiaSu.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                this.Hide();
+                formMainPhuHuynh formMainPhuHuynh = new formMainPhuHuynh();
+                formMainPhuHuynh.ShowDialog();
+                this.Close();
+            }
+                
+        }
     }
 }

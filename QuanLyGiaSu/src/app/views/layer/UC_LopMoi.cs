@@ -21,11 +21,6 @@ namespace QuanLyGiaSu.src.app.views.layer
             db = new TRUNGTAMGIASUDataContext();
         }
 
-        private void đăngKýDạyToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            DangKyDay dangKyDay = new DangKyDay();
-            dangKyDay.Show();
-        }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -50,7 +45,7 @@ namespace QuanLyGiaSu.src.app.views.layer
         private void UC_LopMoi_Load(object sender, EventArgs e)
         {
             cbbSearch.Hide();
-            dgvTHONGTINLOPMOI.DataSource = db.THONGTINLOPMOIs.Select(p => p);
+            //dgvTHONGTINLOPMOI.DataSource = db.THONGTINLOPMOIs.Select(p => p);
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -67,6 +62,17 @@ namespace QuanLyGiaSu.src.app.views.layer
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void DangKyMoLop_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DangKyDay_Click(object sender, EventArgs e)
+        {
+            DangKyDay dangKyDay = new DangKyDay();
+            dangKyDay.Show();
         }
     }
 }
