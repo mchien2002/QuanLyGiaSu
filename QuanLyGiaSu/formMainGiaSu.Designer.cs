@@ -204,7 +204,7 @@
             // 
             this.uC_LichSuGiaoDich1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.uC_LichSuGiaoDich1.Location = new System.Drawing.Point(12, 67);
-            this.uC_LichSuGiaoDich1.Margin = new System.Windows.Forms.Padding(2);
+            this.uC_LichSuGiaoDich1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.uC_LichSuGiaoDich1.Name = "uC_LichSuGiaoDich1";
             this.uC_LichSuGiaoDich1.Size = new System.Drawing.Size(982, 433);
             this.uC_LichSuGiaoDich1.TabIndex = 11;
@@ -223,6 +223,7 @@
             this.Controls.Add(this.uC_DanhSachLopDaDangKy1);
             this.Controls.Add(this.uC_LichSuGiaoDich1);
             this.Name = "formMainGiaSu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "formMainGiaSu";
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);

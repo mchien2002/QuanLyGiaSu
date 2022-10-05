@@ -235,7 +235,7 @@ namespace QuanLyGiaSu
             // 
             this.uC_PhuHuynh1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.uC_PhuHuynh1.Location = new System.Drawing.Point(-2, 2);
-            this.uC_PhuHuynh1.Margin = new System.Windows.Forms.Padding(2);
+            this.uC_PhuHuynh1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.uC_PhuHuynh1.Name = "uC_PhuHuynh1";
             this.uC_PhuHuynh1.Size = new System.Drawing.Size(982, 433);
             this.uC_PhuHuynh1.TabIndex = 2;
@@ -313,6 +313,7 @@ namespace QuanLyGiaSu
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "formMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Quản Lý Gia Sư";
             this.Load += new System.EventHandler(this.formMain_Load);
             this.panel1.ResumeLayout(false);
