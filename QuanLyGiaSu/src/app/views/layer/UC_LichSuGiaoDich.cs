@@ -15,6 +15,12 @@ namespace DoAnCuoiKy_Nhom13
         public UC_LichSuGiaoDich()
         {
             InitializeComponent();
+            comboBox1.Text = this.Items[0].ToString();
+        }
+
+        private void UC_LichSuGiaoDich_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
