@@ -53,5 +53,26 @@ namespace QuanLyGiaSu.src.app.views.layer
             }
                 
         }
+
+        private void đăngKýLàmPhụHuynhToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDangKyGiaSu_Click(object sender, EventArgs e)
+        {
+            DangKyGiaSu dangKyGiaSu = new DangKyGiaSu();
+            this.Hide();
+            dangKyGiaSu.ShowDialog();
+            this.Close();
+        }
+
+        private void btnDangKyPhuHuynh_Click(object sender, EventArgs e)
+        {
+            DangKyTKPhuHuynh dangKyTKPhuHuynh = new DangKyTKPhuHuynh();
+            this.Hide();
+            dangKyTKPhuHuynh.ShowDialog();
+            this.Close();
+        }
     }
 }

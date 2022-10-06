@@ -234,8 +234,13 @@ namespace QuanLyGiaSu
             // uC_PhuHuynh1
             // 
             this.uC_PhuHuynh1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+<<<<<<< HEAD
             this.uC_PhuHuynh1.Location = new System.Drawing.Point(-3, 2);
             this.uC_PhuHuynh1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+=======
+            this.uC_PhuHuynh1.Location = new System.Drawing.Point(-2, 2);
+            this.uC_PhuHuynh1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> 0498f994af20fdcf429256cb2ecc7ebcca79e41b
             this.uC_PhuHuynh1.Name = "uC_PhuHuynh1";
             this.uC_PhuHuynh1.Size = new System.Drawing.Size(1309, 533);
             this.uC_PhuHuynh1.TabIndex = 2;
@@ -313,7 +318,11 @@ namespace QuanLyGiaSu
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "formMain";
+<<<<<<< HEAD
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+=======
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+>>>>>>> 0498f994af20fdcf429256cb2ecc7ebcca79e41b
             this.Text = "Quản Lý Gia Sư";
             this.Load += new System.EventHandler(this.formMain_Load);
             this.panel1.ResumeLayout(false);
