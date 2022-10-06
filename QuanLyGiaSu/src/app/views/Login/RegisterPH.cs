@@ -8,26 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QuanLyGiaSu.src.app.views.layer
+namespace QuanLyGiaSu.src.app.views.Login
 {
-    public partial class DangKyTKPhuHuynh : Form
+    public partial class RegisterPH : Form
     {
-        public DangKyTKPhuHuynh()
+        public RegisterPH()
         {
             InitializeComponent();
         }
 
-        private void btn_Sua_Click(object sender, EventArgs e)
+        private void btn_Register_Click(object sender, EventArgs e)
         {
-            Login login = new Login();
+            NhapThongTinPhuHuynh nhapThongTinPhuHuynh = new NhapThongTinPhuHuynh();
             this.Hide();
-            login.ShowDialog();
+            nhapThongTinPhuHuynh.ShowDialog();
             this.Close();
-        }
-
-        private void DangKyTKPhuHuynh_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

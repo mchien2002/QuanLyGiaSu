@@ -52,5 +52,9 @@ namespace QuanLyGiaSu
         {
             uC_LichSuGiaoDich1.BringToFront();
         }
+
+        private void formMainGiaSu_Load(object sender, EventArgs e)
+        {
+        }
     }
 }

@@ -24,7 +24,6 @@ C:\Users\Admin\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\DoAnCuoiKy_Nhom13.UC_Tr
 C:\Users\Admin\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_LopMoi.resources
 C:\Users\Admin\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_TuyenDung.resources
 C:\Users\Admin\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_LienHe.resources
-C:\Users\Admin\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.Login.resources
 C:\Users\Admin\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_Login.resources
 C:\Users\Admin\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_Register.resources
 C:\Users\Admin\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_QuanLyLop.resources
@@ -129,3 +128,9 @@ C:\Users\Admin\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer
 C:\Users\Admin\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.DangKyGiaSu.resources
 C:\Users\84975\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.DangKyGiaSu.resources
 C:\Users\84975\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.DangKyTKPhuHuynh.resources
+C:\Users\Admin\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_LopMoi2.resources
+C:\Users\Admin\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.Login.Login.resources
+C:\Users\Admin\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.Login.NhapThongTinGiaSu.resources
+C:\Users\Admin\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.Login.RegisterGiaSu.resources
+C:\Users\Admin\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.Login.NhapThongTinPhuHuynh.resources
+C:\Users\Admin\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.Login.RegisterPH.resources

@@ -25,7 +25,7 @@ namespace QuanLyGiaSu
 
         private void btn_LopMoi_Click(object sender, EventArgs e)
         {
-            uC_LopMoi1.BringToFront();
+            uC_LopMoi21.BringToFront();
         }
 
         private void btn_TuyenDung_Click(object sender, EventArgs e)

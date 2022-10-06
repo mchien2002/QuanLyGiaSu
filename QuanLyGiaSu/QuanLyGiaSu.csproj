@@ -96,29 +96,11 @@
     <Compile Include="src\app\views\layer\DangKyDay.Designer.cs">
       <DependentUpon>DangKyDay.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\app\views\layer\DangKyGiaSu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="src\app\views\layer\DangKyGiaSu.Designer.cs">
-      <DependentUpon>DangKyGiaSu.cs</DependentUpon>
-    </Compile>
     <Compile Include="src\app\views\layer\DangKyMoLop.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="src\app\views\layer\DangKyMoLop.Designer.cs">
       <DependentUpon>DangKyMoLop.cs</DependentUpon>
-    </Compile>
-    <Compile Include="src\app\views\layer\DangKyTKPhuHuynh.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="src\app\views\layer\DangKyTKPhuHuynh.Designer.cs">
-      <DependentUpon>DangKyTKPhuHuynh.cs</DependentUpon>
-    </Compile>
-    <Compile Include="src\app\views\layer\Login.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="src\app\views\layer\Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="src\app\views\layer\SuaGiaSu.cs">
       <SubType>Form</SubType>
@@ -149,6 +131,12 @@
     </Compile>
     <Compile Include="src\app\views\layer\UC_DanhSachLopDaDangKy.Designer.cs">
       <DependentUpon>UC_DanhSachLopDaDangKy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\app\views\layer\UC_LopMoi2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\app\views\layer\UC_LopMoi2.Designer.cs">
+      <DependentUpon>UC_LopMoi2.cs</DependentUpon>
     </Compile>
     <Compile Include="src\app\views\layer\UC_QuanLyGiaSu.cs">
       <SubType>UserControl</SubType>
@@ -240,6 +228,36 @@
     <Compile Include="src\app\views\layout\sidebar.Designer.cs">
       <DependentUpon>sidebar.cs</DependentUpon>
     </Compile>
+    <Compile Include="src\app\views\Login\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\app\views\Login\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\app\views\Login\NhapThongTinGiaSu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\app\views\Login\NhapThongTinGiaSu.Designer.cs">
+      <DependentUpon>NhapThongTinGiaSu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\app\views\Login\NhapThongTinPhuHuynh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\app\views\Login\NhapThongTinPhuHuynh.Designer.cs">
+      <DependentUpon>NhapThongTinPhuHuynh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\app\views\Login\RegisterGiaSu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\app\views\Login\RegisterGiaSu.Designer.cs">
+      <DependentUpon>RegisterGiaSu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\app\views\Login\RegisterPH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\app\views\Login\RegisterPH.Designer.cs">
+      <DependentUpon>RegisterPH.cs</DependentUpon>
+    </Compile>
     <Compile Include="src\controllers\Admin\AuthController.cs" />
     <Compile Include="src\controllers\Parent\ClassController.cs" />
     <Compile Include="src\controllers\Tutor\ClassController.cs" />
@@ -271,17 +289,8 @@
     <EmbeddedResource Include="src\app\views\layer\DangKyDay.resx">
       <DependentUpon>DangKyDay.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\app\views\layer\DangKyGiaSu.resx">
-      <DependentUpon>DangKyGiaSu.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="src\app\views\layer\DangKyMoLop.resx">
       <DependentUpon>DangKyMoLop.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="src\app\views\layer\DangKyTKPhuHuynh.resx">
-      <DependentUpon>DangKyTKPhuHuynh.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="src\app\views\layer\Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\app\views\layer\SuaGiaSu.resx">
       <DependentUpon>SuaGiaSu.cs</DependentUpon>
@@ -297,6 +306,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="src\app\views\layer\UC_DanhSachLopDaDangKy.resx">
       <DependentUpon>UC_DanhSachLopDaDangKy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\app\views\layer\UC_LopMoi2.resx">
+      <DependentUpon>UC_LopMoi2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\app\views\layer\UC_QuanLyGiaSu.resx">
       <DependentUpon>UC_QuanLyGiaSu.cs</DependentUpon>
@@ -333,6 +345,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="src\app\views\layer\UC_TuyenDung.resx">
       <DependentUpon>UC_TuyenDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\app\views\Login\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\app\views\Login\NhapThongTinGiaSu.resx">
+      <DependentUpon>NhapThongTinGiaSu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\app\views\Login\NhapThongTinPhuHuynh.resx">
+      <DependentUpon>NhapThongTinPhuHuynh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\app\views\Login\RegisterGiaSu.resx">
+      <DependentUpon>RegisterGiaSu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\app\views\Login\RegisterPH.resx">
+      <DependentUpon>RegisterPH.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="database\TRUNGTAMGIASU.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>

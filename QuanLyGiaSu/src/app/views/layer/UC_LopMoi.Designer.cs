@@ -32,14 +32,12 @@
             this.dgvTHONGTINLOPMOI = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.DangKyDay = new System.Windows.Forms.ToolStripMenuItem();
-            this.DangKyMoLop = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tb_TimKiem = new System.Windows.Forms.TextBox();
             this.cbbSearchType = new System.Windows.Forms.ComboBox();
             this.cbbSearch = new System.Windows.Forms.ComboBox();
             this.btnTim = new System.Windows.Forms.Button();
-            this.btnDangKyMoLop = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTHONGTINLOPMOI)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -62,10 +60,9 @@
             // 
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.DangKyDay,
-            this.DangKyMoLop});
+            this.DangKyDay});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(162, 48);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(140, 26);
             // 
             // DangKyDay
             // 
@@ -73,13 +70,6 @@
             this.DangKyDay.Size = new System.Drawing.Size(161, 22);
             this.DangKyDay.Text = "Đăng ký dạy";
             this.DangKyDay.Click += new System.EventHandler(this.DangKyDay_Click);
-            // 
-            // DangKyMoLop
-            // 
-            this.DangKyMoLop.Name = "DangKyMoLop";
-            this.DangKyMoLop.Size = new System.Drawing.Size(161, 22);
-            this.DangKyMoLop.Text = "Đăng Ký Mở Lớp";
-            this.DangKyMoLop.Click += new System.EventHandler(this.DangKyMoLop_Click);
             // 
             // label1
             // 
@@ -150,24 +140,11 @@
             this.btnTim.Text = "Tìm";
             this.btnTim.UseVisualStyleBackColor = true;
             // 
-            // btnDangKyMoLop
-            // 
-            this.btnDangKyMoLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDangKyMoLop.Location = new System.Drawing.Point(196, 19);
-            this.btnDangKyMoLop.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDangKyMoLop.Name = "btnDangKyMoLop";
-            this.btnDangKyMoLop.Size = new System.Drawing.Size(140, 27);
-            this.btnDangKyMoLop.TabIndex = 12;
-            this.btnDangKyMoLop.Text = "Đăng Ký Mở Lớp";
-            this.btnDangKyMoLop.UseVisualStyleBackColor = true;
-            this.btnDangKyMoLop.Click += new System.EventHandler(this.button2_Click);
-            // 
             // UC_LopMoi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Controls.Add(this.btnDangKyMoLop);
             this.Controls.Add(this.btnTim);
             this.Controls.Add(this.cbbSearch);
             this.Controls.Add(this.cbbSearchType);
@@ -197,7 +174,5 @@
         private System.Windows.Forms.ComboBox cbbSearchType;
         private System.Windows.Forms.ComboBox cbbSearch;
         private System.Windows.Forms.Button btnTim;
-        private System.Windows.Forms.ToolStripMenuItem DangKyMoLop;
-        private System.Windows.Forms.Button btnDangKyMoLop;
     }
 }

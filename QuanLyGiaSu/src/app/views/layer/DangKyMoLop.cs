@@ -21,5 +21,10 @@ namespace QuanLyGiaSu.src.app.views.layer
         {
             this.Close();
         }
+
+        private void DangKyMoLop_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

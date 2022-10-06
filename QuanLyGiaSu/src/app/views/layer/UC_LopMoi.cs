@@ -53,12 +53,6 @@ namespace QuanLyGiaSu.src.app.views.layer
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            DangKyMoLop dangKyMoLop = new DangKyMoLop();
-            dangKyMoLop.Show();
-        }
-
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
