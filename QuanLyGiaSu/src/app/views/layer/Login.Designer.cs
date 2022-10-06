@@ -32,13 +32,10 @@
             this.btn_Login = new System.Windows.Forms.Button();
             this.tb_Pass = new System.Windows.Forms.TextBox();
             this.tb_user = new System.Windows.Forms.TextBox();
-<<<<<<< HEAD
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.đăngNhậpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registerParent = new System.Windows.Forms.ToolStripMenuItem();
             this.registerTutor = new System.Windows.Forms.ToolStripMenuItem();
-=======
->>>>>>> 0498f994af20fdcf429256cb2ecc7ebcca79e41b
             this.rb_Admin = new System.Windows.Forms.RadioButton();
             this.rb_PhuHuynh = new System.Windows.Forms.RadioButton();
             this.rb_GiaSu = new System.Windows.Forms.RadioButton();
@@ -50,12 +47,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
             this.label1.Location = new System.Drawing.Point(193, 56);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-=======
             this.label1.Location = new System.Drawing.Point(445, 95);
->>>>>>> 0498f994af20fdcf429256cb2ecc7ebcca79e41b
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(208, 42);
             this.label1.TabIndex = 18;
@@ -63,12 +57,9 @@
             // 
             // btn_Login
             // 
-<<<<<<< HEAD
             this.btn_Login.Location = new System.Drawing.Point(347, 274);
             this.btn_Login.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-=======
             this.btn_Login.Location = new System.Drawing.Point(373, 279);
->>>>>>> 0498f994af20fdcf429256cb2ecc7ebcca79e41b
             this.btn_Login.Name = "btn_Login";
             this.btn_Login.Size = new System.Drawing.Size(100, 28);
             this.btn_Login.TabIndex = 14;
@@ -79,12 +70,10 @@
             // tb_Pass
             // 
             this.tb_Pass.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
             this.tb_Pass.Location = new System.Drawing.Point(137, 177);
             this.tb_Pass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-=======
+
             this.tb_Pass.Location = new System.Drawing.Point(373, 195);
->>>>>>> 0498f994af20fdcf429256cb2ecc7ebcca79e41b
             this.tb_Pass.Name = "tb_Pass";
             this.tb_Pass.Size = new System.Drawing.Size(308, 37);
             this.tb_Pass.TabIndex = 11;
@@ -92,17 +81,13 @@
             // tb_user
             // 
             this.tb_user.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
             this.tb_user.Location = new System.Drawing.Point(137, 113);
             this.tb_user.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-=======
             this.tb_user.Location = new System.Drawing.Point(373, 143);
->>>>>>> 0498f994af20fdcf429256cb2ecc7ebcca79e41b
             this.tb_user.Name = "tb_user";
             this.tb_user.Size = new System.Drawing.Size(308, 37);
             this.tb_user.TabIndex = 12;
             // 
-<<<<<<< HEAD
             // menuStrip1
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -140,12 +125,10 @@
             this.rb_Admin.AutoSize = true;
             this.rb_Admin.Location = new System.Drawing.Point(137, 234);
             this.rb_Admin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-=======
             // rb_Admin
             // 
             this.rb_Admin.AutoSize = true;
             this.rb_Admin.Location = new System.Drawing.Point(373, 241);
->>>>>>> 0498f994af20fdcf429256cb2ecc7ebcca79e41b
             this.rb_Admin.Name = "rb_Admin";
             this.rb_Admin.Size = new System.Drawing.Size(66, 20);
             this.rb_Admin.TabIndex = 20;
@@ -156,12 +139,9 @@
             // rb_PhuHuynh
             // 
             this.rb_PhuHuynh.AutoSize = true;
-<<<<<<< HEAD
             this.rb_PhuHuynh.Location = new System.Drawing.Point(241, 234);
             this.rb_PhuHuynh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-=======
             this.rb_PhuHuynh.Location = new System.Drawing.Point(451, 241);
->>>>>>> 0498f994af20fdcf429256cb2ecc7ebcca79e41b
             this.rb_PhuHuynh.Name = "rb_PhuHuynh";
             this.rb_PhuHuynh.Size = new System.Drawing.Size(92, 20);
             this.rb_PhuHuynh.TabIndex = 20;
@@ -172,12 +152,9 @@
             // rb_GiaSu
             // 
             this.rb_GiaSu.AutoSize = true;
-<<<<<<< HEAD
             this.rb_GiaSu.Location = new System.Drawing.Point(371, 234);
             this.rb_GiaSu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-=======
             this.rb_GiaSu.Location = new System.Drawing.Point(548, 241);
->>>>>>> 0498f994af20fdcf429256cb2ecc7ebcca79e41b
             this.rb_GiaSu.Name = "rb_GiaSu";
             this.rb_GiaSu.Size = new System.Drawing.Size(68, 20);
             this.rb_GiaSu.TabIndex = 20;
@@ -209,13 +186,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(587, 391);
-=======
             this.ClientSize = new System.Drawing.Size(1000, 508);
             this.Controls.Add(this.btnDangKyPhuHuynh);
             this.Controls.Add(this.btnDangKyGiaSu);
->>>>>>> 0498f994af20fdcf429256cb2ecc7ebcca79e41b
             this.Controls.Add(this.rb_GiaSu);
             this.Controls.Add(this.rb_PhuHuynh);
             this.Controls.Add(this.rb_Admin);
@@ -223,12 +197,9 @@
             this.Controls.Add(this.btn_Login);
             this.Controls.Add(this.tb_Pass);
             this.Controls.Add(this.tb_user);
-<<<<<<< HEAD
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-=======
->>>>>>> 0498f994af20fdcf429256cb2ecc7ebcca79e41b
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
@@ -244,13 +215,10 @@
         private System.Windows.Forms.Button btn_Login;
         private System.Windows.Forms.TextBox tb_Pass;
         private System.Windows.Forms.TextBox tb_user;
-<<<<<<< HEAD
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem đăngNhậpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registerParent;
         private System.Windows.Forms.ToolStripMenuItem registerTutor;
-=======
->>>>>>> 0498f994af20fdcf429256cb2ecc7ebcca79e41b
         private System.Windows.Forms.RadioButton rb_Admin;
         private System.Windows.Forms.RadioButton rb_PhuHuynh;
         private System.Windows.Forms.RadioButton rb_GiaSu;

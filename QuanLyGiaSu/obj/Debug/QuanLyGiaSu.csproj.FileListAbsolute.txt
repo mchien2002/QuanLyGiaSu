@@ -127,3 +127,5 @@ C:\Users\Admin\QuanLyGiaSu\QuanLyGiaSu\bin\Debug\QuanLyGiaSu.exe
 C:\Users\Admin\QuanLyGiaSu\QuanLyGiaSu\bin\Debug\QuanLyGiaSu.pdb
 C:\Users\Admin\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.DangKyTKPhuHuynh.resources
 C:\Users\Admin\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.DangKyGiaSu.resources
+C:\Users\84975\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.DangKyGiaSu.resources
+C:\Users\84975\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.DangKyTKPhuHuynh.resources

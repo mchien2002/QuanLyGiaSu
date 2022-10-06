@@ -180,13 +180,10 @@
             // uC_LichSuGiaoDich1
             // 
             this.uC_LichSuGiaoDich1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-<<<<<<< HEAD
             this.uC_LichSuGiaoDich1.Location = new System.Drawing.Point(16, 82);
             this.uC_LichSuGiaoDich1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-=======
             this.uC_LichSuGiaoDich1.Location = new System.Drawing.Point(12, 67);
             this.uC_LichSuGiaoDich1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
->>>>>>> 0498f994af20fdcf429256cb2ecc7ebcca79e41b
             this.uC_LichSuGiaoDich1.Name = "uC_LichSuGiaoDich1";
             this.uC_LichSuGiaoDich1.Size = new System.Drawing.Size(1309, 533);
             this.uC_LichSuGiaoDich1.TabIndex = 10;
@@ -205,11 +202,8 @@
             this.Controls.Add(this.uC_LichSuGiaoDich1);
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "formMainPhuHuynh";
-<<<<<<< HEAD
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-=======
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
->>>>>>> 0498f994af20fdcf429256cb2ecc7ebcca79e41b
             this.Text = "formMainPhuHuynh";
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
