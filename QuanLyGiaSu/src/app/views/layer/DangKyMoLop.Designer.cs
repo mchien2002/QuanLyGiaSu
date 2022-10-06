@@ -48,8 +48,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -246,15 +246,6 @@
             this.panel1.Size = new System.Drawing.Size(261, 516);
             this.panel1.TabIndex = 30;
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.textBox10);
-            this.panel2.Location = new System.Drawing.Point(294, 34);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(393, 516);
-            this.panel2.TabIndex = 31;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -265,6 +256,15 @@
             this.label5.Size = new System.Drawing.Size(91, 25);
             this.label5.TabIndex = 7;
             this.label5.Text = "Môn Học";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.textBox10);
+            this.panel2.Location = new System.Drawing.Point(294, 34);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(393, 516);
+            this.panel2.TabIndex = 31;
             // 
             // textBox10
             // 
@@ -301,6 +301,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Name = "DangKyMoLop";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DangKyMoLop";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

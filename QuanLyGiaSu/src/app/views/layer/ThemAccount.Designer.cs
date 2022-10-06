@@ -37,9 +37,10 @@
             // btn_Them
             // 
             this.btn_Them.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Them.Location = new System.Drawing.Point(197, 194);
+            this.btn_Them.Location = new System.Drawing.Point(263, 239);
+            this.btn_Them.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Them.Name = "btn_Them";
-            this.btn_Them.Size = new System.Drawing.Size(75, 29);
+            this.btn_Them.Size = new System.Drawing.Size(100, 36);
             this.btn_Them.TabIndex = 21;
             this.btn_Them.Text = "Thêm";
             this.btn_Them.UseVisualStyleBackColor = true;
@@ -48,39 +49,44 @@
             // tb_Pass
             // 
             this.tb_Pass.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Pass.Location = new System.Drawing.Point(40, 132);
+            this.tb_Pass.Location = new System.Drawing.Point(53, 162);
+            this.tb_Pass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tb_Pass.Name = "tb_Pass";
-            this.tb_Pass.Size = new System.Drawing.Size(232, 31);
+            this.tb_Pass.Size = new System.Drawing.Size(308, 37);
             this.tb_Pass.TabIndex = 1;
             // 
             // tb_user
             // 
             this.tb_user.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_user.Location = new System.Drawing.Point(40, 80);
+            this.tb_user.Location = new System.Drawing.Point(53, 98);
+            this.tb_user.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tb_user.Name = "tb_user";
-            this.tb_user.Size = new System.Drawing.Size(232, 31);
+            this.tb_user.Size = new System.Drawing.Size(308, 37);
             this.tb_user.TabIndex = 0;
             // 
             // btn_text
             // 
             this.btn_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_text.Location = new System.Drawing.Point(65, 25);
+            this.btn_text.Location = new System.Drawing.Point(87, 31);
+            this.btn_text.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_text.Name = "btn_text";
-            this.btn_text.Size = new System.Drawing.Size(182, 32);
+            this.btn_text.Size = new System.Drawing.Size(243, 39);
             this.btn_text.TabIndex = 22;
             this.btn_text.Text = "button1";
             this.btn_text.UseVisualStyleBackColor = true;
             // 
             // ThemAccount
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(316, 261);
+            this.ClientSize = new System.Drawing.Size(421, 321);
             this.Controls.Add(this.btn_text);
             this.Controls.Add(this.btn_Them);
             this.Controls.Add(this.tb_Pass);
             this.Controls.Add(this.tb_user);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ThemAccount";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ThemAccount";
             this.Load += new System.EventHandler(this.ThemAccount_Load);
             this.ResumeLayout(false);
