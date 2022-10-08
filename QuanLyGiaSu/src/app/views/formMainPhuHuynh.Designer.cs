@@ -44,7 +44,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbSoDu = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.uC_LopMoi21 = new QuanLyGiaSu.src.app.views.layer.UC_LopMoi2();
+            this.uC_LopMoi21 = new QuanLyGiaSu.src.app.views.layer.UC_LopMoiForParent();
             this.uC_DanhSachMoLop1 = new QuanLyGiaSu.src.app.views.layer.UC_DanhSachMoLop();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -288,7 +288,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lbSoDu;
         private System.Windows.Forms.Label label1;
-        private src.app.views.layer.UC_LopMoi2 uC_LopMoi21;
+        private src.app.views.layer.UC_LopMoiForParent uC_LopMoi21;
         private System.Windows.Forms.Button btn_DanhSachMoLop;
         private src.app.views.layer.UC_DanhSachMoLop uC_DanhSachMoLop1;
     }

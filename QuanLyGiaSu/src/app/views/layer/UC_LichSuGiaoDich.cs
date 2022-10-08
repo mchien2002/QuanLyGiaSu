@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyGiaSu.src.controller;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,7 +22,7 @@ namespace DoAnCuoiKy_Nhom13
 
         private void UC_LichSuGiaoDich_Load(object sender, EventArgs e)
         {
-
+            Locator.tutorController.showLichSuGiaoDichTable(dgvLICHSUGIAODICH);
         }
     }
 }

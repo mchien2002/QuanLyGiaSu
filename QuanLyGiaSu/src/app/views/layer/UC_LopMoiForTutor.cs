@@ -1,4 +1,5 @@
 ﻿using QuanLyGiaSu.database;
+using QuanLyGiaSu.src.controller;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,10 +12,10 @@ using System.Windows.Forms;
 
 namespace QuanLyGiaSu.src.app.views.layer
 {
-    public partial class UC_LopMoi : UserControl
+    public partial class UC_LopMoiForTutor : UserControl
     {
         TRUNGTAMGIASUDataContext db;
-        public UC_LopMoi()
+        public UC_LopMoiForTutor()
         {
             InitializeComponent();
             cbbSearchType.Text = cbbSearchType.Items[0].ToString();
@@ -45,7 +46,7 @@ namespace QuanLyGiaSu.src.app.views.layer
         private void UC_LopMoi_Load(object sender, EventArgs e)
         {
             cbbSearch.Hide();
-            //dgvTHONGTINLOPMOI.DataSource = db.THONGTINLOPMOIs.Select(p => p);
+            Locator.tutorController.showLopMoiTable(dgvTHONGTINLOPMOI);
         }
 
         private void label2_Click(object sender, EventArgs e)

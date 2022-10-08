@@ -37,7 +37,7 @@
             this.btn_LopMoi = new System.Windows.Forms.Button();
             this.btnTrangchu = new System.Windows.Forms.Button();
             this.uC_TrangChu1 = new DoAnCuoiKy_Nhom13.UC_TrangChu();
-            this.uC_LopMoi1 = new QuanLyGiaSu.src.app.views.layer.UC_LopMoi();
+            this.uC_LopMoi1 = new QuanLyGiaSu.src.app.views.layer.UC_LopMoiForTutor();
             this.uC_TuyenDung1 = new QuanLyGiaSu.src.app.views.layer.UC_TuyenDung();
             this.uC_LienHe1 = new QuanLyGiaSu.src.app.views.layer.UC_LienHe();
             this.uC_GiaSu1 = new DoAnCuoiKy_Nhom13.UC_GiaSu();
@@ -283,7 +283,7 @@
         private System.Windows.Forms.Button btn_LopMoi;
         private System.Windows.Forms.Button btnTrangchu;
         private DoAnCuoiKy_Nhom13.UC_TrangChu uC_TrangChu1;
-        private src.app.views.layer.UC_LopMoi uC_LopMoi1;
+        private src.app.views.layer.UC_LopMoiForTutor uC_LopMoi1;
         private src.app.views.layer.UC_TuyenDung uC_TuyenDung1;
         private src.app.views.layer.UC_LienHe uC_LienHe1;
         private DoAnCuoiKy_Nhom13.UC_GiaSu uC_GiaSu1;

@@ -16,6 +16,7 @@ namespace QuanLyGiaSu.src.app.views.Login
         public Login()
         {
             InitializeComponent();
+            rbGiaSu.Checked = true;
         }
 
         private void Login_Load(object sender, EventArgs e)
@@ -32,7 +33,7 @@ namespace QuanLyGiaSu.src.app.views.Login
                 formMain.ShowDialog();
                 this.Close();
             }
-            else if (rb_GiaSu.Checked == true)
+            else if (rbGiaSu.Checked == true)
             {
                 this.Hide();
                 formMainGiaSu formMainGiaSu = new formMainGiaSu();

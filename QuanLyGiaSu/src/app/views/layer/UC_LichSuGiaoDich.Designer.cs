@@ -33,9 +33,9 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tb_TimKiem = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvLICHSUGIAODICH = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLICHSUGIAODICH)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Tim
@@ -95,17 +95,17 @@
             this.label2.TabIndex = 18;
             this.label2.Text = "Tìm Theo :";
             // 
-            // dataGridView1
+            // dgvLICHSUGIAODICH
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(16, 62);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1277, 453);
-            this.dataGridView1.TabIndex = 17;
+            this.dgvLICHSUGIAODICH.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvLICHSUGIAODICH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLICHSUGIAODICH.Location = new System.Drawing.Point(16, 62);
+            this.dgvLICHSUGIAODICH.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvLICHSUGIAODICH.Name = "dgvLICHSUGIAODICH";
+            this.dgvLICHSUGIAODICH.RowHeadersWidth = 51;
+            this.dgvLICHSUGIAODICH.RowTemplate.Height = 24;
+            this.dgvLICHSUGIAODICH.Size = new System.Drawing.Size(1277, 453);
+            this.dgvLICHSUGIAODICH.TabIndex = 17;
             // 
             // label1
             // 
@@ -127,13 +127,13 @@
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.tb_TimKiem);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvLICHSUGIAODICH);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UC_LichSuGiaoDich";
             this.Size = new System.Drawing.Size(1309, 533);
             this.Load += new System.EventHandler(this.UC_LichSuGiaoDich_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLICHSUGIAODICH)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -146,7 +146,7 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox tb_TimKiem;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvLICHSUGIAODICH;
         private System.Windows.Forms.Label label1;
     }
 }

@@ -44,7 +44,7 @@ namespace QuanLyGiaSu
             this.uC_TrangChu1 = new DoAnCuoiKy_Nhom13.UC_TrangChu();
             this.uC_GiaSu1 = new DoAnCuoiKy_Nhom13.UC_GiaSu();
             this.uC_PhuHuynh1 = new DoAnCuoiKy_Nhom13.UC_LichSuGiaoDich();
-            this.uC_LopMoi1 = new QuanLyGiaSu.src.app.views.layer.UC_LopMoi();
+            this.uC_LopMoi1 = new QuanLyGiaSu.src.app.views.layer.UC_LopMoiForTutor();
             this.uC_TuyenDung1 = new QuanLyGiaSu.src.app.views.layer.UC_TuyenDung();
             this.uC_LienHe1 = new QuanLyGiaSu.src.app.views.layer.UC_LienHe();
             this.uC_QuanLyLop1 = new QuanLyGiaSu.src.app.views.layer.UC_QuanLyLop();
@@ -334,7 +334,7 @@ namespace QuanLyGiaSu
         private DoAnCuoiKy_Nhom13.UC_GiaSu uC_GiaSu1;
         private DoAnCuoiKy_Nhom13.UC_TrangChu uC_TrangChu1;
         private DoAnCuoiKy_Nhom13.UC_LichSuGiaoDich uC_PhuHuynh1;
-        private src.app.views.layer.UC_LopMoi uC_LopMoi1;
+        private src.app.views.layer.UC_LopMoiForTutor uC_LopMoi1;
         private System.Windows.Forms.Button btn_LienHe;
         private src.app.views.layer.UC_TuyenDung uC_TuyenDung1;
         private src.app.views.layer.UC_LienHe uC_LienHe1;

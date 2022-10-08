@@ -52,44 +52,26 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TRUNGTAMGIASU.dbml</DependentUpon>
     </Compile>
-    <Compile Include="formMain.cs">
+    <Compile Include="src\app\views\formMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formMain.Designer.cs">
+    <Compile Include="src\app\views\formMain.Designer.cs">
       <DependentUpon>formMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="formMainGiaSu.cs">
+    <Compile Include="src\app\views\formMainGiaSu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formMainGiaSu.Designer.cs">
+    <Compile Include="src\app\views\formMainGiaSu.Designer.cs">
       <DependentUpon>formMainGiaSu.cs</DependentUpon>
     </Compile>
-    <Compile Include="formMainPhuHuynh.cs">
+    <Compile Include="src\app\views\formMainPhuHuynh.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formMainPhuHuynh.Designer.cs">
+    <Compile Include="src\app\views\formMainPhuHuynh.Designer.cs">
       <DependentUpon>formMainPhuHuynh.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="src\app\views\Admin\layout\footer.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="src\app\views\Admin\layout\footer.Designer.cs">
-      <DependentUpon>footer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="src\app\views\Admin\layout\header.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="src\app\views\Admin\layout\header.Designer.cs">
-      <DependentUpon>header.cs</DependentUpon>
-    </Compile>
-    <Compile Include="src\app\views\Admin\layout\sidebar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="src\app\views\Admin\layout\sidebar.Designer.cs">
-      <DependentUpon>sidebar.cs</DependentUpon>
-    </Compile>
     <Compile Include="src\app\views\layer\DangKyDay.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,11 +120,11 @@
     <Compile Include="src\app\views\layer\UC_DanhSachMoLop.Designer.cs">
       <DependentUpon>UC_DanhSachMoLop.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\app\views\layer\UC_LopMoi2.cs">
+    <Compile Include="src\app\views\layer\UC_LopMoiForParent.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="src\app\views\layer\UC_LopMoi2.Designer.cs">
-      <DependentUpon>UC_LopMoi2.cs</DependentUpon>
+    <Compile Include="src\app\views\layer\UC_LopMoiForParent.Designer.cs">
+      <DependentUpon>UC_LopMoiForParent.cs</DependentUpon>
     </Compile>
     <Compile Include="src\app\views\layer\UC_QuanLyGiaSu.cs">
       <SubType>UserControl</SubType>
@@ -174,17 +156,11 @@
     <Compile Include="src\app\views\layer\UC_LienHe.Designer.cs">
       <DependentUpon>UC_LienHe.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\app\views\layer\UC_Login.cs">
+    <Compile Include="src\app\views\layer\UC_LopMoiForTutor.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="src\app\views\layer\UC_Login.Designer.cs">
-      <DependentUpon>UC_Login.cs</DependentUpon>
-    </Compile>
-    <Compile Include="src\app\views\layer\UC_LopMoi.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="src\app\views\layer\UC_LopMoi.Designer.cs">
-      <DependentUpon>UC_LopMoi.cs</DependentUpon>
+    <Compile Include="src\app\views\layer\UC_LopMoiForTutor.Designer.cs">
+      <DependentUpon>UC_LopMoiForTutor.cs</DependentUpon>
     </Compile>
     <Compile Include="src\app\views\layer\UC_GiaSu.cs">
       <SubType>UserControl</SubType>
@@ -216,70 +192,48 @@
     <Compile Include="src\app\views\layer\UC_TuyenDung.Designer.cs">
       <DependentUpon>UC_TuyenDung.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\app\views\layout\footer.cs">
+    <Compile Include="src\app\views\login\Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="src\app\views\layout\footer.Designer.cs">
-      <DependentUpon>footer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="src\app\views\layout\header.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="src\app\views\layout\header.Designer.cs">
-      <DependentUpon>header.cs</DependentUpon>
-    </Compile>
-    <Compile Include="src\app\views\layout\sidebar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="src\app\views\layout\sidebar.Designer.cs">
-      <DependentUpon>sidebar.cs</DependentUpon>
-    </Compile>
-    <Compile Include="src\app\views\Login\Login.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="src\app\views\Login\Login.Designer.cs">
+    <Compile Include="src\app\views\login\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\app\views\Login\NhapThongTinGiaSu.cs">
+    <Compile Include="src\app\views\login\NhapThongTinGiaSu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="src\app\views\Login\NhapThongTinGiaSu.Designer.cs">
+    <Compile Include="src\app\views\login\NhapThongTinGiaSu.Designer.cs">
       <DependentUpon>NhapThongTinGiaSu.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\app\views\Login\NhapThongTinPhuHuynh.cs">
+    <Compile Include="src\app\views\login\NhapThongTinPhuHuynh.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="src\app\views\Login\NhapThongTinPhuHuynh.Designer.cs">
+    <Compile Include="src\app\views\login\NhapThongTinPhuHuynh.Designer.cs">
       <DependentUpon>NhapThongTinPhuHuynh.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\app\views\Login\RegisterGiaSu.cs">
+    <Compile Include="src\app\views\login\RegisterGiaSu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="src\app\views\Login\RegisterGiaSu.Designer.cs">
+    <Compile Include="src\app\views\login\RegisterGiaSu.Designer.cs">
       <DependentUpon>RegisterGiaSu.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\app\views\Login\RegisterPH.cs">
+    <Compile Include="src\app\views\login\RegisterPH.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="src\app\views\Login\RegisterPH.Designer.cs">
+    <Compile Include="src\app\views\login\RegisterPH.Designer.cs">
       <DependentUpon>RegisterPH.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\controllers\Admin\AuthController.cs" />
-    <Compile Include="src\controllers\Parent\ClassController.cs" />
-    <Compile Include="src\controllers\Tutor\ClassController.cs" />
-    <Compile Include="src\models\ClassModel.cs" />
-    <Compile Include="src\models\FeedBack.cs" />
-    <Compile Include="src\models\ParentModel.cs" />
-    <Compile Include="src\models\PostModel.cs" />
-    <Compile Include="src\models\SubjectModel.cs" />
-    <Compile Include="src\models\TutorModel.cs" />
-    <EmbeddedResource Include="formMain.resx">
+    <Compile Include="src\controller\Admin\AuthController.cs" />
+    <Compile Include="src\controller\baseController.cs" />
+    <Compile Include="src\controller\locator.cs" />
+    <Compile Include="src\controller\Parent\ClassController.cs" />
+    <Compile Include="src\controller\Tutor\tutorController.cs" />
+    <EmbeddedResource Include="src\app\views\formMain.resx">
       <DependentUpon>formMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formMainGiaSu.resx">
+    <EmbeddedResource Include="src\app\views\formMainGiaSu.resx">
       <DependentUpon>formMainGiaSu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formMainPhuHuynh.resx">
+    <EmbeddedResource Include="src\app\views\formMainPhuHuynh.resx">
       <DependentUpon>formMainPhuHuynh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -316,8 +270,8 @@
     <EmbeddedResource Include="src\app\views\layer\UC_DanhSachMoLop.resx">
       <DependentUpon>UC_DanhSachMoLop.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\app\views\layer\UC_LopMoi2.resx">
-      <DependentUpon>UC_LopMoi2.cs</DependentUpon>
+    <EmbeddedResource Include="src\app\views\layer\UC_LopMoiForParent.resx">
+      <DependentUpon>UC_LopMoiForParent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\app\views\layer\UC_QuanLyGiaSu.resx">
       <DependentUpon>UC_QuanLyGiaSu.cs</DependentUpon>
@@ -334,11 +288,8 @@
     <EmbeddedResource Include="src\app\views\layer\UC_LienHe.resx">
       <DependentUpon>UC_LienHe.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\app\views\layer\UC_Login.resx">
-      <DependentUpon>UC_Login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="src\app\views\layer\UC_LopMoi.resx">
-      <DependentUpon>UC_LopMoi.cs</DependentUpon>
+    <EmbeddedResource Include="src\app\views\layer\UC_LopMoiForTutor.resx">
+      <DependentUpon>UC_LopMoiForTutor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\app\views\layer\UC_GiaSu.resx">
       <DependentUpon>UC_GiaSu.cs</DependentUpon>
@@ -355,19 +306,19 @@
     <EmbeddedResource Include="src\app\views\layer\UC_TuyenDung.resx">
       <DependentUpon>UC_TuyenDung.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\app\views\Login\Login.resx">
+    <EmbeddedResource Include="src\app\views\login\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\app\views\Login\NhapThongTinGiaSu.resx">
+    <EmbeddedResource Include="src\app\views\login\NhapThongTinGiaSu.resx">
       <DependentUpon>NhapThongTinGiaSu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\app\views\Login\NhapThongTinPhuHuynh.resx">
+    <EmbeddedResource Include="src\app\views\login\NhapThongTinPhuHuynh.resx">
       <DependentUpon>NhapThongTinPhuHuynh.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\app\views\Login\RegisterGiaSu.resx">
+    <EmbeddedResource Include="src\app\views\login\RegisterGiaSu.resx">
       <DependentUpon>RegisterGiaSu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\app\views\Login\RegisterPH.resx">
+    <EmbeddedResource Include="src\app\views\login\RegisterPH.resx">
       <DependentUpon>RegisterPH.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="database\TRUNGTAMGIASU.dbml">

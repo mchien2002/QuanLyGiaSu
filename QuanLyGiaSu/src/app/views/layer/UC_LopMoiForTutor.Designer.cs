@@ -1,6 +1,6 @@
 ﻿namespace QuanLyGiaSu.src.app.views.layer
 {
-    partial class UC_LopMoi
+    partial class UC_LopMoiForTutor
     {
         /// <summary> 
         /// Required designer variable.

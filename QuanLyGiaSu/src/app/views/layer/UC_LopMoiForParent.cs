@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QuanLyGiaSu.src.app.views.layer
 {
-    public partial class UC_LopMoi2 : UserControl
+    public partial class UC_LopMoiForParent : UserControl
     {
-        public UC_LopMoi2()
+        public UC_LopMoiForParent()
         {
             InitializeComponent();
         }
