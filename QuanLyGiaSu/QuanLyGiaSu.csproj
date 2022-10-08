@@ -132,6 +132,12 @@
     <Compile Include="src\app\views\layer\UC_DanhSachLopDaDangKy.Designer.cs">
       <DependentUpon>UC_DanhSachLopDaDangKy.cs</DependentUpon>
     </Compile>
+    <Compile Include="src\app\views\layer\UC_DanhSachMoLop.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\app\views\layer\UC_DanhSachMoLop.Designer.cs">
+      <DependentUpon>UC_DanhSachMoLop.cs</DependentUpon>
+    </Compile>
     <Compile Include="src\app\views\layer\UC_LopMoi2.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -306,6 +312,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="src\app\views\layer\UC_DanhSachLopDaDangKy.resx">
       <DependentUpon>UC_DanhSachLopDaDangKy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\app\views\layer\UC_DanhSachMoLop.resx">
+      <DependentUpon>UC_DanhSachMoLop.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\app\views\layer\UC_LopMoi2.resx">
       <DependentUpon>UC_LopMoi2.cs</DependentUpon>

@@ -47,5 +47,15 @@ namespace QuanLyGiaSu
         {
             uC_LichSuGiaoDich1.BringToFront();
         }
+
+        private void btn_DanhSachMoLop_Click(object sender, EventArgs e)
+        {
+            uC_DanhSachMoLop1.BringToFront();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
