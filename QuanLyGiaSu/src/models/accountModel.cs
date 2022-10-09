@@ -14,29 +14,24 @@ namespace QuanLyGiaSu.src.models
         private string _email;
         private int _nganSach;
 
-        public string phanQuyen { get { return _phanQuyen; } set { _phanQuyen = value; } }
-        public string userName { get { return _userName; } set { _userName = value; } }
-        public string password { get { return _password; } set { _password = value; } }
-        public string email { get { return _email; } set { _email = value; } }
-        public int nganSach { get { return _nganSach; } set { _nganSach = value; } }
-
-        public AccountModel()
-        {
-            nganSach = 0;
-        }
+        public string PhanQuyen { get => _phanQuyen; set => _phanQuyen = value; }
+        public string UserName { get => _userName; set => _userName = value; }
+        public string Password { get => _password; set => _password = value; }
+        public string Email { get => _email; set => _email = value; }
+        public int NganSach { get => _nganSach; set => _nganSach = value; }
 
         public AccountModel(string phanQuyen, string userName, string password, string email, int nganSach)
         {
-            this.phanQuyen = phanQuyen;
-            this.userName = userName;
-            this.password = password;
-            this.email = email;
-            this.nganSach = nganSach;
-            this.phanQuyen = phanQuyen;
-            this.userName = userName;
-            this.password = password;
-            this.email = email;
-            this.nganSach = nganSach;
+            PhanQuyen = phanQuyen;
+            UserName = userName;
+            Password = password;
+            Email = email;
+            NganSach = nganSach;
+            PhanQuyen = phanQuyen;
+            UserName = userName;
+            Password = password;
+            Email = email;
+            NganSach = nganSach;
         }
     }
 }

@@ -8,6 +8,5 @@ namespace QuanLyGiaSu.src.models
 {
     public class ToturModel
     {
-
     }
 }

@@ -119,7 +119,7 @@
             this.btn_Register.Name = "btn_Register";
             this.btn_Register.Size = new System.Drawing.Size(357, 42);
             this.btn_Register.TabIndex = 67;
-            this.btn_Register.Text = "Đăng Ký";
+            this.btn_Register.Text = "Tiếp tục";
             this.btn_Register.UseVisualStyleBackColor = false;
             this.btn_Register.Click += new System.EventHandler(this.btn_Register_Click);
             // 

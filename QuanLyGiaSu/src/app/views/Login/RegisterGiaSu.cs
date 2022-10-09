@@ -20,13 +20,10 @@ namespace QuanLyGiaSu.src.app.views.Login
 
         private void btn_Register_Click(object sender, EventArgs e)
         {
-            // REGISTER ACCOUNT TUTOR
-            Locator.tutorController.registerAccount(tbUser.Text, tbPassword.Text, tbConfirmPass.Text);
-
-            /*this.Hide();
+            this.Hide();
             NhapThongTinGiaSu nhapThongTinGiaSu = new NhapThongTinGiaSu();
-            nhapThongTinGiaSu.ShowDialog();            
-            this.Close();*/
+            nhapThongTinGiaSu.ShowDialog();
+            this.Close();
         }
     }
 }
