@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbTrinhDo = new System.Windows.Forms.TextBox();
+            this.tbUuDiem = new System.Windows.Forms.TextBox();
+            this.tbQueQuan = new System.Windows.Forms.TextBox();
+            this.tbDiaChi = new System.Windows.Forms.TextBox();
+            this.tbSDT = new System.Windows.Forms.TextBox();
+            this.tbTen = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -47,9 +47,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.cbbGioiTinh = new System.Windows.Forms.ComboBox();
+            this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
+            this.tbTruong = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -58,47 +58,48 @@
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBox8
+            // tbTrinhDo
             // 
-            this.textBox8.Location = new System.Drawing.Point(457, 381);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(270, 20);
-            this.textBox8.TabIndex = 49;
+            this.tbTrinhDo.Location = new System.Drawing.Point(457, 381);
+            this.tbTrinhDo.Name = "tbTrinhDo";
+            this.tbTrinhDo.Size = new System.Drawing.Size(270, 20);
+            this.tbTrinhDo.TabIndex = 49;
             // 
-            // textBox6
+            // tbUuDiem
             // 
-            this.textBox6.Location = new System.Drawing.Point(457, 289);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(270, 20);
-            this.textBox6.TabIndex = 48;
+            this.tbUuDiem.Location = new System.Drawing.Point(457, 289);
+            this.tbUuDiem.Name = "tbUuDiem";
+            this.tbUuDiem.Size = new System.Drawing.Size(270, 20);
+            this.tbUuDiem.TabIndex = 48;
+            this.tbUuDiem.TextChanged += new System.EventHandler(this.tbUuDiem_TextChanged);
             // 
-            // textBox5
+            // tbQueQuan
             // 
-            this.textBox5.Location = new System.Drawing.Point(457, 246);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(142, 20);
-            this.textBox5.TabIndex = 47;
+            this.tbQueQuan.Location = new System.Drawing.Point(457, 246);
+            this.tbQueQuan.Name = "tbQueQuan";
+            this.tbQueQuan.Size = new System.Drawing.Size(142, 20);
+            this.tbQueQuan.TabIndex = 5;
             // 
-            // textBox4
+            // tbDiaChi
             // 
-            this.textBox4.Location = new System.Drawing.Point(457, 204);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(270, 20);
-            this.textBox4.TabIndex = 46;
+            this.tbDiaChi.Location = new System.Drawing.Point(457, 204);
+            this.tbDiaChi.Name = "tbDiaChi";
+            this.tbDiaChi.Size = new System.Drawing.Size(270, 20);
+            this.tbDiaChi.TabIndex = 4;
             // 
-            // textBox3
+            // tbSDT
             // 
-            this.textBox3.Location = new System.Drawing.Point(457, 166);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(142, 20);
-            this.textBox3.TabIndex = 45;
+            this.tbSDT.Location = new System.Drawing.Point(457, 166);
+            this.tbSDT.Name = "tbSDT";
+            this.tbSDT.Size = new System.Drawing.Size(142, 20);
+            this.tbSDT.TabIndex = 3;
             // 
-            // textBox1
+            // tbTen
             // 
-            this.textBox1.Location = new System.Drawing.Point(457, 81);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(193, 20);
-            this.textBox1.TabIndex = 44;
+            this.tbTen.Location = new System.Drawing.Point(457, 81);
+            this.tbTen.Name = "tbTen";
+            this.tbTen.Size = new System.Drawing.Size(193, 20);
+            this.tbTen.TabIndex = 1;
             // 
             // label2
             // 
@@ -219,38 +220,38 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.comboBox1);
-            this.panel2.Controls.Add(this.dateTimePicker1);
-            this.panel2.Controls.Add(this.textBox9);
+            this.panel2.Controls.Add(this.cbbGioiTinh);
+            this.panel2.Controls.Add(this.dtpNgaySinh);
+            this.panel2.Controls.Add(this.tbTruong);
             this.panel2.Location = new System.Drawing.Point(450, 34);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(295, 383);
             this.panel2.TabIndex = 51;
             // 
-            // comboBox1
+            // cbbGioiTinh
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbbGioiTinh.FormattingEnabled = true;
+            this.cbbGioiTinh.Items.AddRange(new object[] {
             "Nam ",
             "Nữ"});
-            this.comboBox1.Location = new System.Drawing.Point(7, 297);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 23;
+            this.cbbGioiTinh.Location = new System.Drawing.Point(7, 297);
+            this.cbbGioiTinh.Name = "cbbGioiTinh";
+            this.cbbGioiTinh.Size = new System.Drawing.Size(121, 21);
+            this.cbbGioiTinh.TabIndex = 23;
             // 
-            // dateTimePicker1
+            // dtpNgaySinh
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(7, 87);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 22;
+            this.dtpNgaySinh.Location = new System.Drawing.Point(7, 87);
+            this.dtpNgaySinh.Name = "dtpNgaySinh";
+            this.dtpNgaySinh.Size = new System.Drawing.Size(200, 20);
+            this.dtpNgaySinh.TabIndex = 2;
             // 
-            // textBox9
+            // tbTruong
             // 
-            this.textBox9.Location = new System.Drawing.Point(7, 10);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(270, 20);
-            this.textBox9.TabIndex = 21;
+            this.tbTruong.Location = new System.Drawing.Point(7, 10);
+            this.tbTruong.Name = "tbTruong";
+            this.tbTruong.Size = new System.Drawing.Size(270, 20);
+            this.tbTruong.TabIndex = 0;
             // 
             // label3
             // 
@@ -312,12 +313,12 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbTrinhDo);
+            this.Controls.Add(this.tbUuDiem);
+            this.Controls.Add(this.tbQueQuan);
+            this.Controls.Add(this.tbDiaChi);
+            this.Controls.Add(this.tbSDT);
+            this.Controls.Add(this.tbTen);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
@@ -334,6 +335,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UC_GiaSu";
             this.Size = new System.Drawing.Size(982, 433);
+            this.Load += new System.EventHandler(this.UC_GiaSu_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -343,12 +345,12 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbTrinhDo;
+        private System.Windows.Forms.TextBox tbUuDiem;
+        private System.Windows.Forms.TextBox tbQueQuan;
+        private System.Windows.Forms.TextBox tbDiaChi;
+        private System.Windows.Forms.TextBox tbSDT;
+        private System.Windows.Forms.TextBox tbTen;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
@@ -362,9 +364,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.ComboBox cbbGioiTinh;
+        private System.Windows.Forms.DateTimePicker dtpNgaySinh;
+        private System.Windows.Forms.TextBox tbTruong;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label14;

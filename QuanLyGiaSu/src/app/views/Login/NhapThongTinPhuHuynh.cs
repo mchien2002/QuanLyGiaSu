@@ -24,5 +24,13 @@ namespace QuanLyGiaSu.src.app.views.Login
             login.ShowDialog();
             this.Close();
         }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            this.Hide();
+            login.ShowDialog();
+            this.Close();
+        }
     }
 }

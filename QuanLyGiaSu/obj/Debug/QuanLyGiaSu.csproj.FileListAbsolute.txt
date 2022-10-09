@@ -21,10 +21,8 @@ C:\Users\Admin\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.exe
 C:\Users\Admin\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.pdb
 C:\Users\Admin\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\DoAnCuoiKy_Nhom13.UC_GiaSu.resources
 C:\Users\Admin\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\DoAnCuoiKy_Nhom13.UC_TrangChu.resources
-C:\Users\Admin\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_LopMoi.resources
 C:\Users\Admin\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_TuyenDung.resources
 C:\Users\Admin\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_LienHe.resources
-C:\Users\Admin\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_Login.resources
 C:\Users\Admin\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_Register.resources
 C:\Users\Admin\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_QuanLyLop.resources
 C:\Users\Admin\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.SuaThongTinLop.resources
@@ -123,7 +121,6 @@ C:\Users\Admin\QuanLyGiaSu\QuanLyGiaSu\bin\Debug\QuanLyGiaSu.exe
 C:\Users\Admin\QuanLyGiaSu\QuanLyGiaSu\bin\Debug\QuanLyGiaSu.pdb
 C:\Users\Admin\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.DangKyTKPhuHuynh.resources
 C:\Users\Admin\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.DangKyGiaSu.resources
-C:\Users\Admin\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_LopMoi2.resources
 C:\Users\Admin\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.Login.Login.resources
 C:\Users\Admin\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.Login.NhapThongTinGiaSu.resources
 C:\Users\Admin\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.Login.RegisterGiaSu.resources
@@ -142,3 +139,12 @@ C:\Users\84975\Desktop\QuanLyGiaSu\QuanLyGiaSu\bin\Debug\Microsoft.AspNetCore.Cr
 C:\Users\84975\Desktop\QuanLyGiaSu\QuanLyGiaSu\bin\Debug\Microsoft.AspNetCore.Cryptography.Internal.xml
 C:\Users\84975\Desktop\QuanLyGiaSu\QuanLyGiaSu\bin\Debug\Microsoft.AspNetCore.Cryptography.KeyDerivation.xml
 C:\Users\84975\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.csproj.CopyComplete
+C:\Users\Admin\Desktop\QuanLyGiaSu\QuanLyGiaSu\bin\Debug\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\Admin\Desktop\QuanLyGiaSu\QuanLyGiaSu\bin\Debug\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\Admin\Desktop\QuanLyGiaSu\QuanLyGiaSu\bin\Debug\Microsoft.AspNetCore.Cryptography.Internal.xml
+C:\Users\Admin\Desktop\QuanLyGiaSu\QuanLyGiaSu\bin\Debug\Microsoft.AspNetCore.Cryptography.KeyDerivation.xml
+C:\Users\Admin\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_DanhSachMoLop.resources
+C:\Users\Admin\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_LopMoiForParent.resources
+C:\Users\Admin\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_LopMoiForTutor.resources
+C:\Users\Admin\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.csproj.CopyComplete
+C:\Users\Admin\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_LSGD_PH.resources

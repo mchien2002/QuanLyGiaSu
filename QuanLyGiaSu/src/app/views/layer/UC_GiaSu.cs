@@ -15,6 +15,17 @@ namespace DoAnCuoiKy_Nhom13
         public UC_GiaSu()
         {
             InitializeComponent();
+            
+        }
+
+        private void UC_GiaSu_Load(object sender, EventArgs e)
+        {
+            tbTruong.Focus();
+        }
+
+        private void tbUuDiem_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

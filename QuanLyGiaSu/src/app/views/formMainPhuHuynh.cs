@@ -45,7 +45,8 @@ namespace QuanLyGiaSu
 
         private void button1_Click(object sender, EventArgs e)
         {
-            uC_LichSuGiaoDich1.BringToFront();
+            //uC_LichSuGiaoDich1.BringToFront();
+            uC_LSGD_PH1.BringToFront();
         }
 
         private void btn_DanhSachMoLop_Click(object sender, EventArgs e)

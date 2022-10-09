@@ -44,5 +44,16 @@ namespace QuanLyGiaSu.Properties {
                 return ((string)(this["TRUNGTAMGIASUConnectionString1"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-V99O7H4\\HAIDANG;Initial Catalog=TRUNGTAMGIASU;Integrated Secu" +
+            "rity=True")]
+        public string TRUNGTAMGIASUConnectionString2 {
+            get {
+                return ((string)(this["TRUNGTAMGIASUConnectionString2"]));
+            }
+        }
     }
 }

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="TRUNGTAMGIASU" Class="TRUNGTAMGIASUDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-G67KDJT;Initial Catalog=TRUNGTAMGIASU;Integrated Security=True" SettingsObjectName="QuanLyGiaSu.Properties.Settings" SettingsPropertyName="TRUNGTAMGIASUConnectionString1" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-V99O7H4\HAIDANG;Initial Catalog=TRUNGTAMGIASU;Integrated Security=True" SettingsObjectName="QuanLyGiaSu.Properties.Settings" SettingsPropertyName="TRUNGTAMGIASUConnectionString2" Provider="System.Data.SqlClient" />
   <Table Name="dbo.ACCOUNT" Member="ACCOUNTs">
     <Type Name="ACCOUNT">
       <Column Name="ACCID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -73,6 +73,7 @@
       <Column Name="TruongDaoTao" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
       <Column Name="TrinhDo" Type="System.String" DbType="NVarChar(4000) NOT NULL" CanBeNull="false" />
       <Column Name="UuDiem" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="Avatae" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
       <Association Name="GIASU_DANHSACHDANGKYDAY" Member="DANHSACHDANGKYDAYs" ThisKey="GSID" OtherKey="GSID" Type="DANHSACHDANGKYDAY" />
       <Association Name="GIASU_LOP_GIASU" Member="LOP_GIASUs" ThisKey="GSID" OtherKey="GSID" Type="LOP_GIASU" />
       <Association Name="GIASU_MONHOC_GIASU" Member="MONHOC_GIASUs" ThisKey="GSID" OtherKey="GSID" Type="MONHOC_GIASU" />
@@ -90,14 +91,6 @@
       <Association Name="DANHSACHMOLOP_LICHSUGIAODICH" Member="DANHSACHMOLOP" ThisKey="LMID" OtherKey="LMID" Type="DANHSACHMOLOP" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.LOP_GIASU" Member="LOP_GIASUs">
-    <Type Name="LOP_GIASU">
-      <Column Name="GSID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="LHID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Association Name="GIASU_LOP_GIASU" Member="GIASU" ThisKey="GSID" OtherKey="GSID" Type="GIASU" IsForeignKey="true" />
-      <Association Name="LOPHOC_LOP_GIASU" Member="LOPHOC" ThisKey="LHID" OtherKey="LHID" Type="LOPHOC" IsForeignKey="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.LICHSUNAPTIEN" Member="LICHSUNAPTIENs">
     <Type Name="LICHSUNAPTIEN">
       <Column Name="GDID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -107,12 +100,12 @@
       <Association Name="ACCOUNT_LICHSUNAPTIEN" Member="ACCOUNT" ThisKey="ACCID" OtherKey="ACCID" Type="ACCOUNT" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.MONHOC" Member="MONHOCs">
-    <Type Name="MONHOC">
-      <Column Name="MHID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="TenMon" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Association Name="MONHOC_MONHOC_GIASU" Member="MONHOC_GIASUs" ThisKey="MHID" OtherKey="MHID" Type="MONHOC_GIASU" />
-      <Association Name="MONHOC_MONHOC_LOPMOI" Member="MONHOC_LOPMOIs" ThisKey="MHID" OtherKey="MHID" Type="MONHOC_LOPMOI" />
+  <Table Name="dbo.LOP_GIASU" Member="LOP_GIASUs">
+    <Type Name="LOP_GIASU">
+      <Column Name="GSID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LHID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="GIASU_LOP_GIASU" Member="GIASU" ThisKey="GSID" OtherKey="GSID" Type="GIASU" IsForeignKey="true" />
+      <Association Name="LOPHOC_LOP_GIASU" Member="LOPHOC" ThisKey="LHID" OtherKey="LHID" Type="LOPHOC" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.LOPHOC" Member="LOPHOCs">
@@ -121,6 +114,14 @@
       <Column Name="TenLop" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
       <Association Name="LOPHOC_DANHSACHMOLOP" Member="DANHSACHMOLOPs" ThisKey="LHID" OtherKey="LHID" Type="DANHSACHMOLOP" />
       <Association Name="LOPHOC_LOP_GIASU" Member="LOP_GIASUs" ThisKey="LHID" OtherKey="LHID" Type="LOP_GIASU" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MONHOC" Member="MONHOCs">
+    <Type Name="MONHOC">
+      <Column Name="MHID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TenMon" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="MONHOC_MONHOC_GIASU" Member="MONHOC_GIASUs" ThisKey="MHID" OtherKey="MHID" Type="MONHOC_GIASU" />
+      <Association Name="MONHOC_MONHOC_LOPMOI" Member="MONHOC_LOPMOIs" ThisKey="MHID" OtherKey="MHID" Type="MONHOC_LOPMOI" />
     </Type>
   </Table>
   <Table Name="dbo.MONHOC_GIASU" Member="MONHOC_GIASUs">

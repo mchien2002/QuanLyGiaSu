@@ -132,6 +132,12 @@
     <Compile Include="src\app\views\layer\UC_LopMoiForParent.Designer.cs">
       <DependentUpon>UC_LopMoiForParent.cs</DependentUpon>
     </Compile>
+    <Compile Include="src\app\views\layer\UC_LSGD_PH.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\app\views\layer\UC_LSGD_PH.Designer.cs">
+      <DependentUpon>UC_LSGD_PH.cs</DependentUpon>
+    </Compile>
     <Compile Include="src\app\views\layer\UC_QuanLyGiaSu.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -280,6 +286,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="src\app\views\layer\UC_LopMoiForParent.resx">
       <DependentUpon>UC_LopMoiForParent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\app\views\layer\UC_LSGD_PH.resx">
+      <DependentUpon>UC_LSGD_PH.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\app\views\layer\UC_QuanLyGiaSu.resx">
       <DependentUpon>UC_QuanLyGiaSu.cs</DependentUpon>

@@ -64,5 +64,21 @@ namespace QuanLyGiaSu.src.app.views.Login
             dangKyTKPhuHuynh.ShowDialog();
             this.Close();
         }
+
+        private void textBox_User_Click(object sender, EventArgs e)
+        {
+            if(textBox_User.Text == "Username")
+            {
+                textBox_User.Clear();
+            }    
+        }
+
+        private void textBox_Password_Click(object sender, EventArgs e)
+        {
+            if(textBox_Password.Text == "Password")
+            {
+                textBox_Password.Clear();
+            }    
+        }
     }
 }
