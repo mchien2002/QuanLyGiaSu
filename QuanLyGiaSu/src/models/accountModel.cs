@@ -33,5 +33,7 @@ namespace QuanLyGiaSu.src.models
             Email = email;
             NganSach = nganSach;
         }
+
+        public AccountModel() { }
     }
 }

@@ -33,5 +33,9 @@ namespace QuanLyGiaSu.src.app.views.Login
             login.ShowDialog();            
             this.Close();
         }
+
+        private void RegisterGiaSu_Load(object sender, EventArgs e)
+        {
+        }
     }
 }

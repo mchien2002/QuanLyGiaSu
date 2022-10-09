@@ -9,7 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace QuanLyGiaSu.database
+namespace QuanLyGiaSu.database.database_local
 {
 	using System.Data.Linq;
 	using System.Data.Linq.Mapping;

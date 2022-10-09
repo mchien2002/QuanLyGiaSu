@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.AspNetCore.Cryptography.KeyDerivation;
-
+using QuanLyGiaSu.database.database_local;
 
 namespace QuanLyGiaSu.src.controller
 {
@@ -32,7 +32,6 @@ namespace QuanLyGiaSu.src.controller
                 iterationCount: 100000,
                 numBytesRequested: 256 / 8)
             );
-
             return hashed;
         }
     }
