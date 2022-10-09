@@ -137,3 +137,8 @@ C:\Users\84975\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.vie
 C:\Users\84975\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_DanhSachMoLop.resources
 C:\Users\84975\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_LopMoiForParent.resources
 C:\Users\84975\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_LopMoiForTutor.resources
+C:\Users\84975\Desktop\QuanLyGiaSu\QuanLyGiaSu\bin\Debug\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\84975\Desktop\QuanLyGiaSu\QuanLyGiaSu\bin\Debug\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\84975\Desktop\QuanLyGiaSu\QuanLyGiaSu\bin\Debug\Microsoft.AspNetCore.Cryptography.Internal.xml
+C:\Users\84975\Desktop\QuanLyGiaSu\QuanLyGiaSu\bin\Debug\Microsoft.AspNetCore.Cryptography.KeyDerivation.xml
+C:\Users\84975\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.csproj.CopyComplete

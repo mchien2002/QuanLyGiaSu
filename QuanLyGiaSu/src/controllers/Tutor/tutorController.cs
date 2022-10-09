@@ -16,6 +16,11 @@ namespace QuanLyGiaSu.src.controllers.Tutor
             _db = new TRUNGTAMGIASUDataContext();
         }
 
+        public override void registerAccount(string userName, string passWord, string confirmPassWord)
+        {
+            
+        }
+
         public override void showBangTinTable(DataGridView db)
         {
             throw new NotImplementedException();

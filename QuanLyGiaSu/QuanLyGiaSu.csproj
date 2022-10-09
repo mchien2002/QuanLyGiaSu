@@ -33,6 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.AspNetCore.Cryptography.Internal, Version=6.0.9.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Cryptography.Internal.6.0.9\lib\net461\Microsoft.AspNetCore.Cryptography.Internal.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Cryptography.KeyDerivation, Version=6.0.9.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Cryptography.KeyDerivation.6.0.9\lib\net461\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
@@ -222,11 +228,13 @@
     <Compile Include="src\app\views\login\RegisterPH.Designer.cs">
       <DependentUpon>RegisterPH.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\controller\Admin\AuthController.cs" />
-    <Compile Include="src\controller\baseController.cs" />
-    <Compile Include="src\controller\locator.cs" />
-    <Compile Include="src\controller\Parent\ClassController.cs" />
-    <Compile Include="src\controller\Tutor\tutorController.cs" />
+    <Compile Include="src\controllers\Admin\AuthController.cs" />
+    <Compile Include="src\controllers\baseController.cs" />
+    <Compile Include="src\controllers\locator.cs" />
+    <Compile Include="src\controllers\Parent\ClassController.cs" />
+    <Compile Include="src\controllers\Tutor\tutorController.cs" />
+    <Compile Include="src\models\accountModel.cs" />
+    <Compile Include="src\models\toturModel.cs" />
     <EmbeddedResource Include="src\app\views\formMain.resx">
       <DependentUpon>formMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -329,6 +337,7 @@
     <None Include="database\TRUNGTAMGIASU.dbml.layout">
       <DependentUpon>TRUNGTAMGIASU.dbml</DependentUpon>
     </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

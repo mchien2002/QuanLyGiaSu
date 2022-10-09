@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyGiaSu.src.controller;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,10 +20,13 @@ namespace QuanLyGiaSu.src.app.views.Login
 
         private void btn_Register_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            // REGISTER ACCOUNT TUTOR
+            Locator.tutorController.registerAccount(tbUser.Text, tbPassword.Text, tbConfirmPass.Text);
+
+            /*this.Hide();
             NhapThongTinGiaSu nhapThongTinGiaSu = new NhapThongTinGiaSu();
             nhapThongTinGiaSu.ShowDialog();            
-            this.Close();
+            this.Close();*/
         }
     }
 }
