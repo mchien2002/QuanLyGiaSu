@@ -31,18 +31,7 @@ namespace QuanLyGiaSu.src.app.views.Login
                 userPermission = "Admin";
             }
 
-            tmCheckInfoLogin.Start();
-
-            tbEmail.GotFocus += removeText;
-            tbUser.GotFocus += removeText;
-            tbPassword.GotFocus += removeText;
-            tbConfirmPass.GotFocus += removeText;
-
-            tbEmail.LostFocus += addText;
-            tbUser.LostFocus += addText;
-            tbPassword.LostFocus += addText;
-            tbConfirmPass.LostFocus += addText;
-
+            // tmCheckInfoLogin.Start();
         }
 
         void refreshTextBoxPassword()
@@ -63,31 +52,6 @@ namespace QuanLyGiaSu.src.app.views.Login
                 btnRegister.BackColor = Color.Blue;
                 btnRegister.Enabled = true;
                 tmCheckInfoLogin.Stop();
-            }
-        }
-
-        public void removeText(object sender, EventArgs e)
-        {
-            tbEmail.Text = "";
-            tbUser.Text = "";
-            tbPassword.Text = "";
-            tbConfirmPass.Text = "";
-        }
-
-        public void addText(object sender, EventArgs e)
-        {
-            if (tbEmail.Text.Length == 0)
-            {
-                tbEmail.Text = "trungtamgiasu@gmail.com";
-            } if (String.IsNullOrWhiteSpace(tbEmail.Text))
-            {
-                tbUser.Text = "trungtamgiasu123";
-            } if (String.IsNullOrWhiteSpace(tbEmail.Text))
-            {
-                tbPassword.Text = "password";
-            } if (String.IsNullOrWhiteSpace(tbEmail.Text))
-            {
-                tbConfirmPass.Text = "password";
             }
         }
 
