@@ -53,7 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="database\database_local\TRUNGTAMGIASU.designer.cs">
+    <Compile Include="src\database\database_local\TRUNGTAMGIASU.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>TRUNGTAMGIASU.dbml</DependentUpon>
@@ -235,6 +235,7 @@
     <Compile Include="src\controllers\Tutor\tutorController.cs" />
     <Compile Include="src\models\accountModel.cs" />
     <Compile Include="src\models\toturModel.cs" />
+    <Compile Include="src\server\server.cs" />
     <EmbeddedResource Include="src\app\views\formMain.resx">
       <DependentUpon>formMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -329,12 +330,12 @@
     <EmbeddedResource Include="src\app\views\login\RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="database\database_local\TRUNGTAMGIASU.dbml">
+    <None Include="src\database\database_local\TRUNGTAMGIASU.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>TRUNGTAMGIASU.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="database\database_local\TRUNGTAMGIASU.dbml.layout">
+    <None Include="src\database\database_local\TRUNGTAMGIASU.dbml.layout">
       <DependentUpon>TRUNGTAMGIASU.dbml</DependentUpon>
     </None>
     <None Include="packages.config" />

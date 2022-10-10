@@ -265,7 +265,6 @@
             // tmCheckInfoLogin
             // 
             this.tmCheckInfoLogin.Interval = 1;
-            this.tmCheckInfoLogin.Tick += new System.EventHandler(this.checkInfoLogin_Tick);
             // 
             // RegisterForm
             // 

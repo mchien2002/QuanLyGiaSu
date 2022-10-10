@@ -1,6 +1,5 @@
-﻿using QuanLyGiaSu.database;
-using QuanLyGiaSu.database.database_local;
-using QuanLyGiaSu.src.controller;
+﻿using QuanLyGiaSu.src.controller;
+using QuanLyGiaSu.src.database.database_local;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -47,7 +46,7 @@ namespace QuanLyGiaSu.src.app.views.layer
         private void UC_LopMoi_Load(object sender, EventArgs e)
         {
             cbbSearch.Hide();
-            Locator.tutorController.showLopMoiTable(dgvTHONGTINLOPMOI);
+            Locator.tutorController.fetchLopMoiTable(dgvTHONGTINLOPMOI);
         }
 
         private void label2_Click(object sender, EventArgs e)

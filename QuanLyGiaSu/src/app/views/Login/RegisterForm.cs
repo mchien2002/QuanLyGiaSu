@@ -13,23 +13,15 @@ namespace QuanLyGiaSu.src.app.views.Login
 {
     public partial class RegisterForm : Form
     {
-        string userPermission;
+        UserType userType;
         public RegisterForm(UserType userType)
         {
             InitializeComponent();
-            if (userType == UserType.tutor)
-            {
-                lbUserType.Text = "ĐĂNG KÝ GIA SƯ";
-                userPermission = "Gia sư";
-            } else if (userType == UserType.parent)
-            {
-                lbUserType.Text = "ĐĂNG KÝ PHỤ HUYNH";
-                userPermission = "Phụ huynh";
-            } else
-            {
-                lbUserType.Text = "ĐĂNG KÝ ADMIN";
-                userPermission = "Admin";
-            }
+            this.userType = userType;
+            lbUserType.Text =
+                this.userType == UserType.tutor ? "ĐĂNG KÝ GIA SƯ" 
+                : this.userType == UserType.parent ? "ĐĂNG KÝ PHỤ HUYNH"
+                : "ĐĂNG KÝ ADMIN";
 
             // tmCheckInfoLogin.Start();
         }
@@ -40,7 +32,7 @@ namespace QuanLyGiaSu.src.app.views.Login
             tbConfirmPass.Clear();
         }
 
-        void checkInfoTextBox()
+        /*void checkInfoTextBox()
         {
             if (tbUser.Text.Length > 8 && tbEmail.Text.Length > 11 && tbPassword.Text.Length > 8 && tbConfirmPass.Text.Length > 8)
             {
@@ -53,33 +45,41 @@ namespace QuanLyGiaSu.src.app.views.Login
                 btnRegister.Enabled = true;
                 tmCheckInfoLogin.Stop();
             }
-        }
+        }*/
 
         private void btn_Register_Click(object sender, EventArgs e)
         {
-            try
+            // LƯU THÔNG TIN ACCOUTN
+            if (tbPassword.Text != tbConfirmPass.Text)
             {
-                // LƯU THÔNG TIN ACCOUTN
-                if (tbPassword.Text != tbConfirmPass.Text)
-                {
-                    lbExceptionPassword.Visible = true;
-                    refreshTextBoxPassword();
-                    return;
-                };
-                Locator.author.getAccount(userPermission, tbUser.Text, Locator.tutorController.hashPassWord(tbPassword.Text, tbUser.Text), tbEmail.Text, 0);
-                Locator.tutorController.registerAccount(Locator.author);
-
-                this.Hide();
-                NhapThongTinGiaSu nhapThongTinGiaSu = new NhapThongTinGiaSu();
-                nhapThongTinGiaSu.ShowDialog();
-                this.Close();
-            }
-            catch
-            {
-                lbExceptionUserName.Visible = true;
+                lbExceptionPassword.Visible = true;
                 refreshTextBoxPassword();
+                return;
+            };
+            if (Locator.server.isUserExist(tbUser.Text) || Locator.server.isEmailExist(tbEmail.Text)){
+                lbExceptionUserName.Visible = true;
+                return;
+            } 
+            Locator.author.getAccount(
+                this.userType == UserType.tutor ? "Gia sư" 
+                : this.userType == UserType.parent ? "Phụ huynh"
+                : "Admin", 
+                tbUser.Text, 
+                Locator.server.hashPassWord(tbPassword.Text, tbUser.Text), tbEmail.Text, 0
+            );
+
+
+            this.Hide();
+            var nextRegisterPage = new Form();
+            if (userType == UserType.tutor)
+            {
+                nextRegisterPage = new NhapThongTinGiaSu();
+            } else
+            {
+                nextRegisterPage = new NhapThongTinPhuHuynh();
             }
-            
+            nextRegisterPage.ShowDialog();
+            this.Close();
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
@@ -88,11 +88,6 @@ namespace QuanLyGiaSu.src.app.views.Login
             this.Hide();
             login.ShowDialog();
             this.Close();
-        }
-
-        private void checkInfoLogin_Tick(object sender, EventArgs e)
-        {
-            checkInfoTextBox();
         }
     }
 }

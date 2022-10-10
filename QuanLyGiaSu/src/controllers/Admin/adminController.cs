@@ -12,27 +12,22 @@ namespace QuanLyGiaSu.src.controllers.Admin
 {
     class AdminController : BaseController
     {
-        public override void registerAccount(AccountModel account)
+        public override void fetchBangTinTable(DataGridView dgv)
         {
             throw new NotImplementedException();
         }
 
-        public override void showBangTinTable(DataGridView db)
+        public override void fetchLichSuGiaoDichNapTienTable(DataGridView dgv)
         {
             throw new NotImplementedException();
         }
 
-        public override void showLichSuGiaoDichNapTienTable(DataGridView db)
+        public override void fetchLichSuGiaoDichTable(DataGridView dgv)
         {
             throw new NotImplementedException();
         }
 
-        public override void showLichSuGiaoDichTable(DataGridView db)
-        {
-            throw new NotImplementedException();
-        }
-
-        public override void showLopMoiTable(DataGridView db)
+        public override void fetchLopMoiTable(DataGridView dgv)
         {
             throw new NotImplementedException();
         }

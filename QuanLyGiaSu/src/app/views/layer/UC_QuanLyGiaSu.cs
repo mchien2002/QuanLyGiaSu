@@ -1,6 +1,4 @@
-﻿using QuanLyGiaSu.database;
-using QuanLyGiaSu.database.database_local;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QuanLyGiaSu.src.database.database_local;
 
 namespace QuanLyGiaSu.src.app.views.layer
 {

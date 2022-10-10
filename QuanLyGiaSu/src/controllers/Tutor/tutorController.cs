@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Cryptography.KeyDerivation;
-using QuanLyGiaSu.database;
-using QuanLyGiaSu.database.database_local;
 using QuanLyGiaSu.src.controller;
+using QuanLyGiaSu.src.database.database_local;
 using QuanLyGiaSu.src.models;
+using QuanLyGiaSu.src.server;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,38 +20,24 @@ namespace QuanLyGiaSu.src.controllers.Tutor
             _db = new TRUNGTAMGIASUDataContext();
         }
 
-        public override void registerAccount(AccountModel account)
-        {
-            ACCOUNT newAccount = new ACCOUNT
-            {
-                Email = account.Email,
-                Username = account.UserName,
-                Password = account.Password,
-                PhanQuyen = account.PhanQuyen,
-                NganSach = account.NganSach,
-            };
-            _db.ACCOUNTs.InsertOnSubmit(newAccount);
-            _db.SubmitChanges();
-        }
-
-        public override void showBangTinTable(DataGridView db)
+        public override void fetchBangTinTable(DataGridView dgv)
         {
             throw new NotImplementedException();
         }
 
-        public override void showLichSuGiaoDichNapTienTable(DataGridView db)
+        public override void fetchLichSuGiaoDichNapTienTable(DataGridView db)
         {
             throw new NotImplementedException();
         }
 
-        public override void showLichSuGiaoDichTable(DataGridView db)
+        public override void fetchLichSuGiaoDichTable(DataGridView db)
         {
             db.DataSource = _db.select_lichsugiaodich_gs(1);
         }
 
-        public override void showLopMoiTable(DataGridView db)
+        public override void fetchLopMoiTable(DataGridView db)
         {
-            db.DataSource = _db.DANHSACHMOLOPs.Select(p => p);
+            db.DataSource = Locator.server.fetchLopMoiTable();
         }
     }
 }
