@@ -20,6 +20,7 @@ namespace QuanLyGiaSu.src.models
         public string Email { get => _email; set => _email = value; }
         public int NganSach { get => _nganSach; set => _nganSach = value; }
 
+        // TẠO USER ACCOUNT
         public void getAccount(string phanQuyen, string userName, string password, string email, int nganSach)
         {
             PhanQuyen = phanQuyen;

@@ -49,25 +49,25 @@ namespace QuanLyGiaSu.src.app.views.Login
 
         private void btn_Register_Click(object sender, EventArgs e)
         {
-            // LƯU THÔNG TIN ACCOUTN
+            // CHECK PASSWORD CÓ GIỐNG NHAU KHONG
             if (tbPassword.Text != tbConfirmPass.Text)
             {
                 lbExceptionPassword.Visible = true;
                 refreshTextBoxPassword();
                 return;
             };
-            if (Locator.server.isUserExist(tbUser.Text) || Locator.server.isEmailExist(tbEmail.Text)){
+            if (Locator.server.isAccountExist(tbUser.Text, tbEmail.Text))
+            {
                 lbExceptionUserName.Visible = true;
                 return;
-            } 
+            }
             Locator.author.getAccount(
-                this.userType == UserType.tutor ? "Gia sư" 
-                : this.userType == UserType.parent ? "Phụ huynh"
-                : "Admin", 
-                tbUser.Text, 
-                Locator.server.hashPassWord(tbPassword.Text, tbUser.Text), tbEmail.Text, 0
+               this.userType == UserType.tutor ? "Gia sư"
+               : this.userType == UserType.parent ? "Phụ huynh"
+               : "Admin",
+               tbUser.Text,
+               Locator.server.hashPassWord(tbPassword.Text, tbUser.Text), tbEmail.Text, 0
             );
-
 
             this.Hide();
             var nextRegisterPage = new Form();

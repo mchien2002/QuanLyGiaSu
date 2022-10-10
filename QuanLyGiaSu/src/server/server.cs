@@ -20,7 +20,7 @@ namespace QuanLyGiaSu.src.server
             return _db.BANGTINs.Select(p => p);
         }
         public object fetchLopMoiTable(){
-            return _db.DANHSACHMOLOPs.Select(p => p);
+            return _db.THONGTINLOPMOI_PH_Gs.Select(p => p);
         }
         public object fetchLichSuGiaoDichTable(int id){
             return _db.select_lichsugiaodich_gs(id);
@@ -36,40 +36,16 @@ namespace QuanLyGiaSu.src.server
             return Convert.ToBase64String(hashPassword);
         }
 
-        public bool isUserExist(string userName)
+        // CHECK USER ĐÃ TỒN TẠI CHƯA
+        public bool isAccountExist(string userName, string email)
         {
-            var tempData = from ACCOUNT in _db.ACCOUNTs
-                           select new
-                           {
-                               UserName = userName,
-                           };
-            if (tempData != null) return true;
-            return false;
+            bool resultCheck = (bool)_db.check_username_email(userName, email);
+            return resultCheck;
         }
 
-        public bool isEmailExist(string email)
+        public void postAccount(AccountModel account)
         {
-            var tempData = from ACCOUNT in _db.ACCOUNTs
-            select new
-                           {
-                               Email = email,
-                           };
-            if (tempData != null) return true;
-            return false;
-        }
-
-        public void registerAccount(AccountModel account)
-        {
-            ACCOUNT newAccount = new ACCOUNT
-            {
-                Email = account.Email,
-                Username = account.UserName,
-                Password = account.Password,
-                PhanQuyen = account.PhanQuyen,
-                NganSach = account.NganSach,
-            };
-            _db.ACCOUNTs.InsertOnSubmit(newAccount);
-            _db.SubmitChanges();
+            _db.insert_acc(account.PhanQuyen, account.UserName, account.Password, account.Email, account.NganSach);
         }
     }
 }
