@@ -222,17 +222,11 @@
     <Compile Include="src\app\views\login\NhapThongTinPhuHuynh.Designer.cs">
       <DependentUpon>NhapThongTinPhuHuynh.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\app\views\login\RegisterGiaSu.cs">
+    <Compile Include="src\app\views\login\RegisterForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="src\app\views\login\RegisterGiaSu.Designer.cs">
-      <DependentUpon>RegisterGiaSu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="src\app\views\login\RegisterPH.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="src\app\views\login\RegisterPH.Designer.cs">
-      <DependentUpon>RegisterPH.cs</DependentUpon>
+    <Compile Include="src\app\views\login\RegisterForm.Designer.cs">
+      <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
     <Compile Include="src\controllers\Admin\adminController.cs" />
     <Compile Include="src\controllers\baseController.cs" />
@@ -332,13 +326,9 @@
     <EmbeddedResource Include="src\app\views\login\NhapThongTinPhuHuynh.resx">
       <DependentUpon>NhapThongTinPhuHuynh.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\app\views\login\RegisterGiaSu.resx">
-      <DependentUpon>RegisterGiaSu.cs</DependentUpon>
+    <EmbeddedResource Include="src\app\views\login\RegisterForm.resx">
+      <DependentUpon>RegisterForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\app\views\login\RegisterPH.resx">
-      <DependentUpon>RegisterPH.cs</DependentUpon>
-    </EmbeddedResource>
-    <None Include="database\database_local\loginLocal.json" />
     <None Include="database\database_local\TRUNGTAMGIASU.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>TRUNGTAMGIASU.designer.cs</LastGenOutput>

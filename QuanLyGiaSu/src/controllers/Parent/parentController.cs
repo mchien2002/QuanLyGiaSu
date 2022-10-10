@@ -1,4 +1,6 @@
-﻿using QuanLyGiaSu.src.controller;
+﻿using Microsoft.AspNetCore.Cryptography.KeyDerivation;
+using QuanLyGiaSu.src.controller;
+using QuanLyGiaSu.src.models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +12,7 @@ namespace QuanLyGiaSu.src.controllers.Parent
 {
     class ParentController : BaseController
     {
-        public override void registerAccount(string userName, string passWord, string confirmPassWord)
+        public override void registerAccount(AccountModel account )
         {
             throw new NotImplementedException();
         }

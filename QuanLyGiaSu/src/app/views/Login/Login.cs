@@ -1,4 +1,5 @@
 ﻿using QuanLyGiaSu.src.app.views.layer;
+using QuanLyGiaSu.src.controller;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -51,7 +52,7 @@ namespace QuanLyGiaSu.src.app.views.Login
 
         private void llb_DangKyGiaSu_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            RegisterGiaSu dangKyGiaSu = new RegisterGiaSu();
+            RegisterForm dangKyGiaSu = new RegisterForm(UserType.tutor);
             this.Hide();
             dangKyGiaSu.ShowDialog();
             this.Close();
@@ -59,7 +60,7 @@ namespace QuanLyGiaSu.src.app.views.Login
 
         private void llb_DangKyPhuHuynh_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            RegisterPH dangKyTKPhuHuynh = new RegisterPH();
+            RegisterForm dangKyTKPhuHuynh = new RegisterForm(UserType.parent);
             this.Hide();
             dangKyTKPhuHuynh.ShowDialog();
             this.Close();
@@ -79,6 +80,11 @@ namespace QuanLyGiaSu.src.app.views.Login
             {
                 textBox_Password.Clear();
             }    
+        }
+
+        private void textBox_Password_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

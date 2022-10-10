@@ -1,4 +1,4 @@
-﻿using QuanLyGiaSu.src.controllers.Admin;
+﻿    using QuanLyGiaSu.src.controllers.Admin;
 using QuanLyGiaSu.src.controllers.Parent;
 using QuanLyGiaSu.src.controllers.Tutor;
 using QuanLyGiaSu.src.models;
@@ -16,5 +16,12 @@ namespace QuanLyGiaSu.src.controller
         public static AdminController adminController = new AdminController();
         public static ParentController parentController = new ParentController();
         public static AccountModel author = new AccountModel();
+    }
+
+    public enum UserType
+    {
+        tutor,
+        parent,
+        admin
     }
 }

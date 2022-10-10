@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.AspNetCore.Cryptography.KeyDerivation;
 using QuanLyGiaSu.database.database_local;
+using QuanLyGiaSu.src.models;
 
 namespace QuanLyGiaSu.src.controller
 {
@@ -18,21 +19,14 @@ namespace QuanLyGiaSu.src.controller
         public abstract void showLopMoiTable(DataGridView db);
         public abstract void showLichSuGiaoDichTable(DataGridView db);
         public abstract void showLichSuGiaoDichNapTienTable(DataGridView db);
-        public abstract void registerAccount(string userName, string passWord, string confirmPassWord);
+        public abstract void registerAccount(AccountModel account);
 
-        public string hashPassWord(string pass)
+        public string hashPassWord(string pass, string userName)
         {
-            var bytes = new byte[128 / 8]; // divide by 8 to convert bits to bytes
-
-            // derive a 256-bit subkey (use HMACSHA256 with 100,000 iterations)
-            string hashed = Convert.ToBase64String(KeyDerivation.Pbkdf2(
-                password: pass,
-                salt: bytes,
-                prf: KeyDerivationPrf.HMACSHA256,
-                iterationCount: 100000,
-                numBytesRequested: 256 / 8)
-            );
-            return hashed;
+            var sha = SHA256.Create();
+            var asByteArray = Encoding.Default.GetBytes(pass + userName);
+            var hashPassword = sha.ComputeHash(asByteArray);
+            return Convert.ToBase64String(hashPassword);
         }
     }
 }

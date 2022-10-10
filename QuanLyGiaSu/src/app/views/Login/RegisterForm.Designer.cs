@@ -1,6 +1,6 @@
 ﻿namespace QuanLyGiaSu.src.app.views.Login
 {
-    partial class RegisterGiaSu
+    partial class RegisterForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,16 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterGiaSu));
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterForm));
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbExceptionUserName = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.tbConfirmPass = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.btn_Register = new System.Windows.Forms.Button();
+            this.btnRegister = new System.Windows.Forms.Button();
             this.tbPassword = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbUserType = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -46,6 +47,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.tbUser = new System.Windows.Forms.TextBox();
+            this.lbExceptionPassword = new System.Windows.Forms.Label();
+            this.tmCheckInfoLogin = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -63,17 +66,17 @@
             this.comboBox1.Size = new System.Drawing.Size(79, 24);
             this.comboBox1.TabIndex = 74;
             // 
-            // label1
+            // lbExceptionUserName
             // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(495, 342);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(153, 16);
-            this.label1.TabIndex = 73;
-            this.label1.Text = "Đã tồn tại Username này";
-            this.label1.Visible = false;
+            this.lbExceptionUserName.AutoSize = true;
+            this.lbExceptionUserName.ForeColor = System.Drawing.Color.Red;
+            this.lbExceptionUserName.Location = new System.Drawing.Point(495, 342);
+            this.lbExceptionUserName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbExceptionUserName.Name = "lbExceptionUserName";
+            this.lbExceptionUserName.Size = new System.Drawing.Size(269, 16);
+            this.lbExceptionUserName.TabIndex = 73;
+            this.lbExceptionUserName.Text = "Tên đăng nhập hoặc email đã được sử dụng";
+            this.lbExceptionUserName.Visible = false;
             // 
             // label8
             // 
@@ -94,7 +97,8 @@
             this.tbConfirmPass.Name = "tbConfirmPass";
             this.tbConfirmPass.Size = new System.Drawing.Size(404, 20);
             this.tbConfirmPass.TabIndex = 65;
-            this.tbConfirmPass.Text = "Confirm Password";
+            this.tbConfirmPass.Text = "Password";
+            this.tbConfirmPass.UseSystemPasswordChar = true;
             // 
             // label4
             // 
@@ -114,20 +118,20 @@
             this.label3.Size = new System.Drawing.Size(467, 4);
             this.label3.TabIndex = 68;
             // 
-            // btn_Register
+            // btnRegister
             // 
-            this.btn_Register.BackColor = System.Drawing.Color.Blue;
-            this.btn_Register.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Register.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Register.ForeColor = System.Drawing.Color.White;
-            this.btn_Register.Location = new System.Drawing.Point(499, 524);
-            this.btn_Register.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_Register.Name = "btn_Register";
-            this.btn_Register.Size = new System.Drawing.Size(357, 42);
-            this.btn_Register.TabIndex = 67;
-            this.btn_Register.Text = "Tiếp tục";
-            this.btn_Register.UseVisualStyleBackColor = false;
-            this.btn_Register.Click += new System.EventHandler(this.btn_Register_Click);
+            this.btnRegister.BackColor = System.Drawing.Color.Blue;
+            this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegister.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegister.ForeColor = System.Drawing.Color.White;
+            this.btnRegister.Location = new System.Drawing.Point(499, 524);
+            this.btnRegister.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnRegister.Name = "btnRegister";
+            this.btnRegister.Size = new System.Drawing.Size(357, 42);
+            this.btnRegister.TabIndex = 67;
+            this.btnRegister.Text = "Tiếp tục";
+            this.btnRegister.UseVisualStyleBackColor = false;
+            this.btnRegister.Click += new System.EventHandler(this.btn_Register_Click);
             // 
             // tbPassword
             // 
@@ -140,18 +144,19 @@
             this.tbPassword.Size = new System.Drawing.Size(404, 20);
             this.tbPassword.TabIndex = 64;
             this.tbPassword.Text = "Password";
+            this.tbPassword.UseSystemPasswordChar = true;
             // 
-            // label2
+            // lbUserType
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label2.Location = new System.Drawing.Point(573, 162);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(203, 33);
-            this.label2.TabIndex = 63;
-            this.label2.Text = "ĐĂNG KÝ GIA SƯ";
+            this.lbUserType.AutoSize = true;
+            this.lbUserType.BackColor = System.Drawing.Color.White;
+            this.lbUserType.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbUserType.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lbUserType.Location = new System.Drawing.Point(573, 162);
+            this.lbUserType.Name = "lbUserType";
+            this.lbUserType.Size = new System.Drawing.Size(203, 33);
+            this.lbUserType.TabIndex = 63;
+            this.lbUserType.Text = "ĐĂNG KÝ GIA SƯ";
             // 
             // pictureBox7
             // 
@@ -245,7 +250,24 @@
             this.tbUser.Tag = "";
             this.tbUser.Text = "Username";
             // 
-            // RegisterGiaSu
+            // lbExceptionPassword
+            // 
+            this.lbExceptionPassword.AutoSize = true;
+            this.lbExceptionPassword.ForeColor = System.Drawing.Color.Red;
+            this.lbExceptionPassword.Location = new System.Drawing.Point(495, 478);
+            this.lbExceptionPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbExceptionPassword.Name = "lbExceptionPassword";
+            this.lbExceptionPassword.Size = new System.Drawing.Size(236, 16);
+            this.lbExceptionPassword.TabIndex = 73;
+            this.lbExceptionPassword.Text = "Nhập khẩu bạn nhập không trùng khớp";
+            this.lbExceptionPassword.Visible = false;
+            // 
+            // tmCheckInfoLogin
+            // 
+            this.tmCheckInfoLogin.Interval = 1;
+            this.tmCheckInfoLogin.Tick += new System.EventHandler(this.checkInfoLogin_Tick);
+            // 
+            // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -253,26 +275,26 @@
             this.ClientSize = new System.Drawing.Size(1333, 625);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbExceptionPassword);
+            this.Controls.Add(this.lbExceptionUserName);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.tbConfirmPass);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.btn_Register);
+            this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.tbEmail);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.tbPassword);
             this.Controls.Add(this.tbUser);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lbUserType);
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "RegisterGiaSu";
+            this.Name = "RegisterForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegisterGiaSu";
-            this.Load += new System.EventHandler(this.RegisterGiaSu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -286,21 +308,23 @@
         #endregion
 
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbExceptionUserName;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.TextBox tbConfirmPass;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btn_Register;
+        private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TextBox tbPassword;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbUserType;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.TextBox tbEmail;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox tbUser;
+        private System.Windows.Forms.Label lbExceptionPassword;
+        private System.Windows.Forms.Timer tmCheckInfoLogin;
     }
 }
