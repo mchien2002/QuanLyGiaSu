@@ -52,7 +52,34 @@ namespace QuanLyGiaSu.src.server
             }
         }
 
-        public void postInfoTutor(AccountModel acccount) { 
+        public void updateInfoTutor(
+            AccountModel acccount, 
+            string name, 
+            string cmnd, 
+            string gender, 
+            DateTime birthday, 
+            string phone, 
+            string homeTown, 
+            string school,
+            string level,
+            string strong
+        )
+        {
+          
+        }
+
+        public void updateParent(
+            AccountModel account,
+            string name,
+            string cmnd,
+            string gender,
+            DateTime birthday,
+            string phone,
+            string job,
+            string location
+        )
+        {
+
         }
     }
 }
