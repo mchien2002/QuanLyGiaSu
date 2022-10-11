@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using QuanLyGiaSu.src.database.database_local;
 using QuanLyGiaSu.src.models;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace QuanLyGiaSu.src.server
 {
@@ -45,7 +42,17 @@ namespace QuanLyGiaSu.src.server
 
         public void postAccount(AccountModel account)
         {
-            _db.insert_acc(account.PhanQuyen, account.UserName, account.Password, account.Email, account.NganSach);
+            try
+            {
+                _db.insert_acc(account.PhanQuyen, account.UserName, account.Password, account.Email, account.NganSach);
+            }
+            catch
+            {
+                MessageBox.Show("Bạn đã nhập thiếu hoặc sai thông tin! Vui lòng nhập lại","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void postInfoTutor(AccountModel acccount) { 
         }
     }
 }
