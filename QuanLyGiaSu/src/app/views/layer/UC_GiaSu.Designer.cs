@@ -55,6 +55,10 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.clbMonDay = new System.Windows.Forms.CheckedListBox();
+            this.clbLopDay = new System.Windows.Forms.CheckedListBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -303,11 +307,51 @@
             this.button1.Text = "Sửa";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // clbMonDay
+            // 
+            this.clbMonDay.FormattingEnabled = true;
+            this.clbMonDay.Location = new System.Drawing.Point(883, 92);
+            this.clbMonDay.Name = "clbMonDay";
+            this.clbMonDay.Size = new System.Drawing.Size(78, 94);
+            this.clbMonDay.TabIndex = 75;
+            // 
+            // clbLopDay
+            // 
+            this.clbLopDay.FormattingEnabled = true;
+            this.clbLopDay.Location = new System.Drawing.Point(770, 92);
+            this.clbLopDay.Name = "clbLopDay";
+            this.clbLopDay.Size = new System.Drawing.Size(78, 94);
+            this.clbLopDay.TabIndex = 76;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(879, 64);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(69, 20);
+            this.label16.TabIndex = 73;
+            this.label16.Text = "Môn dạy";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(766, 64);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(68, 20);
+            this.label17.TabIndex = 74;
+            this.label17.Text = "Lớp Dạy";
+            // 
             // UC_GiaSu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Controls.Add(this.clbMonDay);
+            this.Controls.Add(this.clbLopDay);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.label17);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label3);
@@ -372,5 +416,9 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.CheckedListBox clbMonDay;
+        private System.Windows.Forms.CheckedListBox clbLopDay;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
     }
 }

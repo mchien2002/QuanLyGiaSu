@@ -20,7 +20,7 @@ namespace QuanLyGiaSu.src.app.views.Login
 
         private void button_Login_Click(object sender, EventArgs e)
         {
-            Locator.server.updateParent(Locator.author.UserName, )
+            //Locator.server.updateParent(Locator.author.UserName, )
             Login login = new Login();
             this.Hide();
             login.ShowDialog();

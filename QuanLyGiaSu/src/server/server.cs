@@ -84,7 +84,7 @@ namespace QuanLyGiaSu.src.server
             {
                 MessageBox.Show("Thiếu hoặc sai dữ liệu! \nXin vui lòng nhập đủ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
+
         }
 
         public void updateParent(
