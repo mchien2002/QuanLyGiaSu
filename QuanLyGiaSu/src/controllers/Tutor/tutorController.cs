@@ -1,14 +1,6 @@
-﻿using Microsoft.AspNetCore.Cryptography.KeyDerivation;
-using QuanLyGiaSu.src.controller;
-using QuanLyGiaSu.src.database.database_local;
-using QuanLyGiaSu.src.models;
-using QuanLyGiaSu.src.server;
+﻿using QuanLyGiaSu.src.controller;
+using QuanLyGiaSu.src.database;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QuanLyGiaSu.src.controllers.Tutor

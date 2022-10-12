@@ -3,7 +3,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Windows.Forms;
-using QuanLyGiaSu.src.database.database_local;
+using QuanLyGiaSu.src.database;
 using QuanLyGiaSu.src.models;
 
 namespace QuanLyGiaSu.src.server
@@ -65,7 +65,26 @@ namespace QuanLyGiaSu.src.server
             string strong
         )
         {
-          
+            try
+            {
+                _db.update_gs(
+                    _db.find_ph_gs(_db.find_account_username(acccount.UserName)),
+                    name,
+                    cmnd,
+                    gender,
+                    birthday,
+                    phone,
+                    homeTown,
+                    school,
+                    level,
+                    strong
+                );
+            }
+            catch
+            {
+                MessageBox.Show("Thiếu hoặc sai dữ liệu! \nXin vui lòng nhập đủ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
 
         public void updateParent(

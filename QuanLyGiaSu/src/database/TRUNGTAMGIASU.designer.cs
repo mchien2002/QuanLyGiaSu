@@ -9,7 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace QuanLyGiaSu.src.database.database_local
+namespace QuanLyGiaSu.src.database
 {
 	using System.Data.Linq;
 	using System.Data.Linq.Mapping;
@@ -516,7 +516,24 @@ namespace QuanLyGiaSu.src.database.database_local
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), pHID, hOTEN, cMND, gIOITINH, nGAYSINH, sDT, nGHENGHIEP, dIACHI);
 			return ((int)(result.ReturnValue));
 		}
-	}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.find_ph_gs", IsComposable=true)]
+		public string find_ph_gs([global::System.Data.Linq.Mapping.ParameterAttribute(Name="ACCID", DbType="Int")] System.Nullable<int> aCCID)
+		{
+			return ((string)(this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), aCCID).ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.find_account_username", IsComposable=true)]
+		public IQueryable<find_account_usernameResult> find_account_username([global::System.Data.Linq.Mapping.ParameterAttribute(Name="USERNAME", DbType="NVarChar(100)")] string uSERNAME)
+		{
+			return this.CreateMethodCallQuery<find_account_usernameResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), uSERNAME);
+		}
+
+        internal int? find_ph_gs(IQueryable<find_account_usernameResult> find_account_usernameResults)
+        {
+            throw new NotImplementedException();
+        }
+    }
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ACCOUNT")]
 	public partial class ACCOUNT : INotifyPropertyChanging, INotifyPropertyChanged
@@ -5674,6 +5691,122 @@ namespace QuanLyGiaSu.src.database.database_local
 				if ((this._TenMon != value))
 				{
 					this._TenMon = value;
+				}
+			}
+		}
+	}
+	
+	public partial class find_account_usernameResult
+	{
+		
+		private int _ACCID;
+		
+		private string _PhanQuyen;
+		
+		private string _Username;
+		
+		private string _Password;
+		
+		private string _Email;
+		
+		private int _NganSach;
+		
+		public find_account_usernameResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ACCID", DbType="Int NOT NULL")]
+		public int ACCID
+		{
+			get
+			{
+				return this._ACCID;
+			}
+			set
+			{
+				if ((this._ACCID != value))
+				{
+					this._ACCID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PhanQuyen", DbType="NVarChar(30)")]
+		public string PhanQuyen
+		{
+			get
+			{
+				return this._PhanQuyen;
+			}
+			set
+			{
+				if ((this._PhanQuyen != value))
+				{
+					this._PhanQuyen = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Username", DbType="Char(100) NOT NULL", CanBeNull=false)]
+		public string Username
+		{
+			get
+			{
+				return this._Username;
+			}
+			set
+			{
+				if ((this._Username != value))
+				{
+					this._Username = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Password", DbType="Char(100) NOT NULL", CanBeNull=false)]
+		public string Password
+		{
+			get
+			{
+				return this._Password;
+			}
+			set
+			{
+				if ((this._Password != value))
+				{
+					this._Password = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="Char(100) NOT NULL", CanBeNull=false)]
+		public string Email
+		{
+			get
+			{
+				return this._Email;
+			}
+			set
+			{
+				if ((this._Email != value))
+				{
+					this._Email = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NganSach", DbType="Int NOT NULL")]
+		public int NganSach
+		{
+			get
+			{
+				return this._NganSach;
+			}
+			set
+			{
+				if ((this._NganSach != value))
+				{
+					this._NganSach = value;
 				}
 			}
 		}

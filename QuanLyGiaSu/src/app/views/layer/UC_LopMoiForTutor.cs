@@ -1,5 +1,5 @@
 ﻿using QuanLyGiaSu.src.controller;
-using QuanLyGiaSu.src.database.database_local;
+using QuanLyGiaSu.src.database;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

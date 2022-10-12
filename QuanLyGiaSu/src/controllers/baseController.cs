@@ -1,11 +1,5 @@
-﻿using System;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using QuanLyGiaSu.src.models;
-using QuanLyGiaSu.src.database.database_local;
+﻿using System.Windows.Forms;
+using QuanLyGiaSu.src.database;
 
 namespace QuanLyGiaSu.src.controller
 {

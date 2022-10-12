@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyGiaSu.src.controller;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,7 @@ namespace QuanLyGiaSu.src.app.views.Login
 
         private void button_Login_Click(object sender, EventArgs e)
         {
-
+            Locator.server.updateParent(Locator.author.UserName, )
             Login login = new Login();
             this.Hide();
             login.ShowDialog();
