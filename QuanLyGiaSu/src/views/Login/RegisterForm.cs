@@ -66,7 +66,9 @@ namespace QuanLyGiaSu.src.app.views.Login
                : this.userType == UserType.parent ? "Phụ huynh"
                : "Admin",
                tbUser.Text,
-               Locator.server.hashPassWord(tbPassword.Text, tbUser.Text), tbEmail.Text, 0
+               Locator.server.hashPassWord(tbPassword.Text, tbUser.Text), 
+               tbEmail.Text, 
+               0
             );
 
             this.Hide();

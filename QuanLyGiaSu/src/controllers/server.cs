@@ -20,7 +20,7 @@ namespace QuanLyGiaSu.src.server
             return _db.THONGTINLOPMOI_PH_Gs.Select(p => p);
         }
         public object fetchLichSuGiaoDichTable(int id){
-            return _db.select_lichsugiaodich_gs(id);
+            return _db.select_lichsugiaodich(id);
         }
         public object fetchLichSuGiaoDichNapTienTable(){
             return _db.BANGTINs.Select(p => p);
@@ -40,26 +40,29 @@ namespace QuanLyGiaSu.src.server
             return resultCheck;
         }
 
-        public void postAccount(AccountModel account)
+        public bool addAccount(AccountModel account)
         {
             try
             {
-                _db.insert_acc(account.PhanQuyen, account.UserName, account.Password, account.Email, account.NganSach);
+                _db.insert_acc(account.PhanQuyen, account.UserName, account.Password, account.Email, account.NganSach = 0);
+                return true;
             }
-            catch
+            catch(Exception e)
             {
-                MessageBox.Show("Bạn đã nhập thiếu hoặc sai thông tin! Vui lòng nhập lại","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(e.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
             }
         }
 
-        public void updateInfoTutor(
-            AccountModel acccount, 
+        public bool updateInfoTutor(
+            string userName, 
             string name, 
             string cmnd, 
             string gender, 
             DateTime birthday, 
-            string phone, 
+            string phone,
             string homeTown, 
+            string address,
             string school,
             string level,
             string strong
@@ -68,7 +71,7 @@ namespace QuanLyGiaSu.src.server
             try
             {
                 _db.update_gs(
-                    _db.find_ph_gs(_db.find_account_username(acccount.UserName)),
+                    _db.check_ph_gs(_db.find_accid_username(userName)),
                     name,
                     cmnd,
                     gender,
@@ -77,12 +80,18 @@ namespace QuanLyGiaSu.src.server
                     homeTown,
                     school,
                     level,
-                    strong
+                    strong,
+                    address,
+                    null
                 );
+                MessageBox.Show("Đăng ký thành công", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return true;
+
             }
             catch
             {
                 MessageBox.Show("Thiếu hoặc sai dữ liệu! \nXin vui lòng nhập đủ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
             }
 
         }
