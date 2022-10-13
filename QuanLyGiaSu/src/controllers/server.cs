@@ -109,5 +109,10 @@ namespace QuanLyGiaSu.src.server
         {
 
         }
+
+        public bool checkSignIn(string userName, string passHash, string phanQuyen)
+        {
+            return (bool)_db.check_signin(userName, passHash, phanQuyen);
+        }
     }
 }

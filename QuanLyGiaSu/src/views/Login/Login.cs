@@ -27,26 +27,14 @@ namespace QuanLyGiaSu.src.app.views.Login
 
         private void button_Login_Click(object sender, EventArgs e)
         {
-            if (rb_Admin.Checked == true)
-            {
-                this.Hide();
-                formMain formMain = new formMain();
-                formMain.ShowDialog();
-                this.Close();
-            }
-            else if (rbGiaSu.Checked == true)
-            {
-                this.Hide();
-                formMainGiaSu formMainGiaSu = new formMainGiaSu();
-                formMainGiaSu.ShowDialog();
-                this.Close();
-            }
+            string phanQuyen = rbAdmin.Checked ? "Admin"
+                : rbPhuHuynh.Checked ? "Phụ huynh"
+                : "Gia sư";
+            if (Locator.server.checkSignIn(tbUserName.Text, Locator.server.hashPassWord(tbPassword.Text, tbUserName.Text), phanQuyen)) loginPage();
             else
-            {
-                this.Hide();
-                formMainPhuHuynh formMainPhuHuynh = new formMainPhuHuynh();
-                formMainPhuHuynh.ShowDialog();
-                this.Close();
+            {    
+                lbCannotLogin.Visible = true;
+                return;
             }
         }
 
@@ -68,23 +56,48 @@ namespace QuanLyGiaSu.src.app.views.Login
 
         private void textBox_User_Click(object sender, EventArgs e)
         {
-            if(textBox_User.Text == "Username")
+            if(tbUserName.Text == "Username")
             {
-                textBox_User.Clear();
+                tbUserName.Clear();
             }    
         }
 
         private void textBox_Password_Click(object sender, EventArgs e)
         {
-            if(textBox_Password.Text == "Password")
+            if(tbPassword.Text == "Password")
             {
-                textBox_Password.Clear();
+                tbPassword.Clear();
             }    
         }
 
         private void textBox_Password_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        void loginPage()
+        {
+            if (rbAdmin.Checked == true)
+            {
+                this.Hide();
+                formMain formMain = new formMain();
+                formMain.ShowDialog();
+                this.Close();
+            }
+            else if (rbGiaSu.Checked == true)
+            {
+                this.Hide();
+                formMainGiaSu formMainGiaSu = new formMainGiaSu();
+                formMainGiaSu.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                this.Hide();
+                formMainPhuHuynh formMainPhuHuynh = new formMainPhuHuynh();
+                formMainPhuHuynh.ShowDialog();
+                this.Close();
+            }
         }
     }
 }

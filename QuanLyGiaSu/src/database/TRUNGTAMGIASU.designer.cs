@@ -522,6 +522,12 @@ namespace QuanLyGiaSu.src.database
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), pHID, hOTEN, cMND, gIOITINH, nGAYSINH, sDT, nGHENGHIEP, dIACHI);
 			return ((int)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.check_signin", IsComposable=true)]
+		public System.Nullable<bool> check_signin([global::System.Data.Linq.Mapping.ParameterAttribute(Name="USERNAME", DbType="Char(100)")] string uSERNAME, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PW", DbType="Char(100)")] string pW, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PHANQUYEN", DbType="NVarChar(30)")] string pHANQUYEN)
+		{
+			return ((System.Nullable<bool>)(this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), uSERNAME, pW, pHANQUYEN).ReturnValue));
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ACCOUNT")]

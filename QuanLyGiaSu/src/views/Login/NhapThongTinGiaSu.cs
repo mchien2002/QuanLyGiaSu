@@ -64,7 +64,7 @@ namespace QuanLyGiaSu.src.app.views.Login
                 && tbSchool.Text.Length > 0
                 && tbUuDiem.Text.Length > 0
                 && cbGender.Text.Length > 0
-                && cbTrinhDo.Text.Length > 0) return true;
+                && cbTrinhDo.Text.Length > 0) return true;  
             return false;
         }
 

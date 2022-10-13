@@ -356,6 +356,10 @@
   <ItemGroup>
     <None Include="Resources\password_24px.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="src\views\layer\admin\" />
+    <Folder Include="src\views\layer\parent\" />
+    <Folder Include="src\views\layer\tutor\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

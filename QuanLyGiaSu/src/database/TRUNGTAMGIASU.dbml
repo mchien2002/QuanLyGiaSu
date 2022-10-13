@@ -536,4 +536,10 @@
     <Parameter Name="DIACHI" Parameter="dIACHI" Type="System.String" DbType="NVarChar(60)" />
     <Return Type="System.Int32" />
   </Function>
+  <Function Name="dbo.check_signin" Method="check_signin" IsComposable="true">
+    <Parameter Name="USERNAME" Parameter="uSERNAME" Type="System.String" DbType="Char(100)" />
+    <Parameter Name="PW" Parameter="pW" Type="System.String" DbType="Char(100)" />
+    <Parameter Name="PHANQUYEN" Parameter="pHANQUYEN" Type="System.String" DbType="NVarChar(30)" />
+    <Return Type="System.Boolean" />
+  </Function>
 </Database>

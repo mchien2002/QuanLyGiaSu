@@ -35,14 +35,15 @@
             this.button_Login = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.textBox_Password = new System.Windows.Forms.TextBox();
-            this.textBox_User = new System.Windows.Forms.TextBox();
+            this.tbPassword = new System.Windows.Forms.TextBox();
+            this.tbUserName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.rbGiaSu = new System.Windows.Forms.RadioButton();
-            this.rb_PhuHuynh = new System.Windows.Forms.RadioButton();
-            this.rb_Admin = new System.Windows.Forms.RadioButton();
+            this.rbPhuHuynh = new System.Windows.Forms.RadioButton();
+            this.rbAdmin = new System.Windows.Forms.RadioButton();
             this.llb_DangKyPhuHuynh = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
+            this.lbCannotLogin = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -128,34 +129,34 @@
             this.pictureBox2.TabIndex = 37;
             this.pictureBox2.TabStop = false;
             // 
-            // textBox_Password
+            // tbPassword
             // 
-            this.textBox_Password.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_Password.ForeColor = System.Drawing.Color.Gray;
-            this.textBox_Password.Location = new System.Drawing.Point(493, 388);
-            this.textBox_Password.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox_Password.Name = "textBox_Password";
-            this.textBox_Password.Size = new System.Drawing.Size(404, 20);
-            this.textBox_Password.TabIndex = 36;
-            this.textBox_Password.Text = "Password";
-            this.textBox_Password.UseSystemPasswordChar = true;
-            this.textBox_Password.Click += new System.EventHandler(this.textBox_Password_Click);
-            this.textBox_Password.TextChanged += new System.EventHandler(this.textBox_Password_TextChanged);
+            this.tbPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPassword.ForeColor = System.Drawing.Color.Gray;
+            this.tbPassword.Location = new System.Drawing.Point(493, 388);
+            this.tbPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbPassword.Name = "tbPassword";
+            this.tbPassword.Size = new System.Drawing.Size(404, 20);
+            this.tbPassword.TabIndex = 36;
+            this.tbPassword.Text = "Password";
+            this.tbPassword.UseSystemPasswordChar = true;
+            this.tbPassword.Click += new System.EventHandler(this.textBox_Password_Click);
+            this.tbPassword.TextChanged += new System.EventHandler(this.textBox_Password_TextChanged);
             // 
-            // textBox_User
+            // tbUserName
             // 
-            this.textBox_User.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox_User.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_User.ForeColor = System.Drawing.Color.Gray;
-            this.textBox_User.Location = new System.Drawing.Point(493, 338);
-            this.textBox_User.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox_User.Name = "textBox_User";
-            this.textBox_User.Size = new System.Drawing.Size(404, 20);
-            this.textBox_User.TabIndex = 34;
-            this.textBox_User.Tag = "";
-            this.textBox_User.Text = "Username";
-            this.textBox_User.Click += new System.EventHandler(this.textBox_User_Click);
+            this.tbUserName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbUserName.ForeColor = System.Drawing.Color.Gray;
+            this.tbUserName.Location = new System.Drawing.Point(493, 338);
+            this.tbUserName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbUserName.Name = "tbUserName";
+            this.tbUserName.Size = new System.Drawing.Size(404, 20);
+            this.tbUserName.TabIndex = 34;
+            this.tbUserName.Tag = "";
+            this.tbUserName.Text = "Username";
+            this.tbUserName.Click += new System.EventHandler(this.textBox_User_Click);
             // 
             // label2
             // 
@@ -173,7 +174,7 @@
             // 
             this.rbGiaSu.AutoSize = true;
             this.rbGiaSu.Location = new System.Drawing.Point(775, 439);
-            this.rbGiaSu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbGiaSu.Margin = new System.Windows.Forms.Padding(4);
             this.rbGiaSu.Name = "rbGiaSu";
             this.rbGiaSu.Size = new System.Drawing.Size(68, 20);
             this.rbGiaSu.TabIndex = 45;
@@ -181,29 +182,29 @@
             this.rbGiaSu.Text = "Gia Sư";
             this.rbGiaSu.UseVisualStyleBackColor = true;
             // 
-            // rb_PhuHuynh
+            // rbPhuHuynh
             // 
-            this.rb_PhuHuynh.AutoSize = true;
-            this.rb_PhuHuynh.Location = new System.Drawing.Point(620, 439);
-            this.rb_PhuHuynh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.rb_PhuHuynh.Name = "rb_PhuHuynh";
-            this.rb_PhuHuynh.Size = new System.Drawing.Size(92, 20);
-            this.rb_PhuHuynh.TabIndex = 46;
-            this.rb_PhuHuynh.TabStop = true;
-            this.rb_PhuHuynh.Text = "Phụ Huynh";
-            this.rb_PhuHuynh.UseVisualStyleBackColor = true;
+            this.rbPhuHuynh.AutoSize = true;
+            this.rbPhuHuynh.Location = new System.Drawing.Point(620, 439);
+            this.rbPhuHuynh.Margin = new System.Windows.Forms.Padding(4);
+            this.rbPhuHuynh.Name = "rbPhuHuynh";
+            this.rbPhuHuynh.Size = new System.Drawing.Size(92, 20);
+            this.rbPhuHuynh.TabIndex = 46;
+            this.rbPhuHuynh.TabStop = true;
+            this.rbPhuHuynh.Text = "Phụ Huynh";
+            this.rbPhuHuynh.UseVisualStyleBackColor = true;
             // 
-            // rb_Admin
+            // rbAdmin
             // 
-            this.rb_Admin.AutoSize = true;
-            this.rb_Admin.Location = new System.Drawing.Point(493, 439);
-            this.rb_Admin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.rb_Admin.Name = "rb_Admin";
-            this.rb_Admin.Size = new System.Drawing.Size(66, 20);
-            this.rb_Admin.TabIndex = 47;
-            this.rb_Admin.TabStop = true;
-            this.rb_Admin.Text = "Admin";
-            this.rb_Admin.UseVisualStyleBackColor = true;
+            this.rbAdmin.AutoSize = true;
+            this.rbAdmin.Location = new System.Drawing.Point(493, 439);
+            this.rbAdmin.Margin = new System.Windows.Forms.Padding(4);
+            this.rbAdmin.Name = "rbAdmin";
+            this.rbAdmin.Size = new System.Drawing.Size(66, 20);
+            this.rbAdmin.TabIndex = 47;
+            this.rbAdmin.TabStop = true;
+            this.rbAdmin.Text = "Admin";
+            this.rbAdmin.UseVisualStyleBackColor = true;
             // 
             // llb_DangKyPhuHuynh
             // 
@@ -230,17 +231,29 @@
             this.label1.TabIndex = 48;
             this.label1.Text = "Đăng ký tài khoản phụ huynh ==>";
             // 
+            // lbCannotLogin
+            // 
+            this.lbCannotLogin.AutoSize = true;
+            this.lbCannotLogin.ForeColor = System.Drawing.Color.Red;
+            this.lbCannotLogin.Location = new System.Drawing.Point(490, 419);
+            this.lbCannotLogin.Name = "lbCannotLogin";
+            this.lbCannotLogin.Size = new System.Drawing.Size(261, 16);
+            this.lbCannotLogin.TabIndex = 50;
+            this.lbCannotLogin.Text = "Tên đăng nhập hoặc mật khẩu không đúng";
+            this.lbCannotLogin.Visible = false;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1333, 625);
+            this.Controls.Add(this.lbCannotLogin);
             this.Controls.Add(this.llb_DangKyPhuHuynh);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.rbGiaSu);
-            this.Controls.Add(this.rb_PhuHuynh);
-            this.Controls.Add(this.rb_Admin);
+            this.Controls.Add(this.rbPhuHuynh);
+            this.Controls.Add(this.rbAdmin);
             this.Controls.Add(this.llb_DangKyGiaSu);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -248,10 +261,10 @@
             this.Controls.Add(this.button_Login);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.textBox_Password);
-            this.Controls.Add(this.textBox_User);
+            this.Controls.Add(this.tbPassword);
+            this.Controls.Add(this.tbUserName);
             this.Controls.Add(this.label2);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
@@ -272,13 +285,14 @@
         private System.Windows.Forms.Button button_Login;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TextBox textBox_Password;
-        private System.Windows.Forms.TextBox textBox_User;
+        private System.Windows.Forms.TextBox tbPassword;
+        private System.Windows.Forms.TextBox tbUserName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.RadioButton rbGiaSu;
-        private System.Windows.Forms.RadioButton rb_PhuHuynh;
-        private System.Windows.Forms.RadioButton rb_Admin;
+        private System.Windows.Forms.RadioButton rbPhuHuynh;
+        private System.Windows.Forms.RadioButton rbAdmin;
         private System.Windows.Forms.LinkLabel llb_DangKyPhuHuynh;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbCannotLogin;
     }
 }
