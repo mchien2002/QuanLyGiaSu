@@ -99,5 +99,10 @@ namespace QuanLyGiaSu.src.app.views.Login
                 this.Close();
             }
         }
+
+        private void rbPhuHuynh_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

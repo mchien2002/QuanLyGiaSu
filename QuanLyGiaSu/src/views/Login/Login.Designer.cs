@@ -69,7 +69,7 @@
             this.label5.Location = new System.Drawing.Point(520, 534);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(144, 16);
+            this.label5.Size = new System.Drawing.Size(156, 17);
             this.label5.TabIndex = 43;
             this.label5.Text = "Đăng ký làm gia sư ==>";
             // 
@@ -176,7 +176,7 @@
             this.rbGiaSu.Location = new System.Drawing.Point(775, 439);
             this.rbGiaSu.Margin = new System.Windows.Forms.Padding(4);
             this.rbGiaSu.Name = "rbGiaSu";
-            this.rbGiaSu.Size = new System.Drawing.Size(68, 20);
+            this.rbGiaSu.Size = new System.Drawing.Size(72, 21);
             this.rbGiaSu.TabIndex = 45;
             this.rbGiaSu.TabStop = true;
             this.rbGiaSu.Text = "Gia Sư";
@@ -188,7 +188,7 @@
             this.rbPhuHuynh.Location = new System.Drawing.Point(620, 439);
             this.rbPhuHuynh.Margin = new System.Windows.Forms.Padding(4);
             this.rbPhuHuynh.Name = "rbPhuHuynh";
-            this.rbPhuHuynh.Size = new System.Drawing.Size(92, 20);
+            this.rbPhuHuynh.Size = new System.Drawing.Size(99, 21);
             this.rbPhuHuynh.TabIndex = 46;
             this.rbPhuHuynh.TabStop = true;
             this.rbPhuHuynh.Text = "Phụ Huynh";
@@ -200,7 +200,7 @@
             this.rbAdmin.Location = new System.Drawing.Point(493, 439);
             this.rbAdmin.Margin = new System.Windows.Forms.Padding(4);
             this.rbAdmin.Name = "rbAdmin";
-            this.rbAdmin.Size = new System.Drawing.Size(66, 20);
+            this.rbAdmin.Size = new System.Drawing.Size(68, 21);
             this.rbAdmin.TabIndex = 47;
             this.rbAdmin.TabStop = true;
             this.rbAdmin.Text = "Admin";
@@ -227,7 +227,7 @@
             this.label1.Location = new System.Drawing.Point(520, 564);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(200, 16);
+            this.label1.Size = new System.Drawing.Size(221, 17);
             this.label1.TabIndex = 48;
             this.label1.Text = "Đăng ký tài khoản phụ huynh ==>";
             // 
@@ -237,7 +237,7 @@
             this.lbCannotLogin.ForeColor = System.Drawing.Color.Red;
             this.lbCannotLogin.Location = new System.Drawing.Point(490, 419);
             this.lbCannotLogin.Name = "lbCannotLogin";
-            this.lbCannotLogin.Size = new System.Drawing.Size(261, 16);
+            this.lbCannotLogin.Size = new System.Drawing.Size(281, 17);
             this.lbCannotLogin.TabIndex = 50;
             this.lbCannotLogin.Text = "Tên đăng nhập hoặc mật khẩu không đúng";
             this.lbCannotLogin.Visible = false;

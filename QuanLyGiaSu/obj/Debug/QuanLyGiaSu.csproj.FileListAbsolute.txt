@@ -147,3 +147,44 @@ C:\Users\Admin\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.vie
 C:\Users\84975\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_LSGD_PH.resources
 C:\Users\84975\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.Login.RegisterForm.resources
 C:\Users\Admin\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.Login.RegisterForm.resources
+D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\bin\Debug\QuanLyGiaSu.exe.config
+D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\bin\Debug\QuanLyGiaSu.exe
+D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\bin\Debug\QuanLyGiaSu.pdb
+D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\bin\Debug\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\bin\Debug\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\bin\Debug\Microsoft.AspNetCore.Cryptography.Internal.xml
+D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\bin\Debug\Microsoft.AspNetCore.Cryptography.KeyDerivation.xml
+D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.csproj.AssemblyReference.cache
+D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.formMain.resources
+D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.formMainGiaSu.resources
+D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.formMainPhuHuynh.resources
+D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.Properties.Resources.resources
+D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.DangKyDay.resources
+D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.DangKyMoLop.resources
+D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.SuaGiaSu.resources
+D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.SuaPhuHuynh.resources
+D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.SuaThongTinLop.resources
+D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.ThemAccount.resources
+D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_DanhSachLopDaDangKy.resources
+D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_DanhSachMoLop.resources
+D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_LopMoiForParent.resources
+D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_LSGD_PH.resources
+D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_QuanLyGiaSu.resources
+D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_QuanLyLop.resources
+D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_QuanLyPhuHuynh.resources
+D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_Register.resources
+D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_LienHe.resources
+D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_LopMoiForTutor.resources
+D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\DoAnCuoiKy_Nhom13.UC_GiaSu.resources
+D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\DoAnCuoiKy_Nhom13.UC_LichSuGiaoDich.resources
+D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_ThongTinPhuHuynh.resources
+D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\DoAnCuoiKy_Nhom13.UC_TrangChu.resources
+D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_TuyenDung.resources
+D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.Login.Login.resources
+D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.Login.NhapThongTinGiaSu.resources
+D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.Login.NhapThongTinPhuHuynh.resources
+D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.Login.RegisterForm.resources
+D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.csproj.GenerateResource.cache
+D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.csproj.CoreCompileInputs.cache
+D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.exe
+D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.pdb

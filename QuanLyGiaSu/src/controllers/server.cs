@@ -96,18 +96,37 @@ namespace QuanLyGiaSu.src.server
 
         }
 
-        public void updateParent(
-            AccountModel account,
+        public bool updateParent(
+            string userName,
             string name,
-            string cmnd,
-            string gender,
-            DateTime birthday,
             string phone,
+            DateTime birthday,
+            string address,
             string job,
-            string location
+            string gender,
+            string cmnd
         )
         {
-
+            try
+            {
+                _db.update_ph(
+                    _db.check_ph_gs(_db.find_accid_username(userName)),
+                    name,
+                    cmnd,
+                    gender,
+                    birthday,
+                    phone,
+                    job,
+                    address
+                );
+                MessageBox.Show("Đăng ký thành công", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return true;
+            }
+            catch
+            {
+                MessageBox.Show("Thiếu hoặc sai dữ liệu! \nXin vui lòng nhập đủ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
         }
 
         public bool checkSignIn(string userName, string passHash, string phanQuyen)
