@@ -26,8 +26,9 @@ namespace QuanLyGiaSu.src.app.views.Login
             // tmCheckInfoLogin.Start();
         }
 
-        void refreshTextBoxPassword()
+        void refreshTextBoxLogin()
         {
+            tbUser.Clear();
             tbPassword.Clear();
             tbConfirmPass.Clear();
         }
@@ -53,14 +54,17 @@ namespace QuanLyGiaSu.src.app.views.Login
             if (tbPassword.Text != tbConfirmPass.Text)
             {
                 lbExceptionPassword.Visible = true;
-                refreshTextBoxPassword();
+                refreshTextBoxLogin();
                 return;
             };
+            lbExceptionPassword.Visible = false;
             if (Locator.server.isAccountExist(tbUser.Text, tbEmail.Text))
             {
                 lbExceptionUserName.Visible = true;
+                refreshTextBoxLogin();
                 return;
             }
+            lbExceptionUserName.Visible = false;
             Locator.author.getAccount(
                this.userType == UserType.tutor ? "Gia sư"
                : this.userType == UserType.parent ? "Phụ huynh"
