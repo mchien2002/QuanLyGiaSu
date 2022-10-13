@@ -81,5 +81,10 @@ namespace QuanLyGiaSu.src.app.views.Login
                 btnRegister.BackColor = Color.Blue;
             }
         }
+
+        private void NhapThongTinGiaSu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

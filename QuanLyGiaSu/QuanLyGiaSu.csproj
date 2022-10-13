@@ -374,5 +374,8 @@
     <Folder Include="src\views\layer\parent\" />
     <Folder Include="src\views\layer\tutor\" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email_open_50px.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

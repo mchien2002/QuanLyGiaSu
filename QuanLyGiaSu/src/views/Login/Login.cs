@@ -104,5 +104,26 @@ namespace QuanLyGiaSu.src.app.views.Login
         {
 
         }
+
+        private void tbUserName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbUserName_Leave(object sender, EventArgs e)
+        {
+            if (tbUserName.Text == "")
+            {
+                tbUserName.Text = "Username";
+            }
+        }
+
+        private void tbPassword_Leave(object sender, EventArgs e)
+        {
+            if (tbPassword.Text == "")
+            {
+                tbPassword.Text = "Password";
+            }
+        }
     }
 }

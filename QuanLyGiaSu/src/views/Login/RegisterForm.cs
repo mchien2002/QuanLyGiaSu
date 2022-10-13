@@ -24,6 +24,8 @@ namespace QuanLyGiaSu.src.app.views.Login
                 : "ĐĂNG KÝ ADMIN";
 
             // tmCheckInfoLogin.Start();
+            btnRegister.Enabled = false;
+            btnRegister.BackColor = Color.Gray;
         }
 
         void refreshTextBoxLogin()
@@ -94,6 +96,84 @@ namespace QuanLyGiaSu.src.app.views.Login
             this.Hide();
             login.ShowDialog();
             this.Close();
+        }
+
+        private void tbEmail_Click(object sender, EventArgs e)
+        {
+            if (tbEmail.Text == "Email")
+            {
+                tbEmail.Clear();
+            }
+        }
+
+        private void tbUser_Click(object sender, EventArgs e)
+        {
+            if (tbUser.Text == "Username")
+            {
+                tbUser.Clear();
+            }
+        }
+
+        private void tbPassword_Click(object sender, EventArgs e)
+        {
+            if (tbPassword.Text == "Password")
+            {
+                tbPassword.Clear();
+            }
+        }
+
+        private void tbConfirmPass_Click(object sender, EventArgs e)
+        {
+            if (tbConfirmPass.Text == "Password")
+            {
+                tbConfirmPass.Clear();
+            }
+        }
+
+        private void tbEmail_Leave(object sender, EventArgs e)
+        {
+            if (tbEmail.Text == "")
+            {
+                tbEmail.Text = "Email";
+            }
+        }
+
+        private void tbUser_Leave(object sender, EventArgs e)
+        {
+            if (tbUser.Text == "")
+            {
+                tbUser.Text = "Username";
+            }
+        }
+
+        private void tbPassword_Leave(object sender, EventArgs e)
+        {
+            if (tbPassword.Text == "")
+            {
+                tbPassword.Text = "Password";
+            }
+        }
+
+        private void tbConfirmPass_Leave(object sender, EventArgs e)
+        {
+            if (tbConfirmPass.Text == "")
+            {
+                tbConfirmPass.Text = "Password";
+            }
+        }
+
+        private void RegisterForm_MouseMove(object sender, MouseEventArgs e)
+        {
+            if(tbEmail.Text != "Email" && tbUser.Text != "Username" && tbPassword.Text != "Password" && tbConfirmPass.Text != "Password")
+            {
+                btnRegister.BackColor = Color.Blue;
+                btnRegister.Enabled = true;
+            }    
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
