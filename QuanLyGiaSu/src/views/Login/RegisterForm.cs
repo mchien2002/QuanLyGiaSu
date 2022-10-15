@@ -67,7 +67,7 @@ namespace QuanLyGiaSu.src.app.views.Login
                 return;
             }
             lbExceptionUserName.Visible = false;
-            Locator.author.getAccount(
+            Locator.author.setAccount(
                this.userType == UserType.tutor ? "Gia sư"
                : this.userType == UserType.parent ? "Phụ huynh"
                : "Admin",

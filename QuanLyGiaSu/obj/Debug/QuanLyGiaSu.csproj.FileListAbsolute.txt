@@ -188,3 +188,46 @@ D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.csproj.Generate
 D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.csproj.CoreCompileInputs.cache
 D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.exe
 D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.pdb
+D:\Trần Huỳnh Tấn Phát\HKI-Năm3\Hệ quản trị cơ sở dữ liệu\Demo\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.csproj.AssemblyReference.cache
+D:\Trần Huỳnh Tấn Phát\HKI-Năm3\Hệ quản trị cơ sở dữ liệu\Demo\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.csproj.SuggestedBindingRedirects.cache
+D:\Trần Huỳnh Tấn Phát\HKI-Năm3\Hệ quản trị cơ sở dữ liệu\Demo\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.formMain.resources
+D:\Trần Huỳnh Tấn Phát\HKI-Năm3\Hệ quản trị cơ sở dữ liệu\Demo\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.formMainGiaSu.resources
+D:\Trần Huỳnh Tấn Phát\HKI-Năm3\Hệ quản trị cơ sở dữ liệu\Demo\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.formMainPhuHuynh.resources
+D:\Trần Huỳnh Tấn Phát\HKI-Năm3\Hệ quản trị cơ sở dữ liệu\Demo\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.Properties.Resources.resources
+D:\Trần Huỳnh Tấn Phát\HKI-Năm3\Hệ quản trị cơ sở dữ liệu\Demo\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.DangKyDay.resources
+D:\Trần Huỳnh Tấn Phát\HKI-Năm3\Hệ quản trị cơ sở dữ liệu\Demo\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.DangKyMoLop.resources
+D:\Trần Huỳnh Tấn Phát\HKI-Năm3\Hệ quản trị cơ sở dữ liệu\Demo\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.SuaGiaSu.resources
+D:\Trần Huỳnh Tấn Phát\HKI-Năm3\Hệ quản trị cơ sở dữ liệu\Demo\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.SuaPhuHuynh.resources
+D:\Trần Huỳnh Tấn Phát\HKI-Năm3\Hệ quản trị cơ sở dữ liệu\Demo\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.SuaThongTinLop.resources
+D:\Trần Huỳnh Tấn Phát\HKI-Năm3\Hệ quản trị cơ sở dữ liệu\Demo\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.ThemAccount.resources
+D:\Trần Huỳnh Tấn Phát\HKI-Năm3\Hệ quản trị cơ sở dữ liệu\Demo\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_DanhSachLopDaDangKy.resources
+D:\Trần Huỳnh Tấn Phát\HKI-Năm3\Hệ quản trị cơ sở dữ liệu\Demo\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_DanhSachMoLop.resources
+D:\Trần Huỳnh Tấn Phát\HKI-Năm3\Hệ quản trị cơ sở dữ liệu\Demo\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_LopMoiForParent.resources
+D:\Trần Huỳnh Tấn Phát\HKI-Năm3\Hệ quản trị cơ sở dữ liệu\Demo\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_LSGD_PH.resources
+D:\Trần Huỳnh Tấn Phát\HKI-Năm3\Hệ quản trị cơ sở dữ liệu\Demo\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_QuanLyGiaSu.resources
+D:\Trần Huỳnh Tấn Phát\HKI-Năm3\Hệ quản trị cơ sở dữ liệu\Demo\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_QuanLyLop.resources
+D:\Trần Huỳnh Tấn Phát\HKI-Năm3\Hệ quản trị cơ sở dữ liệu\Demo\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_QuanLyPhuHuynh.resources
+D:\Trần Huỳnh Tấn Phát\HKI-Năm3\Hệ quản trị cơ sở dữ liệu\Demo\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_Register.resources
+D:\Trần Huỳnh Tấn Phát\HKI-Năm3\Hệ quản trị cơ sở dữ liệu\Demo\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_LienHe.resources
+D:\Trần Huỳnh Tấn Phát\HKI-Năm3\Hệ quản trị cơ sở dữ liệu\Demo\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_LopMoiForTutor.resources
+D:\Trần Huỳnh Tấn Phát\HKI-Năm3\Hệ quản trị cơ sở dữ liệu\Demo\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\DoAnCuoiKy_Nhom13.UC_GiaSu.resources
+D:\Trần Huỳnh Tấn Phát\HKI-Năm3\Hệ quản trị cơ sở dữ liệu\Demo\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\DoAnCuoiKy_Nhom13.UC_LichSuGiaoDich.resources
+D:\Trần Huỳnh Tấn Phát\HKI-Năm3\Hệ quản trị cơ sở dữ liệu\Demo\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_ThongTinPhuHuynh.resources
+D:\Trần Huỳnh Tấn Phát\HKI-Năm3\Hệ quản trị cơ sở dữ liệu\Demo\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\DoAnCuoiKy_Nhom13.UC_TrangChu.resources
+D:\Trần Huỳnh Tấn Phát\HKI-Năm3\Hệ quản trị cơ sở dữ liệu\Demo\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_TuyenDung.resources
+D:\Trần Huỳnh Tấn Phát\HKI-Năm3\Hệ quản trị cơ sở dữ liệu\Demo\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.Login.Login.resources
+D:\Trần Huỳnh Tấn Phát\HKI-Năm3\Hệ quản trị cơ sở dữ liệu\Demo\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.Login.NhapThongTinGiaSu.resources
+D:\Trần Huỳnh Tấn Phát\HKI-Năm3\Hệ quản trị cơ sở dữ liệu\Demo\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.Login.NhapThongTinPhuHuynh.resources
+D:\Trần Huỳnh Tấn Phát\HKI-Năm3\Hệ quản trị cơ sở dữ liệu\Demo\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.Login.RegisterForm.resources
+D:\Trần Huỳnh Tấn Phát\HKI-Năm3\Hệ quản trị cơ sở dữ liệu\Demo\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.csproj.GenerateResource.cache
+D:\Trần Huỳnh Tấn Phát\HKI-Năm3\Hệ quản trị cơ sở dữ liệu\Demo\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.csproj.CoreCompileInputs.cache
+D:\Trần Huỳnh Tấn Phát\HKI-Năm3\Hệ quản trị cơ sở dữ liệu\Demo\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.exe
+D:\Trần Huỳnh Tấn Phát\HKI-Năm3\Hệ quản trị cơ sở dữ liệu\Demo\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.pdb
+D:\Trần Huỳnh Tấn Phát\HKI-Năm3\Hệ quản trị cơ sở dữ liệu\Demo\QuanLyGiaSu\QuanLyGiaSu\bin\Debug\QuanLyGiaSu.exe.config
+D:\Trần Huỳnh Tấn Phát\HKI-Năm3\Hệ quản trị cơ sở dữ liệu\Demo\QuanLyGiaSu\QuanLyGiaSu\bin\Debug\QuanLyGiaSu.exe
+D:\Trần Huỳnh Tấn Phát\HKI-Năm3\Hệ quản trị cơ sở dữ liệu\Demo\QuanLyGiaSu\QuanLyGiaSu\bin\Debug\QuanLyGiaSu.pdb
+D:\Trần Huỳnh Tấn Phát\HKI-Năm3\Hệ quản trị cơ sở dữ liệu\Demo\QuanLyGiaSu\QuanLyGiaSu\bin\Debug\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\Trần Huỳnh Tấn Phát\HKI-Năm3\Hệ quản trị cơ sở dữ liệu\Demo\QuanLyGiaSu\QuanLyGiaSu\bin\Debug\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\Trần Huỳnh Tấn Phát\HKI-Năm3\Hệ quản trị cơ sở dữ liệu\Demo\QuanLyGiaSu\QuanLyGiaSu\bin\Debug\Microsoft.AspNetCore.Cryptography.Internal.xml
+D:\Trần Huỳnh Tấn Phát\HKI-Năm3\Hệ quản trị cơ sở dữ liệu\Demo\QuanLyGiaSu\QuanLyGiaSu\bin\Debug\Microsoft.AspNetCore.Cryptography.KeyDerivation.xml
+D:\Trần Huỳnh Tấn Phát\HKI-Năm3\Hệ quản trị cơ sở dữ liệu\Demo\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.csproj.CopyComplete

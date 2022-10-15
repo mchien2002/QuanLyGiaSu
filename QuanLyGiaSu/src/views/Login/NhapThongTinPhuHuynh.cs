@@ -34,7 +34,9 @@ namespace QuanLyGiaSu.src.app.views.Login
                     cbbGender.Text,
                     tbCmndPH.Text
                     ))
+                {
                     return;
+                }
             }
             else
             {

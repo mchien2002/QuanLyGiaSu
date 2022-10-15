@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Security.Cryptography;
 using System.Text;
 using System.Windows.Forms;
@@ -16,15 +17,24 @@ namespace QuanLyGiaSu.src.server
         public object fetchBangTinTable(){
             return _db.BANGTINs.Select(p => p);
         }
-        public object fetchLopMoiTable(){
+        public object fetchLopMoiTable()
+        {
             return _db.THONGTINLOPMOI_PH_Gs.Select(p => p);
         }
-        public object fetchLichSuGiaoDichTable(int id){
-            return _db.select_lichsugiaodich(id);
+        //public object fetchLichSuGiaoDichTable(int id){
+        //    return _db.select_lichsugiaodich(id);
+        //}
+        //public object fetchLichSuGiaoDichNapTienTable(){
+        //    return _db.BANGTINs.Select(p => p);
+        //}
+        public object fetchDanhSachLopDaDangKyDayTable(string username)
+        {
+            return _db.select_danhsachlopmoi_dadangkyday(_db.check_ph_gs(_db.find_accid_username(username)));
         }
-        public object fetchLichSuGiaoDichNapTienTable(){
-            return _db.BANGTINs.Select(p => p);
-        }
+        public object fetchLichSuGiaoDichTable(string username)
+        {
+            return _db.select_lichsugiaodich(_db.find_accid_username(username));
+        }    
         public string hashPassWord(string pass, string userName)
         {
             var sha = SHA256.Create();
@@ -53,7 +63,6 @@ namespace QuanLyGiaSu.src.server
                 return false;
             }
         }
-
         public bool updateInfoTutor(
             string userName, 
             string name, 
@@ -132,6 +141,21 @@ namespace QuanLyGiaSu.src.server
         public bool checkSignIn(string userName, string passHash, string phanQuyen)
         {
             return (bool)_db.check_signin(userName, passHash, phanQuyen);
+        }
+        public int getNganSach(String userName)
+        {
+            try
+            {
+                var temp = _db.select_ngansach(_db.find_accid_username(userName));
+                if (temp != null)
+                    return (int)temp;
+                return 0;
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
+            }
         }
     }
 }

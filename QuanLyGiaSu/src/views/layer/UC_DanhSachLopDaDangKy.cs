@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyGiaSu.src.controller;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,6 +20,8 @@ namespace QuanLyGiaSu.src.app.views.layer
 
         private void UC_DanhSachLopDaDangKy_Load(object sender, EventArgs e)
         {
+            dgvDSDKD.DataSource = Locator.server.fetchDanhSachLopDaDangKyDayTable(Locator.author.UserName);
         }
+
     }
 }

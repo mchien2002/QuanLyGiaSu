@@ -200,7 +200,7 @@
             // 
             this.uC_DanhSachLopDaDangKy1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.uC_DanhSachLopDaDangKy1.Location = new System.Drawing.Point(15, 82);
-            this.uC_DanhSachLopDaDangKy1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.uC_DanhSachLopDaDangKy1.Margin = new System.Windows.Forms.Padding(5);
             this.uC_DanhSachLopDaDangKy1.Name = "uC_DanhSachLopDaDangKy1";
             this.uC_DanhSachLopDaDangKy1.Size = new System.Drawing.Size(1309, 533);
             this.uC_DanhSachLopDaDangKy1.TabIndex = 10;
@@ -220,7 +220,7 @@
             this.panel2.Controls.Add(this.lbSoDu);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(1132, 12);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(192, 62);
             this.panel2.TabIndex = 12;
@@ -261,7 +261,7 @@
             this.Controls.Add(this.uC_GiaSu1);
             this.Controls.Add(this.uC_DanhSachLopDaDangKy1);
             this.Controls.Add(this.uC_LichSuGiaoDich1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "formMainGiaSu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "formMainGiaSu";

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyGiaSu.src.controller;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -57,6 +58,8 @@ namespace QuanLyGiaSu
 
         private void formMainGiaSu_Load(object sender, EventArgs e)
         {
+            lbSoDu.Text = Locator.server.getNganSach(Locator.author.UserName).ToString();
         }
+
     }
 }

@@ -33,9 +33,9 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tb_TimKiem = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvDANHSACHMOLOP = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDANHSACHMOLOP)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Tim
@@ -93,17 +93,17 @@
             this.label2.TabIndex = 18;
             this.label2.Text = "Tìm Theo :";
             // 
-            // dataGridView1
+            // dgvDANHSACHMOLOP
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(16, 61);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1277, 453);
-            this.dataGridView1.TabIndex = 17;
+            this.dgvDANHSACHMOLOP.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvDANHSACHMOLOP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDANHSACHMOLOP.Location = new System.Drawing.Point(16, 61);
+            this.dgvDANHSACHMOLOP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvDANHSACHMOLOP.Name = "dgvDANHSACHMOLOP";
+            this.dgvDANHSACHMOLOP.RowHeadersWidth = 51;
+            this.dgvDANHSACHMOLOP.RowTemplate.Height = 24;
+            this.dgvDANHSACHMOLOP.Size = new System.Drawing.Size(1277, 453);
+            this.dgvDANHSACHMOLOP.TabIndex = 17;
             // 
             // label1
             // 
@@ -125,11 +125,12 @@
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.tb_TimKiem);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvDANHSACHMOLOP);
             this.Controls.Add(this.label1);
             this.Name = "UC_DanhSachMoLop";
             this.Size = new System.Drawing.Size(1309, 533);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.UC_DanhSachMoLop_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDANHSACHMOLOP)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -142,7 +143,7 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox tb_TimKiem;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvDANHSACHMOLOP;
         private System.Windows.Forms.Label label1;
     }
 }

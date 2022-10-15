@@ -22,6 +22,7 @@ namespace DoAnCuoiKy_Nhom13
 
         private void UC_LichSuGiaoDich_Load(object sender, EventArgs e)
         {
+            dgvLICHSUGIAODICH.DataSource = Locator.server.fetchLichSuGiaoDichTable(Locator.author.UserName);
         }
     }
 }

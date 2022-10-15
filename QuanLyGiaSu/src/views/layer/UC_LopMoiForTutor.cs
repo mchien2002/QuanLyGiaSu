@@ -46,6 +46,7 @@ namespace QuanLyGiaSu.src.app.views.layer
         private void UC_LopMoi_Load(object sender, EventArgs e)
         {
             cbbSearch.Hide();
+            dgvTHONGTINLOPMOI.DataSource = Locator.server.fetchLopMoiTable();
         }
 
         private void label2_Click(object sender, EventArgs e)
