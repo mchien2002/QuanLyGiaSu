@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="lbTuyenDung.Text" xml:space="preserve">
+    <value>+ Nhận dạy kèm tại nhà từ lớp lá tới lớp 12 - luyện thi Đại học, các lớp đàn, vẽ, ngoại ngữ, tin học...
++ Nhận dạy kèm toán, lý, hóa, sinh, anh văn, tin học.. dạy báo bài các môn trên lớp
+
++ Nhận dạy kèm anh văn giao tiếp, tiếng hoa, tiếng nhật, tiếng hàn, tiếng Pháp mọi lứa tuổi
+
++ Nhận dạy kèm tiếng việt cho người nước ngoài
+
++ Nhận dạy kèm cho những học sinh mất căn bản, học sinh học lực yếu , trung bình, khá ,giỏi
+
++ Tìm gia sư  cho con , cần gia sư , tìm gia sư , day kem tai nha ,dạy kem, trung tâm gia sư
+
++ Gia sư môn toán, gia sư môn lý, gia sư hóa, gia sư môn văn, gia sư online
+
++ Tuyển nhiều Giáo viên, Sinh viên dạy kèm tại nhà từ lớp lá tới lớp12 - luyện thi Đại học, các lớp đàn, vẽ, ngoại ngữ, tin học...
+ 
+
+Chúng tôi chuyên:
++ Tư vấn , hỗ trợ giáo dục
++ Dạy kèm tại nhà
++ Tư vấn du học
++ Cung cấp giáo viên giỏi , uy tín từ  các quận huyện trong thành phố
++ Nhận dạy thử 3 buổi đầu tiên
+Xem danh sách các lớp cấp 1 cần gia sư
+Xem danh sách các lớp cấp 2 cần gia sư  
+Xem danh sách các lớp cấp 3 cần gia sư  
+Xem danh sách các lớp tiếng anh  cần gia sư   
+Xem danh sách các lớp tin học  cần gia sư   
+ 
+
+ 
+
+
+
+ 
+
+ 
+
+       Kính gởi quý phụ huynh,giáo viên và các bạn sinh viên thân mến !  
+
+ 
+
+                Trung tâm gia sư nhân văn, công ty TNHH Yến Điệp là 1 trong những trung tâm gia sư  uy tín và lớn mạnh ở TP HCM, với đội ngũ giáo viên và sinh viên chuyên đi dạy gia sư nhiều năm kinh nghiệm khắp trong thành phố. Với hệ thống 3 văn phòng được trải đều trong thành phố để đáp ứng nhanh nhất nhu cầu cần gia sư của quý phụ huynh. Giáo viên đang công tác trong các trường công lập, dân lập,...các trường giáo dục thường xuyên, trường quốc tế..vv. Sinh viên kinh nghiệm  của các trường ĐH BK, ĐHSP, XÃ HỘI VÀ NHÂN VĂN, KHTN, các khối kỹ thuật, khắp trong thành phố. Ngoài ra  trung tâm còn có đội ngũ giáo viên mầm non, nhận dạy học sinh từ 4 tuổi trở lên, đang công tác trong các trường mầm non công lập và tư thục. Đội ngũ giáo viên lớn tuổi từ 30 tuổi trở lên với nhiều năm gắn bó với nghề giáo sẽ là nơi để quý phụ huynh gởi trọn niềm tin về tri thức, giúp cho các em có thể nâng cao về kiến thức trên lớp, hoặc lấy lại kiến thức căn bản cho các em.
+
+      Quý phụ huynh có thể liên hệ với trung tâm bằng cách gọi điện thoại qua các số của trung tâm (0972.38.38.48) hoặc qua trực tiếp vp gần nhất.  Địa chỉ: 109 Tân Lập 2  P, Hiệp Phú quận 9, Thủ Đức,  Điện Biên Phủ P,22 quận Bình Thạnh, 294 đường Hòa Hưng, F13 Quận 10. Hoặc điện thoại lên tổng đài 1080 ( công ty Yến Điệp, gia sư nhân văn).
+
+      Giáo viên và sinh viên khi đến nhà phụ huynh sẽ có giấy giới thiệu của công ty, mang theo  bằng cấp giáo viên, thẻ sinh viên. Công ty sẽ cam kết với quý phụ huynh về kết quả học tập của học sinh trong vòng 2 tuần đầu. Lương được trả tại nhà phụ huynh vào ngày thứ 30 tính từ lúc gia sư bắt đầu dạy.
+
+ 
+
+      Trung tâm gia sư nhân văn, công ty Yến Điệp là trung tâm uy tín dành cho giáo viên và các bạn sinh viên tìm 1 công việc làm thêm ngoài giờ. Các lớp của trung tâm đã được nhân viên công ty tư vấn cho quý phụ huynh kỹ về môn học, giờ dạy, học lực, địa chỉ nơi dạy.. Các lớp dạy gặp trở ngại sẽ được công ty xác minh rõ ràng và xếp lớp khác miễn phí cho giáo viên và sinh viên trong thời gian chậm nhất là 1 tuần, hoặc hoàn phí cho giáo viên và sinh viên 100% phí đã đóng . Khi đến với trung tâm, giáo viên và sinh viên sẽ tìm được chỗ dạy phù hợp nhất với khả năng và mong muốn của các cô, thầy và các bạn sinh viên.
+
+        Kính chúc các bậc phụ huynh, các thầy, cô và các bạn sinh viên luôn mạnh khỏe.
+
+ 
+
+                       Chào thân mến  !   
+
+ 
+
+HÃY GHÉ TRỰC TIẾP TRUNG TÂM ĐỂ XEM CÁC LỚP MỚI NHẤT
+</value>
+  </data>
+</root>

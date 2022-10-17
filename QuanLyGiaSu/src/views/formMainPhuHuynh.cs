@@ -28,10 +28,6 @@ namespace QuanLyGiaSu
             uC_LopMoi21.BringToFront();
         }
 
-        private void btn_TuyenDung_Click(object sender, EventArgs e)
-        {
-            uC_TuyenDung1.BringToFront();
-        }
 
         private void btn_LienHe_Click(object sender, EventArgs e)
         {

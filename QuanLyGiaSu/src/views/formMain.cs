@@ -32,21 +32,6 @@ namespace QuanLyGiaSu
             uC_GiaSu1.BringToFront();
         }
 
-        private void btn_LopMoi_Click(object sender, EventArgs e)
-        {
-            uC_LopMoi1.BringToFront();
-        }
-
-        private void btn_TuyenDung_Click(object sender, EventArgs e)
-        {
-            uC_TuyenDung1.BringToFront();
-            //uC_TuyenDung1.BackColor = System.Drawing.Color.Red;
-        }
-
-        private void btn_LienHe_Click(object sender, EventArgs e)
-        {
-            uC_LienHe1.BringToFront();
-        }
 
         private void btn_QlyLop_Click(object sender, EventArgs e)
         {
@@ -65,17 +50,12 @@ namespace QuanLyGiaSu
 
         private void btn_QlyDSLOP_Click(object sender, EventArgs e)
         {
-            uC_DanhSachLopDaDangKy1.BringToFront();
+            uC_QuanLyDanhSachDangKyDay1.BringToFront();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnLichSuGiaoDich_Click(object sender, EventArgs e)
         {
-            uC_PhuHuynh1.BringToFront();
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
+            uC_LichSuGiaoDich1.BringToFront();
         }
     }
 }

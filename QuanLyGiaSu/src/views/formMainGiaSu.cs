@@ -28,17 +28,12 @@ namespace QuanLyGiaSu
 
         private void btn_LopMoi_Click(object sender, EventArgs e)
         {
-            uC_LopMoi1.BringToFront();
+            uC_LopMoiChoPhuHuynh_GiaSu1.BringToFront();
         }
 
-        private void btn_TuyenDung_Click(object sender, EventArgs e)
-        {
-            uC_TuyenDung1.BringToFront();
-        }
 
         private void btn_LienHe_Click(object sender, EventArgs e)
         {
-            uC_LienHe1.BringToFront();
         }
 
         private void btn_GiaSu_Click(object sender, EventArgs e)
@@ -48,18 +43,18 @@ namespace QuanLyGiaSu
 
         private void btn_QlyDSLOP_Click(object sender, EventArgs e)
         {
-            uC_DanhSachLopDaDangKy1.BringToFront();
+            uC_DanhSachLopDaDangKyDay1.BringToFront();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            uC_LichSuGiaoDich1.BringToFront();
-        }
 
         private void formMainGiaSu_Load(object sender, EventArgs e)
         {
             lbSoDu.Text = Locator.server.getNganSach(Locator.author.UserName).ToString();
         }
 
+        private void btnLichSuGiaoDich_Click(object sender, EventArgs e)
+        {
+            uC_LichSuGiaoDichPhuHuynh_GiaSu1.BringToFront();
+        }
     }
 }
