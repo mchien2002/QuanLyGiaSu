@@ -52,6 +52,7 @@
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -91,11 +92,47 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\views\layer\admin\NapTien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\views\layer\admin\NapTien.Designer.cs">
+      <DependentUpon>NapTien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\views\layer\admin\ThemSuaLop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\views\layer\admin\ThemSuaLop.Designer.cs">
+      <DependentUpon>ThemSuaLop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\views\layer\admin\ThemSuaMon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\views\layer\admin\ThemSuaMon.Designer.cs">
+      <DependentUpon>ThemSuaMon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\views\layer\admin\UC_QLyLichSuNap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\views\layer\admin\UC_QLyLichSuNap.Designer.cs">
+      <DependentUpon>UC_QLyLichSuNap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\views\layer\admin\UC_QLyLopHoc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\views\layer\admin\UC_QLyLopHoc.Designer.cs">
+      <DependentUpon>UC_QLyLopHoc.cs</DependentUpon>
+    </Compile>
     <Compile Include="src\views\layer\admin\UC_QuanLyDanhSachDangKyDay.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="src\views\layer\admin\UC_QuanLyDanhSachDangKyDay.Designer.cs">
       <DependentUpon>UC_QuanLyDanhSachDangKyDay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\views\layer\admin\UC_ThongKe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\views\layer\admin\UC_ThongKe.Designer.cs">
+      <DependentUpon>UC_ThongKe.cs</DependentUpon>
     </Compile>
     <Compile Include="src\views\layer\tutors\DangKyDay.cs">
       <SubType>Form</SubType>
@@ -263,8 +300,26 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="src\views\layer\admin\NapTien.resx">
+      <DependentUpon>NapTien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\views\layer\admin\ThemSuaLop.resx">
+      <DependentUpon>ThemSuaLop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\views\layer\admin\ThemSuaMon.resx">
+      <DependentUpon>ThemSuaMon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\views\layer\admin\UC_QLyLichSuNap.resx">
+      <DependentUpon>UC_QLyLichSuNap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\views\layer\admin\UC_QLyLopHoc.resx">
+      <DependentUpon>UC_QLyLopHoc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="src\views\layer\admin\UC_QuanLyDanhSachDangKyDay.resx">
       <DependentUpon>UC_QuanLyDanhSachDangKyDay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\views\layer\admin\UC_ThongKe.resx">
+      <DependentUpon>UC_ThongKe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\views\layer\tutors\DangKyDay.resx">
       <DependentUpon>DangKyDay.cs</DependentUpon>
@@ -394,6 +449,8 @@
   <ItemGroup>
     <Content Include="Resources\banner_lienhe1.mp4" />
     <Content Include="Resources\banner_trungtamgiasu.gif" />
+    <None Include="Resources\vietcom.jpg" />
+    <None Include="Resources\momo.jpg" />
     <Content Include="Resources\trung tâm.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

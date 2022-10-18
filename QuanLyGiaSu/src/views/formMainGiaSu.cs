@@ -1,4 +1,6 @@
-﻿using QuanLyGiaSu.src.controller;
+﻿using QuanLyGiaSu.src.app.views.layer;
+using QuanLyGiaSu.src.controller;
+using QuanLyGiaSu.src.views.layer.admin;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -55,6 +57,15 @@ namespace QuanLyGiaSu
         private void btnLichSuGiaoDich_Click(object sender, EventArgs e)
         {
             uC_LichSuGiaoDichPhuHuynh_GiaSu1.BringToFront();
+        }
+
+        private void panel2_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                NapTien napTien = new NapTien();
+                napTien.Show();
+            }
         }
     }
 }

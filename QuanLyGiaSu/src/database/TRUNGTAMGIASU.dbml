@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="TRUNGTAMGIASU" Class="TRUNGTAMGIASUDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=TRANHUYNHTANPHA;Initial Catalog=TRUNGTAMGIASU;Integrated Security=True" SettingsObjectName="QuanLyGiaSu.Properties.Settings" SettingsPropertyName="TRUNGTAMGIASUConnectionString4" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-V99O7H4\HAIDANG;Initial Catalog=TRUNGTAMGIASU;Integrated Security=True" SettingsObjectName="QuanLyGiaSu.Properties.Settings" SettingsPropertyName="TRUNGTAMGIASUConnectionString2" Provider="System.Data.SqlClient" />
   <Table Name="dbo.ACCOUNT" Member="ACCOUNTs">
     <Type Name="ACCOUNT">
       <Column Name="ACCID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -14,18 +14,18 @@
       <Association Name="ACCOUNT_PHUHUYNH" Member="PHUHUYNHs" ThisKey="ACCID" OtherKey="ACCID" Type="PHUHUYNH" />
     </Type>
   </Table>
-  <Table Name="dbo.Admin" Member="Admins">
-    <Type Name="Admin">
-      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="Username" Type="System.String" DbType="Char(100)" CanBeNull="true" />
-      <Column Name="Password" Type="System.String" DbType="Char(100)" CanBeNull="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.BANGTIN" Member="BANGTINs">
     <Type Name="BANGTIN">
       <Column Name="BID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="ChuDe" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
       <Column Name="NoiDung" Type="System.String" DbType="NVarChar(4000) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Admin" Member="Admins">
+    <Type Name="Admin">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="Char(100)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="Char(100)" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.DANHSACHDANGKYDAY" Member="DANHSACHDANGKYDAYs">
@@ -109,20 +109,20 @@
       <Association Name="LOPHOC_LOP_GIASU" Member="LOPHOC" ThisKey="LHID" OtherKey="LHID" Type="LOPHOC" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.MONHOC" Member="MONHOCs">
-    <Type Name="MONHOC">
-      <Column Name="MHID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="TenMon" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Association Name="MONHOC_MONHOC_GIASU" Member="MONHOC_GIASUs" ThisKey="MHID" OtherKey="MHID" Type="MONHOC_GIASU" />
-      <Association Name="MONHOC_MONHOC_LOPMOI" Member="MONHOC_LOPMOIs" ThisKey="MHID" OtherKey="MHID" Type="MONHOC_LOPMOI" />
-    </Type>
-  </Table>
   <Table Name="dbo.LOPHOC" Member="LOPHOCs">
     <Type Name="LOPHOC">
       <Column Name="LHID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="TenLop" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
       <Association Name="LOPHOC_DANHSACHMOLOP" Member="DANHSACHMOLOPs" ThisKey="LHID" OtherKey="LHID" Type="DANHSACHMOLOP" />
       <Association Name="LOPHOC_LOP_GIASU" Member="LOP_GIASUs" ThisKey="LHID" OtherKey="LHID" Type="LOP_GIASU" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MONHOC" Member="MONHOCs">
+    <Type Name="MONHOC">
+      <Column Name="MHID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TenMon" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="MONHOC_MONHOC_GIASU" Member="MONHOC_GIASUs" ThisKey="MHID" OtherKey="MHID" Type="MONHOC_GIASU" />
+      <Association Name="MONHOC_MONHOC_LOPMOI" Member="MONHOC_LOPMOIs" ThisKey="MHID" OtherKey="MHID" Type="MONHOC_LOPMOI" />
     </Type>
   </Table>
   <Table Name="dbo.MONHOC_GIASU" Member="MONHOC_GIASUs">
@@ -191,12 +191,14 @@
       <Column Name="Avartar" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
     </Type>
   </Table>
-  <Table Name="dbo.THONGTINLOPMOI_PH_GS" Member="THONGTINLOPMOI_PH_Gs">
-    <Type Name="THONGTINLOPMOI_PH_G">
+  <Table Name="dbo.THONGTINLOPMOI_AD" Member="THONGTINLOPMOI_ADs">
+    <Type Name="THONGTINLOPMOI_AD">
       <Column Name="LMID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PHID" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="MONHOC_LIST" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="TenLop" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="DiaChi" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="SDTLienHe" Type="System.String" DbType="Char(20)" CanBeNull="true" />
       <Column Name="MucLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="ThoiGianDangKy" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Column Name="ThoiGianHoc" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
@@ -207,14 +209,12 @@
       <Column Name="TrangThai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.THONGTINLOPMOI_AD" Member="THONGTINLOPMOI_ADs">
-    <Type Name="THONGTINLOPMOI_AD">
+  <Table Name="dbo.THONGTINLOPMOI_PH_GS" Member="THONGTINLOPMOI_PH_Gs">
+    <Type Name="THONGTINLOPMOI_PH_G">
       <Column Name="LMID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="PHID" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="MONHOC_LIST" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="TenLop" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="DiaChi" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
-      <Column Name="SDTLienHe" Type="System.String" DbType="Char(20)" CanBeNull="true" />
       <Column Name="MucLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="ThoiGianDangKy" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Column Name="ThoiGianHoc" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
@@ -375,6 +375,11 @@
     <Parameter Name="dadongtien" Type="System.String" DbType="NVarChar(50)" />
     <Return Type="System.Int32" />
   </Function>
+  <Function Name="dbo.update_lh" Method="update_lh">
+    <Parameter Name="LHID" Parameter="lHID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TENLOP" Parameter="tENLOP" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
   <Function Name="dbo.update_gs" Method="update_gs">
     <Parameter Name="GSID" Parameter="gSID" Type="System.Int32" DbType="Int" />
     <Parameter Name="HOTEN" Parameter="hOTEN" Type="System.String" DbType="NVarChar(100)" />
@@ -388,11 +393,6 @@
     <Parameter Name="UUDIEM" Parameter="uUDIEM" Type="System.String" DbType="NVarChar(4000)" />
     <Parameter Name="DiaChi" Parameter="diaChi" Type="System.String" DbType="NVarChar(4000)" />
     <Parameter Name="Avartar" Parameter="avartar" Type="System.Data.Linq.Binary" DbType="Image" />
-    <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.update_lh" Method="update_lh">
-    <Parameter Name="LHID" Parameter="lHID" Type="System.Int32" DbType="Int" />
-    <Parameter Name="TENLOP" Parameter="tENLOP" Type="System.String" DbType="NVarChar(50)" />
     <Return Type="System.Int32" />
   </Function>
   <Function Name="dbo.update_lsgd" Method="update_lsgd">
@@ -417,6 +417,19 @@
     <Parameter Name="DIACHI" Parameter="dIACHI" Type="System.String" DbType="NVarChar(60)" />
     <Return Type="System.Int32" />
   </Function>
+  <Function Name="dbo.check_admin" Method="check_admin" IsComposable="true">
+    <Parameter Name="ADMIN" Parameter="aDMIN" Type="System.String" DbType="Char(100)" />
+    <Parameter Name="PW" Parameter="pW" Type="System.String" DbType="Char(100)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.check_lhid" Method="check_lhid" IsComposable="true">
+    <Parameter Name="TENLOP" Parameter="tENLOP" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.check_mhid" Method="check_mhid" IsComposable="true">
+    <Parameter Name="TENMON" Parameter="tENMON" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
   <Function Name="dbo.check_ph_gs" Method="check_ph_gs" IsComposable="true">
     <Parameter Name="ACCID" Parameter="aCCID" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
@@ -436,18 +449,27 @@
     <Parameter Name="EMAIL" Parameter="eMAIL" Type="System.String" DbType="NVarChar(100)" />
     <Return Type="System.Boolean" />
   </Function>
+  <Function Name="dbo.danhsachlop_damo" Method="danhsachlop_damo" IsComposable="true">
+    <Parameter Name="PHID" Parameter="pHID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="danhsachlop_damoResult">
+      <Column Name="LMID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MONHOC_LIST" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="TenLop" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="SDTLienHe" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="MucLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ThoiGianDangKy" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ThoiGianHoc" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SoBuoi" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HinhThucDay" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ThongTinHocVien" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="YeuCauGiaSu" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="TrangThai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
   <Function Name="dbo.find_accid_username" Method="find_accid_username" IsComposable="true">
     <Parameter Name="USERNAME" Parameter="uSERNAME" Type="System.String" DbType="NVarChar(100)" />
     <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.select_lichsugiaodich" Method="select_lichsugiaodich" IsComposable="true">
-    <Parameter Name="ACCID" Parameter="aCCID" Type="System.Int32" DbType="Int" />
-    <ElementType Name="select_lichsugiaodichResult">
-      <Column Name="GDID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="LMID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="SoTien" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="ThoiGianGiaoDich" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-    </ElementType>
   </Function>
   <Function Name="dbo.select_danhsachlopmoi_dadangkyday" Method="select_danhsachlopmoi_dadangkyday" IsComposable="true">
     <Parameter Name="GSID" Parameter="gSID" Type="System.Int32" DbType="Int" />
@@ -465,6 +487,15 @@
       <Column Name="ThongTinHocVien" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
       <Column Name="YeuCauGiaSu" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
       <Column Name="TrangThai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.select_lichsugiaodich" Method="select_lichsugiaodich" IsComposable="true">
+    <Parameter Name="ACCID" Parameter="aCCID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="select_lichsugiaodichResult">
+      <Column Name="GDID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LMID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SoTien" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ThoiGianGiaoDich" Type="System.DateTime" DbType="Date" CanBeNull="true" />
     </ElementType>
   </Function>
   <Function Name="dbo.select_lichsunaptien" Method="select_lichsunaptien" IsComposable="true">
@@ -498,37 +529,6 @@
   <Function Name="dbo.select_ngansach" Method="select_ngansach" IsComposable="true">
     <Parameter Name="ACCID" Parameter="aCCID" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.check_admin" Method="check_admin" IsComposable="true">
-    <Parameter Name="ADMIN" Parameter="aDMIN" Type="System.String" DbType="Char(100)" />
-    <Parameter Name="PW" Parameter="pW" Type="System.String" DbType="Char(100)" />
-    <Return Type="System.Boolean" />
-  </Function>
-  <Function Name="dbo.check_lhid" Method="check_lhid" IsComposable="true">
-    <Parameter Name="TENLOP" Parameter="tENLOP" Type="System.String" DbType="NVarChar(50)" />
-    <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.check_mhid" Method="check_mhid" IsComposable="true">
-    <Parameter Name="TENMON" Parameter="tENMON" Type="System.String" DbType="NVarChar(50)" />
-    <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.danhsachlop_damo" Method="danhsachlop_damo" IsComposable="true">
-    <Parameter Name="PHID" Parameter="pHID" Type="System.Int32" DbType="Int" />
-    <ElementType Name="danhsachlop_damoResult">
-      <Column Name="LMID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="MONHOC_LIST" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="TenLop" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
-      <Column Name="SDTLienHe" Type="System.String" DbType="Char(20)" CanBeNull="true" />
-      <Column Name="MucLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="ThoiGianDangKy" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-      <Column Name="ThoiGianHoc" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="SoBuoi" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="HinhThucDay" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="ThongTinHocVien" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
-      <Column Name="YeuCauGiaSu" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
-      <Column Name="TrangThai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-    </ElementType>
   </Function>
   <Function Name="dbo.thongtingiasu_private" Method="thongtingiasu_private" IsComposable="true">
     <Parameter Name="ACCID" Parameter="aCCID" Type="System.Int32" DbType="Int" />

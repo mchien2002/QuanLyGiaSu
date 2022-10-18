@@ -57,5 +57,20 @@ namespace QuanLyGiaSu
         {
             uC_LichSuGiaoDich1.BringToFront();
         }
+
+        private void btnQuanLyLopVaMon_Click(object sender, EventArgs e)
+        {
+            uC_QLyLopHoc1.BringToFront();
+        }
+
+        private void btnLichSuNapTien_Click(object sender, EventArgs e)
+        {
+            uC_QLyLichSuNap1.BringToFront();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            uC_ThongKe1.BringToFront();
+        }
     }
 }

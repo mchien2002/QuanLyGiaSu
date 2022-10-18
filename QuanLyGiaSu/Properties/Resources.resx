@@ -124,8 +124,17 @@
   <data name="user_male_30px2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user_male_30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="vietcom" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\vietcom.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="password_24px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\password_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="user_male_30px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user_male_30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="banner_trungtamgiasu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\banner_trungtamgiasu.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="email_open_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\email_open_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -136,16 +145,16 @@
   <data name="password_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\password_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="momo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\momo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="password_24px3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\password_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="user_male_30px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user_male_30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="password_24px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\password_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="banner_trungtamgiasu" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\banner_trungtamgiasu.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="momo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\momo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

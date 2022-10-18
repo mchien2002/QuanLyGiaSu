@@ -83,6 +83,26 @@ namespace QuanLyGiaSu.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap momo {
+            get {
+                object obj = ResourceManager.GetObject("momo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap momo1 {
+            get {
+                object obj = ResourceManager.GetObject("momo1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap password_24px {
             get {
                 object obj = ResourceManager.GetObject("password_24px", resourceCulture);
@@ -156,6 +176,16 @@ namespace QuanLyGiaSu.Properties {
         internal static System.Drawing.Bitmap user_male_30px2 {
             get {
                 object obj = ResourceManager.GetObject("user_male_30px2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap vietcom {
+            get {
+                object obj = ResourceManager.GetObject("vietcom", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

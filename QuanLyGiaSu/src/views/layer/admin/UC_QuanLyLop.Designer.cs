@@ -48,12 +48,12 @@
             this.dgvQuanLyLopMoi.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvQuanLyLopMoi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvQuanLyLopMoi.ContextMenuStrip = this.contextMenuStrip1;
-            this.dgvQuanLyLopMoi.Location = new System.Drawing.Point(16, 60);
-            this.dgvQuanLyLopMoi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvQuanLyLopMoi.Location = new System.Drawing.Point(12, 49);
+            this.dgvQuanLyLopMoi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvQuanLyLopMoi.Name = "dgvQuanLyLopMoi";
             this.dgvQuanLyLopMoi.RowHeadersWidth = 51;
             this.dgvQuanLyLopMoi.RowTemplate.Height = 24;
-            this.dgvQuanLyLopMoi.Size = new System.Drawing.Size(1277, 453);
+            this.dgvQuanLyLopMoi.Size = new System.Drawing.Size(958, 368);
             this.dgvQuanLyLopMoi.TabIndex = 3;
             // 
             // contextMenuStrip1
@@ -63,38 +63,39 @@
             this.SuaThongTinLop,
             this.XoaLop});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(203, 52);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 70);
             // 
             // SuaThongTinLop
             // 
             this.SuaThongTinLop.Name = "SuaThongTinLop";
-            this.SuaThongTinLop.Size = new System.Drawing.Size(202, 24);
+            this.SuaThongTinLop.Size = new System.Drawing.Size(180, 22);
             this.SuaThongTinLop.Text = "Sửa Thông Tin Lớp";
             this.SuaThongTinLop.Click += new System.EventHandler(this.SuaThongTinLop_Click);
             // 
             // XoaLop
             // 
             this.XoaLop.Name = "XoaLop";
-            this.XoaLop.Size = new System.Drawing.Size(202, 24);
+            this.XoaLop.Size = new System.Drawing.Size(180, 22);
             this.XoaLop.Text = "Xóa Lớp";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(28, 18);
+            this.label1.Location = new System.Drawing.Point(21, 15);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(307, 38);
+            this.label1.Size = new System.Drawing.Size(252, 31);
             this.label1.TabIndex = 2;
             this.label1.Text = "QUẢN LÝ LỚP MỚI";
             // 
             // btn_Tim
             // 
             this.btn_Tim.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Tim.Location = new System.Drawing.Point(1156, 17);
-            this.btn_Tim.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_Tim.Location = new System.Drawing.Point(867, 14);
+            this.btn_Tim.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_Tim.Name = "btn_Tim";
-            this.btn_Tim.Size = new System.Drawing.Size(75, 33);
+            this.btn_Tim.Size = new System.Drawing.Size(56, 27);
             this.btn_Tim.TabIndex = 15;
             this.btn_Tim.Text = "Tìm";
             this.btn_Tim.UseVisualStyleBackColor = true;
@@ -103,10 +104,10 @@
             // 
             this.cbb_TimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbb_TimKiem.FormattingEnabled = true;
-            this.cbb_TimKiem.Location = new System.Drawing.Point(869, 17);
-            this.cbb_TimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbb_TimKiem.Location = new System.Drawing.Point(652, 14);
+            this.cbb_TimKiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbb_TimKiem.Name = "cbb_TimKiem";
-            this.cbb_TimKiem.Size = new System.Drawing.Size(256, 33);
+            this.cbb_TimKiem.Size = new System.Drawing.Size(193, 28);
             this.cbb_TimKiem.TabIndex = 14;
             // 
             // comboBox1
@@ -118,35 +119,36 @@
             "Mã Lớp",
             "Môn Học",
             "Lớp Học"});
-            this.comboBox1.Location = new System.Drawing.Point(672, 17);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox1.Location = new System.Drawing.Point(504, 14);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(192, 33);
+            this.comboBox1.Size = new System.Drawing.Size(145, 28);
             this.comboBox1.TabIndex = 13;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // tb_TimKiem
             // 
             this.tb_TimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_TimKiem.Location = new System.Drawing.Point(869, 18);
-            this.tb_TimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tb_TimKiem.Location = new System.Drawing.Point(652, 15);
+            this.tb_TimKiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tb_TimKiem.Name = "tb_TimKiem";
-            this.tb_TimKiem.Size = new System.Drawing.Size(256, 30);
+            this.tb_TimKiem.Size = new System.Drawing.Size(193, 26);
             this.tb_TimKiem.TabIndex = 12;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(559, 21);
+            this.label2.Location = new System.Drawing.Point(419, 17);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 25);
+            this.label2.Size = new System.Drawing.Size(82, 20);
             this.label2.TabIndex = 11;
             this.label2.Text = "Tìm Theo :";
             // 
             // UC_QuanLyLop
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Controls.Add(this.btn_Tim);
@@ -156,9 +158,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dgvQuanLyLopMoi);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UC_QuanLyLop";
-            this.Size = new System.Drawing.Size(1309, 533);
+            this.Size = new System.Drawing.Size(982, 433);
             this.Load += new System.EventHandler(this.UC_QuanLyLop_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuanLyLopMoi)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);

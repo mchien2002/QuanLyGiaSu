@@ -15,6 +15,7 @@ namespace QuanLyGiaSu.src.app.views.layer
         public SuaPhuHuynh()
         {
             InitializeComponent();
+            tbUser.Enabled = false;
         }
 
         private void SuaPhuHuynh_Load(object sender, EventArgs e)

@@ -16,6 +16,7 @@ namespace QuanLyGiaSu.src.app.views.layer
         public SuaGiaSu()
         {
             InitializeComponent();
+            tbUser.Enabled = false;
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -27,6 +28,16 @@ namespace QuanLyGiaSu.src.app.views.layer
         {
             //Locator.server.updateInfoTutor(Locator.author.UserName,tbHovaTen,)
             this.Close();
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SuaGiaSu_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

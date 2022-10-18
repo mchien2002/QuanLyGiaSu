@@ -55,5 +55,10 @@ namespace DoAnCuoiKy_Nhom13
         {
 
         }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
