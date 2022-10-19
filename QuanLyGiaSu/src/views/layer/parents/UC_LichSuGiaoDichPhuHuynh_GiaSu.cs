@@ -16,11 +16,30 @@ namespace QuanLyGiaSu.src.app.views.layer
         public UC_LichSuGiaoDichPhuHuynh_GiaSu()
         {
             InitializeComponent();
+            dgvLICHSUNAPTIEN.Hide();
         }
 
         private void UC_LichSuGiaoDichPhuHuynh_Load(object sender, EventArgs e)
         {
             dgvLICHSUGIAODICH.DataSource = Locator.server.fetchLichSuGiaoDichUserTable(Locator.author.UserName);
+        }
+
+        private void btn_LichSuNap_Click(object sender, EventArgs e)
+        {
+            if(btn_LichSuNap.Text == "Xem Lịch Sử Nạp Tiền")
+            {
+                dgvLICHSUGIAODICH.Hide();
+                dgvLICHSUNAPTIEN.Show();
+                btn_LichSuNap.Text = "Xem Lịch Sử Giao Dịch";
+                lbText.Text = "LỊCH SỬ NẠP TIỀN";
+            }
+            else
+            {
+                dgvLICHSUNAPTIEN.Hide();
+                dgvLICHSUGIAODICH.Show();
+                btn_LichSuNap.Text = "Xem Lịch Sử Nạp Tiền";
+                lbText.Text = "LỊCH SỬ GIAO DỊCH";
+            }
         }
     }
 }
