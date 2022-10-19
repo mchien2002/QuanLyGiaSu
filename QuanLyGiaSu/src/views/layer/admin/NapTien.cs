@@ -21,6 +21,9 @@ namespace QuanLyGiaSu.src.views.layer.admin
             lbSTK.Text = "";
             lbNoidung.Text = "";
             lbUser.Text = "";
+            lbstk2.Hide();
+            lbctk2.Hide();
+            lbnoidung2.Hide();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -37,6 +40,9 @@ namespace QuanLyGiaSu.src.views.layer.admin
                 lbNoidung.Text = "Nội dung : ";
                 lbUser.Text = "username";
                 ptbQRVietCom.Hide();
+                lbstk2.Show();
+                lbctk2.Show();
+                lbnoidung2.Show();
                 ptbQRMomo.Show();
                 
             }    
@@ -47,6 +53,9 @@ namespace QuanLyGiaSu.src.views.layer.admin
                 lbNoidung.Text = "Nội dung : ";
                 lbUser.Text = "user";
                 ptbQRMomo.Hide();
+                lbstk2.Show();
+                lbctk2.Show();
+                lbnoidung2.Show();
                 ptbQRVietCom.Show();
             }  
         }
