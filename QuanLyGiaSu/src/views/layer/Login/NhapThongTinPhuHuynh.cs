@@ -83,6 +83,9 @@ namespace QuanLyGiaSu.src.app.views.Login
             this.Close();
         }
 
+        private void NhapThongTinPhuHuynh_Load(object sender, EventArgs e)
+        {
 
+        }
     }
 }

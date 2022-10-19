@@ -206,12 +206,6 @@
     <Compile Include="src\views\layer\admin\UC_QuanLyPhuHuynh.Designer.cs">
       <DependentUpon>UC_QuanLyPhuHuynh.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\views\layer\admin\UC_Register.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="src\views\layer\admin\UC_Register.Designer.cs">
-      <DependentUpon>UC_Register.cs</DependentUpon>
-    </Compile>
     <Compile Include="src\views\layer\admin\UC_LienHe.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -281,6 +275,12 @@
     <Compile Include="src\controllers\locator.cs" />
     <Compile Include="src\models\accountModel.cs" />
     <Compile Include="src\controllers\server.cs" />
+    <Compile Include="src\views\layer\tutors\UC_LopMoiChoGiaSu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\views\layer\tutors\UC_LopMoiChoGiaSu.Designer.cs">
+      <DependentUpon>UC_LopMoiChoGiaSu.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="src\views\formMain.resx">
       <DependentUpon>formMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -357,9 +357,6 @@
     <EmbeddedResource Include="src\views\layer\admin\UC_QuanLyPhuHuynh.resx">
       <DependentUpon>UC_QuanLyPhuHuynh.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\views\layer\admin\UC_Register.resx">
-      <DependentUpon>UC_Register.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="src\views\layer\admin\UC_LienHe.resx">
       <DependentUpon>UC_LienHe.cs</DependentUpon>
     </EmbeddedResource>
@@ -392,6 +389,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="src\views\layer\login\RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\views\layer\tutors\UC_LopMoiChoGiaSu.resx">
+      <DependentUpon>UC_LopMoiChoGiaSu.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="src\database\TRUNGTAMGIASU.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>

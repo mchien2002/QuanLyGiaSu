@@ -15,7 +15,7 @@ namespace QuanLyGiaSu.src.views.layer.admin
         public ThemSuaMon()
         {
             InitializeComponent();
-            lbText.Text = "Thêm Môn Học : ";
+            lbText.Text = "Thêm Môn Học ";
         }
         public ThemSuaMon(string text)
         {

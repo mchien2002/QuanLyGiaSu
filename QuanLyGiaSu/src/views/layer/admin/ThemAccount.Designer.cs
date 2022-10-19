@@ -28,71 +28,163 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_Them = new System.Windows.Forms.Button();
-            this.tb_Pass = new System.Windows.Forms.TextBox();
-            this.tb_user = new System.Windows.Forms.TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThemAccount));
             this.btn_text = new System.Windows.Forms.Button();
+            this.lbExceptionUserName = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.tbPassword = new System.Windows.Forms.TextBox();
+            this.tbUser = new System.Windows.Forms.TextBox();
+            this.btn_Them = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btn_Them
-            // 
-            this.btn_Them.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Them.Location = new System.Drawing.Point(197, 194);
-            this.btn_Them.Name = "btn_Them";
-            this.btn_Them.Size = new System.Drawing.Size(75, 29);
-            this.btn_Them.TabIndex = 21;
-            this.btn_Them.Text = "Thêm";
-            this.btn_Them.UseVisualStyleBackColor = true;
-            this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click);
-            // 
-            // tb_Pass
-            // 
-            this.tb_Pass.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Pass.Location = new System.Drawing.Point(40, 132);
-            this.tb_Pass.Name = "tb_Pass";
-            this.tb_Pass.Size = new System.Drawing.Size(232, 31);
-            this.tb_Pass.TabIndex = 1;
-            // 
-            // tb_user
-            // 
-            this.tb_user.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_user.Location = new System.Drawing.Point(40, 80);
-            this.tb_user.Name = "tb_user";
-            this.tb_user.Size = new System.Drawing.Size(232, 31);
-            this.tb_user.TabIndex = 0;
             // 
             // btn_text
             // 
-            this.btn_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_text.Location = new System.Drawing.Point(65, 25);
+            this.btn_text.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_text.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btn_text.Location = new System.Drawing.Point(84, 29);
             this.btn_text.Name = "btn_text";
-            this.btn_text.Size = new System.Drawing.Size(182, 32);
+            this.btn_text.Size = new System.Drawing.Size(268, 32);
             this.btn_text.TabIndex = 22;
             this.btn_text.Text = "button1";
             this.btn_text.UseVisualStyleBackColor = true;
+            // 
+            // lbExceptionUserName
+            // 
+            this.lbExceptionUserName.AutoSize = true;
+            this.lbExceptionUserName.ForeColor = System.Drawing.Color.Red;
+            this.lbExceptionUserName.Location = new System.Drawing.Point(81, 123);
+            this.lbExceptionUserName.Name = "lbExceptionUserName";
+            this.lbExceptionUserName.Size = new System.Drawing.Size(220, 13);
+            this.lbExceptionUserName.TabIndex = 81;
+            this.lbExceptionUserName.Text = "Tên đăng nhập hoặc email đã được sử dụng";
+            this.lbExceptionUserName.Visible = false;
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.Color.Silver;
+            this.label4.Location = new System.Drawing.Point(34, 178);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(350, 3);
+            this.label4.TabIndex = 80;
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.Silver;
+            this.label3.Location = new System.Drawing.Point(38, 120);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(350, 3);
+            this.label3.TabIndex = 79;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.White;
+            this.pictureBox3.Image = global::QuanLyGiaSu.Properties.Resources.password_24px2;
+            this.pictureBox3.Location = new System.Drawing.Point(37, 148);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(33, 33);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 78;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.White;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pictureBox2.Image = global::QuanLyGiaSu.Properties.Resources.user_male_30px2;
+            this.pictureBox2.Location = new System.Drawing.Point(37, 90);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(33, 33);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 77;
+            this.pictureBox2.TabStop = false;
+            // 
+            // tbPassword
+            // 
+            this.tbPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPassword.ForeColor = System.Drawing.Color.Gray;
+            this.tbPassword.Location = new System.Drawing.Point(84, 159);
+            this.tbPassword.Margin = new System.Windows.Forms.Padding(2);
+            this.tbPassword.Name = "tbPassword";
+            this.tbPassword.Size = new System.Drawing.Size(303, 16);
+            this.tbPassword.TabIndex = 76;
+            this.tbPassword.Text = "Password";
+            this.tbPassword.UseSystemPasswordChar = true;
+            this.tbPassword.Click += new System.EventHandler(this.tbPassword_Click);
+            this.tbPassword.Leave += new System.EventHandler(this.tbPassword_Leave);
+            // 
+            // tbUser
+            // 
+            this.tbUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbUser.ForeColor = System.Drawing.Color.Gray;
+            this.tbUser.Location = new System.Drawing.Point(84, 102);
+            this.tbUser.Margin = new System.Windows.Forms.Padding(2);
+            this.tbUser.Name = "tbUser";
+            this.tbUser.Size = new System.Drawing.Size(300, 16);
+            this.tbUser.TabIndex = 75;
+            this.tbUser.Tag = "";
+            this.tbUser.Text = "Username";
+            this.tbUser.Click += new System.EventHandler(this.tbUser_Click);
+            this.tbUser.Leave += new System.EventHandler(this.tbUser_Leave);
+            // 
+            // btn_Them
+            // 
+            this.btn_Them.BackColor = System.Drawing.Color.Blue;
+            this.btn_Them.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Them.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Them.ForeColor = System.Drawing.Color.White;
+            this.btn_Them.Location = new System.Drawing.Point(84, 210);
+            this.btn_Them.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Them.Name = "btn_Them";
+            this.btn_Them.Size = new System.Drawing.Size(268, 34);
+            this.btn_Them.TabIndex = 82;
+            this.btn_Them.Text = "Thêm";
+            this.btn_Them.UseVisualStyleBackColor = false;
             // 
             // ThemAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(316, 261);
-            this.Controls.Add(this.btn_text);
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ClientSize = new System.Drawing.Size(436, 292);
             this.Controls.Add(this.btn_Them);
-            this.Controls.Add(this.tb_Pass);
-            this.Controls.Add(this.tb_user);
+            this.Controls.Add(this.lbExceptionUserName);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.tbPassword);
+            this.Controls.Add(this.tbUser);
+            this.Controls.Add(this.btn_text);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ThemAccount";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = " ";
+            this.Text = " Thêm Account";
             this.Load += new System.EventHandler(this.ThemAccount_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button btn_Them;
-        private System.Windows.Forms.TextBox tb_Pass;
-        private System.Windows.Forms.TextBox tb_user;
         private System.Windows.Forms.Button btn_text;
+        private System.Windows.Forms.Label lbExceptionUserName;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.TextBox tbPassword;
+        private System.Windows.Forms.TextBox tbUser;
+        private System.Windows.Forms.Button btn_Them;
     }
 }

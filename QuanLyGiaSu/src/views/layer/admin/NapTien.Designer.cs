@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NapTien));
             this.label1 = new System.Windows.Forms.Label();
             this.cbbLoaiNap = new System.Windows.Forms.ComboBox();
             this.lbSTK = new System.Windows.Forms.Label();
@@ -141,6 +142,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(674, 264);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.ptbQRMomo);
@@ -151,8 +153,9 @@
             this.Controls.Add(this.lbCTK);
             this.Controls.Add(this.lbSTK);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "NapTien";
-            this.Text = "NapTien";
+            this.Text = "Nạp Tiền Vào Tài Khoản";
             this.Load += new System.EventHandler(this.NapTien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ptbQRMomo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbQRVietCom)).EndInit();

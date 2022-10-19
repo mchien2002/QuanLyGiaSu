@@ -35,5 +35,38 @@ namespace QuanLyGiaSu.src.app.views.layer
         {
             this.Close();
         }
+
+        private void tbUser_Click(object sender, EventArgs e)
+        {
+            if(tbUser.Text == "Username")
+            {
+                tbUser.Clear();
+            }    
+
+        }
+
+        private void tbPassword_Click(object sender, EventArgs e)
+        {
+            if(tbPassword.Text == "Password")
+            {
+                tbPassword.Clear();
+            }    
+        }
+
+        private void tbUser_Leave(object sender, EventArgs e)
+        {
+            if(tbUser.Text=="")
+            {
+                tbUser.Text = "Username";
+            }    
+        }
+
+        private void tbPassword_Leave(object sender, EventArgs e)
+        {
+            if (tbPassword.Text == "")
+            {
+                tbPassword.Text = "Password";
+            }
+        }
     }
 }

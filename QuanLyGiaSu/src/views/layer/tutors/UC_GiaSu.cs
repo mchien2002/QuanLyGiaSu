@@ -47,8 +47,9 @@ namespace DoAnCuoiKy_Nhom13
             cbbGioiTinh.Text = GioiTinh;
             tbTrinhDo.Text = TrinhDo;
             lbGSID.Text = gsid.ToString();
-            lbUsername.Text=Locator.author.UserName;
-            lbPW.Text = "*****";
+            tbUser.Text=Locator.author.UserName;
+            tbPass.Text = "*****";
+            tbCMND.Text = Cmnd;
         }
 
         private void tbUuDiem_TextChanged(object sender, EventArgs e)

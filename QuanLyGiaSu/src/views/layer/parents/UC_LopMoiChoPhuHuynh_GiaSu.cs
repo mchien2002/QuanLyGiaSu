@@ -11,17 +11,17 @@ using System.Windows.Forms;
 
 namespace QuanLyGiaSu.src.app.views.layer
 {
-    public partial class UC_LopMoiChoPhuHuynh_GiaSu : UserControl
+    public partial class UC_LopMoiChoPhuHuynh : UserControl
     {
-        public UC_LopMoiChoPhuHuynh_GiaSu()
+        public UC_LopMoiChoPhuHuynh()
         {
             InitializeComponent();
         }
 
         private void btnDangKyMoLop_Click(object sender, EventArgs e)
         {
-            DangKyDay dangKyDay = new DangKyDay();
-            dangKyDay.Show();
+            DangKyMoLop dangKyMoLop = new DangKyMoLop();
+            dangKyMoLop.Show();
         }
 
         private void cbbSearchType_SelectedIndexChanged(object sender, EventArgs e)
@@ -48,6 +48,36 @@ namespace QuanLyGiaSu.src.app.views.layer
         {
             cbbSearch.Hide();
             dgvTHONGTINLOPMOI.DataSource = Locator.server.fetchLopMoiPH_GSTable();
+        }
+
+        private void btnTim_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbbSearch_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tb_TimKiem_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvTHONGTINLOPMOI_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

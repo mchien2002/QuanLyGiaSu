@@ -296,9 +296,10 @@
             this.Controls.Add(this.tbUser);
             this.Controls.Add(this.lbUserType);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RegisterForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "RegisterGiaSu";
+            this.Text = "Đăng Ký Tài Khoản";
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.RegisterForm_MouseMove);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();

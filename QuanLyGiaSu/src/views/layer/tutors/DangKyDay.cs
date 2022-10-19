@@ -16,5 +16,10 @@ namespace QuanLyGiaSu.src.app.views.layer
         {
             InitializeComponent();
         }
+
+        private void DangKyDay_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

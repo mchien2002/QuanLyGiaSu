@@ -30,7 +30,7 @@ namespace QuanLyGiaSu
 
         private void btn_LopMoi_Click(object sender, EventArgs e)
         {
-            uC_LopMoiChoPhuHuynh_GiaSu1.BringToFront();
+            uC_LopMoiChoGiaSu1.BringToFront();
         }
 
 
@@ -41,6 +41,7 @@ namespace QuanLyGiaSu
         private void btn_GiaSu_Click(object sender, EventArgs e)
         {
             uC_GiaSu1.BringToFront();
+            uC_GiaSu1.BackColor = SystemColors.ButtonHighlight;
         }
 
         private void btn_QlyDSLOP_Click(object sender, EventArgs e)

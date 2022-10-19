@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formMainPhuHuynh));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_DanhSachMoLop = new System.Windows.Forms.Button();
             this.btnLichSuGiaoDich = new System.Windows.Forms.Button();
@@ -40,11 +41,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.uC_DanhSachMoLop1 = new QuanLyGiaSu.src.app.views.layer.UC_DanhSachLopDaMo();
             this.uC_TrangChu1 = new DoAnCuoiKy_Nhom13.UC_TrangChu();
-            this.uC_LopMoi21 = new QuanLyGiaSu.src.app.views.layer.UC_LopMoiChoPhuHuynh_GiaSu();
             this.uC_LienHe1 = new QuanLyGiaSu.src.app.views.layer.UC_LienHe();
             this.uC_ThongTinPhuHuynh1 = new QuanLyGiaSu.src.app.views.layer.UC_ThongTinPhuHuynh();
             this.uC_LSGD_PH1 = new QuanLyGiaSu.src.app.views.layer.UC_LichSuGiaoDichPhuHuynh_GiaSu();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.uC_LopMoiChoPhuHuynh1 = new QuanLyGiaSu.src.app.views.layer.UC_LopMoiChoPhuHuynh();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -58,7 +59,7 @@
             this.panel1.Controls.Add(this.btn_DanhSachLopMoi);
             this.panel1.Controls.Add(this.btnTrangchu);
             this.panel1.Location = new System.Drawing.Point(11, 10);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(833, 50);
             this.panel1.TabIndex = 3;
@@ -68,7 +69,7 @@
             // 
             this.btn_DanhSachMoLop.Dock = System.Windows.Forms.DockStyle.Left;
             this.btn_DanhSachMoLop.Location = new System.Drawing.Point(664, 0);
-            this.btn_DanhSachMoLop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_DanhSachMoLop.Margin = new System.Windows.Forms.Padding(2);
             this.btn_DanhSachMoLop.Name = "btn_DanhSachMoLop";
             this.btn_DanhSachMoLop.Size = new System.Drawing.Size(169, 50);
             this.btn_DanhSachMoLop.TabIndex = 10;
@@ -80,7 +81,7 @@
             // 
             this.btnLichSuGiaoDich.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnLichSuGiaoDich.Location = new System.Drawing.Point(498, 0);
-            this.btnLichSuGiaoDich.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLichSuGiaoDich.Margin = new System.Windows.Forms.Padding(2);
             this.btnLichSuGiaoDich.Name = "btnLichSuGiaoDich";
             this.btnLichSuGiaoDich.Size = new System.Drawing.Size(166, 50);
             this.btnLichSuGiaoDich.TabIndex = 9;
@@ -92,7 +93,7 @@
             // 
             this.btn_ThongTinhPhuHuynh.Dock = System.Windows.Forms.DockStyle.Left;
             this.btn_ThongTinhPhuHuynh.Location = new System.Drawing.Point(332, 0);
-            this.btn_ThongTinhPhuHuynh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_ThongTinhPhuHuynh.Margin = new System.Windows.Forms.Padding(2);
             this.btn_ThongTinhPhuHuynh.Name = "btn_ThongTinhPhuHuynh";
             this.btn_ThongTinhPhuHuynh.Size = new System.Drawing.Size(166, 50);
             this.btn_ThongTinhPhuHuynh.TabIndex = 2;
@@ -104,7 +105,7 @@
             // 
             this.btn_DanhSachLopMoi.Dock = System.Windows.Forms.DockStyle.Left;
             this.btn_DanhSachLopMoi.Location = new System.Drawing.Point(166, 0);
-            this.btn_DanhSachLopMoi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_DanhSachLopMoi.Margin = new System.Windows.Forms.Padding(2);
             this.btn_DanhSachLopMoi.Name = "btn_DanhSachLopMoi";
             this.btn_DanhSachLopMoi.Size = new System.Drawing.Size(166, 50);
             this.btn_DanhSachLopMoi.TabIndex = 3;
@@ -116,7 +117,7 @@
             // 
             this.btnTrangchu.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnTrangchu.Location = new System.Drawing.Point(0, 0);
-            this.btnTrangchu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTrangchu.Margin = new System.Windows.Forms.Padding(2);
             this.btnTrangchu.Name = "btnTrangchu";
             this.btnTrangchu.Size = new System.Drawing.Size(166, 50);
             this.btnTrangchu.TabIndex = 0;
@@ -176,15 +177,6 @@
             this.uC_TrangChu1.Size = new System.Drawing.Size(982, 433);
             this.uC_TrangChu1.TabIndex = 5;
             // 
-            // uC_LopMoi21
-            // 
-            this.uC_LopMoi21.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.uC_LopMoi21.Location = new System.Drawing.Point(12, 67);
-            this.uC_LopMoi21.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.uC_LopMoi21.Name = "uC_LopMoi21";
-            this.uC_LopMoi21.Size = new System.Drawing.Size(982, 433);
-            this.uC_LopMoi21.TabIndex = 12;
-            // 
             // uC_LienHe1
             // 
             this.uC_LienHe1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -199,7 +191,7 @@
             // 
             this.uC_ThongTinPhuHuynh1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.uC_ThongTinPhuHuynh1.Location = new System.Drawing.Point(12, 67);
-            this.uC_ThongTinPhuHuynh1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.uC_ThongTinPhuHuynh1.Margin = new System.Windows.Forms.Padding(4);
             this.uC_ThongTinPhuHuynh1.Name = "uC_ThongTinPhuHuynh1";
             this.uC_ThongTinPhuHuynh1.Size = new System.Drawing.Size(982, 433);
             this.uC_ThongTinPhuHuynh1.TabIndex = 9;
@@ -208,10 +200,18 @@
             // 
             this.uC_LSGD_PH1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.uC_LSGD_PH1.Location = new System.Drawing.Point(12, 67);
-            this.uC_LSGD_PH1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.uC_LSGD_PH1.Margin = new System.Windows.Forms.Padding(4);
             this.uC_LSGD_PH1.Name = "uC_LSGD_PH1";
             this.uC_LSGD_PH1.Size = new System.Drawing.Size(982, 433);
             this.uC_LSGD_PH1.TabIndex = 14;
+            // 
+            // uC_LopMoiChoPhuHuynh1
+            // 
+            this.uC_LopMoiChoPhuHuynh1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.uC_LopMoiChoPhuHuynh1.Location = new System.Drawing.Point(12, 67);
+            this.uC_LopMoiChoPhuHuynh1.Name = "uC_LopMoiChoPhuHuynh1";
+            this.uC_LopMoiChoPhuHuynh1.Size = new System.Drawing.Size(982, 433);
+            this.uC_LopMoiChoPhuHuynh1.TabIndex = 15;
             // 
             // formMainPhuHuynh
             // 
@@ -221,14 +221,15 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.uC_TrangChu1);
-            this.Controls.Add(this.uC_LopMoi21);
+            this.Controls.Add(this.uC_LopMoiChoPhuHuynh1);
             this.Controls.Add(this.uC_LienHe1);
             this.Controls.Add(this.uC_ThongTinPhuHuynh1);
             this.Controls.Add(this.uC_LSGD_PH1);
             this.Controls.Add(this.uC_DanhSachMoLop1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "formMainPhuHuynh";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "formMainPhuHuynh";
+            this.Text = "Trung Tâm Gia Sư Anh Em";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -248,10 +249,11 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lbSoDu;
         private System.Windows.Forms.Label label1;
-        private src.app.views.layer.UC_LopMoiChoPhuHuynh_GiaSu uC_LopMoi21;
+        private src.app.views.layer.UC_LopMoiChoPhuHuynh uC_LopMoi21;
         private System.Windows.Forms.Button btn_DanhSachMoLop;
         private src.app.views.layer.UC_DanhSachLopDaMo uC_DanhSachMoLop1;
         private src.app.views.layer.UC_LichSuGiaoDichPhuHuynh_GiaSu uC_LSGD_PH1;
         private System.Windows.Forms.ToolTip toolTip1;
+        private src.app.views.layer.UC_LopMoiChoPhuHuynh uC_LopMoiChoPhuHuynh1;
     }
 }

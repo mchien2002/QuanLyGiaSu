@@ -108,6 +108,7 @@ namespace QuanLyGiaSu.src.server
             try
             {
                 var a = _db.thongtingiasu_private(_db.find_accid_username(userName));
+
                 if (a == null) return;
                 foreach (var x in a)
                 {

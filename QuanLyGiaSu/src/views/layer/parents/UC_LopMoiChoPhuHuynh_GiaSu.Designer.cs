@@ -1,6 +1,6 @@
 ﻿namespace QuanLyGiaSu.src.app.views.layer
 {
-    partial class UC_LopMoiChoPhuHuynh_GiaSu
+    partial class UC_LopMoiChoPhuHuynh
     {
         /// <summary> 
         /// Required designer variable.
@@ -61,6 +61,7 @@
             this.btnTim.TabIndex = 19;
             this.btnTim.Text = "Tìm";
             this.btnTim.UseVisualStyleBackColor = true;
+            this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
             // 
             // cbbSearch
             // 
@@ -71,6 +72,7 @@
             this.cbbSearch.Name = "cbbSearch";
             this.cbbSearch.Size = new System.Drawing.Size(193, 28);
             this.cbbSearch.TabIndex = 18;
+            this.cbbSearch.SelectedIndexChanged += new System.EventHandler(this.cbbSearch_SelectedIndexChanged);
             // 
             // cbbSearchType
             // 
@@ -96,6 +98,7 @@
             this.tb_TimKiem.Name = "tb_TimKiem";
             this.tb_TimKiem.Size = new System.Drawing.Size(193, 26);
             this.tb_TimKiem.TabIndex = 16;
+            this.tb_TimKiem.TextChanged += new System.EventHandler(this.tb_TimKiem_TextChanged);
             // 
             // label2
             // 
@@ -107,6 +110,7 @@
             this.label2.Size = new System.Drawing.Size(82, 20);
             this.label2.TabIndex = 15;
             this.label2.Text = "Tìm Theo :";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // dgvTHONGTINLOPMOI
             // 
@@ -119,6 +123,7 @@
             this.dgvTHONGTINLOPMOI.RowTemplate.Height = 24;
             this.dgvTHONGTINLOPMOI.Size = new System.Drawing.Size(958, 368);
             this.dgvTHONGTINLOPMOI.TabIndex = 14;
+            this.dgvTHONGTINLOPMOI.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTHONGTINLOPMOI_CellContentClick);
             // 
             // label1
             // 
@@ -130,8 +135,9 @@
             this.label1.Size = new System.Drawing.Size(126, 31);
             this.label1.TabIndex = 13;
             this.label1.Text = "LỚP MỚI";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // UC_LopMoi2
+            // UC_LopMoiChoPhuHuynh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -144,7 +150,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dgvTHONGTINLOPMOI);
             this.Controls.Add(this.label1);
-            this.Name = "UC_LopMoi2";
+            this.Name = "UC_LopMoiChoPhuHuynh";
             this.Size = new System.Drawing.Size(982, 433);
             this.Load += new System.EventHandler(this.UC_LopMoi2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTHONGTINLOPMOI)).EndInit();

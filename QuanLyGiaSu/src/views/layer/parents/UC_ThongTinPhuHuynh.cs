@@ -16,5 +16,10 @@ namespace QuanLyGiaSu.src.app.views.layer
         {
             InitializeComponent();
         }
+
+        private void UC_ThongTinPhuHuynh_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

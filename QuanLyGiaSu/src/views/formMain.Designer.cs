@@ -29,7 +29,9 @@ namespace QuanLyGiaSu
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formMain));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnLichSuNapTien = new System.Windows.Forms.Button();
             this.btnQuanLyLopVaMon = new System.Windows.Forms.Button();
             this.btnLichSuGiaoDich = new System.Windows.Forms.Button();
@@ -39,7 +41,6 @@ namespace QuanLyGiaSu
             this.btn_QuanLyLopMoi = new System.Windows.Forms.Button();
             this.btnTrangchu = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.uC_TrangChu1 = new DoAnCuoiKy_Nhom13.UC_TrangChu();
             this.uC_GiaSu1 = new DoAnCuoiKy_Nhom13.UC_GiaSu();
             this.uC_QuanLyLop1 = new QuanLyGiaSu.src.app.views.layer.UC_QuanLyLop();
@@ -71,6 +72,18 @@ namespace QuanLyGiaSu
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(978, 50);
             this.panel1.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button1.Location = new System.Drawing.Point(860, 0);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(115, 50);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "Thống Kê";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnLichSuNapTien
             // 
@@ -186,18 +199,6 @@ namespace QuanLyGiaSu
             this.panel2.Size = new System.Drawing.Size(982, 433);
             this.panel2.TabIndex = 1;
             // 
-            // button1
-            // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button1.Location = new System.Drawing.Point(860, 0);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(115, 50);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Thống Kê";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // uC_TrangChu1
             // 
             this.uC_TrangChu1.AutoScroll = true;
@@ -296,10 +297,11 @@ namespace QuanLyGiaSu
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "formMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Quản Lý Gia Sư";
+            this.Text = "Quản Lý Trung Tâm Gia Sư Anh Em";
             this.Load += new System.EventHandler(this.formMain_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

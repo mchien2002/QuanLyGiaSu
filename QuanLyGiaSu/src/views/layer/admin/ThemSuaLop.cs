@@ -15,7 +15,8 @@ namespace QuanLyGiaSu.src.views.layer.admin
         public ThemSuaLop()
         {
             InitializeComponent();
-            lbText.Text = "Thêm Lớp : ";
+            lbText.Text = "Thêm Lớp";
+            
         }
         public ThemSuaLop(string text)
         {

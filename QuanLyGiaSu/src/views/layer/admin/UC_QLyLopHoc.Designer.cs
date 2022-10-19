@@ -71,21 +71,21 @@
             // ThemLopHoc
             // 
             this.ThemLopHoc.Name = "ThemLopHoc";
-            this.ThemLopHoc.Size = new System.Drawing.Size(180, 22);
+            this.ThemLopHoc.Size = new System.Drawing.Size(152, 22);
             this.ThemLopHoc.Text = "Thêm Lớp Học";
             this.ThemLopHoc.Click += new System.EventHandler(this.ThemLopHoc_Click);
             // 
             // SuaLopHoc
             // 
             this.SuaLopHoc.Name = "SuaLopHoc";
-            this.SuaLopHoc.Size = new System.Drawing.Size(180, 22);
+            this.SuaLopHoc.Size = new System.Drawing.Size(152, 22);
             this.SuaLopHoc.Text = "Sửa Lớp Học";
             this.SuaLopHoc.Click += new System.EventHandler(this.SuaLopHoc_Click);
             // 
             // XoaLopHoc
             // 
             this.XoaLopHoc.Name = "XoaLopHoc";
-            this.XoaLopHoc.Size = new System.Drawing.Size(180, 22);
+            this.XoaLopHoc.Size = new System.Drawing.Size(152, 22);
             this.XoaLopHoc.Text = "Xóa Lớp Học";
             // 
             // label1
@@ -119,19 +119,19 @@
             this.SuaMonHoc,
             this.XoaMonHoc});
             this.contextMenuStrip2.Name = "contextMenuStrip2";
-            this.contextMenuStrip2.Size = new System.Drawing.Size(181, 92);
+            this.contextMenuStrip2.Size = new System.Drawing.Size(158, 70);
             // 
             // ThemMonHoc
             // 
             this.ThemMonHoc.Name = "ThemMonHoc";
-            this.ThemMonHoc.Size = new System.Drawing.Size(180, 22);
+            this.ThemMonHoc.Size = new System.Drawing.Size(157, 22);
             this.ThemMonHoc.Text = "Thêm Môn Học";
             this.ThemMonHoc.Click += new System.EventHandler(this.ThemMonHoc_Click);
             // 
             // SuaMonHoc
             // 
             this.SuaMonHoc.Name = "SuaMonHoc";
-            this.SuaMonHoc.Size = new System.Drawing.Size(180, 22);
+            this.SuaMonHoc.Size = new System.Drawing.Size(157, 22);
             this.SuaMonHoc.Text = "Sửa Môn Học";
             this.SuaMonHoc.Click += new System.EventHandler(this.SuaMonHoc_Click);
             // 
@@ -151,6 +151,7 @@
             this.Controls.Add(this.label1);
             this.Name = "UC_QLyLopHoc";
             this.Size = new System.Drawing.Size(982, 433);
+            this.Load += new System.EventHandler(this.UC_QLyLopHoc_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvQLyLopHoc)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvQLyMonHoc)).EndInit();

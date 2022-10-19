@@ -26,7 +26,7 @@ namespace QuanLyGiaSu.src.views.layer.admin
 
         private void SuaLopHoc_Click(object sender, EventArgs e)
         {
-            ThemSuaLop suaLop = new ThemSuaLop("Sửa Lớp : ");
+            ThemSuaLop suaLop = new ThemSuaLop("Sửa Lớp");
             suaLop.Show();
         }
 
@@ -38,8 +38,13 @@ namespace QuanLyGiaSu.src.views.layer.admin
 
         private void SuaMonHoc_Click(object sender, EventArgs e)
         {
-            ThemSuaMon suaMon = new ThemSuaMon("Sửa Môn : ");
+            ThemSuaMon suaMon = new ThemSuaMon("Sửa Môn");
             suaMon.Show();
+        }
+
+        private void UC_QLyLopHoc_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

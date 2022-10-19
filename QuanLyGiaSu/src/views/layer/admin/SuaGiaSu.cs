@@ -39,5 +39,10 @@ namespace QuanLyGiaSu.src.app.views.layer
         {
 
         }
+
+        private void cbbGioiTinh_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

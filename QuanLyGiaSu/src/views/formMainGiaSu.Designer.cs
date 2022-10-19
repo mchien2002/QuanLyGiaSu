@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formMainGiaSu));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnLichSuGiaoDich = new System.Windows.Forms.Button();
             this.btn_QlyDSLOP = new System.Windows.Forms.Button();
@@ -40,12 +41,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.uC_TrangChu1 = new DoAnCuoiKy_Nhom13.UC_TrangChu();
             this.uC_GiaSu1 = new DoAnCuoiKy_Nhom13.UC_GiaSu();
-            this.uC_LopMoiChoPhuHuynh_GiaSu1 = new QuanLyGiaSu.src.app.views.layer.UC_LopMoiChoPhuHuynh_GiaSu();
             this.uC_LichSuGiaoDichPhuHuynh_GiaSu1 = new QuanLyGiaSu.src.app.views.layer.UC_LichSuGiaoDichPhuHuynh_GiaSu();
             this.uC_DanhSachLopDaDangKyDay1 = new QuanLyGiaSu.src.views.layer.tutors.UC_DanhSachLopDaDangKyDay();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.NapTien = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.uC_LopMoiChoGiaSu1 = new QuanLyGiaSu.src.views.layer.tutors.UC_LopMoiChoGiaSu();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
@@ -177,14 +178,6 @@
             this.uC_GiaSu1.Size = new System.Drawing.Size(982, 433);
             this.uC_GiaSu1.TabIndex = 9;
             // 
-            // uC_LopMoiChoPhuHuynh_GiaSu1
-            // 
-            this.uC_LopMoiChoPhuHuynh_GiaSu1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.uC_LopMoiChoPhuHuynh_GiaSu1.Location = new System.Drawing.Point(11, 67);
-            this.uC_LopMoiChoPhuHuynh_GiaSu1.Name = "uC_LopMoiChoPhuHuynh_GiaSu1";
-            this.uC_LopMoiChoPhuHuynh_GiaSu1.Size = new System.Drawing.Size(979, 433);
-            this.uC_LopMoiChoPhuHuynh_GiaSu1.TabIndex = 13;
-            // 
             // uC_LichSuGiaoDichPhuHuynh_GiaSu1
             // 
             this.uC_LichSuGiaoDichPhuHuynh_GiaSu1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -215,8 +208,13 @@
             this.NapTien.Size = new System.Drawing.Size(121, 22);
             this.NapTien.Text = "Nạp Tiền";
             // 
-            // toolTip1
+            // uC_LopMoiChoGiaSu1
             // 
+            this.uC_LopMoiChoGiaSu1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.uC_LopMoiChoGiaSu1.Location = new System.Drawing.Point(11, 67);
+            this.uC_LopMoiChoGiaSu1.Name = "uC_LopMoiChoGiaSu1";
+            this.uC_LopMoiChoGiaSu1.Size = new System.Drawing.Size(982, 433);
+            this.uC_LopMoiChoGiaSu1.TabIndex = 16;
             // 
             // formMainGiaSu
             // 
@@ -226,13 +224,14 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.uC_TrangChu1);
+            this.Controls.Add(this.uC_LopMoiChoGiaSu1);
             this.Controls.Add(this.uC_GiaSu1);
-            this.Controls.Add(this.uC_LopMoiChoPhuHuynh_GiaSu1);
             this.Controls.Add(this.uC_LichSuGiaoDichPhuHuynh_GiaSu1);
             this.Controls.Add(this.uC_DanhSachLopDaDangKyDay1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "formMainGiaSu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "formMainGiaSu";
+            this.Text = "Trung Tâm Gia Sư Anh Em";
             this.Load += new System.EventHandler(this.formMainGiaSu_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -254,11 +253,12 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lbSoDu;
         private System.Windows.Forms.Label label1;
-        private src.app.views.layer.UC_LopMoiChoPhuHuynh_GiaSu uC_LopMoiChoPhuHuynh_GiaSu1;
+        private src.app.views.layer.UC_LopMoiChoPhuHuynh uC_LopMoiChoPhuHuynh_GiaSu1;
         private src.app.views.layer.UC_LichSuGiaoDichPhuHuynh_GiaSu uC_LichSuGiaoDichPhuHuynh_GiaSu1;
         private src.views.layer.tutors.UC_DanhSachLopDaDangKyDay uC_DanhSachLopDaDangKyDay1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem NapTien;
         private System.Windows.Forms.ToolTip toolTip1;
+        private src.views.layer.tutors.UC_LopMoiChoGiaSu uC_LopMoiChoGiaSu1;
     }
 }
