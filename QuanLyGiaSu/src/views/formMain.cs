@@ -72,5 +72,10 @@ namespace QuanLyGiaSu
         {
             uC_ThongKe1.BringToFront();
         }
+
+        private void btnAccount_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
