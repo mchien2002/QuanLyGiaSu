@@ -69,11 +69,9 @@ C:\Users\84975\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.vie
 C:\Users\84975\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.SuaPhuHuynh.resources
 C:\Users\84975\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.SuaThongTinLop.resources
 C:\Users\84975\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.ThemAccount.resources
-C:\Users\84975\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_DanhSachLopDaDangKy.resources
 C:\Users\84975\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_QuanLyGiaSu.resources
 C:\Users\84975\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_QuanLyLop.resources
 C:\Users\84975\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_QuanLyPhuHuynh.resources
-C:\Users\84975\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_Register.resources
 C:\Users\84975\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_LienHe.resources
 C:\Users\84975\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\DoAnCuoiKy_Nhom13.UC_GiaSu.resources
 C:\Users\84975\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\DoAnCuoiKy_Nhom13.UC_LichSuGiaoDich.resources
@@ -125,9 +123,6 @@ C:\Users\Admin\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.vie
 C:\Users\84975\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.Login.Login.resources
 C:\Users\84975\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.Login.NhapThongTinGiaSu.resources
 C:\Users\84975\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.Login.NhapThongTinPhuHuynh.resources
-C:\Users\84975\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_DanhSachMoLop.resources
-C:\Users\84975\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_LopMoiForParent.resources
-C:\Users\84975\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_LopMoiForTutor.resources
 C:\Users\84975\Desktop\QuanLyGiaSu\QuanLyGiaSu\bin\Debug\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\Users\84975\Desktop\QuanLyGiaSu\QuanLyGiaSu\bin\Debug\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 C:\Users\84975\Desktop\QuanLyGiaSu\QuanLyGiaSu\bin\Debug\Microsoft.AspNetCore.Cryptography.Internal.xml
@@ -138,7 +133,6 @@ C:\Users\Admin\Desktop\QuanLyGiaSu\QuanLyGiaSu\bin\Debug\Microsoft.AspNetCore.Cr
 C:\Users\Admin\Desktop\QuanLyGiaSu\QuanLyGiaSu\bin\Debug\Microsoft.AspNetCore.Cryptography.Internal.xml
 C:\Users\Admin\Desktop\QuanLyGiaSu\QuanLyGiaSu\bin\Debug\Microsoft.AspNetCore.Cryptography.KeyDerivation.xml
 C:\Users\Admin\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.csproj.CopyComplete
-C:\Users\84975\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_LSGD_PH.resources
 C:\Users\84975\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.Login.RegisterForm.resources
 C:\Users\Admin\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.Login.RegisterForm.resources
 D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\bin\Debug\QuanLyGiaSu.exe.config
@@ -247,3 +241,20 @@ C:\Users\Admin\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.views.l
 C:\Users\Admin\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.views.layer.admin.NapTien.resources
 C:\Users\Admin\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_LopMoiChoPhuHuynh.resources
 C:\Users\Admin\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.views.layer.tutors.UC_LopMoiChoGiaSu.resources
+C:\Users\84975\Desktop\QuanLyGiaSu\QuanLyGiaSu\bin\Debug\Interop.WMPLib.dll
+C:\Users\84975\Desktop\QuanLyGiaSu\QuanLyGiaSu\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\84975\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\Interop.WMPLib.dll
+C:\Users\84975\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\84975\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.csproj.ResolveComReference.cache
+C:\Users\84975\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.views.layer.admin.NapTien.resources
+C:\Users\84975\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.views.layer.admin.ThemSuaLop.resources
+C:\Users\84975\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.views.layer.admin.ThemSuaMon.resources
+C:\Users\84975\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.views.layer.admin.UC_QLyLichSuNap.resources
+C:\Users\84975\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.views.layer.admin.UC_QLyLopHoc.resources
+C:\Users\84975\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.views.layer.admin.UC_QuanLyDanhSachDangKyDay.resources
+C:\Users\84975\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.views.layer.admin.UC_ThongKe.resources
+C:\Users\84975\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_DanhSachLopDaMo.resources
+C:\Users\84975\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_LopMoiChoPhuHuynh.resources
+C:\Users\84975\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_LichSuGiaoDichPhuHuynh_GiaSu.resources
+C:\Users\84975\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.views.layer.tutors.UC_DanhSachLopDaDangKyDay.resources
+C:\Users\84975\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.views.layer.tutors.UC_LopMoiChoGiaSu.resources

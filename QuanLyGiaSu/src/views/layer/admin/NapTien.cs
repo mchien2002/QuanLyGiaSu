@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyGiaSu.src.controller;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,15 +16,15 @@ namespace QuanLyGiaSu.src.views.layer.admin
         public NapTien()
         {
             InitializeComponent();
-            ptbQRMomo.Hide();
+            /*ptbQRMomo.Hide();
             ptbQRVietCom.Hide();
             lbCTK.Text = "";
             lbSTK.Text = "";
             lbNoidung.Text = "";
-            lbUser.Text = "";
             lbstk2.Hide();
             lbctk2.Hide();
-            lbnoidung2.Hide();
+            lbnoidung2.Hide();*/
+            cbbLoaiNap.Text = cbbLoaiNap.Items[0].ToString();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -38,7 +39,6 @@ namespace QuanLyGiaSu.src.views.layer.admin
                 lbSTK.Text = "Số Momo : 0379324239 ";
                 lbCTK.Text = "Mai Hải Đăng";
                 lbNoidung.Text = "Nội dung : ";
-                lbUser.Text = "username";
                 ptbQRVietCom.Hide();
                 lbstk2.Show();
                 lbctk2.Show();
@@ -49,15 +49,19 @@ namespace QuanLyGiaSu.src.views.layer.admin
             else if(cbbLoaiNap.Text == "Vietcombank")
             {
                 lbSTK.Text = "STK : 0231000676593";
-                lbCTK.Text = "Mai Hai Dang";
+                lbCTK.Text = "Mai Hải Đăng";
                 lbNoidung.Text = "Nội dung : ";
-                lbUser.Text = "user";
                 ptbQRMomo.Hide();
                 lbstk2.Show();
                 lbctk2.Show();
                 lbnoidung2.Show();
                 ptbQRVietCom.Show();
             }  
+        }
+
+        private void NapTien_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Locator.isOpenningNapTien = false;
         }
 
         private void NapTien_Load(object sender, EventArgs e)

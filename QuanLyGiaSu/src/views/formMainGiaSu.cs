@@ -16,7 +16,6 @@ namespace QuanLyGiaSu
 {
     public partial class formMainGiaSu : Form
     {
-        public int chien;
         public formMainGiaSu()
         {
             InitializeComponent();
@@ -62,10 +61,15 @@ namespace QuanLyGiaSu
 
         private void panel2_MouseUp(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left)
+            NapTien napTien = new NapTien();
+            if (Locator.isOpenningNapTien)
             {
-                NapTien napTien = new NapTien();
+                return;
+            }
+            else if (e.Button == MouseButtons.Left)
+            {
                 napTien.Show();
+                Locator.isOpenningNapTien = true;
             }
         }
     }

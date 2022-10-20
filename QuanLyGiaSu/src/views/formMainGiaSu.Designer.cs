@@ -60,19 +60,19 @@
             this.panel1.Controls.Add(this.btn_GiaSu);
             this.panel1.Controls.Add(this.btn_DanhSachLopMoi);
             this.panel1.Controls.Add(this.btnTrangchu);
-            this.panel1.Location = new System.Drawing.Point(11, 10);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Location = new System.Drawing.Point(15, 12);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(833, 50);
+            this.panel1.Size = new System.Drawing.Size(1111, 62);
             this.panel1.TabIndex = 3;
             // 
             // btnLichSuGiaoDich
             // 
             this.btnLichSuGiaoDich.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnLichSuGiaoDich.Location = new System.Drawing.Point(668, 0);
-            this.btnLichSuGiaoDich.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLichSuGiaoDich.Location = new System.Drawing.Point(892, 0);
+            this.btnLichSuGiaoDich.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLichSuGiaoDich.Name = "btnLichSuGiaoDich";
-            this.btnLichSuGiaoDich.Size = new System.Drawing.Size(163, 50);
+            this.btnLichSuGiaoDich.Size = new System.Drawing.Size(217, 62);
             this.btnLichSuGiaoDich.TabIndex = 9;
             this.btnLichSuGiaoDich.Text = "Lịch Sử Giao Dịch";
             this.btnLichSuGiaoDich.UseVisualStyleBackColor = true;
@@ -81,10 +81,10 @@
             // btn_QlyDSLOP
             // 
             this.btn_QlyDSLOP.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btn_QlyDSLOP.Location = new System.Drawing.Point(501, 0);
-            this.btn_QlyDSLOP.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_QlyDSLOP.Location = new System.Drawing.Point(669, 0);
+            this.btn_QlyDSLOP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_QlyDSLOP.Name = "btn_QlyDSLOP";
-            this.btn_QlyDSLOP.Size = new System.Drawing.Size(167, 50);
+            this.btn_QlyDSLOP.Size = new System.Drawing.Size(223, 62);
             this.btn_QlyDSLOP.TabIndex = 8;
             this.btn_QlyDSLOP.Text = "Danh Sách Lớp Đã Đăng Ký Dạy";
             this.btn_QlyDSLOP.UseVisualStyleBackColor = true;
@@ -93,10 +93,10 @@
             // btn_GiaSu
             // 
             this.btn_GiaSu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btn_GiaSu.Location = new System.Drawing.Point(334, 0);
-            this.btn_GiaSu.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_GiaSu.Location = new System.Drawing.Point(446, 0);
+            this.btn_GiaSu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_GiaSu.Name = "btn_GiaSu";
-            this.btn_GiaSu.Size = new System.Drawing.Size(167, 50);
+            this.btn_GiaSu.Size = new System.Drawing.Size(223, 62);
             this.btn_GiaSu.TabIndex = 2;
             this.btn_GiaSu.Text = "Thông Tin Gia Sư";
             this.btn_GiaSu.UseVisualStyleBackColor = true;
@@ -105,10 +105,10 @@
             // btn_DanhSachLopMoi
             // 
             this.btn_DanhSachLopMoi.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btn_DanhSachLopMoi.Location = new System.Drawing.Point(167, 0);
-            this.btn_DanhSachLopMoi.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_DanhSachLopMoi.Location = new System.Drawing.Point(223, 0);
+            this.btn_DanhSachLopMoi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_DanhSachLopMoi.Name = "btn_DanhSachLopMoi";
-            this.btn_DanhSachLopMoi.Size = new System.Drawing.Size(167, 50);
+            this.btn_DanhSachLopMoi.Size = new System.Drawing.Size(223, 62);
             this.btn_DanhSachLopMoi.TabIndex = 3;
             this.btn_DanhSachLopMoi.Text = "Danh Sách Lớp Mới";
             this.btn_DanhSachLopMoi.UseVisualStyleBackColor = true;
@@ -118,9 +118,9 @@
             // 
             this.btnTrangchu.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnTrangchu.Location = new System.Drawing.Point(0, 0);
-            this.btnTrangchu.Margin = new System.Windows.Forms.Padding(2);
+            this.btnTrangchu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTrangchu.Name = "btnTrangchu";
-            this.btnTrangchu.Size = new System.Drawing.Size(167, 50);
+            this.btnTrangchu.Size = new System.Drawing.Size(223, 62);
             this.btnTrangchu.TabIndex = 0;
             this.btnTrangchu.Text = "Trang Chủ";
             this.btnTrangchu.UseVisualStyleBackColor = true;
@@ -131,9 +131,10 @@
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel2.Controls.Add(this.lbSoDu);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(849, 10);
+            this.panel2.Location = new System.Drawing.Point(1132, 12);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(144, 50);
+            this.panel2.Size = new System.Drawing.Size(192, 62);
             this.panel2.TabIndex = 12;
             this.toolTip1.SetToolTip(this.panel2, "Click Để Nạp Tiền");
             this.panel2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseUp);
@@ -142,9 +143,10 @@
             // 
             this.lbSoDu.AutoSize = true;
             this.lbSoDu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSoDu.Location = new System.Drawing.Point(48, 16);
+            this.lbSoDu.Location = new System.Drawing.Point(64, 20);
+            this.lbSoDu.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbSoDu.Name = "lbSoDu";
-            this.lbSoDu.Size = new System.Drawing.Size(62, 16);
+            this.lbSoDu.Size = new System.Drawing.Size(80, 20);
             this.lbSoDu.TabIndex = 0;
             this.lbSoDu.Text = "1.000.000";
             // 
@@ -152,9 +154,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 16);
+            this.label1.Location = new System.Drawing.Point(4, 20);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 16);
+            this.label1.Size = new System.Drawing.Size(66, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Số Dư :";
             // 
@@ -163,64 +166,67 @@
             this.uC_TrangChu1.AutoScroll = true;
             this.uC_TrangChu1.BackColor = System.Drawing.Color.White;
             this.uC_TrangChu1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.uC_TrangChu1.Location = new System.Drawing.Point(11, 67);
-            this.uC_TrangChu1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.uC_TrangChu1.Location = new System.Drawing.Point(15, 82);
+            this.uC_TrangChu1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.uC_TrangChu1.Name = "uC_TrangChu1";
-            this.uC_TrangChu1.Size = new System.Drawing.Size(982, 433);
+            this.uC_TrangChu1.Size = new System.Drawing.Size(1309, 533);
             this.uC_TrangChu1.TabIndex = 5;
             // 
             // uC_GiaSu1
             // 
             this.uC_GiaSu1.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.uC_GiaSu1.Location = new System.Drawing.Point(11, 67);
-            this.uC_GiaSu1.Margin = new System.Windows.Forms.Padding(2);
+            this.uC_GiaSu1.Location = new System.Drawing.Point(15, 82);
+            this.uC_GiaSu1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.uC_GiaSu1.Name = "uC_GiaSu1";
-            this.uC_GiaSu1.Size = new System.Drawing.Size(982, 433);
+            this.uC_GiaSu1.Size = new System.Drawing.Size(1309, 533);
             this.uC_GiaSu1.TabIndex = 9;
             // 
             // uC_LichSuGiaoDichPhuHuynh_GiaSu1
             // 
             this.uC_LichSuGiaoDichPhuHuynh_GiaSu1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.uC_LichSuGiaoDichPhuHuynh_GiaSu1.Location = new System.Drawing.Point(11, 67);
+            this.uC_LichSuGiaoDichPhuHuynh_GiaSu1.Location = new System.Drawing.Point(15, 82);
+            this.uC_LichSuGiaoDichPhuHuynh_GiaSu1.Margin = new System.Windows.Forms.Padding(5);
             this.uC_LichSuGiaoDichPhuHuynh_GiaSu1.Name = "uC_LichSuGiaoDichPhuHuynh_GiaSu1";
-            this.uC_LichSuGiaoDichPhuHuynh_GiaSu1.Size = new System.Drawing.Size(979, 433);
+            this.uC_LichSuGiaoDichPhuHuynh_GiaSu1.Size = new System.Drawing.Size(1305, 533);
             this.uC_LichSuGiaoDichPhuHuynh_GiaSu1.TabIndex = 14;
             // 
             // uC_DanhSachLopDaDangKyDay1
             // 
             this.uC_DanhSachLopDaDangKyDay1.BackColor = System.Drawing.Color.White;
-            this.uC_DanhSachLopDaDangKyDay1.Location = new System.Drawing.Point(11, 67);
-            this.uC_DanhSachLopDaDangKyDay1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.uC_DanhSachLopDaDangKyDay1.Location = new System.Drawing.Point(15, 82);
+            this.uC_DanhSachLopDaDangKyDay1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.uC_DanhSachLopDaDangKyDay1.Name = "uC_DanhSachLopDaDangKyDay1";
-            this.uC_DanhSachLopDaDangKyDay1.Size = new System.Drawing.Size(982, 433);
+            this.uC_DanhSachLopDaDangKyDay1.Size = new System.Drawing.Size(1309, 533);
             this.uC_DanhSachLopDaDangKyDay1.TabIndex = 15;
             // 
             // contextMenuStrip1
             // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.NapTien});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(122, 26);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(139, 28);
             // 
             // NapTien
             // 
             this.NapTien.Name = "NapTien";
-            this.NapTien.Size = new System.Drawing.Size(121, 22);
+            this.NapTien.Size = new System.Drawing.Size(138, 24);
             this.NapTien.Text = "Nạp Tiền";
             // 
             // uC_LopMoiChoGiaSu1
             // 
             this.uC_LopMoiChoGiaSu1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.uC_LopMoiChoGiaSu1.Location = new System.Drawing.Point(11, 67);
+            this.uC_LopMoiChoGiaSu1.Location = new System.Drawing.Point(15, 82);
+            this.uC_LopMoiChoGiaSu1.Margin = new System.Windows.Forms.Padding(5);
             this.uC_LopMoiChoGiaSu1.Name = "uC_LopMoiChoGiaSu1";
-            this.uC_LopMoiChoGiaSu1.Size = new System.Drawing.Size(982, 433);
+            this.uC_LopMoiChoGiaSu1.Size = new System.Drawing.Size(1309, 533);
             this.uC_LopMoiChoGiaSu1.TabIndex = 16;
             // 
             // formMainGiaSu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1000, 508);
+            this.ClientSize = new System.Drawing.Size(1333, 625);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.uC_TrangChu1);
@@ -229,6 +235,7 @@
             this.Controls.Add(this.uC_LichSuGiaoDichPhuHuynh_GiaSu1);
             this.Controls.Add(this.uC_DanhSachLopDaDangKyDay1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "formMainGiaSu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Trung Tâm Gia Sư Anh Em";

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="TRUNGTAMGIASU" Class="TRUNGTAMGIASUDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-V99O7H4\HAIDANG;Initial Catalog=TRUNGTAMGIASU;Integrated Security=True" SettingsObjectName="QuanLyGiaSu.Properties.Settings" SettingsPropertyName="TRUNGTAMGIASUConnectionString2" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-G67KDJT;Initial Catalog=TRUNGTAMGIASU;Integrated Security=True" SettingsObjectName="QuanLyGiaSu.Properties.Settings" SettingsPropertyName="TRUNGTAMGIASUConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.ACCOUNT" Member="ACCOUNTs">
     <Type Name="ACCOUNT">
       <Column Name="ACCID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -14,18 +14,18 @@
       <Association Name="ACCOUNT_PHUHUYNH" Member="PHUHUYNHs" ThisKey="ACCID" OtherKey="ACCID" Type="PHUHUYNH" />
     </Type>
   </Table>
-  <Table Name="dbo.BANGTIN" Member="BANGTINs">
-    <Type Name="BANGTIN">
-      <Column Name="BID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="ChuDe" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
-      <Column Name="NoiDung" Type="System.String" DbType="NVarChar(4000) NOT NULL" CanBeNull="false" />
-    </Type>
-  </Table>
   <Table Name="dbo.Admin" Member="Admins">
     <Type Name="Admin">
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="Username" Type="System.String" DbType="Char(100)" CanBeNull="true" />
       <Column Name="Password" Type="System.String" DbType="Char(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BANGTIN" Member="BANGTINs">
+    <Type Name="BANGTIN">
+      <Column Name="BID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ChuDe" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="NoiDung" Type="System.String" DbType="NVarChar(4000) NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
   <Table Name="dbo.DANHSACHDANGKYDAY" Member="DANHSACHDANGKYDAYs">
@@ -34,8 +34,29 @@
       <Column Name="GSID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="LMID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="ThoiGianDangKy" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-      <Association Name="DANHSACHMOLOP_DANHSACHDANGKYDAY" Member="DANHSACHMOLOP" ThisKey="LMID" OtherKey="LMID" Type="DANHSACHMOLOP" IsForeignKey="true" />
       <Association Name="GIASU_DANHSACHDANGKYDAY" Member="GIASU" ThisKey="GSID" OtherKey="GSID" Type="GIASU" IsForeignKey="true" />
+      <Association Name="DANHSACHMOLOP_DANHSACHDANGKYDAY" Member="DANHSACHMOLOP" ThisKey="LMID" OtherKey="LMID" Type="DANHSACHMOLOP" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GIASU" Member="GIASUs">
+    <Type Name="GIASU">
+      <Column Name="GSID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ACCID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CMND" Type="System.String" DbType="Char(20) NOT NULL" CanBeNull="false" />
+      <Column Name="GioiTinh" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="NgaySinh" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="SDT" Type="System.String" DbType="Char(20) NOT NULL" CanBeNull="false" />
+      <Column Name="QueQuan" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="TruongDaoTao" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="TrinhDo" Type="System.String" DbType="NVarChar(4000) NOT NULL" CanBeNull="false" />
+      <Column Name="UuDiem" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="Avartar" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Association Name="GIASU_DANHSACHDANGKYDAY" Member="DANHSACHDANGKYDAYs" ThisKey="GSID" OtherKey="GSID" Type="DANHSACHDANGKYDAY" />
+      <Association Name="GIASU_LOP_GIASU" Member="LOP_GIASUs" ThisKey="GSID" OtherKey="GSID" Type="LOP_GIASU" />
+      <Association Name="GIASU_MONHOC_GIASU" Member="MONHOC_GIASUs" ThisKey="GSID" OtherKey="GSID" Type="MONHOC_GIASU" />
+      <Association Name="ACCOUNT_GIASU" Member="ACCOUNT" ThisKey="ACCID" OtherKey="ACCID" Type="ACCOUNT" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.DANHSACHMOLOP" Member="DANHSACHMOLOPs">
@@ -58,27 +79,6 @@
       <Association Name="DANHSACHMOLOP_MONHOC_LOPMOI" Member="MONHOC_LOPMOIs" ThisKey="LMID" OtherKey="LMID" Type="MONHOC_LOPMOI" />
       <Association Name="LOPHOC_DANHSACHMOLOP" Member="LOPHOC" ThisKey="LHID" OtherKey="LHID" Type="LOPHOC" IsForeignKey="true" />
       <Association Name="PHUHUYNH_DANHSACHMOLOP" Member="PHUHUYNH" ThisKey="PHID" OtherKey="PHID" Type="PHUHUYNH" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.GIASU" Member="GIASUs">
-    <Type Name="GIASU">
-      <Column Name="GSID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="ACCID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="HoTen" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
-      <Column Name="CMND" Type="System.String" DbType="Char(20) NOT NULL" CanBeNull="false" />
-      <Column Name="GioiTinh" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
-      <Column Name="NgaySinh" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
-      <Column Name="SDT" Type="System.String" DbType="Char(20) NOT NULL" CanBeNull="false" />
-      <Column Name="QueQuan" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
-      <Column Name="TruongDaoTao" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
-      <Column Name="TrinhDo" Type="System.String" DbType="NVarChar(4000) NOT NULL" CanBeNull="false" />
-      <Column Name="UuDiem" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
-      <Column Name="Avartar" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
-      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
-      <Association Name="GIASU_DANHSACHDANGKYDAY" Member="DANHSACHDANGKYDAYs" ThisKey="GSID" OtherKey="GSID" Type="DANHSACHDANGKYDAY" />
-      <Association Name="GIASU_LOP_GIASU" Member="LOP_GIASUs" ThisKey="GSID" OtherKey="GSID" Type="LOP_GIASU" />
-      <Association Name="GIASU_MONHOC_GIASU" Member="MONHOC_GIASUs" ThisKey="GSID" OtherKey="GSID" Type="MONHOC_GIASU" />
-      <Association Name="ACCOUNT_GIASU" Member="ACCOUNT" ThisKey="ACCID" OtherKey="ACCID" Type="ACCOUNT" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.LICHSUGIAODICH" Member="LICHSUGIAODICHes">
@@ -333,16 +333,16 @@
     <Parameter Name="CMND" Parameter="cMND" Type="System.String" DbType="Char(10)" Direction="InOut" />
     <Return Type="System.Int32" />
   </Function>
+  <Function Name="dbo.update_admin" Method="update_admin">
+    <Parameter Name="USERNAME" Parameter="uSERNAME" Type="System.String" DbType="Char(100)" />
+    <Parameter Name="PASSWORD" Parameter="pASSWORD" Type="System.String" DbType="Char(100)" />
+    <Return Type="System.Int32" />
+  </Function>
   <Function Name="dbo.update_acc" Method="update_acc">
     <Parameter Name="accid" Type="System.Int32" DbType="Int" />
     <Parameter Name="USERNAME" Parameter="uSERNAME" Type="System.String" DbType="Char(100)" />
     <Parameter Name="PASSWORD" Parameter="pASSWORD" Type="System.String" DbType="Char(100)" />
     <Parameter Name="EMAIL" Parameter="eMAIL" Type="System.String" DbType="Char(50)" />
-    <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.update_admin" Method="update_admin">
-    <Parameter Name="USERNAME" Parameter="uSERNAME" Type="System.String" DbType="Char(100)" />
-    <Parameter Name="PASSWORD" Parameter="pASSWORD" Type="System.String" DbType="Char(100)" />
     <Return Type="System.Int32" />
   </Function>
   <Function Name="dbo.update_bangtin" Method="update_bangtin">
@@ -375,11 +375,6 @@
     <Parameter Name="dadongtien" Type="System.String" DbType="NVarChar(50)" />
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.update_lh" Method="update_lh">
-    <Parameter Name="LHID" Parameter="lHID" Type="System.Int32" DbType="Int" />
-    <Parameter Name="TENLOP" Parameter="tENLOP" Type="System.String" DbType="NVarChar(50)" />
-    <Return Type="System.Int32" />
-  </Function>
   <Function Name="dbo.update_gs" Method="update_gs">
     <Parameter Name="GSID" Parameter="gSID" Type="System.Int32" DbType="Int" />
     <Parameter Name="HOTEN" Parameter="hOTEN" Type="System.String" DbType="NVarChar(100)" />
@@ -393,6 +388,11 @@
     <Parameter Name="UUDIEM" Parameter="uUDIEM" Type="System.String" DbType="NVarChar(4000)" />
     <Parameter Name="DiaChi" Parameter="diaChi" Type="System.String" DbType="NVarChar(4000)" />
     <Parameter Name="Avartar" Parameter="avartar" Type="System.Data.Linq.Binary" DbType="Image" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.update_lh" Method="update_lh">
+    <Parameter Name="LHID" Parameter="lHID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TENLOP" Parameter="tENLOP" Type="System.String" DbType="NVarChar(50)" />
     <Return Type="System.Int32" />
   </Function>
   <Function Name="dbo.update_lsgd" Method="update_lsgd">
@@ -507,16 +507,16 @@
       <Column Name="THOIGIANGIAODICH" Type="System.DateTime" DbType="Date" CanBeNull="true" />
     </ElementType>
   </Function>
-  <Function Name="dbo.select_lophoc_gs" Method="select_lophoc_gs" IsComposable="true">
-    <Parameter Name="GSID" Parameter="gSID" Type="System.Int32" DbType="Int" />
-    <ElementType Name="select_lophoc_gsResult">
-      <Column Name="TenLop" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-    </ElementType>
-  </Function>
   <Function Name="dbo.select_monhoc_gs" Method="select_monhoc_gs" IsComposable="true">
     <Parameter Name="GSID" Parameter="gSID" Type="System.Int32" DbType="Int" />
     <ElementType Name="select_monhoc_gsResult">
       <Column Name="TenMon" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.select_lophoc_gs" Method="select_lophoc_gs" IsComposable="true">
+    <Parameter Name="GSID" Parameter="gSID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="select_lophoc_gsResult">
+      <Column Name="TenLop" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </ElementType>
   </Function>
   <Function Name="dbo.select_monhoc_lm" Method="select_monhoc_lm" IsComposable="true">

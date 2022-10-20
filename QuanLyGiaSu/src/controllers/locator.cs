@@ -12,6 +12,7 @@ namespace QuanLyGiaSu.src.controller
     {
         public static Server server = new Server();
         public static AccountModel author = new AccountModel();
+        public static bool isOpenningNapTien = false;
     }
 
     public enum UserType

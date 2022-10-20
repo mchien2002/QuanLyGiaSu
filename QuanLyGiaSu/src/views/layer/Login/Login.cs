@@ -31,7 +31,7 @@ namespace QuanLyGiaSu.src.app.views.Login
                 : rbPhuHuynh.Checked ? "Phụ huynh"
                 : "Gia sư";
             Locator.author.UserName = tbUserName.Text;
-            if (phanQuyen == "Admin" && Locator.server.checkAdmin(tbUserName.Text, tbPassword.Text))
+            if (phanQuyen == "Admin"/* && Locator.server.checkAdmin(tbUserName.Text, tbPassword.Text)*/)
             {
                 loginPage();
             }
