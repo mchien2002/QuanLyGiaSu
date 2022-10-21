@@ -98,6 +98,12 @@
     <Compile Include="src\views\layer\admin\NapTien.Designer.cs">
       <DependentUpon>NapTien.cs</DependentUpon>
     </Compile>
+    <Compile Include="src\views\layer\admin\NapTienAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\views\layer\admin\NapTienAdmin.Designer.cs">
+      <DependentUpon>NapTienAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="src\views\layer\admin\ThemSuaLop.cs">
       <SubType>Form</SubType>
     </Compile>
