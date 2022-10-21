@@ -122,6 +122,12 @@
     <Compile Include="src\views\layer\admin\UC_QLyLopHoc.Designer.cs">
       <DependentUpon>UC_QLyLopHoc.cs</DependentUpon>
     </Compile>
+    <Compile Include="src\views\layer\admin\UC_QuanLyAccount.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\views\layer\admin\UC_QuanLyAccount.Designer.cs">
+      <DependentUpon>UC_QuanLyAccount.cs</DependentUpon>
+    </Compile>
     <Compile Include="src\views\layer\admin\UC_QuanLyDanhSachDangKyDay.cs">
       <SubType>UserControl</SubType>
     </Compile>
