@@ -28,35 +28,56 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbTenTaiKhoan = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnNapTien = new System.Windows.Forms.Button();
+            this.tbNapTien = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // label1
+            // lbTenTaiKhoan
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(53, 43);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
+            this.lbTenTaiKhoan.AutoSize = true;
+            this.lbTenTaiKhoan.Location = new System.Drawing.Point(224, 36);
+            this.lbTenTaiKhoan.Name = "lbTenTaiKhoan";
+            this.lbTenTaiKhoan.Size = new System.Drawing.Size(44, 16);
+            this.lbTenTaiKhoan.TabIndex = 0;
+            this.lbTenTaiKhoan.Text = "label1";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(53, 91);
+            this.label2.Location = new System.Drawing.Point(35, 36);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 16);
+            this.label2.Size = new System.Drawing.Size(145, 16);
             this.label2.TabIndex = 1;
-            this.label2.Text = "label2";
+            this.label2.Text = "Nạp tiền cho tài khoản: ";
+            // 
+            // btnNapTien
+            // 
+            this.btnNapTien.Location = new System.Drawing.Point(38, 136);
+            this.btnNapTien.Name = "btnNapTien";
+            this.btnNapTien.Size = new System.Drawing.Size(75, 23);
+            this.btnNapTien.TabIndex = 2;
+            this.btnNapTien.Text = "Nạp Tiền";
+            this.btnNapTien.UseVisualStyleBackColor = true;
+            this.btnNapTien.Click += new System.EventHandler(this.btnNapTien_Click);
+            // 
+            // tbNapTien
+            // 
+            this.tbNapTien.Location = new System.Drawing.Point(38, 89);
+            this.tbNapTien.Name = "tbNapTien";
+            this.tbNapTien.Size = new System.Drawing.Size(100, 22);
+            this.tbNapTien.TabIndex = 3;
             // 
             // NapTienAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.tbNapTien);
+            this.Controls.Add(this.btnNapTien);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbTenTaiKhoan);
             this.Name = "NapTienAdmin";
             this.Text = "NapTienAdmin";
             this.ResumeLayout(false);
@@ -66,7 +87,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbTenTaiKhoan;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnNapTien;
+        private System.Windows.Forms.TextBox tbNapTien;
     }
 }

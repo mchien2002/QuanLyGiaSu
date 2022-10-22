@@ -315,6 +315,9 @@
     <EmbeddedResource Include="src\views\layer\admin\NapTien.resx">
       <DependentUpon>NapTien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="src\views\layer\admin\NapTienAdmin.resx">
+      <DependentUpon>NapTienAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="src\views\layer\admin\ThemSuaLop.resx">
       <DependentUpon>ThemSuaLop.cs</DependentUpon>
     </EmbeddedResource>

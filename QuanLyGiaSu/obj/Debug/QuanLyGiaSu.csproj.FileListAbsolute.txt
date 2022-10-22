@@ -272,3 +272,4 @@ D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.views.layer
 D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.views.layer.tutors.UC_LopMoiChoGiaSu.resources
 D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.csproj.CopyComplete
 D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.views.layer.admin.UC_QuanLyAccount.resources
+D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.views.layer.admin.NapTienAdmin.resources

@@ -16,5 +16,10 @@ namespace QuanLyGiaSu.src.views.layer.admin
         {
             InitializeComponent();
         }
+
+        private void btnNapTien_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

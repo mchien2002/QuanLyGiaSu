@@ -34,5 +34,11 @@ namespace QuanLyGiaSu.src.views.layer.admin
                 dgvQLyAccount.DataSource = Locator.server.fetchAccount();
             }
         }
+
+        private void NapTien_Click(object sender, EventArgs e)
+        {
+            NapTienAdmin napTienAdmin1 = new NapTienAdmin();
+            napTienAdmin1.Show();
+        }
     }
 }
