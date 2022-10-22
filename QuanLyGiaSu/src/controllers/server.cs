@@ -14,6 +14,19 @@ namespace QuanLyGiaSu.src.server
         public TRUNGTAMGIASUDataContext _db = new TRUNGTAMGIASUDataContext();
         public Server() { }
         
+        public object fetchAccountByUserName(string username)
+        {
+            var q = from p in _db.ACCOUNTs
+                    where p.Username == username
+                    select p;
+            return q;
+
+        }
+        public object fetchAccount()
+        {
+            return _db.ACCOUNTs.Select(p => p);
+        }
+
         /// <summary>
         /// Lấy dữ liệu bảng tin
         /// </summary>
@@ -359,5 +372,7 @@ namespace QuanLyGiaSu.src.server
                 return 0;
             }
         }
+
+       
     }
 }

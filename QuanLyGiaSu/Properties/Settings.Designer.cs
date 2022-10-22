@@ -76,5 +76,16 @@ namespace QuanLyGiaSu.Properties {
                 return ((string)(this["TRUNGTAMGIASUConnectionString4"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-3SM2096\\SQLEXPRESS;Initial Catalog=TRUNGTAMGIASU;Integrated S" +
+            "ecurity=True")]
+        public string TRUNGTAMGIASUConnectionString5 {
+            get {
+                return ((string)(this["TRUNGTAMGIASUConnectionString5"]));
+            }
+        }
     }
 }

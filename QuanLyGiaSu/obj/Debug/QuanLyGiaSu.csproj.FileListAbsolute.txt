@@ -153,16 +153,10 @@ D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.l
 D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.SuaPhuHuynh.resources
 D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.SuaThongTinLop.resources
 D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.ThemAccount.resources
-D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_DanhSachLopDaDangKy.resources
-D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_DanhSachMoLop.resources
-D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_LopMoiForParent.resources
-D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_LSGD_PH.resources
 D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_QuanLyGiaSu.resources
 D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_QuanLyLop.resources
 D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_QuanLyPhuHuynh.resources
-D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_Register.resources
 D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_LienHe.resources
-D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_LopMoiForTutor.resources
 D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\DoAnCuoiKy_Nhom13.UC_GiaSu.resources
 D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\DoAnCuoiKy_Nhom13.UC_LichSuGiaoDich.resources
 D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_ThongTinPhuHuynh.resources
@@ -258,3 +252,23 @@ C:\Users\84975\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.vie
 C:\Users\84975\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_LichSuGiaoDichPhuHuynh_GiaSu.resources
 C:\Users\84975\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.views.layer.tutors.UC_DanhSachLopDaDangKyDay.resources
 C:\Users\84975\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.views.layer.tutors.UC_LopMoiChoGiaSu.resources
+D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\bin\Debug\Interop.WMPLib.dll
+D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\bin\Debug\AxInterop.WMPLib.dll
+D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.csproj.SuggestedBindingRedirects.cache
+D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\Interop.WMPLib.dll
+D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\AxInterop.WMPLib.dll
+D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.csproj.ResolveComReference.cache
+D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.views.layer.admin.NapTien.resources
+D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.views.layer.admin.ThemSuaLop.resources
+D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.views.layer.admin.ThemSuaMon.resources
+D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.views.layer.admin.UC_QLyLichSuNap.resources
+D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.views.layer.admin.UC_QLyLopHoc.resources
+D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.views.layer.admin.UC_QuanLyDanhSachDangKyDay.resources
+D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.views.layer.admin.UC_ThongKe.resources
+D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_DanhSachLopDaMo.resources
+D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_LopMoiChoPhuHuynh.resources
+D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.app.views.layer.UC_LichSuGiaoDichPhuHuynh_GiaSu.resources
+D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.views.layer.tutors.UC_DanhSachLopDaDangKyDay.resources
+D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.views.layer.tutors.UC_LopMoiChoGiaSu.resources
+D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.csproj.CopyComplete
+D:\HQTCSDL\Gia Sư\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.views.layer.admin.UC_QuanLyAccount.resources

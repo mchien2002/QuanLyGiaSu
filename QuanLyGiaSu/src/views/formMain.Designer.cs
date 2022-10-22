@@ -31,6 +31,7 @@ namespace QuanLyGiaSu
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formMain));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnAccount = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnLichSuNapTien = new System.Windows.Forms.Button();
             this.btnQuanLyLopVaMon = new System.Windows.Forms.Button();
@@ -51,7 +52,7 @@ namespace QuanLyGiaSu
             this.uC_QLyLopHoc1 = new QuanLyGiaSu.src.views.layer.admin.UC_QLyLopHoc();
             this.uC_QLyLichSuNap1 = new QuanLyGiaSu.src.views.layer.admin.UC_QLyLichSuNap();
             this.uC_ThongKe1 = new QuanLyGiaSu.src.views.layer.admin.UC_ThongKe();
-            this.btnAccount = new System.Windows.Forms.Button();
+            this.uC_QuanLyAccount1 = new QuanLyGiaSu.src.views.layer.admin.UC_QuanLyAccount();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -74,6 +75,17 @@ namespace QuanLyGiaSu
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1304, 62);
             this.panel1.TabIndex = 0;
+            // 
+            // btnAccount
+            // 
+            this.btnAccount.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnAccount.Location = new System.Drawing.Point(1170, 0);
+            this.btnAccount.Name = "btnAccount";
+            this.btnAccount.Size = new System.Drawing.Size(130, 62);
+            this.btnAccount.TabIndex = 14;
+            this.btnAccount.Text = "Quản lý account";
+            this.btnAccount.UseVisualStyleBackColor = true;
+            this.btnAccount.Click += new System.EventHandler(this.btnAccount_Click);
             // 
             // button1
             // 
@@ -195,6 +207,7 @@ namespace QuanLyGiaSu
             this.panel2.Controls.Add(this.uC_QLyLopHoc1);
             this.panel2.Controls.Add(this.uC_QLyLichSuNap1);
             this.panel2.Controls.Add(this.uC_ThongKe1);
+            this.panel2.Controls.Add(this.uC_QuanLyAccount1);
             this.panel2.Location = new System.Drawing.Point(12, 80);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
@@ -225,7 +238,7 @@ namespace QuanLyGiaSu
             // 
             this.uC_QuanLyLop1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.uC_QuanLyLop1.Location = new System.Drawing.Point(0, 2);
-            this.uC_QuanLyLop1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.uC_QuanLyLop1.Margin = new System.Windows.Forms.Padding(5);
             this.uC_QuanLyLop1.Name = "uC_QuanLyLop1";
             this.uC_QuanLyLop1.Size = new System.Drawing.Size(1309, 533);
             this.uC_QuanLyLop1.TabIndex = 5;
@@ -234,7 +247,7 @@ namespace QuanLyGiaSu
             // 
             this.uC_QuanLyGiaSu1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.uC_QuanLyGiaSu1.Location = new System.Drawing.Point(-3, 1);
-            this.uC_QuanLyGiaSu1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.uC_QuanLyGiaSu1.Margin = new System.Windows.Forms.Padding(5);
             this.uC_QuanLyGiaSu1.Name = "uC_QuanLyGiaSu1";
             this.uC_QuanLyGiaSu1.Size = new System.Drawing.Size(1309, 533);
             this.uC_QuanLyGiaSu1.TabIndex = 6;
@@ -243,7 +256,7 @@ namespace QuanLyGiaSu
             // 
             this.uC_QuanLyPhuHuynh1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.uC_QuanLyPhuHuynh1.Location = new System.Drawing.Point(0, 2);
-            this.uC_QuanLyPhuHuynh1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.uC_QuanLyPhuHuynh1.Margin = new System.Windows.Forms.Padding(5);
             this.uC_QuanLyPhuHuynh1.Name = "uC_QuanLyPhuHuynh1";
             this.uC_QuanLyPhuHuynh1.Size = new System.Drawing.Size(1309, 533);
             this.uC_QuanLyPhuHuynh1.TabIndex = 7;
@@ -270,7 +283,7 @@ namespace QuanLyGiaSu
             // 
             this.uC_QLyLopHoc1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.uC_QLyLopHoc1.Location = new System.Drawing.Point(-3, 1);
-            this.uC_QLyLopHoc1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.uC_QLyLopHoc1.Margin = new System.Windows.Forms.Padding(5);
             this.uC_QLyLopHoc1.Name = "uC_QLyLopHoc1";
             this.uC_QLyLopHoc1.Size = new System.Drawing.Size(1309, 533);
             this.uC_QLyLopHoc1.TabIndex = 11;
@@ -279,7 +292,7 @@ namespace QuanLyGiaSu
             // 
             this.uC_QLyLichSuNap1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.uC_QLyLichSuNap1.Location = new System.Drawing.Point(-3, 1);
-            this.uC_QLyLichSuNap1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.uC_QLyLichSuNap1.Margin = new System.Windows.Forms.Padding(5);
             this.uC_QLyLichSuNap1.Name = "uC_QLyLichSuNap1";
             this.uC_QLyLichSuNap1.Size = new System.Drawing.Size(1309, 533);
             this.uC_QLyLichSuNap1.TabIndex = 12;
@@ -288,21 +301,17 @@ namespace QuanLyGiaSu
             // 
             this.uC_ThongKe1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.uC_ThongKe1.Location = new System.Drawing.Point(-3, 1);
-            this.uC_ThongKe1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.uC_ThongKe1.Margin = new System.Windows.Forms.Padding(5);
             this.uC_ThongKe1.Name = "uC_ThongKe1";
             this.uC_ThongKe1.Size = new System.Drawing.Size(1309, 533);
             this.uC_ThongKe1.TabIndex = 13;
             // 
-            // btnAccount
+            // uC_QuanLyAccount1
             // 
-            this.btnAccount.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnAccount.Location = new System.Drawing.Point(1170, 0);
-            this.btnAccount.Name = "btnAccount";
-            this.btnAccount.Size = new System.Drawing.Size(130, 62);
-            this.btnAccount.TabIndex = 14;
-            this.btnAccount.Text = "Quản lý account";
-            this.btnAccount.UseVisualStyleBackColor = true;
-            this.btnAccount.Click += new System.EventHandler(this.btnAccount_Click);
+            this.uC_QuanLyAccount1.Location = new System.Drawing.Point(-3, 1);
+            this.uC_QuanLyAccount1.Name = "uC_QuanLyAccount1";
+            this.uC_QuanLyAccount1.Size = new System.Drawing.Size(1309, 533);
+            this.uC_QuanLyAccount1.TabIndex = 14;
             // 
             // formMain
             // 
@@ -349,6 +358,7 @@ namespace QuanLyGiaSu
         private System.Windows.Forms.Button button1;
         private src.views.layer.admin.UC_ThongKe uC_ThongKe1;
         private System.Windows.Forms.Button btnAccount;
+        private src.views.layer.admin.UC_QuanLyAccount uC_QuanLyAccount1;
     }
 }
 

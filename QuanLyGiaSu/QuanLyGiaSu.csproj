@@ -327,6 +327,9 @@
     <EmbeddedResource Include="src\views\layer\admin\UC_QLyLopHoc.resx">
       <DependentUpon>UC_QLyLopHoc.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="src\views\layer\admin\UC_QuanLyAccount.resx">
+      <DependentUpon>UC_QuanLyAccount.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="src\views\layer\admin\UC_QuanLyDanhSachDangKyDay.resx">
       <DependentUpon>UC_QuanLyDanhSachDangKyDay.cs</DependentUpon>
     </EmbeddedResource>

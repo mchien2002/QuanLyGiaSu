@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyGiaSu.src.views.layer.admin;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -75,7 +76,7 @@ namespace QuanLyGiaSu
 
         private void btnAccount_Click(object sender, EventArgs e)
         {
-
+            uC_QuanLyAccount1.BringToFront();
         }
     }
 }
