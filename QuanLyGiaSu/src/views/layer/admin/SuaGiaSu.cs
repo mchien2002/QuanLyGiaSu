@@ -44,5 +44,31 @@ namespace QuanLyGiaSu.src.app.views.layer
         {
 
         }
+        
+        public void ShowThongTinGiaSu(string GSID,
+            string truongDT,
+            string hoTen,
+            string ngaySinh,
+            string gioiTinh,
+            string soDienThoai,
+            string cmnd,
+            string diaChi,
+            string queQuan,
+            string uuDiem,
+            string trinhDo
+            )
+        {
+            tbGSID.Text = GSID;
+            tbTruongDT.Text = truongDT;
+            tbHoTen.Text = hoTen;
+            dtpNgaySinh.Value = Convert.ToDateTime(ngaySinh);
+            cbbGioiTinh.Text = gioiTinh;
+            tbSDT.Text = soDienThoai;
+            tbCMND.Text = cmnd;
+            tbDiaChi.Text = diaChi;
+            tbQueQuan.Text = queQuan;
+            tbUuDiem.Text = uuDiem;
+            cbbsTrinhDo.Text = trinhDo;
+        }
     }
 }

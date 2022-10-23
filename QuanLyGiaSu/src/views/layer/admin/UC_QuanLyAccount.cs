@@ -38,7 +38,16 @@ namespace QuanLyGiaSu.src.views.layer.admin
         private void NapTien_Click(object sender, EventArgs e)
         {
             NapTienAdmin napTienAdmin1 = new NapTienAdmin();
+            napTienAdmin1.ShowThongTinNapTien(dgvQLyAccount.CurrentRow.Cells[2].Value.ToString());
             napTienAdmin1.Show();
+        }
+
+        private void dgvQLyAccount_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvQLyAccount.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            {
+                dgvQLyAccount.CurrentRow.Selected = true;
+            }
         }
     }
 }

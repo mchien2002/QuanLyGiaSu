@@ -33,10 +33,10 @@
             this.tb_TimKiem = new System.Windows.Forms.TextBox();
             this.lbTimKiem = new System.Windows.Forms.Label();
             this.dgvQLyAccount = new System.Windows.Forms.DataGridView();
-            this.lbTieuDe = new System.Windows.Forms.Label();
-            this.btnTimKiem = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.NapTien = new System.Windows.Forms.ToolStripMenuItem();
+            this.lbTieuDe = new System.Windows.Forms.Label();
+            this.btnTimKiem = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQLyAccount)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -86,6 +86,22 @@
             this.dgvQLyAccount.RowTemplate.Height = 24;
             this.dgvQLyAccount.Size = new System.Drawing.Size(1277, 453);
             this.dgvQLyAccount.TabIndex = 22;
+            this.dgvQLyAccount.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvQLyAccount_CellClick);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.NapTien});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(139, 28);
+            // 
+            // NapTien
+            // 
+            this.NapTien.Name = "NapTien";
+            this.NapTien.Size = new System.Drawing.Size(138, 24);
+            this.NapTien.Text = "Nạp Tiền";
+            this.NapTien.Click += new System.EventHandler(this.NapTien_Click);
             // 
             // lbTieuDe
             // 
@@ -106,21 +122,6 @@
             this.btnTimKiem.Text = "Tìm Kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = true;
             this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.NapTien});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 56);
-            // 
-            // NapTien
-            // 
-            this.NapTien.Name = "NapTien";
-            this.NapTien.Size = new System.Drawing.Size(210, 24);
-            this.NapTien.Text = "Nạp Tiền";
-            this.NapTien.Click += new System.EventHandler(this.NapTien_Click);
             // 
             // UC_QuanLyAccount
             // 

@@ -45,14 +45,34 @@ namespace QuanLyGiaSu.src.app.views.layer
 
         private void SuaThongTinGiaSu_Click(object sender, EventArgs e)
         {
-            SuaGiaSu suaGiaSu = new SuaGiaSu();
-            suaGiaSu.Show();
+            SuaGiaSu suaGiaSu1 = new SuaGiaSu();
+            suaGiaSu1.ShowThongTinGiaSu(dgvQuanLyGiaSu.CurrentRow.Cells[0].Value.ToString(),
+                dgvQuanLyGiaSu.CurrentRow.Cells[11].Value.ToString(),
+                dgvQuanLyGiaSu.CurrentRow.Cells[2].Value.ToString(),
+                dgvQuanLyGiaSu.CurrentRow.Cells[5].Value.ToString(),
+                dgvQuanLyGiaSu.CurrentRow.Cells[3].Value.ToString(),
+                dgvQuanLyGiaSu.CurrentRow.Cells[6].Value.ToString(),
+                dgvQuanLyGiaSu.CurrentRow.Cells[4].Value.ToString(),
+                dgvQuanLyGiaSu.CurrentRow.Cells[13].Value.ToString(),
+                dgvQuanLyGiaSu.CurrentRow.Cells[9].Value.ToString(),
+                dgvQuanLyGiaSu.CurrentRow.Cells[12].Value.ToString(),
+                dgvQuanLyGiaSu.CurrentRow.Cells[10].Value.ToString()
+                );
+            suaGiaSu1.Show();
         }
 
         private void ThemGiaSu_Click(object sender, EventArgs e)
         {
             ThemAccount themAccount = new ThemAccount();
             themAccount.Show();
+        }
+
+        private void dgvQuanLyGiaSu_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvQuanLyGiaSu.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            {
+                dgvQuanLyGiaSu.CurrentRow.Selected = true;
+            }
         }
     }
 }

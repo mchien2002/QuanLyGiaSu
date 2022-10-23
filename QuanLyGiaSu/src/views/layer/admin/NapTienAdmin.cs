@@ -21,5 +21,10 @@ namespace QuanLyGiaSu.src.views.layer.admin
         {
             this.Close();
         }
+
+        public void ShowThongTinNapTien(string username)
+        {
+            lbTenTaiKhoan.Text = username;
+        }
     }
 }
