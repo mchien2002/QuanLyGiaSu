@@ -10,3 +10,6 @@ Phần mềm quản lý trung tâm gia sư thành phố Hồ Chí Minh là phầ
 ○	Lịch sử giao dịch lưu lại thông tin giao dịch của phụ huynh và gia sư khi thanh toán.
 ○	Lịch sử nạp tiền lưu lai thông tin nạp tiền của phụ huynh và gia sư
 ○	Doanh thu (Tổng tiền thu được khi những lớp học được nhận).
+
+
+heloooo
