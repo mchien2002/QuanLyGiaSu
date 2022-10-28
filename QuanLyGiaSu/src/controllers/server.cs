@@ -145,6 +145,15 @@ namespace QuanLyGiaSu.src.server
             }
         }
 
+        public int getAccountIDByUsername(String userName)
+        {
+            return (int)_db.find_accid_username(userName);
+        }
+
+        public void transactionForAccount(int money)
+        {
+            
+        }
         /// <summary>
         /// Add thông tin vào checkedlistbox
         /// </summary>
