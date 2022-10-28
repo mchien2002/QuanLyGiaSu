@@ -150,9 +150,9 @@ namespace QuanLyGiaSu.src.server
             return (int)_db.find_accid_username(userName);
         }
 
-        public void transactionForAccount(int money)
+        public void transactionForAccount(int money, int accID, DateTime dateTime)
         {
-            
+            _db.insert_lsnt(accID, money, dateTime);
         }
         /// <summary>
         /// Add thông tin vào checkedlistbox

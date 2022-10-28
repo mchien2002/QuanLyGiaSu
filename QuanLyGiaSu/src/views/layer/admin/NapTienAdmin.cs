@@ -24,6 +24,7 @@ namespace QuanLyGiaSu.src.views.layer.admin
             try
             {
                 // Nạp tiền cho tài khoản
+                Locator.server.transactionForAccount(Int32.Parse(tbNapTien.Text), userAccountID, Convert.ToDateTime(DateTime.Now.ToString()));
                 MessageBox.Show("Giao dịch thành công", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch
@@ -37,6 +38,14 @@ namespace QuanLyGiaSu.src.views.layer.admin
         {
             lbTenTaiKhoan.Text = username;
             userAccountID = Locator.server.getAccountIDByUsername(username);
+        }
+
+        private void tbNapTien_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }
