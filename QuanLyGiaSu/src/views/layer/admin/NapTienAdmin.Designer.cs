@@ -68,7 +68,6 @@
             this.tbNapTien.Name = "tbNapTien";
             this.tbNapTien.Size = new System.Drawing.Size(100, 22);
             this.tbNapTien.TabIndex = 3;
-            this.tbNapTien.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbNapTien_KeyPress);
             // 
             // NapTienAdmin
             // 
@@ -81,7 +80,6 @@
             this.Controls.Add(this.lbTenTaiKhoan);
             this.Name = "NapTienAdmin";
             this.Text = "NapTienAdmin";
-            this.Load += new System.EventHandler(this.NapTienAdmin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

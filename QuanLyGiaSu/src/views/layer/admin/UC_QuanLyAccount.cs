@@ -44,16 +44,9 @@ namespace QuanLyGiaSu.src.views.layer.admin
 
         private void dgvQLyAccount_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            try
+            if (dgvQLyAccount.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
             {
-                if (dgvQLyAccount.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
-                {
-                    dgvQLyAccount.CurrentRow.Selected = true;
-                }
-            }
-            catch
-            {
-                return;
+                dgvQLyAccount.CurrentRow.Selected = true;
             }
         }
     }

@@ -20,8 +20,6 @@ namespace QuanLyGiaSu.src.app.views.layer
 
         private void UC_ThongTinPhuHuynh_Load(object sender, EventArgs e)
         {
-            int z = 0;
-            int chien = 0;
             //tbTruong.Focus();
             int PHID = 0;
             string GioiTinh = "", DiaChi = "", SDT = "", Cmnd = "",  HoTen = "", Email = "", Username = "", Pw = "", NgheNghiep="";
