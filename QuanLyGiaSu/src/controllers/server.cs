@@ -13,6 +13,11 @@ namespace QuanLyGiaSu.src.server
     {
         public TRUNGTAMGIASUDataContext _db = new TRUNGTAMGIASUDataContext();
         public Server() { }
+
+        public void setLSNTByUSerName(String userName)
+        {
+
+        }
         
         public object fetchAccountByUserName(string username)
         {
