@@ -16,6 +16,7 @@ namespace QuanLyGiaSu.src.app.views.layer
         public UC_ThongTinPhuHuynh()
         {
             InitializeComponent();
+            btnUpdate.Enabled = false;
         }
 
         private void UC_ThongTinPhuHuynh_Load(object sender, EventArgs e)
@@ -24,7 +25,7 @@ namespace QuanLyGiaSu.src.app.views.layer
             int PHID = 0;
             string GioiTinh = "", DiaChi = "", SDT = "", Cmnd = "",  HoTen = "", Email = "", Username = "", Pw = "", NgheNghiep="";
             DateTime NgaySinh = DateTime.Now;
-            Locator.server.getThongTinPhuHuynh_private(Locator.author.UserName,
+            if (Locator.server.getThongTinPhuHuynh_private(Locator.author.UserName,
                                                      ref PHID,
                                                     ref HoTen,
                                                     ref GioiTinh,
@@ -34,19 +35,21 @@ namespace QuanLyGiaSu.src.app.views.layer
                                                     ref Cmnd,
                                                     ref Email,
                                                     ref NgheNghiep,
-                                                    ref Pw);
-            
-            tbNamePH.Text = HoTen;
-            tbCmndPH.Text = Cmnd;
-            tbAddressPH.Text = DiaChi;
-            dtpBirthDayPH.Value = NgaySinh;
-            tbPhonePH.Text = SDT;
-            lbPHID.Text = PHID.ToString();
-            tbJobPH.Text = NgheNghiep;
-            tbUsername.Text = Locator.author.UserName;
-            tbPass.Text = "*********";
-            tbEmail.Text = Locator.author.Email = Email;
-            cbbGender.Text = GioiTinh;
+                                                    ref Pw))
+            {
+                tbNamePH.Text = HoTen;
+                tbCmndPH.Text = Cmnd;
+                tbAddressPH.Text = DiaChi;
+                dtpBirthDayPH.Value = NgaySinh;
+                tbPhonePH.Text = SDT;
+                lbPHID.Text = PHID.ToString();
+                tbJobPH.Text = NgheNghiep;
+                tbUsername.Text = Locator.author.UserName;
+                tbPass.Text = "*********";
+                tbEmail.Text = Locator.author.Email = Email;
+                cbbGender.Text = GioiTinh;
+                btnUpdate.Enabled = true;
+            }
         }
     }
 }

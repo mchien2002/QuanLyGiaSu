@@ -1,4 +1,6 @@
-﻿using System;
+﻿using QuanLyGiaSu.src.controller;
+using QuanLyGiaSu.src.models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -33,6 +35,17 @@ namespace QuanLyGiaSu.src.app.views.layer
 
         private void btn_Them_Click(object sender, EventArgs e)
         {
+            AccountModel Acc=new AccountModel();
+            Acc.UserName = tbUser.Text;
+            Acc.Password = tbPassword.Text;
+            Acc.NganSach = 0;
+            Acc.Email = "";
+            if (btn_text.Text == "THÊM GIA SƯ")
+                Acc.PhanQuyen = "Gia sư";
+            else Acc.PhanQuyen = "Phụ huynh";
+            if (Locator.server.addAccount(Acc))
+                MessageBox.Show("Tạo tài khoản thành công!");
+            else MessageBox.Show("Tạo tài khoản thất bại!");
             this.Close();
         }
 

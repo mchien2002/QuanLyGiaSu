@@ -89,7 +89,7 @@ namespace QuanLyGiaSu.src.app.views.Login
                 formMain.ShowDialog();
                 this.Close();
             }
-            else if (Locator.author.PhanQuyen=="Gia Sư")
+            else if (Locator.author.PhanQuyen=="Gia sư")
             {
                 this.Hide();
                 formMainGiaSu formMainGiaSu = new formMainGiaSu();

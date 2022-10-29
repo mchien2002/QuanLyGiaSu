@@ -47,8 +47,13 @@ namespace QuanLyGiaSu.src.views.layer.tutors
 
         private void DangKyDayHoc_Click(object sender, EventArgs e)
         {
-            DangKyDay dangKyDay = new DangKyDay();
-            dangKyDay.Show();
+            var x = dgvTHONGTINLOPMOI.CurrentRow.Cells[1].Value;
+            if (x != null)
+            {
+                Int32.TryParse(x.ToString(), out Locator.LMID);
+                DangKyDay dangKyDay = new DangKyDay();
+                dangKyDay.Show();
+            }
         }
     }
 }

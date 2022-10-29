@@ -6,6 +6,7 @@ using System.Text;
 using System.Windows.Forms;
 using QuanLyGiaSu.src.database;
 using QuanLyGiaSu.src.models;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace QuanLyGiaSu.src.server
 {
@@ -14,17 +15,43 @@ namespace QuanLyGiaSu.src.server
         public TRUNGTAMGIASUDataContext _db = new TRUNGTAMGIASUDataContext();
         public Server() { }
         
-        public object fetchAccountByUserName(string username)
+        /// <summary>
+        /// Lấy dữ liệu account bằng UserName
+        /// </summary>
+        /// <param name="UserName">Tên người dùng</param>
+        /// <returns></returns>
+        public object fetchAccountByUserName(string UserName)
         {
-            var q = from p in _db.ACCOUNTs
-                    where p.Username == username
-                    select p;
-            return q;
+            try
+            {
+                var q = from p in _db.ACCOUNTs
+                        where p.Username == UserName
+                        select p;
+                return q;
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
 
         }
+
+        /// <summary>
+        /// Lấy dữ liệu account
+        /// </summary>
+        /// <returns></returns>
         public object fetchAccount()
         {
-            return _db.ACCOUNTs.Select(p => p);
+            try
+            {
+                return _db.ACCOUNTs.Select(p => p);
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
         }
 
         /// <summary>
@@ -32,7 +59,15 @@ namespace QuanLyGiaSu.src.server
         /// </summary>
         /// <returns></returns>
         public object fetchBangTinTable(){
-            return _db.BANGTINs.Select(p => p);
+            try
+            {
+                return _db.BANGTINs.Select(p => p);
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
         }
 
         /// <summary>
@@ -41,7 +76,15 @@ namespace QuanLyGiaSu.src.server
         /// <returns></returns>
         public object fetchLopMoiPH_GSTable()
         {
-            return _db.THONGTINLOPMOI_PH_Gs.Select(p => p);
+            try
+            {
+                return _db.THONGTINLOPMOI_PH_Gs.Select(p => p);
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
         }
         //public object fetchLichSuGiaoDichTable(int id){
         //    return _db.select_lichsugiaodich(id);
@@ -56,42 +99,103 @@ namespace QuanLyGiaSu.src.server
         /// <returns></returns>
         public object fetchDanhSachLopMoiAD()
         {
-            return _db.THONGTINLOPMOI_ADs.Select(p => p);
+            try
+            {
+                return _db.THONGTINLOPMOI_ADs.Select(p => p);
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
         }
 
+        /// <summary>
+        /// Lấy dữ liệu phụ huynh
+        /// </summary>
+        /// <returns></returns>
         public object fetchPhuHuynhAD()
         {
-            return _db.PHUHUYNHs.Select(p => p);
+            try
+            {
+                return _db.PHUHUYNHs.Select(p => p);
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
         }
 
+        /// <summary>
+        /// Lấy dữ liệu danh sách dạy
+        /// </summary>
+        /// <returns></returns>
         public object fetchDanhSachDangKyDayAD()
         {
-            return _db.DANHSACHDANGKYDAYs.Select(p => p);
+            try
+            {
+                return _db.DANHSACHDANGKYDAYs.Select(p => p);
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
         }
 
         /// <summary>
         /// Lấy dữ liệu lớp mà gia sư đăng ký dạy
         /// </summary>
-        /// <param name="username">Tên đăng nhập của gia sư</param>
+        /// <param name="UserName">Tên đăng nhập của gia sư</param>
         /// <returns></returns>
-        public object fetchDanhSachLopDaDangKyDayTable(string username)
+        public object fetchDanhSachLopDaDangKyDayTable(string UserName)
         {
-            return _db.select_danhsachlopmoi_dadangkyday(_db.check_ph_gs(_db.find_accid_username(username)));
+            try
+            {
+                return _db.select_danhsachlopmoi_dadangkyday(_db.check_ph_gs(_db.find_accid_username(UserName)));
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
         }
 
-        public object fetchDanhSachLopDaMo_PhuHuynh(string username)
+        /// <summary>
+        /// Lấy danh sách lớp phụ huynh có UserName đã mở
+        /// </summary>
+        /// <param name="UserName">Tên đăng nhập</param>
+        /// <returns></returns>
+        public object fetchDanhSachLopDaMo_PhuHuynh(string UserName)
         {
-            return _db.danhsachlop_damo(_db.check_ph_gs(_db.find_accid_username(username)));
+            try
+            {
+                return _db.danhsachlop_damo(_db.check_ph_gs(_db.find_accid_username(UserName)));
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
         }
 
         /// <summary>
         /// Lấy thông tin lịch sử giao dịch của người dùng
         /// </summary>
-        /// <param name="username">Tên đăng nhập</param>
+        /// <param name="UserName">Tên đăng nhập</param>
         /// <returns></returns>
-        public object fetchLichSuGiaoDichUserTable(string username)
+        public object fetchLichSuGiaoDichUserTable(string UserName)
         {
-            return _db.select_lichsugiaodich(_db.find_accid_username(username));
+            try
+            {
+                return _db.select_lichsugiaodich(_db.find_accid_username(UserName));
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
         }   
         
         /// <summary>
@@ -100,7 +204,15 @@ namespace QuanLyGiaSu.src.server
         /// <returns></returns>
         public object fetchGiaSuTable()
         {
-            return _db.THONGTINGIASU_ADs.Select(p => p);
+            try
+            {
+                return _db.THONGTINGIASU_ADs.Select(p => p);
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
         }    
 
 
@@ -110,37 +222,11 @@ namespace QuanLyGiaSu.src.server
         /// <param name="clb"></param>
         public void addCheckedListBoxLopHoc(CheckedListBox clb)
         {
-            foreach(var lb in _db.LOPHOCs)
-            {
-                clb.Items.Add(lb.TenLop);
-            }
-        }
-
-        public void getThongTinGiaSu_private(string userName,ref int gsid,ref string ht, 
-            ref string gt, ref DateTime ns,ref string dc, ref string sdt,ref string cmnd, 
-            ref string qq, ref string td, ref string tdt, ref string ud, ref string email, ref string pw)
-        {
             try
             {
-                var a = _db.thongtingiasu_private(_db.find_accid_username(userName));
-
-                if (a == null) return;
-                foreach (var x in a)
+                foreach (var lb in _db.LOPHOCs)
                 {
-                    gsid = x.GSID;
-                    ht = x.HoTen;
-                    gt = x.GioiTinh;
-                    ns = x.NgaySinh;
-                    dc = x.DiaChi;
-                    sdt = x.SDT;
-                    cmnd = x.CMND;
-                    qq = x.QueQuan;
-                    td = x.TrinhDo;
-                    tdt = x.TruongDaoTao;
-                    ud = x.UuDiem;
-                    email = x.Email;
-                    pw = x.Password;
-                    break;
+                    clb.Items.Add(lb.TenLop);
                 }
             }
             catch(Exception e)
@@ -149,44 +235,129 @@ namespace QuanLyGiaSu.src.server
             }
         }
 
-        public void getThongTinPhuHuynh_private(string userName, ref int phid, ref string ht,
-            ref string gt, ref DateTime ns, ref string dc, ref string sdt, ref string cmnd,
-             ref string email,ref string nghenghiep, ref string pw)
+        /// <summary>
+        /// Lấy thông tin cá nhân gia sư
+        /// </summary>
+        /// <param name="UserName">Tên đăng nhập</param>
+        /// <param name="GSID"></param>
+        /// <param name="HoTen"></param>
+        /// <param name="GioiTinh"></param>
+        /// <param name="NgaySinh"></param>
+        /// <param name="DiaChi"></param>
+        /// <param name="Sdt"></param>
+        /// <param name="Cmnd"></param>
+        /// <param name="QueQuan"></param>
+        /// <param name="TrinhDo"></param>
+        /// <param name="TruongDaoTao"></param>
+        /// <param name="UuDiem"></param>
+        /// <param name="Email"></param>
+        /// <param name="Password"></param>
+        /// <returns>true nếu lấy được dữ liệu
+        /// false nếu không lấy được dữ liệu</returns>
+        public bool getThongTinGiaSu_private(string UserName, ref int GSID, ref string HoTen,
+            ref string GioiTinh, ref DateTime NgaySinh, ref string DiaChi, ref string Sdt, ref string Cmnd,
+            ref string QueQuan, ref string TrinhDo, ref string TruongDaoTao, ref string UuDiem, ref string Email, ref string Password)
         {
             try
             {
-                var a = _db.thongtinphuhuynh_private(_db.find_accid_username(userName));
+                var a = _db.thongtingiasu_private(_db.find_accid_username(UserName));
 
-                if (a == null) return;
+                if (a == null) return false ;
                 foreach (var x in a)
                 {
-                    phid = x.PHID;
-                    ht = x.HoTen;
-                    gt = x.GioiTinh;
-                    ns = x.NgaySinh;
-                    dc = x.DiaChi;
-                    sdt = x.SDT;
-                    cmnd = x.CMND;                    
-                    email = x.Email;
-                    nghenghiep = x.NgheNghiep;
-                    pw = x.Password;
+                    GSID = x.GSID;
+                    HoTen = x.HoTen;
+                    GioiTinh = x.GioiTinh;
+                    NgaySinh = x.NgaySinh;
+                    DiaChi = x.DiaChi;
+                    Sdt = x.SDT;
+                    Cmnd = x.CMND;
+                    QueQuan = x.QueQuan;
+                    TrinhDo = x.TrinhDo;
+                    TruongDaoTao = x.TruongDaoTao;
+                    UuDiem = x.UuDiem;
+                    Email = x.Email;
+                    Password = x.Password;
                     break;
                 }
+                return true;
             }
-            catch (Exception e)
+            catch(Exception e)
             {
                 MessageBox.Show(e.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
             }
         }
 
 
-        public string checkAuthorization(string Username)
+        /// <summary>
+        /// Lấy thông tin cá nhân phụ huynh
+        /// </summary>
+        /// <param name="UserName"></param>
+        /// <param name="PHID"></param>
+        /// <param name="HoTen"></param>
+        /// <param name="GioiTinh"></param>
+        /// <param name="NgaySinh"></param>
+        /// <param name="DiaChi"></param>
+        /// <param name="Sdt"></param>
+        /// <param name="Cmnd"></param>
+        /// <param name="Email"></param>
+        /// <param name="NgheNghiep"></param>
+        /// <param name="Password"></param>
+        /// <returns>true nếu lấy được dữ liệu
+        /// false nếu không lấy được dữ liệu</returns>
+        public bool getThongTinPhuHuynh_private(string UserName, ref int PHID, ref string HoTen,
+            ref string GioiTinh, ref DateTime NgaySinh, ref string DiaChi, ref string Sdt, ref string Cmnd,
+             ref string Email,ref string NgheNghiep, ref string Password)
         {
-            var x = _db.authorization_acc(Username);
-            if (x == null)
-                return "Admin";
-            else
-                return x.ToString();
+            try
+            {
+                var a = _db.thongtinphuhuynh_private(_db.find_accid_username(UserName));
+
+                if (a == null) return false;
+                foreach (var x in a)
+                {
+                    PHID = x.PHID;
+                    HoTen = x.HoTen;
+                    GioiTinh = x.GioiTinh;
+                    NgaySinh = x.NgaySinh;
+                    DiaChi = x.DiaChi;
+                    Sdt = x.SDT;
+                    Cmnd = x.CMND;                    
+                    Email = x.Email;
+                    NgheNghiep = x.NgheNghiep;
+                    Password = x.Password;
+                    break;
+                }
+                return true;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Kiểm tra phân quyền
+        /// </summary>
+        /// <param name="UserName">Tên người dùng</param>
+        /// <returns>Phân quyền</returns>
+        public string checkAuthorization(string UserName)
+        {
+            try
+            {
+                var x = _db.authorization_acc(UserName);
+                if (x == null)
+                    return "Admin";
+                else
+                    return x.ToString();
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return "Phụ huynh";
+            }
 
         }
 
@@ -213,12 +384,12 @@ namespace QuanLyGiaSu.src.server
         /// Hash mật khẩu
         /// </summary>
         /// <param name="pass">Mật khẩu</param>
-        /// <param name="userName">Tên đăng nhập</param>
+        /// <param name="UserName">Tên đăng nhập</param>
         /// <returns></returns>
-        public string hashPassWord(string pass, string userName)
+        public string hashPassWord(string pass, string UserName)
         {
             var sha = SHA256.Create();
-            var asByteArray = Encoding.Default.GetBytes(pass + userName);
+            var asByteArray = Encoding.Default.GetBytes(pass + UserName);
             var hashPassword = sha.ComputeHash(asByteArray);
             return Convert.ToBase64String(hashPassword);
         }
@@ -226,13 +397,21 @@ namespace QuanLyGiaSu.src.server
         /// <summary>
         /// Kiểm tra tài khoản đã tồn tại hay chưa
         /// </summary>
-        /// <param name="userName">Tên đăng nhập</param>
+        /// <param name="UserName">Tên đăng nhập</param>
         /// <param name="email">Email người dùng</param>
         /// <returns></returns>
-        public bool isAccountExist(string userName, string email)
+        public bool isAccountExist(string UserName, string email)
         {
-            bool resultCheck = (bool)_db.check_username_email(userName, email);
-            return resultCheck;
+            try
+            {
+                bool resultCheck = (bool)_db.check_username_email(UserName, email);
+                return resultCheck;
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
         }
 
         /// <summary>
@@ -254,34 +433,123 @@ namespace QuanLyGiaSu.src.server
             }
         }
 
-        public void insertLopHocGiaSu(string userName, string tenLop)
+        /// <summary>
+        /// Thêm tài khoản
+        /// </summary>
+        /// <param name="account">Object account</param>
+        /// <returns></returns>
+        public bool insertDSDK(string Username, int LMID, DateTime TGDK)
         {
             try
             {
-                _db.insert_lhgs(_db.check_ph_gs(_db.find_accid_username(userName)), _db.check_lhid(tenLop));
-            }
-            catch(Exception e)
-            {
-                MessageBox.Show(e.ToString(), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        public void insertMonHocGiaSu(string userName, string tenMon)
-        {
-            try
-            {
-                _db.insert_mhgs(_db.check_ph_gs(_db.find_accid_username(userName)), _db.check_mhid(tenMon));
+                _db.insert_dsdk(_db.check_ph_gs(_db.find_accid_username(Username)), LMID, TGDK);
+                return true;
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.ToString(), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(e.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
             }
         }
 
         /// <summary>
+        /// Thêm lớp dạy cho gia sư
+        /// </summary>
+        /// <param name="UserName">Tên đăng nhập</param>
+        /// <param name="tenLop"></param>
+        /// <returns></returns>
+        public bool insertLopHocGiaSu(string UserName, string tenLop)
+        {
+            try
+            {
+                _db.insert_lhgs(_db.check_ph_gs(_db.find_accid_username(UserName)), _db.check_lhid(tenLop));
+                return true;
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.ToString(), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Thêm môn học cho gia sư
+        /// </summary>
+        /// <param name="UserName">Tên đăng nhập</param>
+        /// <param name="tenMon"></param>
+        /// <returns></returns>
+        public bool insertMonHocGiaSu(string UserName, string tenMon)
+        {
+            try
+            {
+                _db.insert_mhgs(_db.check_ph_gs(_db.find_accid_username(UserName)), _db.check_mhid(tenMon));
+                return true;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString(), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Thêm môn học cho lớp mới
+        /// </summary>
+        /// <param name="UserName">Tên đăng nhập</param>
+        /// <param name="tenMon"></param>
+        /// <returns></returns>
+        public bool insertMonHocLopMoi(int LHID, string tenMon)
+        {
+            try
+            {
+                if (_db.insert_mhlm(LHID, _db.check_mhid(tenMon)) == 1) return true;
+                else return false;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString(), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Thêm lớp mới
+        /// </summary>
+        /// <param name="TenLop"></param>
+        /// <param name="UserName"></param>
+        /// <param name="DiaChi"></param>
+        /// <param name="MucLuong"></param>
+        /// <param name="Sdt"></param>
+        /// <param name="ThoiGianDK"></param>
+        /// <param name="SoBuoi"></param>
+        /// <param name="HinhThuc"></param>
+        /// <param name="ThoiGianHoc"></param>
+        /// <param name="ThongTinHocVien"></param>
+        /// <param name="YeuCau"></param>
+        /// <returns></returns>
+        public bool insertDSML(string TenLop, string UserName, string DiaChi, int MucLuong,
+            string Sdt, DateTime ThoiGianDK, int SoBuoi, string HinhThuc, string ThoiGianHoc,
+            string ThongTinHocVien, string YeuCau, ref int LHID)
+        {
+            try
+            {
+                LHID=_db.insert_dsml(_db.check_lhid(TenLop), _db.check_ph_gs(_db.find_accid_username(UserName)), DiaChi, MucLuong, Sdt, ThoiGianDK, SoBuoi, HinhThuc, ThoiGianHoc, ThongTinHocVien, YeuCau);
+                return true;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString(), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                LHID = 0;
+                return false;
+            }
+        }
+
+
+
+        /// <summary>
         /// Cập nhật thông tin gia sư
         /// </summary>
-        /// <param name="userName">Tên đăng nhập</param>
+        /// <param name="UserName">Tên đăng nhập</param>
         /// <param name="name">Tên gia sư</param>
         /// <param name="cmnd">Chứng minh nhân dân</param>
         /// <param name="gender">Giới tính</param>
@@ -294,7 +562,7 @@ namespace QuanLyGiaSu.src.server
         /// <param name="strong">Điểm mạnh</param>
         /// <returns></returns>
         public bool updateInfoTutor(
-            string userName, 
+            string UserName, 
             string name, 
             string cmnd, 
             string gender, 
@@ -310,7 +578,7 @@ namespace QuanLyGiaSu.src.server
             try
             {
                 _db.update_gs(
-                    _db.check_ph_gs(_db.find_accid_username(userName)),
+                    _db.check_ph_gs(_db.find_accid_username(UserName)),
                     name,
                     cmnd,
                     gender,
@@ -338,7 +606,7 @@ namespace QuanLyGiaSu.src.server
         /// <summary>
         /// Cập nhật thông tin phụ huynh
         /// </summary>
-        /// <param name="userName">Tên đăng nhập</param>
+        /// <param name="UserName">Tên đăng nhập</param>
         /// <param name="name">Tên phụ huynh</param>
         /// <param name="phone">Số điện thoại</param>
         /// <param name="birthday">Ngày sinh</param>
@@ -348,7 +616,7 @@ namespace QuanLyGiaSu.src.server
         /// <param name="cmnd">Chứng minh nhân dân</param>
         /// <returns></returns>
         public bool updateParent(
-            string userName,
+            string UserName,
             string name,
             string phone,
             DateTime birthday,
@@ -361,7 +629,7 @@ namespace QuanLyGiaSu.src.server
             try
             {
                 _db.update_ph(
-                    _db.check_ph_gs(_db.find_accid_username(userName)),
+                    _db.check_ph_gs(_db.find_accid_username(UserName)),
                     name,
                     cmnd,
                     gender,
@@ -383,30 +651,52 @@ namespace QuanLyGiaSu.src.server
         /// <summary>
         /// Kiểm tra đăng nhập
         /// </summary>
-        /// <param name="userName">Tên đăng nhập</param>
-        /// <param name="passHash">Hash mật khẩu</param>
-        /// <param name="phanQuyen">Phân quyền</param>
+        /// <param name="UserName">Tên đăng nhập</param>
+        /// <param name="PassHash">Hash mật khẩu</param>
+        /// <param name="PhanQuyen">Phân quyền</param>
         /// <returns></returns>
-        public bool checkSignIn(string userName, string passHash, string phanQuyen)
+        public bool checkSignIn(string UserName, string PassHash, string PhanQuyen)
         {
-            return (bool)_db.check_signin(userName, passHash, phanQuyen);
+            try
+            {
+                return (bool)_db.check_signin(UserName, PassHash, PhanQuyen);
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
         }
 
-        public bool checkAdmin(string userName, string pw)
+        /// <summary>
+        /// Kiểm tra đăng nhập Admin
+        /// </summary>
+        /// <param name="UserName"></param>
+        /// <param name="Password"></param>
+        /// <returns></returns>
+        public bool checkAdmin(string UserName, string Password)
         {
-            return (bool)_db.check_admin(userName, pw);
+            try
+            {
+                return (bool)_db.check_admin(UserName, Password);
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
         }
 
         /// <summary>
         /// Lấy ngân sách
         /// </summary>
-        /// <param name="userName">Tên đăng nhập</param>
+        /// <param name="UserName">Tên đăng nhập</param>
         /// <returns></returns>
-        public int getNganSach(String userName)
+        public int getNganSach(String UserName)
         {
             try
             {
-                var temp = _db.select_ngansach(_db.find_accid_username(userName));
+                var temp = _db.select_ngansach(_db.find_accid_username(UserName));
                 if (temp != null)
                     return (int)temp;
                 return 0;

@@ -16,7 +16,7 @@ namespace DoAnCuoiKy_Nhom13
         public UC_GiaSu()
         {
             InitializeComponent();
-            
+            btnUpdate.Enabled = false;
         }
 
         private void UC_GiaSu_Load(object sender, EventArgs e)
@@ -25,7 +25,7 @@ namespace DoAnCuoiKy_Nhom13
             int gsid=0;
             string GioiTinh="",DiaChi="", SDT="", Cmnd="", QueQuan="", TrinhDo="", TruongDT="", UuDiem="", HoTen="", Email="", Username="",Pw="";
             DateTime NgaySinh=DateTime.Now;
-            Locator.server.getThongTinGiaSu_private(Locator.author.UserName,
+            if (Locator.server.getThongTinGiaSu_private(Locator.author.UserName,
                                                      ref gsid,
                                                     ref HoTen,
                                                     ref GioiTinh,
@@ -36,23 +36,27 @@ namespace DoAnCuoiKy_Nhom13
                                                     ref QueQuan,
                                                     ref TrinhDo,
                                                     ref TruongDT,
-                                                    ref UuDiem, 
+                                                    ref UuDiem,
                                                     ref Email,
-                                                    ref Pw);
-            tbTruong.Text = TruongDT;
-            tbTen.Text = HoTen;
-            tbDiaChi.Text = DiaChi;
-            tbQueQuan.Text = QueQuan;
-            dtpNgaySinh.Value = NgaySinh;
-            tbSDT.Text = SDT;
-            tbUuDiem.Text = UuDiem;
-            cbbGioiTinh.Text = GioiTinh;
-            tbTrinhDo.Text = TrinhDo;
-            lbGSID.Text = gsid.ToString();
-            tbUser.Text=Locator.author.UserName;
-            tbPass.Text = "*********";
-            tbCMND.Text = Cmnd;
-            tbEmail.Text = Locator.author.Email=Email;
+                                                    ref Pw))
+            {
+                tbTruong.Text = TruongDT;
+                tbTen.Text = HoTen;
+                tbDiaChi.Text = DiaChi;
+                tbQueQuan.Text = QueQuan;
+                dtpNgaySinh.Value = NgaySinh;
+                tbSDT.Text = SDT;
+                tbUuDiem.Text = UuDiem;
+                cbbGioiTinh.Text = GioiTinh;
+                tbTrinhDo.Text = TrinhDo;
+                lbGSID.Text = gsid.ToString();
+                tbUser.Text = Locator.author.UserName;
+                tbPass.Text = "*********";
+                tbCMND.Text = Cmnd;
+                tbEmail.Text = Locator.author.Email = Email;
+                btnUpdate.Enabled = true;
+            }
+            
         }
 
         private void tbUuDiem_TextChanged(object sender, EventArgs e)

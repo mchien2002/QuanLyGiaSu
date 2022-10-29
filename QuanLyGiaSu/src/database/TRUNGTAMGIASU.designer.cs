@@ -30,12 +30,12 @@ namespace QuanLyGiaSu.src.database
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
-    partial void InsertACCOUNT(ACCOUNT instance);
-    partial void UpdateACCOUNT(ACCOUNT instance);
-    partial void DeleteACCOUNT(ACCOUNT instance);
     partial void InsertPHUHUYNH(PHUHUYNH instance);
     partial void UpdatePHUHUYNH(PHUHUYNH instance);
     partial void DeletePHUHUYNH(PHUHUYNH instance);
+    partial void InsertACCOUNT(ACCOUNT instance);
+    partial void UpdateACCOUNT(ACCOUNT instance);
+    partial void DeleteACCOUNT(ACCOUNT instance);
     partial void InsertAdmin(Admin instance);
     partial void UpdateAdmin(Admin instance);
     partial void DeleteAdmin(Admin instance);
@@ -104,19 +104,19 @@ namespace QuanLyGiaSu.src.database
 			OnCreated();
 		}
 		
-		public System.Data.Linq.Table<ACCOUNT> ACCOUNTs
-		{
-			get
-			{
-				return this.GetTable<ACCOUNT>();
-			}
-		}
-		
 		public System.Data.Linq.Table<PHUHUYNH> PHUHUYNHs
 		{
 			get
 			{
 				return this.GetTable<PHUHUYNH>();
+			}
+		}
+		
+		public System.Data.Linq.Table<ACCOUNT> ACCOUNTs
+		{
+			get
+			{
+				return this.GetTable<ACCOUNT>();
 			}
 		}
 		
@@ -284,7 +284,7 @@ namespace QuanLyGiaSu.src.database
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.insert_dsml")]
-		public int insert_dsml([global::System.Data.Linq.Mapping.ParameterAttribute(Name="LHID", DbType="Int")] System.Nullable<int> lHID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PHID", DbType="Int")] System.Nullable<int> pHID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DIACHI", DbType="NVarChar(4000)")] string dIACHI, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="MUCLUONG", DbType="Int")] System.Nullable<int> mUCLUONG, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="SDT", DbType="Char(50)")] string sDT, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TGDK", DbType="Date")] System.Nullable<System.DateTime> tGDK, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="SUBUOI", DbType="Int")] System.Nullable<int> sUBUOI, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="HINHTHUC", DbType="NVarChar(50)")] string hINHTHUC, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TGHOC", DbType="NVarChar(50)")] string tGHOC, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TTHOCVIEN", DbType="NVarChar(50)")] string tTHOCVIEN, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="YEUCAU", DbType="NVarChar(300)")] string yEUCAU)
+		public int insert_dsml([global::System.Data.Linq.Mapping.ParameterAttribute(Name="LHID", DbType="Int")] System.Nullable<int> lHID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PHID", DbType="Int")] System.Nullable<int> pHID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DIACHI", DbType="NVarChar(4000)")] string dIACHI, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="MUCLUONG", DbType="Int")] System.Nullable<int> mUCLUONG, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="SDT", DbType="Char(50)")] string sDT, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TGDK", DbType="DateTime")] System.Nullable<System.DateTime> tGDK, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="SUBUOI", DbType="Int")] System.Nullable<int> sUBUOI, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="HINHTHUC", DbType="NVarChar(50)")] string hINHTHUC, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TGHOC", DbType="NVarChar(50)")] string tGHOC, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TTHOCVIEN", DbType="NVarChar(50)")] string tTHOCVIEN, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="YEUCAU", DbType="NVarChar(300)")] string yEUCAU)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), lHID, pHID, dIACHI, mUCLUONG, sDT, tGDK, sUBUOI, hINHTHUC, tGHOC, tTHOCVIEN, yEUCAU);
 			return ((int)(result.ReturnValue));
@@ -336,6 +336,13 @@ namespace QuanLyGiaSu.src.database
 		public int insert_mhgs([global::System.Data.Linq.Mapping.ParameterAttribute(Name="GSID", DbType="Int")] System.Nullable<int> gSID, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> mhid)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), gSID, mhid);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.insert_mhlm")]
+		public int insert_mhlm([global::System.Data.Linq.Mapping.ParameterAttribute(Name="LMID", DbType="Int")] System.Nullable<int> lMID, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> mhid)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), lMID, mhid);
 			return ((int)(result.ReturnValue));
 		}
 		
@@ -409,16 +416,22 @@ namespace QuanLyGiaSu.src.database
 			return ((int)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.check_admin", IsComposable=true)]
-		public System.Nullable<bool> check_admin([global::System.Data.Linq.Mapping.ParameterAttribute(Name="ADMIN", DbType="Char(100)")] string aDMIN, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PW", DbType="Char(100)")] string pW)
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.authorization_acc", IsComposable=true)]
+		public string authorization_acc([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Username", DbType="Char(30)")] string username)
 		{
-			return ((System.Nullable<bool>)(this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), aDMIN, pW).ReturnValue));
+			return ((string)(this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username).ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.timkiemph_tenPH", IsComposable=true)]
 		public IQueryable<timkiemph_tenPHResult> timkiemph_tenPH([global::System.Data.Linq.Mapping.ParameterAttribute(Name="HoTen", DbType="NVarChar(100)")] string hoTen)
 		{
 			return this.CreateMethodCallQuery<timkiemph_tenPHResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), hoTen);
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.check_admin", IsComposable=true)]
+		public System.Nullable<bool> check_admin([global::System.Data.Linq.Mapping.ParameterAttribute(Name="ADMIN", DbType="Char(100)")] string aDMIN, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PW", DbType="Char(100)")] string pW)
+		{
+			return ((System.Nullable<bool>)(this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), aDMIN, pW).ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.check_lhid", IsComposable=true)]
@@ -617,306 +630,6 @@ namespace QuanLyGiaSu.src.database
 		public IQueryable<timkiemph_PHIDResult> timkiemph_PHID([global::System.Data.Linq.Mapping.ParameterAttribute(Name="PHID", DbType="Int")] System.Nullable<int> pHID)
 		{
 			return this.CreateMethodCallQuery<timkiemph_PHIDResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), pHID);
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.authorization_acc", IsComposable=true)]
-		public string authorization_acc([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Username", DbType="Char(30)")] string username)
-		{
-			return ((string)(this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username).ReturnValue));
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ACCOUNT")]
-	public partial class ACCOUNT : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _ACCID;
-		
-		private string _PhanQuyen;
-		
-		private string _Username;
-		
-		private string _Password;
-		
-		private string _Email;
-		
-		private int _NganSach;
-		
-		private EntitySet<PHUHUYNH> _PHUHUYNHs;
-		
-		private EntitySet<GIASU> _GIASUs;
-		
-		private EntitySet<LICHSUGIAODICH> _LICHSUGIAODICHes;
-		
-		private EntitySet<LICHSUNAPTIEN> _LICHSUNAPTIENs;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnACCIDChanging(int value);
-    partial void OnACCIDChanged();
-    partial void OnPhanQuyenChanging(string value);
-    partial void OnPhanQuyenChanged();
-    partial void OnUsernameChanging(string value);
-    partial void OnUsernameChanged();
-    partial void OnPasswordChanging(string value);
-    partial void OnPasswordChanged();
-    partial void OnEmailChanging(string value);
-    partial void OnEmailChanged();
-    partial void OnNganSachChanging(int value);
-    partial void OnNganSachChanged();
-    #endregion
-		
-		public ACCOUNT()
-		{
-			this._PHUHUYNHs = new EntitySet<PHUHUYNH>(new Action<PHUHUYNH>(this.attach_PHUHUYNHs), new Action<PHUHUYNH>(this.detach_PHUHUYNHs));
-			this._GIASUs = new EntitySet<GIASU>(new Action<GIASU>(this.attach_GIASUs), new Action<GIASU>(this.detach_GIASUs));
-			this._LICHSUGIAODICHes = new EntitySet<LICHSUGIAODICH>(new Action<LICHSUGIAODICH>(this.attach_LICHSUGIAODICHes), new Action<LICHSUGIAODICH>(this.detach_LICHSUGIAODICHes));
-			this._LICHSUNAPTIENs = new EntitySet<LICHSUNAPTIEN>(new Action<LICHSUNAPTIEN>(this.attach_LICHSUNAPTIENs), new Action<LICHSUNAPTIEN>(this.detach_LICHSUNAPTIENs));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ACCID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int ACCID
-		{
-			get
-			{
-				return this._ACCID;
-			}
-			set
-			{
-				if ((this._ACCID != value))
-				{
-					this.OnACCIDChanging(value);
-					this.SendPropertyChanging();
-					this._ACCID = value;
-					this.SendPropertyChanged("ACCID");
-					this.OnACCIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PhanQuyen", DbType="NVarChar(30)")]
-		public string PhanQuyen
-		{
-			get
-			{
-				return this._PhanQuyen;
-			}
-			set
-			{
-				if ((this._PhanQuyen != value))
-				{
-					this.OnPhanQuyenChanging(value);
-					this.SendPropertyChanging();
-					this._PhanQuyen = value;
-					this.SendPropertyChanged("PhanQuyen");
-					this.OnPhanQuyenChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Username", DbType="Char(100) NOT NULL", CanBeNull=false)]
-		public string Username
-		{
-			get
-			{
-				return this._Username;
-			}
-			set
-			{
-				if ((this._Username != value))
-				{
-					this.OnUsernameChanging(value);
-					this.SendPropertyChanging();
-					this._Username = value;
-					this.SendPropertyChanged("Username");
-					this.OnUsernameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Password", DbType="Char(100) NOT NULL", CanBeNull=false)]
-		public string Password
-		{
-			get
-			{
-				return this._Password;
-			}
-			set
-			{
-				if ((this._Password != value))
-				{
-					this.OnPasswordChanging(value);
-					this.SendPropertyChanging();
-					this._Password = value;
-					this.SendPropertyChanged("Password");
-					this.OnPasswordChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="Char(100) NOT NULL", CanBeNull=false)]
-		public string Email
-		{
-			get
-			{
-				return this._Email;
-			}
-			set
-			{
-				if ((this._Email != value))
-				{
-					this.OnEmailChanging(value);
-					this.SendPropertyChanging();
-					this._Email = value;
-					this.SendPropertyChanged("Email");
-					this.OnEmailChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NganSach", DbType="Int NOT NULL")]
-		public int NganSach
-		{
-			get
-			{
-				return this._NganSach;
-			}
-			set
-			{
-				if ((this._NganSach != value))
-				{
-					this.OnNganSachChanging(value);
-					this.SendPropertyChanging();
-					this._NganSach = value;
-					this.SendPropertyChanged("NganSach");
-					this.OnNganSachChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ACCOUNT_PHUHUYNH", Storage="_PHUHUYNHs", ThisKey="ACCID", OtherKey="ACCID")]
-		public EntitySet<PHUHUYNH> PHUHUYNHs
-		{
-			get
-			{
-				return this._PHUHUYNHs;
-			}
-			set
-			{
-				this._PHUHUYNHs.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ACCOUNT_GIASU", Storage="_GIASUs", ThisKey="ACCID", OtherKey="ACCID")]
-		public EntitySet<GIASU> GIASUs
-		{
-			get
-			{
-				return this._GIASUs;
-			}
-			set
-			{
-				this._GIASUs.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ACCOUNT_LICHSUGIAODICH", Storage="_LICHSUGIAODICHes", ThisKey="ACCID", OtherKey="ACCID")]
-		public EntitySet<LICHSUGIAODICH> LICHSUGIAODICHes
-		{
-			get
-			{
-				return this._LICHSUGIAODICHes;
-			}
-			set
-			{
-				this._LICHSUGIAODICHes.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ACCOUNT_LICHSUNAPTIEN", Storage="_LICHSUNAPTIENs", ThisKey="ACCID", OtherKey="ACCID")]
-		public EntitySet<LICHSUNAPTIEN> LICHSUNAPTIENs
-		{
-			get
-			{
-				return this._LICHSUNAPTIENs;
-			}
-			set
-			{
-				this._LICHSUNAPTIENs.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_PHUHUYNHs(PHUHUYNH entity)
-		{
-			this.SendPropertyChanging();
-			entity.ACCOUNT = this;
-		}
-		
-		private void detach_PHUHUYNHs(PHUHUYNH entity)
-		{
-			this.SendPropertyChanging();
-			entity.ACCOUNT = null;
-		}
-		
-		private void attach_GIASUs(GIASU entity)
-		{
-			this.SendPropertyChanging();
-			entity.ACCOUNT = this;
-		}
-		
-		private void detach_GIASUs(GIASU entity)
-		{
-			this.SendPropertyChanging();
-			entity.ACCOUNT = null;
-		}
-		
-		private void attach_LICHSUGIAODICHes(LICHSUGIAODICH entity)
-		{
-			this.SendPropertyChanging();
-			entity.ACCOUNT = this;
-		}
-		
-		private void detach_LICHSUGIAODICHes(LICHSUGIAODICH entity)
-		{
-			this.SendPropertyChanging();
-			entity.ACCOUNT = null;
-		}
-		
-		private void attach_LICHSUNAPTIENs(LICHSUNAPTIEN entity)
-		{
-			this.SendPropertyChanging();
-			entity.ACCOUNT = this;
-		}
-		
-		private void detach_LICHSUNAPTIENs(LICHSUNAPTIEN entity)
-		{
-			this.SendPropertyChanging();
-			entity.ACCOUNT = null;
 		}
 	}
 	
@@ -1240,6 +953,300 @@ namespace QuanLyGiaSu.src.database
 		{
 			this.SendPropertyChanging();
 			entity.PHUHUYNH = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ACCOUNT")]
+	public partial class ACCOUNT : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _ACCID;
+		
+		private string _PhanQuyen;
+		
+		private string _Username;
+		
+		private string _Password;
+		
+		private string _Email;
+		
+		private int _NganSach;
+		
+		private EntitySet<PHUHUYNH> _PHUHUYNHs;
+		
+		private EntitySet<GIASU> _GIASUs;
+		
+		private EntitySet<LICHSUGIAODICH> _LICHSUGIAODICHes;
+		
+		private EntitySet<LICHSUNAPTIEN> _LICHSUNAPTIENs;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnACCIDChanging(int value);
+    partial void OnACCIDChanged();
+    partial void OnPhanQuyenChanging(string value);
+    partial void OnPhanQuyenChanged();
+    partial void OnUsernameChanging(string value);
+    partial void OnUsernameChanged();
+    partial void OnPasswordChanging(string value);
+    partial void OnPasswordChanged();
+    partial void OnEmailChanging(string value);
+    partial void OnEmailChanged();
+    partial void OnNganSachChanging(int value);
+    partial void OnNganSachChanged();
+    #endregion
+		
+		public ACCOUNT()
+		{
+			this._PHUHUYNHs = new EntitySet<PHUHUYNH>(new Action<PHUHUYNH>(this.attach_PHUHUYNHs), new Action<PHUHUYNH>(this.detach_PHUHUYNHs));
+			this._GIASUs = new EntitySet<GIASU>(new Action<GIASU>(this.attach_GIASUs), new Action<GIASU>(this.detach_GIASUs));
+			this._LICHSUGIAODICHes = new EntitySet<LICHSUGIAODICH>(new Action<LICHSUGIAODICH>(this.attach_LICHSUGIAODICHes), new Action<LICHSUGIAODICH>(this.detach_LICHSUGIAODICHes));
+			this._LICHSUNAPTIENs = new EntitySet<LICHSUNAPTIEN>(new Action<LICHSUNAPTIEN>(this.attach_LICHSUNAPTIENs), new Action<LICHSUNAPTIEN>(this.detach_LICHSUNAPTIENs));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ACCID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int ACCID
+		{
+			get
+			{
+				return this._ACCID;
+			}
+			set
+			{
+				if ((this._ACCID != value))
+				{
+					this.OnACCIDChanging(value);
+					this.SendPropertyChanging();
+					this._ACCID = value;
+					this.SendPropertyChanged("ACCID");
+					this.OnACCIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PhanQuyen", DbType="NVarChar(30)")]
+		public string PhanQuyen
+		{
+			get
+			{
+				return this._PhanQuyen;
+			}
+			set
+			{
+				if ((this._PhanQuyen != value))
+				{
+					this.OnPhanQuyenChanging(value);
+					this.SendPropertyChanging();
+					this._PhanQuyen = value;
+					this.SendPropertyChanged("PhanQuyen");
+					this.OnPhanQuyenChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Username", DbType="Char(100) NOT NULL", CanBeNull=false)]
+		public string Username
+		{
+			get
+			{
+				return this._Username;
+			}
+			set
+			{
+				if ((this._Username != value))
+				{
+					this.OnUsernameChanging(value);
+					this.SendPropertyChanging();
+					this._Username = value;
+					this.SendPropertyChanged("Username");
+					this.OnUsernameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Password", DbType="Char(100) NOT NULL", CanBeNull=false)]
+		public string Password
+		{
+			get
+			{
+				return this._Password;
+			}
+			set
+			{
+				if ((this._Password != value))
+				{
+					this.OnPasswordChanging(value);
+					this.SendPropertyChanging();
+					this._Password = value;
+					this.SendPropertyChanged("Password");
+					this.OnPasswordChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="Char(100) NOT NULL", CanBeNull=false)]
+		public string Email
+		{
+			get
+			{
+				return this._Email;
+			}
+			set
+			{
+				if ((this._Email != value))
+				{
+					this.OnEmailChanging(value);
+					this.SendPropertyChanging();
+					this._Email = value;
+					this.SendPropertyChanged("Email");
+					this.OnEmailChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NganSach", DbType="Int NOT NULL")]
+		public int NganSach
+		{
+			get
+			{
+				return this._NganSach;
+			}
+			set
+			{
+				if ((this._NganSach != value))
+				{
+					this.OnNganSachChanging(value);
+					this.SendPropertyChanging();
+					this._NganSach = value;
+					this.SendPropertyChanged("NganSach");
+					this.OnNganSachChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ACCOUNT_PHUHUYNH", Storage="_PHUHUYNHs", ThisKey="ACCID", OtherKey="ACCID")]
+		public EntitySet<PHUHUYNH> PHUHUYNHs
+		{
+			get
+			{
+				return this._PHUHUYNHs;
+			}
+			set
+			{
+				this._PHUHUYNHs.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ACCOUNT_GIASU", Storage="_GIASUs", ThisKey="ACCID", OtherKey="ACCID")]
+		public EntitySet<GIASU> GIASUs
+		{
+			get
+			{
+				return this._GIASUs;
+			}
+			set
+			{
+				this._GIASUs.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ACCOUNT_LICHSUGIAODICH", Storage="_LICHSUGIAODICHes", ThisKey="ACCID", OtherKey="ACCID")]
+		public EntitySet<LICHSUGIAODICH> LICHSUGIAODICHes
+		{
+			get
+			{
+				return this._LICHSUGIAODICHes;
+			}
+			set
+			{
+				this._LICHSUGIAODICHes.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ACCOUNT_LICHSUNAPTIEN", Storage="_LICHSUNAPTIENs", ThisKey="ACCID", OtherKey="ACCID")]
+		public EntitySet<LICHSUNAPTIEN> LICHSUNAPTIENs
+		{
+			get
+			{
+				return this._LICHSUNAPTIENs;
+			}
+			set
+			{
+				this._LICHSUNAPTIENs.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_PHUHUYNHs(PHUHUYNH entity)
+		{
+			this.SendPropertyChanging();
+			entity.ACCOUNT = this;
+		}
+		
+		private void detach_PHUHUYNHs(PHUHUYNH entity)
+		{
+			this.SendPropertyChanging();
+			entity.ACCOUNT = null;
+		}
+		
+		private void attach_GIASUs(GIASU entity)
+		{
+			this.SendPropertyChanging();
+			entity.ACCOUNT = this;
+		}
+		
+		private void detach_GIASUs(GIASU entity)
+		{
+			this.SendPropertyChanging();
+			entity.ACCOUNT = null;
+		}
+		
+		private void attach_LICHSUGIAODICHes(LICHSUGIAODICH entity)
+		{
+			this.SendPropertyChanging();
+			entity.ACCOUNT = this;
+		}
+		
+		private void detach_LICHSUGIAODICHes(LICHSUGIAODICH entity)
+		{
+			this.SendPropertyChanging();
+			entity.ACCOUNT = null;
+		}
+		
+		private void attach_LICHSUNAPTIENs(LICHSUNAPTIEN entity)
+		{
+			this.SendPropertyChanging();
+			entity.ACCOUNT = this;
+		}
+		
+		private void detach_LICHSUNAPTIENs(LICHSUNAPTIEN entity)
+		{
+			this.SendPropertyChanging();
+			entity.ACCOUNT = null;
 		}
 	}
 	
@@ -1697,7 +1704,7 @@ namespace QuanLyGiaSu.src.database
 		
 		private string _SDTLienHe;
 		
-		private System.DateTime _ThoiGianDangKy;
+		private System.Nullable<System.DateTime> _ThoiGianDangKy;
 		
 		private int _SoBuoi;
 		
@@ -1737,7 +1744,7 @@ namespace QuanLyGiaSu.src.database
     partial void OnMucLuongChanged();
     partial void OnSDTLienHeChanging(string value);
     partial void OnSDTLienHeChanged();
-    partial void OnThoiGianDangKyChanging(System.DateTime value);
+    partial void OnThoiGianDangKyChanging(System.Nullable<System.DateTime> value);
     partial void OnThoiGianDangKyChanged();
     partial void OnSoBuoiChanging(int value);
     partial void OnSoBuoiChanged();
@@ -1891,8 +1898,8 @@ namespace QuanLyGiaSu.src.database
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ThoiGianDangKy", DbType="Date NOT NULL")]
-		public System.DateTime ThoiGianDangKy
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ThoiGianDangKy", DbType="DateTime")]
+		public System.Nullable<System.DateTime> ThoiGianDangKy
 		{
 			get
 			{
@@ -2801,7 +2808,7 @@ namespace QuanLyGiaSu.src.database
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ThoiGianGiaoDich", DbType="Date")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ThoiGianGiaoDich", DbType="DateTime")]
 		public System.Nullable<System.DateTime> ThoiGianGiaoDich
 		{
 			get
@@ -3010,7 +3017,7 @@ namespace QuanLyGiaSu.src.database
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ThoiGianGiaoDich", DbType="Date")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ThoiGianGiaoDich", DbType="DateTime")]
 		public System.Nullable<System.DateTime> ThoiGianGiaoDich
 		{
 			get

@@ -55,6 +55,7 @@
             this.dgvQuanLyPhuHuynh.RowTemplate.Height = 24;
             this.dgvQuanLyPhuHuynh.Size = new System.Drawing.Size(1277, 453);
             this.dgvQuanLyPhuHuynh.TabIndex = 3;
+            this.dgvQuanLyPhuHuynh.Click += new System.EventHandler(this.UC_QuanLyPhuHuynh_Load);
             // 
             // contextMenuStrip1
             // 
@@ -152,7 +153,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dgvQuanLyPhuHuynh);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UC_QuanLyPhuHuynh";
             this.Size = new System.Drawing.Size(1309, 533);
             this.Load += new System.EventHandler(this.UC_QuanLyPhuHuynh_Load);

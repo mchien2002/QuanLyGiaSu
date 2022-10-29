@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.clbMonDay = new System.Windows.Forms.CheckedListBox();
             this.clbLopDay = new System.Windows.Forms.CheckedListBox();
             this.label16 = new System.Windows.Forms.Label();
@@ -87,22 +87,22 @@
             this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button1
+            // btnUpdate
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(949, 485);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 44);
-            this.button1.TabIndex = 54;
-            this.button1.Text = "Sửa";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.Location = new System.Drawing.Point(949, 485);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(100, 44);
+            this.btnUpdate.TabIndex = 54;
+            this.btnUpdate.Text = "Cập nhật";
+            this.btnUpdate.UseVisualStyleBackColor = true;
             // 
             // clbMonDay
             // 
             this.clbMonDay.FormattingEnabled = true;
             this.clbMonDay.Location = new System.Drawing.Point(1183, 124);
-            this.clbMonDay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.clbMonDay.Margin = new System.Windows.Forms.Padding(4);
             this.clbMonDay.Name = "clbMonDay";
             this.clbMonDay.Size = new System.Drawing.Size(103, 89);
             this.clbMonDay.TabIndex = 75;
@@ -111,7 +111,7 @@
             // 
             this.clbLopDay.FormattingEnabled = true;
             this.clbLopDay.Location = new System.Drawing.Point(1051, 124);
-            this.clbLopDay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.clbLopDay.Margin = new System.Windows.Forms.Padding(4);
             this.clbLopDay.Name = "clbLopDay";
             this.clbLopDay.Size = new System.Drawing.Size(103, 89);
             this.clbLopDay.TabIndex = 76;
@@ -170,7 +170,7 @@
             this.tbUuDiem.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbUuDiem.Font = new System.Drawing.Font("Tahoma", 12F);
             this.tbUuDiem.Location = new System.Drawing.Point(480, 393);
-            this.tbUuDiem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbUuDiem.Margin = new System.Windows.Forms.Padding(4);
             this.tbUuDiem.Name = "tbUuDiem";
             this.tbUuDiem.Size = new System.Drawing.Size(545, 25);
             this.tbUuDiem.TabIndex = 121;
@@ -180,7 +180,7 @@
             this.tbQueQuan.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbQueQuan.Font = new System.Drawing.Font("Tahoma", 12F);
             this.tbQueQuan.Location = new System.Drawing.Point(480, 351);
-            this.tbQueQuan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbQueQuan.Margin = new System.Windows.Forms.Padding(4);
             this.tbQueQuan.Name = "tbQueQuan";
             this.tbQueQuan.Size = new System.Drawing.Size(545, 25);
             this.tbQueQuan.TabIndex = 120;
@@ -190,7 +190,7 @@
             this.tbTen.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbTen.Font = new System.Drawing.Font("Tahoma", 12F);
             this.tbTen.Location = new System.Drawing.Point(480, 100);
-            this.tbTen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbTen.Margin = new System.Windows.Forms.Padding(4);
             this.tbTen.Name = "tbTen";
             this.tbTen.Size = new System.Drawing.Size(545, 25);
             this.tbTen.TabIndex = 119;
@@ -204,7 +204,7 @@
             "Nam ",
             "Nữ"});
             this.cbbGioiTinh.Location = new System.Drawing.Point(489, 175);
-            this.cbbGioiTinh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbbGioiTinh.Margin = new System.Windows.Forms.Padding(4);
             this.cbbGioiTinh.Name = "cbbGioiTinh";
             this.cbbGioiTinh.Size = new System.Drawing.Size(109, 32);
             this.cbbGioiTinh.TabIndex = 89;
@@ -225,7 +225,7 @@
             this.tbCMND.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbCMND.Font = new System.Drawing.Font("Tahoma", 12F);
             this.tbCMND.Location = new System.Drawing.Point(480, 268);
-            this.tbCMND.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbCMND.Margin = new System.Windows.Forms.Padding(4);
             this.tbCMND.Name = "tbCMND";
             this.tbCMND.Size = new System.Drawing.Size(545, 25);
             this.tbCMND.TabIndex = 90;
@@ -246,7 +246,7 @@
             this.tbSDT.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbSDT.Font = new System.Drawing.Font("Tahoma", 12F);
             this.tbSDT.Location = new System.Drawing.Point(480, 226);
-            this.tbSDT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbSDT.Margin = new System.Windows.Forms.Padding(4);
             this.tbSDT.Name = "tbSDT";
             this.tbSDT.Size = new System.Drawing.Size(545, 25);
             this.tbSDT.TabIndex = 88;
@@ -256,7 +256,7 @@
             this.tbDiaChi.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbDiaChi.Font = new System.Drawing.Font("Tahoma", 12F);
             this.tbDiaChi.Location = new System.Drawing.Point(480, 309);
-            this.tbDiaChi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbDiaChi.Margin = new System.Windows.Forms.Padding(4);
             this.tbDiaChi.Name = "tbDiaChi";
             this.tbDiaChi.Size = new System.Drawing.Size(545, 25);
             this.tbDiaChi.TabIndex = 91;
@@ -310,7 +310,7 @@
             this.dtpNgaySinh.Font = new System.Drawing.Font("Tahoma", 12F);
             this.dtpNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpNgaySinh.Location = new System.Drawing.Point(489, 134);
-            this.dtpNgaySinh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpNgaySinh.Margin = new System.Windows.Forms.Padding(4);
             this.dtpNgaySinh.Name = "dtpNgaySinh";
             this.dtpNgaySinh.Size = new System.Drawing.Size(191, 32);
             this.dtpNgaySinh.TabIndex = 85;
@@ -331,7 +331,7 @@
             this.tbTruong.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbTruong.Font = new System.Drawing.Font("Tahoma", 12F);
             this.tbTruong.Location = new System.Drawing.Point(480, 58);
-            this.tbTruong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbTruong.Margin = new System.Windows.Forms.Padding(4);
             this.tbTruong.Name = "tbTruong";
             this.tbTruong.Size = new System.Drawing.Size(545, 25);
             this.tbTruong.TabIndex = 84;
@@ -541,7 +541,7 @@
             this.tbPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbPass.Font = new System.Drawing.Font("Tahoma", 12F);
             this.tbPass.Location = new System.Drawing.Point(627, 17);
-            this.tbPass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbPass.Margin = new System.Windows.Forms.Padding(4);
             this.tbPass.Name = "tbPass";
             this.tbPass.PasswordChar = '*';
             this.tbPass.Size = new System.Drawing.Size(215, 25);
@@ -552,7 +552,7 @@
             this.tbUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbUser.Font = new System.Drawing.Font("Tahoma", 12F);
             this.tbUser.Location = new System.Drawing.Point(345, 17);
-            this.tbUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbUser.Margin = new System.Windows.Forms.Padding(4);
             this.tbUser.Name = "tbUser";
             this.tbUser.Size = new System.Drawing.Size(183, 25);
             this.tbUser.TabIndex = 87;
@@ -639,7 +639,7 @@
             this.tbTrinhDo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbTrinhDo.Font = new System.Drawing.Font("Tahoma", 12F);
             this.tbTrinhDo.Location = new System.Drawing.Point(480, 433);
-            this.tbTrinhDo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbTrinhDo.Margin = new System.Windows.Forms.Padding(4);
             this.tbTrinhDo.Name = "tbTrinhDo";
             this.tbTrinhDo.Size = new System.Drawing.Size(545, 25);
             this.tbTrinhDo.TabIndex = 125;
@@ -658,7 +658,7 @@
             this.tbEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbEmail.Font = new System.Drawing.Font("Tahoma", 12F);
             this.tbEmail.Location = new System.Drawing.Point(965, 16);
-            this.tbEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbEmail.Margin = new System.Windows.Forms.Padding(4);
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(272, 25);
             this.tbEmail.TabIndex = 171;
@@ -735,7 +735,7 @@
             this.Controls.Add(this.clbLopDay);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnUpdate);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UC_GiaSu";
             this.Size = new System.Drawing.Size(1309, 533);
@@ -746,7 +746,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.CheckedListBox clbMonDay;
         private System.Windows.Forms.CheckedListBox clbLopDay;
         private System.Windows.Forms.Label label16;

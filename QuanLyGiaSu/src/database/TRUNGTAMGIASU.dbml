@@ -1,19 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="TRUNGTAMGIASU" Class="TRUNGTAMGIASUDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
   <Connection Mode="AppSettings" ConnectionString="Data Source=TRANHUYNHTANPHA;Initial Catalog=TRUNGTAMGIASU;Integrated Security=True" SettingsObjectName="QuanLyGiaSu.Properties.Settings" SettingsPropertyName="TRUNGTAMGIASUConnectionString4" Provider="System.Data.SqlClient" />
-  <Table Name="dbo.ACCOUNT" Member="ACCOUNTs">
-    <Type Name="ACCOUNT">
-      <Column Name="ACCID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="PhanQuyen" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
-      <Column Name="Username" Type="System.String" DbType="Char(100) NOT NULL" CanBeNull="false" />
-      <Column Name="Password" Type="System.String" DbType="Char(100) NOT NULL" CanBeNull="false" />
-      <Column Name="Email" Type="System.String" DbType="Char(100) NOT NULL" CanBeNull="false" />
-      <Column Name="NganSach" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="ACCOUNT_PHUHUYNH" Member="PHUHUYNHs" ThisKey="ACCID" OtherKey="ACCID" Type="PHUHUYNH" />
-      <Association Name="ACCOUNT_GIASU" Member="GIASUs" ThisKey="ACCID" OtherKey="ACCID" Type="GIASU" />
-      <Association Name="ACCOUNT_LICHSUGIAODICH" Member="LICHSUGIAODICHes" ThisKey="ACCID" OtherKey="ACCID" Type="LICHSUGIAODICH" />
-      <Association Name="ACCOUNT_LICHSUNAPTIEN" Member="LICHSUNAPTIENs" ThisKey="ACCID" OtherKey="ACCID" Type="LICHSUNAPTIEN" />
-    </Type>
-  </Table>
   <Table Name="dbo.PHUHUYNH" Member="PHUHUYNHs">
     <Type Name="PHUHUYNH">
       <Column Name="PHID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -27,6 +13,20 @@
       <Column Name="CMND" Type="System.String" DbType="Char(20) NOT NULL" CanBeNull="false" />
       <Association Name="PHUHUYNH_DANHSACHMOLOP" Member="DANHSACHMOLOPs" ThisKey="PHID" OtherKey="PHID" Type="DANHSACHMOLOP" />
       <Association Name="ACCOUNT_PHUHUYNH" Member="ACCOUNT" ThisKey="ACCID" OtherKey="ACCID" Type="ACCOUNT" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ACCOUNT" Member="ACCOUNTs">
+    <Type Name="ACCOUNT">
+      <Column Name="ACCID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PhanQuyen" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="Username" Type="System.String" DbType="Char(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="Char(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="Char(100) NOT NULL" CanBeNull="false" />
+      <Column Name="NganSach" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="ACCOUNT_PHUHUYNH" Member="PHUHUYNHs" ThisKey="ACCID" OtherKey="ACCID" Type="PHUHUYNH" />
+      <Association Name="ACCOUNT_GIASU" Member="GIASUs" ThisKey="ACCID" OtherKey="ACCID" Type="GIASU" />
+      <Association Name="ACCOUNT_LICHSUGIAODICH" Member="LICHSUGIAODICHes" ThisKey="ACCID" OtherKey="ACCID" Type="LICHSUGIAODICH" />
+      <Association Name="ACCOUNT_LICHSUNAPTIEN" Member="LICHSUNAPTIENs" ThisKey="ACCID" OtherKey="ACCID" Type="LICHSUNAPTIEN" />
     </Type>
   </Table>
   <Table Name="dbo.Admin" Member="Admins">
@@ -61,7 +61,7 @@
       <Column Name="DiaChi" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
       <Column Name="MucLuong" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="SDTLienHe" Type="System.String" DbType="Char(20) NOT NULL" CanBeNull="false" />
-      <Column Name="ThoiGianDangKy" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="ThoiGianDangKy" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="SoBuoi" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="HinhThucDay" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="ThoiGianHoc" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
@@ -102,7 +102,7 @@
       <Column Name="ACCID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="LMID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="SoTien" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="ThoiGianGiaoDich" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ThoiGianGiaoDich" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Association Name="ACCOUNT_LICHSUGIAODICH" Member="ACCOUNT" ThisKey="ACCID" OtherKey="ACCID" Type="ACCOUNT" IsForeignKey="true" />
       <Association Name="DANHSACHMOLOP_LICHSUGIAODICH" Member="DANHSACHMOLOP" ThisKey="LMID" OtherKey="LMID" Type="DANHSACHMOLOP" IsForeignKey="true" />
     </Type>
@@ -112,7 +112,7 @@
       <Column Name="GDID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="ACCID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="SoTien" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="ThoiGianGiaoDich" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ThoiGianGiaoDich" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Association Name="ACCOUNT_LICHSUNAPTIEN" Member="ACCOUNT" ThisKey="ACCID" OtherKey="ACCID" Type="ACCOUNT" IsForeignKey="true" />
     </Type>
   </Table>
@@ -267,7 +267,7 @@
     <Parameter Name="DIACHI" Parameter="dIACHI" Type="System.String" DbType="NVarChar(4000)" />
     <Parameter Name="MUCLUONG" Parameter="mUCLUONG" Type="System.Int32" DbType="Int" />
     <Parameter Name="SDT" Parameter="sDT" Type="System.String" DbType="Char(50)" />
-    <Parameter Name="TGDK" Parameter="tGDK" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="TGDK" Parameter="tGDK" Type="System.DateTime" DbType="DateTime" />
     <Parameter Name="SUBUOI" Parameter="sUBUOI" Type="System.Int32" DbType="Int" />
     <Parameter Name="HINHTHUC" Parameter="hINHTHUC" Type="System.String" DbType="NVarChar(50)" />
     <Parameter Name="TGHOC" Parameter="tGHOC" Type="System.String" DbType="NVarChar(50)" />
@@ -318,6 +318,11 @@
   </Function>
   <Function Name="dbo.insert_mhgs" Method="insert_mhgs">
     <Parameter Name="GSID" Parameter="gSID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="mhid" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.insert_mhlm" Method="insert_mhlm">
+    <Parameter Name="LMID" Parameter="lMID" Type="System.Int32" DbType="Int" />
     <Parameter Name="mhid" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
   </Function>
@@ -405,10 +410,9 @@
     <Parameter Name="TENMON" Parameter="tENMON" Type="System.String" DbType="NVarChar(50)" />
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.check_admin" Method="check_admin" IsComposable="true">
-    <Parameter Name="ADMIN" Parameter="aDMIN" Type="System.String" DbType="Char(100)" />
-    <Parameter Name="PW" Parameter="pW" Type="System.String" DbType="Char(100)" />
-    <Return Type="System.Boolean" />
+  <Function Name="dbo.authorization_acc" Method="authorization_acc" IsComposable="true">
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="Char(30)" />
+    <Return Type="System.String" />
   </Function>
   <Function Name="dbo.timkiemph_tenPH" Method="timkiemph_tenPH" IsComposable="true">
     <Parameter Name="HoTen" Parameter="hoTen" Type="System.String" DbType="NVarChar(100)" />
@@ -423,6 +427,11 @@
       <Column Name="SDT" Type="System.String" DbType="Char(20) NOT NULL" CanBeNull="false" />
       <Column Name="CMND" Type="System.String" DbType="Char(20) NOT NULL" CanBeNull="false" />
     </ElementType>
+  </Function>
+  <Function Name="dbo.check_admin" Method="check_admin" IsComposable="true">
+    <Parameter Name="ADMIN" Parameter="aDMIN" Type="System.String" DbType="Char(100)" />
+    <Parameter Name="PW" Parameter="pW" Type="System.String" DbType="Char(100)" />
+    <Return Type="System.Boolean" />
   </Function>
   <Function Name="dbo.check_lhid" Method="check_lhid" IsComposable="true">
     <Parameter Name="TENLOP" Parameter="tENLOP" Type="System.String" DbType="NVarChar(50)" />
@@ -780,9 +789,5 @@
       <Column Name="SDT" Type="System.String" DbType="Char(20) NOT NULL" CanBeNull="false" />
       <Column Name="CMND" Type="System.String" DbType="Char(20) NOT NULL" CanBeNull="false" />
     </ElementType>
-  </Function>
-  <Function Name="dbo.authorization_acc" Method="authorization_acc" IsComposable="true">
-    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="Char(30)" />
-    <Return Type="System.String" />
   </Function>
 </Database>

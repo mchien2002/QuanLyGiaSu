@@ -57,6 +57,7 @@
             this.dgvQuanLyGiaSu.Size = new System.Drawing.Size(1277, 453);
             this.dgvQuanLyGiaSu.TabIndex = 3;
             this.dgvQuanLyGiaSu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvQuanLyGiaSu_CellClick);
+            this.dgvQuanLyGiaSu.Click += new System.EventHandler(this.UC_QuanLyGiaSu_Load);
             // 
             // contextMenuStrip1
             // 
@@ -168,7 +169,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dgvQuanLyGiaSu);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UC_QuanLyGiaSu";
             this.Size = new System.Drawing.Size(1309, 533);
             this.Load += new System.EventHandler(this.UC_QuanLyGiaSu_Load);
