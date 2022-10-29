@@ -23,7 +23,7 @@ namespace DoAnCuoiKy_Nhom13
         {
             //tbTruong.Focus();
             int gsid=0;
-            string GioiTinh="",DiaChi="", SDT="", Cmnd="", QueQuan="", TrinhDo="", TruongDT="", UuDiem="", HoTen="";
+            string GioiTinh="",DiaChi="", SDT="", Cmnd="", QueQuan="", TrinhDo="", TruongDT="", UuDiem="", HoTen="", Email="", Username="",Pw="";
             DateTime NgaySinh=DateTime.Now;
             Locator.server.getThongTinGiaSu_private(Locator.author.UserName,
                                                      ref gsid,
@@ -36,7 +36,9 @@ namespace DoAnCuoiKy_Nhom13
                                                     ref QueQuan,
                                                     ref TrinhDo,
                                                     ref TruongDT,
-                                                    ref UuDiem);
+                                                    ref UuDiem, 
+                                                    ref Email,
+                                                    ref Pw);
             tbTruong.Text = TruongDT;
             tbTen.Text = HoTen;
             tbDiaChi.Text = DiaChi;
@@ -48,8 +50,9 @@ namespace DoAnCuoiKy_Nhom13
             tbTrinhDo.Text = TrinhDo;
             lbGSID.Text = gsid.ToString();
             tbUser.Text=Locator.author.UserName;
-            tbPass.Text = "*****";
+            tbPass.Text = "*********";
             tbCMND.Text = Cmnd;
+            tbEmail.Text = Locator.author.Email=Email;
         }
 
         private void tbUuDiem_TextChanged(object sender, EventArgs e)

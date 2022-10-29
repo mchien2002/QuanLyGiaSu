@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="TRUNGTAMGIASU" Class="TRUNGTAMGIASUDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-3SM2096\SQLEXPRESS;Initial Catalog=TRUNGTAMGIASU;Integrated Security=True" SettingsObjectName="QuanLyGiaSu.Properties.Settings" SettingsPropertyName="TRUNGTAMGIASUConnectionString5" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=TRANHUYNHTANPHA;Initial Catalog=TRUNGTAMGIASU;Integrated Security=True" SettingsObjectName="QuanLyGiaSu.Properties.Settings" SettingsPropertyName="TRUNGTAMGIASUConnectionString4" Provider="System.Data.SqlClient" />
   <Table Name="dbo.ACCOUNT" Member="ACCOUNTs">
     <Type Name="ACCOUNT">
       <Column Name="ACCID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -332,18 +332,6 @@
     <Parameter Name="DIACHI" Parameter="dIACHI" Type="System.String" DbType="NVarChar(60)" />
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.thongtinphuhuynh_private" Method="thongtinphuhuynh_private">
-    <Parameter Name="ACCID" Parameter="aCCID" Type="System.Int32" DbType="Int" />
-    <Parameter Name="PHID" Parameter="pHID" Type="System.Int32" DbType="Int" Direction="InOut" />
-    <Parameter Name="HOTEN" Parameter="hOTEN" Type="System.String" DbType="NVarChar(50)" Direction="InOut" />
-    <Parameter Name="GIOITINH" Parameter="gIOITINH" Type="System.String" DbType="NVarChar(20)" Direction="InOut" />
-    <Parameter Name="NGAYSINH" Parameter="nGAYSINH" Type="System.DateTime" DbType="Date" Direction="InOut" />
-    <Parameter Name="NGHENGHIEP" Parameter="nGHENGHIEP" Type="System.String" DbType="NVarChar(100)" Direction="InOut" />
-    <Parameter Name="DIACHI" Parameter="dIACHI" Type="System.String" DbType="NVarChar(500)" Direction="InOut" />
-    <Parameter Name="SDT" Parameter="sDT" Type="System.String" DbType="Char(10)" Direction="InOut" />
-    <Parameter Name="CMND" Parameter="cMND" Type="System.String" DbType="Char(10)" Direction="InOut" />
-    <Return Type="System.Int32" />
-  </Function>
   <Function Name="dbo.update_acc" Method="update_acc">
     <Parameter Name="accid" Type="System.Int32" DbType="Int" />
     <Parameter Name="USERNAME" Parameter="uSERNAME" Type="System.String" DbType="Char(100)" />
@@ -422,22 +410,18 @@
     <Parameter Name="PW" Parameter="pW" Type="System.String" DbType="Char(100)" />
     <Return Type="System.Boolean" />
   </Function>
-  <Function Name="dbo.thongtingiasu_private" Method="thongtingiasu_private" IsComposable="true">
-    <Parameter Name="ACCID" Parameter="aCCID" Type="System.Int32" DbType="Int" />
-    <ElementType Name="thongtingiasu_privateResult">
-      <Column Name="GSID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+  <Function Name="dbo.timkiemph_tenPH" Method="timkiemph_tenPH" IsComposable="true">
+    <Parameter Name="HoTen" Parameter="hoTen" Type="System.String" DbType="NVarChar(100)" />
+    <ElementType Name="timkiemph_tenPHResult">
+      <Column Name="PHID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="ACCID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="HoTen" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
-      <Column Name="CMND" Type="System.String" DbType="Char(20) NOT NULL" CanBeNull="false" />
       <Column Name="GioiTinh" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
       <Column Name="NgaySinh" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="NgheNghiep" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(4000) NOT NULL" CanBeNull="false" />
       <Column Name="SDT" Type="System.String" DbType="Char(20) NOT NULL" CanBeNull="false" />
-      <Column Name="QueQuan" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
-      <Column Name="TruongDaoTao" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
-      <Column Name="TrinhDo" Type="System.String" DbType="NVarChar(4000) NOT NULL" CanBeNull="false" />
-      <Column Name="UuDiem" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
-      <Column Name="Avartar" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
-      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="CMND" Type="System.String" DbType="Char(20) NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
   <Function Name="dbo.check_lhid" Method="check_lhid" IsComposable="true">
@@ -547,5 +531,254 @@
   <Function Name="dbo.select_ngansach" Method="select_ngansach" IsComposable="true">
     <Parameter Name="ACCID" Parameter="aCCID" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.timkiemaccount_accid" Method="timkiemaccount_accid" IsComposable="true">
+    <Parameter Name="ACCID" Parameter="aCCID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="timkiemaccount_accidResult">
+      <Column Name="ACCID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PhanQuyen" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="Username" Type="System.String" DbType="Char(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="Char(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="Char(100) NOT NULL" CanBeNull="false" />
+      <Column Name="NganSach" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.timkiemaccount_username" Method="timkiemaccount_username" IsComposable="true">
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="Char(30)" />
+    <ElementType Name="timkiemaccount_usernameResult">
+      <Column Name="ACCID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PhanQuyen" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="Username" Type="System.String" DbType="Char(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="Char(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="Char(100) NOT NULL" CanBeNull="false" />
+      <Column Name="NganSach" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.timkiemgs_ACCID" Method="timkiemgs_ACCID" IsComposable="true">
+    <Parameter Name="ACCID" Parameter="aCCID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="timkiemgs_ACCIDResult">
+      <Column Name="GSID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ACCID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CMND" Type="System.String" DbType="Char(20) NOT NULL" CanBeNull="false" />
+      <Column Name="GioiTinh" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="NgaySinh" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="SDT" Type="System.String" DbType="Char(20) NOT NULL" CanBeNull="false" />
+      <Column Name="QueQuan" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="TruongDaoTao" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="TrinhDo" Type="System.String" DbType="NVarChar(4000) NOT NULL" CanBeNull="false" />
+      <Column Name="UuDiem" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="Avartar" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.timkiemgs_GSID" Method="timkiemgs_GSID" IsComposable="true">
+    <Parameter Name="GSID" Parameter="gSID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="timkiemgs_GSIDResult">
+      <Column Name="GSID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ACCID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CMND" Type="System.String" DbType="Char(20) NOT NULL" CanBeNull="false" />
+      <Column Name="GioiTinh" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="NgaySinh" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="SDT" Type="System.String" DbType="Char(20) NOT NULL" CanBeNull="false" />
+      <Column Name="QueQuan" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="TruongDaoTao" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="TrinhDo" Type="System.String" DbType="NVarChar(4000) NOT NULL" CanBeNull="false" />
+      <Column Name="UuDiem" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="Avartar" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.timkiemgs_tenGS" Method="timkiemgs_tenGS" IsComposable="true">
+    <Parameter Name="HoTen" Parameter="hoTen" Type="System.String" DbType="NVarChar(100)" />
+    <ElementType Name="timkiemgs_tenGSResult">
+      <Column Name="GSID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ACCID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CMND" Type="System.String" DbType="Char(20) NOT NULL" CanBeNull="false" />
+      <Column Name="GioiTinh" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="NgaySinh" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="SDT" Type="System.String" DbType="Char(20) NOT NULL" CanBeNull="false" />
+      <Column Name="QueQuan" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="TruongDaoTao" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="TrinhDo" Type="System.String" DbType="NVarChar(4000) NOT NULL" CanBeNull="false" />
+      <Column Name="UuDiem" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="Avartar" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.timkiemlm_LHID" Method="timkiemlm_LHID" IsComposable="true">
+    <Parameter Name="LHID" Parameter="lHID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="timkiemlm_LHIDResult">
+      <Column Name="LMID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LHID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PHID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="MucLuong" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SDTLienHe" Type="System.String" DbType="Char(20) NOT NULL" CanBeNull="false" />
+      <Column Name="ThoiGianDangKy" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="SoBuoi" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="HinhThucDay" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ThoiGianHoc" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ThongTinHocVien" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="YeuCauGiaSu" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="TrangThai" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.timkiemlm_LMID" Method="timkiemlm_LMID" IsComposable="true">
+    <Parameter Name="LMID" Parameter="lMID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="timkiemlm_LMIDResult">
+      <Column Name="LMID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LHID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PHID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="MucLuong" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SDTLienHe" Type="System.String" DbType="Char(20) NOT NULL" CanBeNull="false" />
+      <Column Name="ThoiGianDangKy" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="SoBuoi" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="HinhThucDay" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ThoiGianHoc" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ThongTinHocVien" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="YeuCauGiaSu" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="TrangThai" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.timkiemlsgd_ACCID" Method="timkiemlsgd_ACCID" IsComposable="true">
+    <Parameter Name="ACCID" Parameter="aCCID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="timkiemlsgd_ACCIDResult">
+      <Column Name="GDID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ACCID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LMID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SoTien" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ThoiGianGiaoDich" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.timkiemlsgd_GDID" Method="timkiemlsgd_GDID" IsComposable="true">
+    <Parameter Name="GDID" Parameter="gDID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="timkiemlsgd_GDIDResult">
+      <Column Name="GDID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ACCID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LMID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SoTien" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ThoiGianGiaoDich" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.timkiemlsgd_LMID" Method="timkiemlsgd_LMID" IsComposable="true">
+    <Parameter Name="LMID" Parameter="lMID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="timkiemlsgd_LMIDResult">
+      <Column Name="GDID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ACCID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LMID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SoTien" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ThoiGianGiaoDich" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.timkiemlsgd_SoTien" Method="timkiemlsgd_SoTien" IsComposable="true">
+    <Parameter Name="SoTien" Parameter="soTien" Type="System.Int32" DbType="Int" />
+    <ElementType Name="timkiemlsgd_SoTienResult">
+      <Column Name="GDID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ACCID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LMID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SoTien" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ThoiGianGiaoDich" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.timkiemlsnt_ACCID" Method="timkiemlsnt_ACCID" IsComposable="true">
+    <Parameter Name="ACCID" Parameter="aCCID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="timkiemlsnt_ACCIDResult">
+      <Column Name="GDID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ACCID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SoTien" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ThoiGianGiaoDich" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.timkiemlsnt_GDID" Method="timkiemlsnt_GDID" IsComposable="true">
+    <Parameter Name="GDID" Parameter="gDID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="timkiemlsnt_GDIDResult">
+      <Column Name="GDID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ACCID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SoTien" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ThoiGianGiaoDich" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.timkiemlsnt_SoTien" Method="timkiemlsnt_SoTien" IsComposable="true">
+    <Parameter Name="SoTien" Parameter="soTien" Type="System.Int32" DbType="Int" />
+    <ElementType Name="timkiemlsnt_SoTienResult">
+      <Column Name="GDID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ACCID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SoTien" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ThoiGianGiaoDich" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.timkiemph_ACCID" Method="timkiemph_ACCID" IsComposable="true">
+    <Parameter Name="ACCID" Parameter="aCCID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="timkiemph_ACCIDResult">
+      <Column Name="PHID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ACCID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="GioiTinh" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="NgaySinh" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="NgheNghiep" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(4000) NOT NULL" CanBeNull="false" />
+      <Column Name="SDT" Type="System.String" DbType="Char(20) NOT NULL" CanBeNull="false" />
+      <Column Name="CMND" Type="System.String" DbType="Char(20) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.timkiemph_PHID" Method="timkiemph_PHID" IsComposable="true">
+    <Parameter Name="PHID" Parameter="pHID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="timkiemph_PHIDResult">
+      <Column Name="PHID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ACCID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="GioiTinh" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="NgaySinh" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="NgheNghiep" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(4000) NOT NULL" CanBeNull="false" />
+      <Column Name="SDT" Type="System.String" DbType="Char(20) NOT NULL" CanBeNull="false" />
+      <Column Name="CMND" Type="System.String" DbType="Char(20) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.thongtingiasu_private" Method="thongtingiasu_private" IsComposable="true">
+    <Parameter Name="ACCID" Parameter="aCCID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="thongtingiasu_privateResult">
+      <Column Name="ACCID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="GSID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CMND" Type="System.String" DbType="Char(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Avartar" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="GioiTinh" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="NgaySinh" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="QueQuan" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="SDT" Type="System.String" DbType="Char(20) NOT NULL" CanBeNull="false" />
+      <Column Name="TrinhDo" Type="System.String" DbType="NVarChar(4000) NOT NULL" CanBeNull="false" />
+      <Column Name="TruongDaoTao" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="UuDiem" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="Char(100) NOT NULL" CanBeNull="false" />
+      <Column Name="NganSach" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="Char(100) NOT NULL" CanBeNull="false" />
+      <Column Name="PhanQuyen" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="Username" Type="System.String" DbType="Char(100) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.thongtinphuhuynh_private" Method="thongtinphuhuynh_private" IsComposable="true">
+    <Parameter Name="ACCID" Parameter="aCCID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="thongtinphuhuynh_privateResult">
+      <Column Name="ACCID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CMND" Type="System.String" DbType="Char(20) NOT NULL" CanBeNull="false" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(4000) NOT NULL" CanBeNull="false" />
+      <Column Name="GioiTinh" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="NgaySinh" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="NgheNghiep" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="PHID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SDT" Type="System.String" DbType="Char(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="Char(100) NOT NULL" CanBeNull="false" />
+      <Column Name="NganSach" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="Char(100) NOT NULL" CanBeNull="false" />
+      <Column Name="PhanQuyen" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="Username" Type="System.String" DbType="Char(100) NOT NULL" CanBeNull="false" />
+    </ElementType>
   </Function>
 </Database>

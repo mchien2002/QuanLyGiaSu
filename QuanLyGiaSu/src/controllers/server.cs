@@ -116,7 +116,9 @@ namespace QuanLyGiaSu.src.server
             }
         }
 
-        public void getThongTinGiaSu_private(string userName,ref int gsid,ref string ht, ref string gt, ref DateTime ns,ref string dc, ref string sdt,ref string cmnd, ref string qq, ref string td, ref string tdt, ref string ud)
+        public void getThongTinGiaSu_private(string userName,ref int gsid,ref string ht, 
+            ref string gt, ref DateTime ns,ref string dc, ref string sdt,ref string cmnd, 
+            ref string qq, ref string td, ref string tdt, ref string ud, ref string email, ref string pw)
         {
             try
             {
@@ -136,10 +138,42 @@ namespace QuanLyGiaSu.src.server
                     td = x.TrinhDo;
                     tdt = x.TruongDaoTao;
                     ud = x.UuDiem;
+                    email = x.Email;
+                    pw = x.Password;
                     break;
                 }
             }
             catch(Exception e)
+            {
+                MessageBox.Show(e.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void getThongTinPhuHuynh_private(string userName, ref int phid, ref string ht,
+            ref string gt, ref DateTime ns, ref string dc, ref string sdt, ref string cmnd,
+             ref string email,ref string nghenghiep, ref string pw)
+        {
+            try
+            {
+                var a = _db.thongtinphuhuynh_private(_db.find_accid_username(userName));
+
+                if (a == null) return;
+                foreach (var x in a)
+                {
+                    phid = x.PHID;
+                    ht = x.HoTen;
+                    gt = x.GioiTinh;
+                    ns = x.NgaySinh;
+                    dc = x.DiaChi;
+                    sdt = x.SDT;
+                    cmnd = x.CMND;                    
+                    email = x.Email;
+                    nghenghiep = x.NgheNghiep;
+                    pw = x.Password;
+                    break;
+                }
+            }
+            catch (Exception e)
             {
                 MessageBox.Show(e.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
