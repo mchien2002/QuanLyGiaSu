@@ -11,6 +11,7 @@ Phần mềm quản lý trung tâm gia sư thành phố Hồ Chí Minh là phầ
 ○	Lịch sử nạp tiền lưu lai thông tin nạp tiền của phụ huynh và gia sư
 ○	Doanh thu (Tổng tiền thu được khi những lớp học được nhận).
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 heloooo
@@ -24,3 +25,8 @@ minh chien
 
 asdasdasd
 >>>>>>> 9f6a7fdb460b200f427c0657e8c73beb16f58386
+=======
+minh chien
+
+nguyen minh chien
+>>>>>>> chien
