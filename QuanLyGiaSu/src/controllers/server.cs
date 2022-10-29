@@ -179,6 +179,17 @@ namespace QuanLyGiaSu.src.server
             }
         }
 
+
+        public string checkAuthorization(string Username)
+        {
+            var x = _db.authorization_acc(Username);
+            if (x == null)
+                return "Admin";
+            else
+                return x.ToString();
+
+        }
+
         /// <summary>
         /// Add thông tin vào checkedlistbox
         /// </summary>
