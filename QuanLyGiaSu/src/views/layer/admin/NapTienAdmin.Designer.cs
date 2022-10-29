@@ -68,6 +68,7 @@
             this.tbNapTien.Name = "tbNapTien";
             this.tbNapTien.Size = new System.Drawing.Size(100, 22);
             this.tbNapTien.TabIndex = 3;
+            this.tbNapTien.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbNapTien_KeyPress);
             // 
             // NapTienAdmin
             // 
