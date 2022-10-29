@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyGiaSu.src.controller;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace QuanLyGiaSu.src.views.layer.admin
 {
     public partial class NapTienAdmin : Form
     {
+        int userAccountID;
         public NapTienAdmin()
         {
             InitializeComponent();
@@ -19,12 +21,31 @@ namespace QuanLyGiaSu.src.views.layer.admin
 
         private void btnNapTien_Click(object sender, EventArgs e)
         {
-            this.Close();
-        }
+            try
+            {
+                // Nạp tiền cho tài khoản
+                Locator.server.transactionForAccount(Int32.Parse(tbNapTien.Text), userAccountID, Convert.ToDateTime(DateTime.Now.ToString()));
+                MessageBox.Show("Giao dịch thành công", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch
+            {
+                MessageBox.Show("Giao dịch thất bại", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+;        }
 
         public void ShowThongTinNapTien(string username)
         {
             lbTenTaiKhoan.Text = username;
+            userAccountID = Locator.server.getAccountIDByUsername(username);
+        }
+
+        private void tbNapTien_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

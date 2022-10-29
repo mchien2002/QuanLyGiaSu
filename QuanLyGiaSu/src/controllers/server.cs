@@ -149,6 +149,7 @@ namespace QuanLyGiaSu.src.server
             }
         }
 
+<<<<<<< HEAD
         public void getThongTinPhuHuynh_private(string userName, ref int phid, ref string ht,
             ref string gt, ref DateTime ns, ref string dc, ref string sdt, ref string cmnd,
              ref string email,ref string nghenghiep, ref string pw)
@@ -179,6 +180,17 @@ namespace QuanLyGiaSu.src.server
             }
         }
 
+=======
+        public int getAccountIDByUsername(String userName)
+        {
+            return (int)_db.find_accid_username(userName);
+        }
+
+        public void transactionForAccount(int money, int accID, DateTime dateTime)
+        {
+            _db.insert_lsnt(accID, money, dateTime);
+        }
+>>>>>>> 9f6a7fdb460b200f427c0657e8c73beb16f58386
         /// <summary>
         /// Add thông tin vào checkedlistbox
         /// </summary>
