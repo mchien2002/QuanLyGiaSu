@@ -16,7 +16,7 @@ namespace QuanLyGiaSu.src.server
 
         public void setLSNTByUSerName(String userName)
         {
-
+            // Nguyen Minh Chien
         }
         
         public object fetchAccountByUserName(string username)
