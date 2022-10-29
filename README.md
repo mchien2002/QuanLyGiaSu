@@ -37,5 +37,9 @@ test thoi test thoi
 =======
 flkadjflkjsdalkfjsdl
 ákansldmasdmasmld
+<<<<<<< HEAD
 >>>>>>> phat
 
+=======
+dflkadsjflkasdjlfkasdj
+>>>>>>> phat
