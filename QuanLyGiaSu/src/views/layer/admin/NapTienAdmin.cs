@@ -47,5 +47,10 @@ namespace QuanLyGiaSu.src.views.layer.admin
                 e.Handled = true;
             }
         }
+
+        private void NapTienAdmin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

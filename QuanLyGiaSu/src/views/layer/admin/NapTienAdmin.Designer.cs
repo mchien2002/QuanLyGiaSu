@@ -81,6 +81,7 @@
             this.Controls.Add(this.lbTenTaiKhoan);
             this.Name = "NapTienAdmin";
             this.Text = "NapTienAdmin";
+            this.Load += new System.EventHandler(this.NapTienAdmin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
