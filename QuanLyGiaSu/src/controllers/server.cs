@@ -15,9 +15,9 @@ namespace QuanLyGiaSu.src.server
         public TRUNGTAMGIASUDataContext _db = new TRUNGTAMGIASUDataContext();
         public Server() { }
 
-        public void setLSNTByUSerName(String userName)
+        public void setLSNTByUSerName(String userName, int value, DateTime date)
         {
-
+            _db.insert_lsnt(_db.find_accid_username(userName), value, date);
         }
         
         /// <summary>
