@@ -43,20 +43,30 @@ namespace QuanLyGiaSu.src.app.views.layer
                 }
                 MessageBox.Show("Thêm lớp mới thành công");
             }
-
-
             this.Close();
         }
 
         private void DangKyMoLop_Load(object sender, EventArgs e)
+        {
+            foreach (string item in Locator.server.fetchLopHoc())
+            {
+                cbbClasses.Items.Add(item);
+            }
+            foreach(string item in Locator.server.fetchMonHoc())
+            {
+                clbSubjects.Items.Add((string)item);
+            }
+        }
+
+        private void tbSDT_TextChanged(object sender, EventArgs e)
         {
             if (!(tbSDT.Text.ToString().Trim() == ""
                 || tbHinhThucDay.Text.ToString().Trim() == ""
                 || tbThoiGianHoc.Text.ToString().Trim() == ""
                 || tbThongTinHocVien.Text.ToString().Trim() == ""
                 || tbDiaChi.Text.ToString().Trim() == ""
-                || tbYeuCau.Text.ToString().Trim() == "")) btnRegister.Enabled = true ;
-            else btnRegister.Enabled = false ;
+                || tbYeuCau.Text.ToString().Trim() == "")) btnRegister.Enabled = true;
+            else btnRegister.Enabled = false;
         }
     }
 }

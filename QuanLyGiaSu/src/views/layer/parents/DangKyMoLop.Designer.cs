@@ -356,7 +356,7 @@
             this.tbThoiGianHoc.Name = "tbThoiGianHoc";
             this.tbThoiGianHoc.Size = new System.Drawing.Size(545, 25);
             this.tbThoiGianHoc.TabIndex = 123;
-            this.tbThoiGianHoc.TextChanged += new System.EventHandler(this.DangKyMoLop_Load);
+            this.tbThoiGianHoc.TextChanged += new System.EventHandler(this.tbSDT_TextChanged);
             // 
             // label33
             // 
@@ -378,7 +378,7 @@
             this.tbHinhThucDay.Name = "tbHinhThucDay";
             this.tbHinhThucDay.Size = new System.Drawing.Size(545, 25);
             this.tbHinhThucDay.TabIndex = 121;
-            this.tbHinhThucDay.TextChanged += new System.EventHandler(this.DangKyMoLop_Load);
+            this.tbHinhThucDay.TextChanged += new System.EventHandler(this.tbSDT_TextChanged);
             // 
             // label34
             // 
@@ -400,7 +400,7 @@
             this.tbThongTinHocVien.Name = "tbThongTinHocVien";
             this.tbThongTinHocVien.Size = new System.Drawing.Size(545, 25);
             this.tbThongTinHocVien.TabIndex = 152;
-            this.tbThongTinHocVien.TextChanged += new System.EventHandler(this.DangKyMoLop_Load);
+            this.tbThongTinHocVien.TextChanged += new System.EventHandler(this.tbSDT_TextChanged);
             // 
             // tbDiaChi
             // 
@@ -411,7 +411,7 @@
             this.tbDiaChi.Name = "tbDiaChi";
             this.tbDiaChi.Size = new System.Drawing.Size(545, 25);
             this.tbDiaChi.TabIndex = 153;
-            this.tbDiaChi.TextChanged += new System.EventHandler(this.DangKyMoLop_Load);
+            this.tbDiaChi.TextChanged += new System.EventHandler(this.tbSDT_TextChanged);
             // 
             // tbYeuCau
             // 
@@ -422,7 +422,7 @@
             this.tbYeuCau.Name = "tbYeuCau";
             this.tbYeuCau.Size = new System.Drawing.Size(545, 25);
             this.tbYeuCau.TabIndex = 154;
-            this.tbYeuCau.TextChanged += new System.EventHandler(this.DangKyMoLop_Load);
+            this.tbYeuCau.TextChanged += new System.EventHandler(this.tbSDT_TextChanged);
             // 
             // tbSDT
             // 
@@ -433,7 +433,7 @@
             this.tbSDT.Name = "tbSDT";
             this.tbSDT.Size = new System.Drawing.Size(545, 25);
             this.tbSDT.TabIndex = 155;
-            this.tbSDT.TextChanged += new System.EventHandler(this.DangKyMoLop_Load);
+            this.tbSDT.TextChanged += new System.EventHandler(this.tbSDT_TextChanged);
             // 
             // cbbClasses
             // 

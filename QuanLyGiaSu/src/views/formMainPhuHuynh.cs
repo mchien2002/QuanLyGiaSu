@@ -1,4 +1,5 @@
-﻿using QuanLyGiaSu.src.views.layer.admin;
+﻿using QuanLyGiaSu.src.controller;
+using QuanLyGiaSu.src.views.layer.admin;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -63,6 +64,11 @@ namespace QuanLyGiaSu
                 NapTien napTien = new NapTien();
                 napTien.Show();
             }    
+        }
+
+        private void formMainPhuHuynh_Load(object sender, EventArgs e)
+        {
+            lbSoDu.Text = Locator.server.getNganSach(Locator.author.UserName).ToString();
         }
     }
 }

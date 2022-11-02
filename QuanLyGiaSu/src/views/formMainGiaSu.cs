@@ -52,6 +52,7 @@ namespace QuanLyGiaSu
         private void formMainGiaSu_Load(object sender, EventArgs e)
         {
             lbSoDu.Text = Locator.server.getNganSach(Locator.author.UserName).ToString();
+            
         }
 
         private void btnLichSuGiaoDich_Click(object sender, EventArgs e)

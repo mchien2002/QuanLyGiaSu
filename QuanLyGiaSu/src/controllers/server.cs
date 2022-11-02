@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Security.Cryptography;
@@ -18,6 +19,30 @@ namespace QuanLyGiaSu.src.server
         public void setLSNTByUSerName(String userName, int value, DateTime date)
         {
             _db.insert_lsnt(_db.find_accid_username(userName), value, date);
+        }
+
+        public List<string> fetchLopHoc()
+        {
+            try
+            {
+                return _db.LOPHOCs.Select(p => p.TenLop).ToList();
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        public List<string> fetchMonHoc()
+        {
+            try
+            {
+                return _db.MONHOCs.Select(p => p.TenMon).ToList();
+            }
+            catch
+            {
+                return null;
+            }
         }
         
         /// <summary>

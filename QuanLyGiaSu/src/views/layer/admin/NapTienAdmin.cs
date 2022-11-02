@@ -23,7 +23,7 @@ namespace QuanLyGiaSu.src.views.layer.admin
         {
             try
             {
-                Locator.server.setLSNTByUSerName(userName, Int32.Parse(tbNapTien.Text), Convert.ToDateTime(DateTime.Now));
+                Locator.server.setLSNTByUSerName(userName, Int32.Parse(tbNapTien.Text), Convert.ToDateTime(DateTime.Now.Date));
                 MessageBox.Show("Giao dịch thành công", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch
