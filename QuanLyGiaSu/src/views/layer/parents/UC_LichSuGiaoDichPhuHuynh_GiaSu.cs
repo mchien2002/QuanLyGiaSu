@@ -22,6 +22,7 @@ namespace QuanLyGiaSu.src.app.views.layer
         private void UC_LichSuGiaoDichPhuHuynh_Load(object sender, EventArgs e)
         {
             dgvLICHSUGIAODICH.DataSource = Locator.server.fetchLichSuGiaoDichUserTable(Locator.author.UserName);
+            dgvLICHSUNAPTIEN.DataSource=Locator.server.fetchLichSuNapTienUserTable(Locator.author.UserName);
         }
 
         private void btn_LichSuNap_Click(object sender, EventArgs e)

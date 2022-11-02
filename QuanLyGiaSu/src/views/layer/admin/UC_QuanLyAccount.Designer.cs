@@ -29,40 +29,42 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.cbbTimKiem = new System.Windows.Forms.ComboBox();
-            this.tb_TimKiem = new System.Windows.Forms.TextBox();
+            this.cbb_TimTheoAccount = new System.Windows.Forms.ComboBox();
+            this.tb_TimKiemAccount = new System.Windows.Forms.TextBox();
             this.lbTimKiem = new System.Windows.Forms.Label();
             this.dgvQLyAccount = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.NapTien = new System.Windows.Forms.ToolStripMenuItem();
             this.lbTieuDe = new System.Windows.Forms.Label();
-            this.btnTimKiem = new System.Windows.Forms.Button();
+            this.btn_TimAccount = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQLyAccount)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // cbbTimKiem
+            // cbb_TimTheoAccount
             // 
-            this.cbbTimKiem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbTimKiem.FormattingEnabled = true;
-            this.cbbTimKiem.Items.AddRange(new object[] {
+            this.cbb_TimTheoAccount.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbb_TimTheoAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbb_TimTheoAccount.FormattingEnabled = true;
+            this.cbb_TimTheoAccount.Items.AddRange(new object[] {
             "User Name",
-            "ID Account"});
-            this.cbbTimKiem.Location = new System.Drawing.Point(672, 18);
-            this.cbbTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbbTimKiem.Name = "cbbTimKiem";
-            this.cbbTimKiem.Size = new System.Drawing.Size(192, 33);
-            this.cbbTimKiem.TabIndex = 25;
+            "Account ID",
+            "Tất Cả"});
+            this.cbb_TimTheoAccount.Location = new System.Drawing.Point(672, 18);
+            this.cbb_TimTheoAccount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbb_TimTheoAccount.Name = "cbb_TimTheoAccount";
+            this.cbb_TimTheoAccount.Size = new System.Drawing.Size(192, 33);
+            this.cbb_TimTheoAccount.TabIndex = 25;
+            this.cbb_TimTheoAccount.SelectedIndexChanged += new System.EventHandler(this.cbbTimTheoAcount_SelectedIndexChanged);
             // 
-            // tb_TimKiem
+            // tb_TimKiemAccount
             // 
-            this.tb_TimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_TimKiem.Location = new System.Drawing.Point(883, 21);
-            this.tb_TimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tb_TimKiem.Name = "tb_TimKiem";
-            this.tb_TimKiem.Size = new System.Drawing.Size(256, 30);
-            this.tb_TimKiem.TabIndex = 24;
+            this.tb_TimKiemAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_TimKiemAccount.Location = new System.Drawing.Point(883, 21);
+            this.tb_TimKiemAccount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tb_TimKiemAccount.Name = "tb_TimKiemAccount";
+            this.tb_TimKiemAccount.Size = new System.Drawing.Size(256, 30);
+            this.tb_TimKiemAccount.TabIndex = 24;
             // 
             // lbTimKiem
             // 
@@ -113,23 +115,23 @@
             this.lbTieuDe.TabIndex = 21;
             this.lbTieuDe.Text = "QUẢN LÝ ACCOUNT";
             // 
-            // btnTimKiem
+            // btn_TimAccount
             // 
-            this.btnTimKiem.Location = new System.Drawing.Point(1174, 22);
-            this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(92, 29);
-            this.btnTimKiem.TabIndex = 26;
-            this.btnTimKiem.Text = "Tìm Kiếm";
-            this.btnTimKiem.UseVisualStyleBackColor = true;
-            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
+            this.btn_TimAccount.Location = new System.Drawing.Point(1174, 22);
+            this.btn_TimAccount.Name = "btn_TimAccount";
+            this.btn_TimAccount.Size = new System.Drawing.Size(92, 29);
+            this.btn_TimAccount.TabIndex = 26;
+            this.btn_TimAccount.Text = "Tìm";
+            this.btn_TimAccount.UseVisualStyleBackColor = true;
+            this.btn_TimAccount.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // UC_QuanLyAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.btnTimKiem);
-            this.Controls.Add(this.cbbTimKiem);
-            this.Controls.Add(this.tb_TimKiem);
+            this.Controls.Add(this.btn_TimAccount);
+            this.Controls.Add(this.cbb_TimTheoAccount);
+            this.Controls.Add(this.tb_TimKiemAccount);
             this.Controls.Add(this.lbTimKiem);
             this.Controls.Add(this.dgvQLyAccount);
             this.Controls.Add(this.lbTieuDe);
@@ -145,12 +147,12 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox cbbTimKiem;
-        private System.Windows.Forms.TextBox tb_TimKiem;
+        private System.Windows.Forms.ComboBox cbb_TimTheoAccount;
+        private System.Windows.Forms.TextBox tb_TimKiemAccount;
         private System.Windows.Forms.Label lbTimKiem;
         private System.Windows.Forms.DataGridView dgvQLyAccount;
         private System.Windows.Forms.Label lbTieuDe;
-        private System.Windows.Forms.Button btnTimKiem;
+        private System.Windows.Forms.Button btn_TimAccount;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem NapTien;
     }

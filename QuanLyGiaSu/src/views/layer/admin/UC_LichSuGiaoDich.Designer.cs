@@ -28,62 +28,51 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_Tim = new System.Windows.Forms.Button();
-            this.cbb_TimKiem = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.tb_TimKiem = new System.Windows.Forms.TextBox();
+            this.btn_TimLSGD = new System.Windows.Forms.Button();
+            this.cbb_TimTheoLSGD = new System.Windows.Forms.ComboBox();
+            this.tb_TimKiemLSGD = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvLICHSUGIAODICH = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLICHSUGIAODICH)).BeginInit();
             this.SuspendLayout();
             // 
-            // btn_Tim
+            // btn_TimLSGD
             // 
-            this.btn_Tim.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Tim.Location = new System.Drawing.Point(1145, 25);
-            this.btn_Tim.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_Tim.Name = "btn_Tim";
-            this.btn_Tim.Size = new System.Drawing.Size(75, 33);
-            this.btn_Tim.TabIndex = 22;
-            this.btn_Tim.Text = "Tìm";
-            this.btn_Tim.UseVisualStyleBackColor = true;
+            this.btn_TimLSGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_TimLSGD.Location = new System.Drawing.Point(1145, 25);
+            this.btn_TimLSGD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_TimLSGD.Name = "btn_TimLSGD";
+            this.btn_TimLSGD.Size = new System.Drawing.Size(75, 33);
+            this.btn_TimLSGD.TabIndex = 22;
+            this.btn_TimLSGD.Text = " Tìm";
+            this.btn_TimLSGD.UseVisualStyleBackColor = true;
+            this.btn_TimLSGD.Click += new System.EventHandler(this.btn_TimLSGD_Click);
             // 
-            // cbb_TimKiem
+            // cbb_TimTheoLSGD
             // 
-            this.cbb_TimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbb_TimKiem.FormattingEnabled = true;
-            this.cbb_TimKiem.Location = new System.Drawing.Point(859, 25);
-            this.cbb_TimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbb_TimKiem.Name = "cbb_TimKiem";
-            this.cbb_TimKiem.Size = new System.Drawing.Size(256, 33);
-            this.cbb_TimKiem.TabIndex = 21;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Mã Gia Sư",
-            "Tên Gia Sư",
+            this.cbb_TimTheoLSGD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbb_TimTheoLSGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbb_TimTheoLSGD.FormattingEnabled = true;
+            this.cbb_TimTheoLSGD.Items.AddRange(new object[] {
             "Account ID",
-            "Môn Dạy",
-            "Lớp Dạy"});
-            this.comboBox1.Location = new System.Drawing.Point(660, 25);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(192, 33);
-            this.comboBox1.TabIndex = 20;
+            "Số Tiền",
+            "Tất Cả"});
+            this.cbb_TimTheoLSGD.Location = new System.Drawing.Point(660, 25);
+            this.cbb_TimTheoLSGD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbb_TimTheoLSGD.Name = "cbb_TimTheoLSGD";
+            this.cbb_TimTheoLSGD.Size = new System.Drawing.Size(192, 33);
+            this.cbb_TimTheoLSGD.TabIndex = 20;
+            this.cbb_TimTheoLSGD.SelectedIndexChanged += new System.EventHandler(this.cbb_TimTheoLSGD_SelectedIndexChanged);
             // 
-            // tb_TimKiem
+            // tb_TimKiemLSGD
             // 
-            this.tb_TimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_TimKiem.Location = new System.Drawing.Point(859, 25);
-            this.tb_TimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tb_TimKiem.Name = "tb_TimKiem";
-            this.tb_TimKiem.Size = new System.Drawing.Size(256, 30);
-            this.tb_TimKiem.TabIndex = 19;
+            this.tb_TimKiemLSGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_TimKiemLSGD.Location = new System.Drawing.Point(859, 25);
+            this.tb_TimKiemLSGD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tb_TimKiemLSGD.Name = "tb_TimKiemLSGD";
+            this.tb_TimKiemLSGD.Size = new System.Drawing.Size(256, 30);
+            this.tb_TimKiemLSGD.TabIndex = 19;
             // 
             // label2
             // 
@@ -122,10 +111,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Controls.Add(this.btn_Tim);
-            this.Controls.Add(this.cbb_TimKiem);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.tb_TimKiem);
+            this.Controls.Add(this.btn_TimLSGD);
+            this.Controls.Add(this.cbb_TimTheoLSGD);
+            this.Controls.Add(this.tb_TimKiemLSGD);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dgvLICHSUGIAODICH);
             this.Controls.Add(this.label1);
@@ -141,10 +129,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btn_Tim;
-        private System.Windows.Forms.ComboBox cbb_TimKiem;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox tb_TimKiem;
+        private System.Windows.Forms.Button btn_TimLSGD;
+        private System.Windows.Forms.ComboBox cbb_TimTheoLSGD;
+        private System.Windows.Forms.TextBox tb_TimKiemLSGD;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dgvLICHSUGIAODICH;
         private System.Windows.Forms.Label label1;

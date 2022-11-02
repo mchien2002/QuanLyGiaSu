@@ -16,13 +16,44 @@ namespace DoAnCuoiKy_Nhom13
         public UC_LichSuGiaoDich()
         {
             InitializeComponent();
-            comboBox1.Text = comboBox1.Items[0].ToString();
+            cbb_TimTheoLSGD.Text = cbb_TimTheoLSGD.Items[0].ToString();
             //comboBox1.Text = this.Items[0].ToString();
         }
 
         private void UC_LichSuGiaoDich_Load(object sender, EventArgs e)
         {
-            dgvLICHSUGIAODICH.DataSource = Locator.server.fetchLichSuGiaoDichUserTable(Locator.author.UserName);
+            dgvLICHSUGIAODICH.DataSource = Locator.server.fetchLishSuGiaoDich();
         }
+
+        private void btn_TimLSGD_Click(object sender, EventArgs e)
+        {
+            if (cbb_TimTheoLSGD.Text == "Mã Giao Dịch")
+            {
+                dgvLICHSUGIAODICH.DataSource = Locator.server.TimKiemLSDG_GDID(Convert.ToInt32(tb_TimKiemLSGD.Text));
+            }
+            else if (cbb_TimTheoLSGD.Text == "Account ID")
+            {
+                dgvLICHSUGIAODICH.DataSource = Locator.server.TimKiemLSDG_ACCID(Convert.ToInt32(tb_TimKiemLSGD.Text));
+            }
+            else if (cbb_TimTheoLSGD.Text == "Số Tiền")
+            {
+                dgvLICHSUGIAODICH.DataSource = Locator.server.TimKiemLSDG_SoTien(Convert.ToInt32(tb_TimKiemLSGD.Text));
+            }
+        }
+
+        private void cbb_TimTheoLSGD_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbb_TimTheoLSGD.Text == "Tất Cả")
+            {
+                tb_TimKiemLSGD.Text = "";
+                tb_TimKiemLSGD.Enabled = false;
+                dgvLICHSUGIAODICH.DataSource = Locator.server.fetchLishSuGiaoDich();
+            }
+            else
+                tb_TimKiemLSGD.Enabled = true;
+        }
+
+
+
     }
 }

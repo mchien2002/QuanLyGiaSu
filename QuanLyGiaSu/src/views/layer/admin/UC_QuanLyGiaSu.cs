@@ -19,27 +19,12 @@ namespace QuanLyGiaSu.src.app.views.layer
         {
             InitializeComponent();
             db = new TRUNGTAMGIASUDataContext();
-            comboBox1.Text = comboBox1.Items[0].ToString();
+            cbb_TimTheoGS.Text = cbb_TimTheoGS.Items[0].ToString();
         }
 
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if(comboBox1.Text == "Lớp Dạy")
-            {
-               tb_TimKiem.Hide();
-                cbb_TimKiem.Visible = true;
-            }
-            else
-            {
-                cbb_TimKiem.Hide();
-                tb_TimKiem.Visible = true;
-            }
-        }
 
         private void UC_QuanLyGiaSu_Load(object sender, EventArgs e)
         {
-            cbb_TimKiem.Hide();
             dgvQuanLyGiaSu.DataSource=Locator.server.fetchGiaSuTable();
         }
 
@@ -164,9 +149,48 @@ namespace QuanLyGiaSu.src.app.views.layer
             }
         }
 
-        private void UC_QuanLyGiaSu_MouseMove(object sender, MouseEventArgs e)
+        private void btn_TimGS_Click(object sender, EventArgs e)
         {
-            UC_QuanLyGiaSu_Load(sender, e);
+            try
+            {
+                if (cbb_TimTheoGS.Text == "Mã Gia Sư")
+                {
+                    dgvQuanLyGiaSu.DataSource = Locator.server.TimKiemGiaSu_GSID(Convert.ToInt32(tb_TimKiemGS.Text));
+                }
+                else if (cbb_TimTheoGS.Text == "Account ID")
+                {
+                    dgvQuanLyGiaSu.DataSource = Locator.server.TimKiemGiaSu_ACCID(Convert.ToInt32(tb_TimKiemGS.Text));
+                }
+                else if (cbb_TimTheoGS.Text == "Tên Gia Sư")
+                {
+                    dgvQuanLyGiaSu.DataSource = Locator.server.TimKiemGiaSu_TenGS(tb_TimKiemGS.Text);
+                }
+                else
+                {
+                    dgvQuanLyGiaSu.DataSource = dgvQuanLyGiaSu.DataSource = Locator.server.fetchGiaSuTable();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
+
+        private void cbbTimTheoGS_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbb_TimTheoGS.Text == "Tất Cả")
+            {
+                tb_TimKiemGS.Text = "";
+                tb_TimKiemGS.Enabled = false;
+                dgvQuanLyGiaSu.DataSource = Locator.server.fetchGiaSuTable();
+            }
+            else
+                tb_TimKiemGS.Enabled = true;
+        }
+
+
+
     }
 }

@@ -16,6 +16,142 @@ namespace QuanLyGiaSu.src.server
         public TRUNGTAMGIASUDataContext _db = new TRUNGTAMGIASUDataContext();
         public Server() { }
 
+        #region Tim Kiem ADMIN
+
+        #region Tim Kiem LSNT trong admin
+        //Tìm kiếm LSNT theo Giao dịch ID
+        public object TimKiemLSNT_GDID(int GDID)
+        {
+            return _db.timkiemlsnt_GDID(GDID);
+        }
+        //Tìm kiếm LSNT theo Account ID
+        public object TimKiemLSNT_ACCID(int ACCID)
+        {
+            return _db.timkiemlsnt_ACCID(ACCID);
+        }
+        //Tìm kiếm LSNT theo Số tiền
+        public object TimKiemLSNT_SoTien(int soTien)
+        {
+            return _db.timkiemlsnt_SoTien(soTien);
+        }
+        #endregion
+
+        #region Tim Kiem LSGD trong admin
+        //Tìm kiếm LSGD theo GDID
+        public object TimKiemLSDG_GDID(int GDID)
+        {
+            return _db.timkiemlsgd_GDID(GDID);
+        }
+        //Tìm kiếm LSGD theo ACCID
+        public object TimKiemLSDG_ACCID(int ACCID)
+        {
+            return _db.timkiemlsgd_ACCID(ACCID);
+        }
+        //Tìm kiếm LSGD theo LMID
+        public object TimKiemLSDG_LMID(int LMID)
+        {
+            return _db.timkiemlsgd_LMID(LMID);
+        }
+        //Tìm kiếm LSGD theo SoTien
+        public object TimKiemLSDG_SoTien(int SoTien)
+        {
+            return _db.timkiemlsgd_SoTien(SoTien);
+        }
+        //Tìm kiếm LSGD theo ThoiGianGiaoDich
+        #endregion
+
+        #region Tim Kiem Phu Huynh trong admin
+        //Tìm kiếm phụ huynh theo PHID
+        public object TimKiemPH_PHID(int PHID)
+        {
+            return _db.timkiemph_PHID(PHID);
+        }
+        //Tìm kiếm phụ huynh theo ACCID
+        public object TimKiemPH_ACCID(int ACCID)
+        {
+            return _db.timkiemph_ACCID(ACCID);
+        }
+        //Tìm kiếm phụ huynh theo HoTen
+        public object TimKiemPH_HoTen(string TenPH)
+        {
+            return _db.timkiemph_tenPH(TenPH);
+        }
+        #endregion
+
+        #region Tim Kiem Gia Su trong admin
+        //Tìm kiếm gia sư theo gsid
+        public object TimKiemGiaSu_GSID(int GSID)
+        {
+            return _db.timkiemgs_GSID(GSID).Select(p => p);
+        }
+
+        //Tìm kiếm gia sư theo accid
+        public object TimKiemGiaSu_ACCID(int ACCID)
+        {
+            return _db.timkiemgs_ACCID(ACCID);
+        }
+        //Tìm kiếm gia sư theo tên gia sư
+        public object TimKiemGiaSu_TenGS(string tenGS)
+        {
+            return _db.timkiemgs_tenGS(tenGS);
+        }
+        //Tìm kiếm gia sư theo môn dạy
+        public object TimKiemGiaSu_MonDay(string monDay)
+        {
+            return _db;
+        }
+        //Tìm kiếm gia sư theo lớp dạy
+        public object TimKiemGiaSu_LopDay()
+        {
+            return _db;
+        }
+        #endregion
+
+        #region Tim Kiem Account trong admin
+        //Tìm kiếm account theo accid
+        public object TimKiem_Account_ACCID(int accid)
+        {
+            return _db.timkiemaccount_accid(accid);
+        }
+        //Tìm kiếm account theo username
+        public object TimKiem_Account_UserName(string username)
+        {
+            return _db.timkiemaccount_username(username);
+        }
+        #endregion
+
+        #region Tim Kiem Lop Moi trong admin
+        //Tìm kiếm lớp mới theo Mã lớp
+        public object TimKiemLM_LMID(int LMID)
+        {
+            return _db.timkiemlm_LMID(LMID);
+        }
+        //Tìm kiếm lớp mới theo Lớp học
+        //Tìm kiếm lớp mới theo Môn học
+
+        #endregion
+
+        #endregion
+
+        #region Tim Kiem GIASU
+
+        #region Tim kiem Lop Moi trong Gia Su(Đã có)
+        #endregion
+
+        #region Tim Kiem DSDK day trong Gia Su
+        //Tìm kiếm DSDK Theo Mã Lớp
+        public object TimKiemDSDK_LMID(int LMID)
+        {
+            return _db;
+        }
+        #endregion
+
+        #endregion
+
+        #region Tim Kiem PHUHUYNH
+
+        #endregion
+
         public void setLSNTByUSerName(String userName, int value, DateTime date)
         {
             _db.insert_lsnt(_db.find_accid_username(userName), value, date);
@@ -148,7 +284,7 @@ namespace QuanLyGiaSu.src.server
         {
             try
             {
-                return _db.PHUHUYNHs.Select(p => p);
+                return _db.THONGTINPHUHUYNH_ADs.Select(p => p);
             }
             catch(Exception e)
             {
@@ -211,10 +347,26 @@ namespace QuanLyGiaSu.src.server
         }
 
         /// <summary>
-        /// Lấy thông tin lịch sử giao dịch của người dùng
+        /// Lấy thông tin lịch sử giao dịch của toàn bộ người dùng
         /// </summary>
         /// <param name="UserName">Tên đăng nhập</param>
         /// <returns></returns>
+        
+        public object fetchLishSuGiaoDich()
+        {
+            return _db.THONGTINLICHSUGIAODICH_ADs.Select(p => p);
+        }
+
+        /// <summary>
+        /// Lấy thông tin lịch sử nạp tiền của toàn bộ người dùng
+        /// </summary>
+        /// <param name="UserName">Tên đăng nhập</param>
+        /// <returns></returns>
+
+        public object fetchLishSuNapTienh()
+        {
+            return _db.THONGTINLICHSUNAPTIEN_ADs.Select(p => p);
+        }
         public object fetchLichSuGiaoDichUserTable(string UserName)
         {
             try
@@ -226,8 +378,26 @@ namespace QuanLyGiaSu.src.server
                 MessageBox.Show(e.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
-        }   
-        
+        }
+
+        /// <summary>
+        /// Lấy thông tin lịch sử nạp tiền của người dùng
+        /// </summary>
+        /// <param name="UserName">Tên đăng nhập</param>
+        /// <returns></returns>
+        public object fetchLichSuNapTienUserTable(string UserName)
+        {
+            try
+            {
+                return _db.select_lichsunaptien(_db.find_accid_username(UserName));
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+
         /// <summary>
         /// Lấy danh sách gia sư
         /// </summary>
@@ -564,7 +734,6 @@ namespace QuanLyGiaSu.src.server
             try
             {
                 LMID=_db.insert_dsml(_db.check_lhid(TenLop), _db.check_ph_gs(_db.find_accid_username(UserName)), DiaChi, MucLuong, Sdt, ThoiGianDK, SoBuoi, HinhThuc, ThoiGianHoc, ThongTinHocVien, YeuCau);
-                MessageBox.Show(LMID.ToString());
                 return true;
             }
             catch (Exception e)
@@ -575,7 +744,19 @@ namespace QuanLyGiaSu.src.server
             }
         }
 
-
+        public bool updateAccount(AccountModel acc)
+        {
+            try
+            {
+                _db.update_acc(_db.find_accid_username(acc.UserName), acc.UserName, hashPassWord(acc.Password, acc.UserName), acc.Email);
+                return true;
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show("Thiếu hoặc sai dữ liệu! \nXin vui lòng nhập đủ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+        }
 
         /// <summary>
         /// Cập nhật thông tin gia sư

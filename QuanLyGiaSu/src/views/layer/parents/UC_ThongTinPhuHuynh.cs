@@ -45,16 +45,31 @@ namespace QuanLyGiaSu.src.app.views.layer
                 lbPHID.Text = PHID.ToString();
                 tbJobPH.Text = NgheNghiep;
                 tbUsername.Text = Locator.author.UserName;
-                tbPass.Text = "*********";
+                tbPass.Text = Pw;
                 tbEmail.Text = Locator.author.Email = Email;
                 cbbGender.Text = GioiTinh;
                 btnUpdate.Enabled = true;
+                Locator.author.Password = Pw;
             }
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            //MessageBox.Show(tbPass.Text);
+            //MessageBox.Show(Locator.author.Password);
+            //if(Locator.author.Password==tbPass.Text)
+            //{
+            //    Locator.author.Email=tbEmail.Text;
+            //    Locator.server.updateAccount(Locator.author);
+            //}
+            //else
+            //{
+            //    Locator.author.Email = tbEmail.Text;
+            //    Locator.author.Password=tbPass.Text;
+            //    Locator.server.updateAccount(Locator.author);
+            //}
             Locator.server.updateParent(tbUsername.Text, tbNamePH.Text, tbPhonePH.Text, dtpBirthDayPH.Value, tbAddressPH.Text, tbJobPH.Text, cbbGender.Text, tbCmndPH.Text);
+            UC_ThongTinPhuHuynh_Load(sender, e);
         }
     }
 }
