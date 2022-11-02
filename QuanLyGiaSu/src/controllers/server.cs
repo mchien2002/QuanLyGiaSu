@@ -528,11 +528,11 @@ namespace QuanLyGiaSu.src.server
         /// <param name="UserName">Tên đăng nhập</param>
         /// <param name="tenMon"></param>
         /// <returns></returns>
-        public bool insertMonHocLopMoi(int LHID, string tenMon)
+        public bool insertMonHocLopMoi(int LMID, string tenMon)
         {
             try
             {
-                if (_db.insert_mhlm(LHID, _db.check_mhid(tenMon)) == 1) return true;
+                if (_db.insert_mhlm(LMID, _db.check_mhid(tenMon)) == 1) return true;
                 else return false;
             }
             catch (Exception e)
@@ -559,17 +559,18 @@ namespace QuanLyGiaSu.src.server
         /// <returns></returns>
         public bool insertDSML(string TenLop, string UserName, string DiaChi, int MucLuong,
             string Sdt, DateTime ThoiGianDK, int SoBuoi, string HinhThuc, string ThoiGianHoc,
-            string ThongTinHocVien, string YeuCau, ref int LHID)
+            string ThongTinHocVien, string YeuCau, ref int LMID)
         {
             try
             {
-                LHID=_db.insert_dsml(_db.check_lhid(TenLop), _db.check_ph_gs(_db.find_accid_username(UserName)), DiaChi, MucLuong, Sdt, ThoiGianDK, SoBuoi, HinhThuc, ThoiGianHoc, ThongTinHocVien, YeuCau);
+                LMID=_db.insert_dsml(_db.check_lhid(TenLop), _db.check_ph_gs(_db.find_accid_username(UserName)), DiaChi, MucLuong, Sdt, ThoiGianDK, SoBuoi, HinhThuc, ThoiGianHoc, ThongTinHocVien, YeuCau);
+                MessageBox.Show(LMID.ToString());
                 return true;
             }
             catch (Exception e)
             {
                 MessageBox.Show(e.ToString(), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                LHID = 0;
+                LMID = 0;
                 return false;
             }
         }

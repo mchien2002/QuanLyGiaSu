@@ -23,25 +23,27 @@ namespace QuanLyGiaSu.src.app.views.layer
         private void btn_DangKy_Click(object sender, EventArgs e)
         {
             DateTime DTNow=DateTime.Now.Date;
-            int LHID=0;
-            if (!Locator.server.insertDSML(cbbClasses.SelectedText, Locator.author.UserName,
+            int LMID=0;
+            if (!Locator.server.insertDSML(cbbClasses.Text.ToString(), Locator.author.UserName,
                 tbDiaChi.Text, Int32.Parse(nudMucLuong.Value.ToString()), tbSDT.Text, DTNow, int.Parse(nudSoBuoi.Value.ToString()),
                 tbHinhThucDay.Text, tbThoiGianHoc.Text, tbThongTinHocVien.Text,
-                tbYeuCau.Text, ref LHID))
+                tbYeuCau.Text, ref LMID) || Locator.author.NganSach < 200000)
             {
+                if (Locator.author.NganSach < 200000)
+                {
+                    MessageBox.Show("Nạp thêm tiền để mở lớp");
+                }
                 MessageBox.Show("Thêm lớp mới thất bại");
             }
-            else
-            {
+            else{
                 
-                foreach (var x in clbSubjects.CheckedItems)
+                foreach (var x in clbSubjects.CheckedItems.OfType<String>().ToList())
                 {
-                    if (!Locator.server.insertMonHocLopMoi(LHID, x.ToString()))
+                    if (!Locator.server.insertMonHocLopMoi(LMID, x))
                     {
                         MessageBox.Show("Không thể thêm môn cho lớp mới");
                     }
                 }
-                MessageBox.Show("Thêm lớp mới thành công");
             }
             this.Close();
         }

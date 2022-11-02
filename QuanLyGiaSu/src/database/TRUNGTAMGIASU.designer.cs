@@ -75,7 +75,7 @@ namespace QuanLyGiaSu.src.database
     #endregion
 		
 		public TRUNGTAMGIASUDataContext() : 
-				base(global::QuanLyGiaSu.Properties.Settings.Default.TRUNGTAMGIASUConnectionString1, mappingSource)
+				base(global::QuanLyGiaSu.Properties.Settings.Default.TRUNGTAMGIASUConnectionString4, mappingSource)
 		{
 			OnCreated();
 		}
@@ -246,174 +246,6 @@ namespace QuanLyGiaSu.src.database
 			{
 				return this.GetTable<THONGTINLOPMOI_AD>();
 			}
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.delete_bangtin")]
-		public int delete_bangtin([global::System.Data.Linq.Mapping.ParameterAttribute(Name="BID", DbType="Int")] System.Nullable<int> bID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="CHUDE", DbType="NVarChar(100)")] string cHUDE, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="NOIDUNG", DbType="NVarChar(4000)")] string nOIDUNG)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), bID, cHUDE, nOIDUNG);
-			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.update_ph")]
-		public int update_ph([global::System.Data.Linq.Mapping.ParameterAttribute(Name="PHID", DbType="Int")] System.Nullable<int> pHID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="HOTEN", DbType="NVarChar(100)")] string hOTEN, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="CMND", DbType="Char(20)")] string cMND, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="GIOITINH", DbType="NVarChar(20)")] string gIOITINH, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="NGAYSINH", DbType="Date")] System.Nullable<System.DateTime> nGAYSINH, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="SDT", DbType="Char(20)")] string sDT, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="NGHENGHIEP", DbType="NVarChar(300)")] string nGHENGHIEP, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DIACHI", DbType="NVarChar(60)")] string dIACHI)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), pHID, hOTEN, cMND, gIOITINH, nGAYSINH, sDT, nGHENGHIEP, dIACHI);
-			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.insert_acc")]
-		public int insert_acc([global::System.Data.Linq.Mapping.ParameterAttribute(Name="PHANQUYEN", DbType="NVarChar(30)")] string pHANQUYEN, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="USERNAME", DbType="Char(100)")] string uSERNAME, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PASSWORD", DbType="Char(100)")] string pASSWORD, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="EMAIL", DbType="Char(50)")] string eMAIL, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="NganSach", DbType="Int")] System.Nullable<int> nganSach)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), pHANQUYEN, uSERNAME, pASSWORD, eMAIL, nganSach);
-			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.insert_bangtin")]
-		public int insert_bangtin([global::System.Data.Linq.Mapping.ParameterAttribute(Name="CHUDE", DbType="NVarChar(100)")] string cHUDE, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="NOIDUNG", DbType="NVarChar(4000)")] string nOIDUNG)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), cHUDE, nOIDUNG);
-			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.insert_dsdk")]
-		public int insert_dsdk([global::System.Data.Linq.Mapping.ParameterAttribute(Name="GSID", DbType="Int")] System.Nullable<int> gSID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="LMID", DbType="Int")] System.Nullable<int> lMID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TGDK", DbType="Date")] System.Nullable<System.DateTime> tGDK)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), gSID, lMID, tGDK);
-			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.insert_dsml")]
-		public int insert_dsml([global::System.Data.Linq.Mapping.ParameterAttribute(Name="LHID", DbType="Int")] System.Nullable<int> lHID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PHID", DbType="Int")] System.Nullable<int> pHID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DIACHI", DbType="NVarChar(4000)")] string dIACHI, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="MUCLUONG", DbType="Int")] System.Nullable<int> mUCLUONG, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="SDT", DbType="Char(50)")] string sDT, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TGDK", DbType="DateTime")] System.Nullable<System.DateTime> tGDK, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="SUBUOI", DbType="Int")] System.Nullable<int> sUBUOI, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="HINHTHUC", DbType="NVarChar(50)")] string hINHTHUC, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TGHOC", DbType="NVarChar(50)")] string tGHOC, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TTHOCVIEN", DbType="NVarChar(50)")] string tTHOCVIEN, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="YEUCAU", DbType="NVarChar(300)")] string yEUCAU)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), lHID, pHID, dIACHI, mUCLUONG, sDT, tGDK, sUBUOI, hINHTHUC, tGHOC, tTHOCVIEN, yEUCAU);
-			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.insert_gs")]
-		public int insert_gs([global::System.Data.Linq.Mapping.ParameterAttribute(Name="ACCID", DbType="Int")] System.Nullable<int> aCCID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="HOTEN", DbType="NVarChar(100)")] string hOTEN, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="CMND", DbType="Char(20)")] string cMND, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="GIOITINH", DbType="NVarChar(20)")] string gIOITINH, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="NGAYSINH", DbType="Date")] System.Nullable<System.DateTime> nGAYSINH, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="SDT", DbType="Char(20)")] string sDT, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="QUEQUAN", DbType="NVarChar(300)")] string qUEQUAN, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TRUONGDAOTAO", DbType="NVarChar(60)")] string tRUONGDAOTAO, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TRINHDO", DbType="NVarChar(4000)")] string tRINHDO, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="UUDIEM", DbType="NVarChar(4000)")] string uUDIEM, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DiaChi", DbType="NVarChar(4000)")] string diaChi, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Avartar", DbType="Image")] System.Data.Linq.Binary avartar)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), aCCID, hOTEN, cMND, gIOITINH, nGAYSINH, sDT, qUEQUAN, tRUONGDAOTAO, tRINHDO, uUDIEM, diaChi, avartar);
-			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.insert_lh")]
-		public int insert_lh([global::System.Data.Linq.Mapping.ParameterAttribute(Name="TENLOP", DbType="NVarChar(50)")] string tENLOP)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), tENLOP);
-			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.insert_lhgs")]
-		public int insert_lhgs([global::System.Data.Linq.Mapping.ParameterAttribute(Name="GSID", DbType="Int")] System.Nullable<int> gSID, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> lhid)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), gSID, lhid);
-			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.insert_lsgd")]
-		public int insert_lsgd([global::System.Data.Linq.Mapping.ParameterAttribute(Name="ACCID", DbType="Int")] System.Nullable<int> aCCID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="LMID", DbType="Int")] System.Nullable<int> lMID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="SOTIEN", DbType="Int")] System.Nullable<int> sOTIEN, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="THOIGIANGIAODICH", DbType="Date")] System.Nullable<System.DateTime> tHOIGIANGIAODICH)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), aCCID, lMID, sOTIEN, tHOIGIANGIAODICH);
-			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.insert_lsnt")]
-		public int insert_lsnt([global::System.Data.Linq.Mapping.ParameterAttribute(Name="ACCID", DbType="Int")] System.Nullable<int> aCCID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="SOTIEN", DbType="Int")] System.Nullable<int> sOTIEN, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TGGD", DbType="Date")] System.Nullable<System.DateTime> tGGD)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), aCCID, sOTIEN, tGGD);
-			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.insert_mh")]
-		public int insert_mh([global::System.Data.Linq.Mapping.ParameterAttribute(Name="TENMON", DbType="NVarChar(50)")] string tENMON)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), tENMON);
-			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.insert_mhgs")]
-		public int insert_mhgs([global::System.Data.Linq.Mapping.ParameterAttribute(Name="GSID", DbType="Int")] System.Nullable<int> gSID, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> mhid)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), gSID, mhid);
-			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.insert_mhlm")]
-		public int insert_mhlm([global::System.Data.Linq.Mapping.ParameterAttribute(Name="LMID", DbType="Int")] System.Nullable<int> lMID, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> mhid)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), lMID, mhid);
-			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.insert_ph")]
-		public int insert_ph([global::System.Data.Linq.Mapping.ParameterAttribute(Name="ACCID", DbType="Int")] System.Nullable<int> aCCID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="HOTEN", DbType="NVarChar(100)")] string hOTEN, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="CMND", DbType="Char(20)")] string cMND, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="GIOITINH", DbType="NVarChar(20)")] string gIOITINH, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="NGAYSINH", DbType="Date")] System.Nullable<System.DateTime> nGAYSINH, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="SDT", DbType="Char(20)")] string sDT, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="NGHENGHIEP", DbType="NVarChar(300)")] string nGHENGHIEP, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DIACHI", DbType="NVarChar(60)")] string dIACHI)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), aCCID, hOTEN, cMND, gIOITINH, nGAYSINH, sDT, nGHENGHIEP, dIACHI);
-			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.update_acc")]
-		public int update_acc([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> accid, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="USERNAME", DbType="Char(100)")] string uSERNAME, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PASSWORD", DbType="Char(100)")] string pASSWORD, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="EMAIL", DbType="Char(50)")] string eMAIL)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), accid, uSERNAME, pASSWORD, eMAIL);
-			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.update_admin")]
-		public int update_admin([global::System.Data.Linq.Mapping.ParameterAttribute(Name="USERNAME", DbType="Char(100)")] string uSERNAME, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PASSWORD", DbType="Char(100)")] string pASSWORD)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), uSERNAME, pASSWORD);
-			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.update_bangtin")]
-		public int update_bangtin([global::System.Data.Linq.Mapping.ParameterAttribute(Name="BID", DbType="Int")] System.Nullable<int> bID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="CHUDE", DbType="NVarChar(100)")] string cHUDE, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="NOIDUNG", DbType="NVarChar(4000)")] string nOIDUNG)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), bID, cHUDE, nOIDUNG);
-			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.update_dsdk")]
-		public int update_dsdk([global::System.Data.Linq.Mapping.ParameterAttribute(Name="DKID", DbType="Int")] System.Nullable<int> dKID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="GSID", DbType="Int")] System.Nullable<int> gSID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="LMID", DbType="Int")] System.Nullable<int> lMID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TGDK", DbType="Date")] System.Nullable<System.DateTime> tGDK)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), dKID, gSID, lMID, tGDK);
-			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.update_dslm")]
-		public int update_dslm([global::System.Data.Linq.Mapping.ParameterAttribute(Name="LMID", DbType="Int")] System.Nullable<int> lMID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="LHID", DbType="Int")] System.Nullable<int> lHID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PHID", DbType="Int")] System.Nullable<int> pHID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DIACHI", DbType="NVarChar(4000)")] string dIACHI, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="MUCLUONG", DbType="Int")] System.Nullable<int> mUCLUONG, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="SDT", DbType="Char(50)")] string sDT, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TGDK", DbType="Date")] System.Nullable<System.DateTime> tGDK, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="SUBUOI", DbType="Int")] System.Nullable<int> sUBUOI, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="HINHTHUC", DbType="NVarChar(50)")] string hINHTHUC, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TGHOC", DbType="Date")] System.Nullable<System.DateTime> tGHOC, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TTHOCVIEN", DbType="NVarChar(50)")] string tTHOCVIEN, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="YEUCAU", DbType="NVarChar(300)")] string yEUCAU, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string trangthai, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string dadongtien)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), lMID, lHID, pHID, dIACHI, mUCLUONG, sDT, tGDK, sUBUOI, hINHTHUC, tGHOC, tTHOCVIEN, yEUCAU, trangthai, dadongtien);
-			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.update_gs")]
-		public int update_gs([global::System.Data.Linq.Mapping.ParameterAttribute(Name="GSID", DbType="Int")] System.Nullable<int> gSID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="HOTEN", DbType="NVarChar(100)")] string hOTEN, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="CMND", DbType="Char(20)")] string cMND, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="GIOITINH", DbType="NVarChar(20)")] string gIOITINH, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="NGAYSINH", DbType="Date")] System.Nullable<System.DateTime> nGAYSINH, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="SDT", DbType="Char(20)")] string sDT, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="QUEQUAN", DbType="NVarChar(300)")] string qUEQUAN, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TRUONGDAOTAO", DbType="NVarChar(60)")] string tRUONGDAOTAO, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TRINHDO", DbType="NVarChar(4000)")] string tRINHDO, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="UUDIEM", DbType="NVarChar(4000)")] string uUDIEM, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DiaChi", DbType="NVarChar(4000)")] string diaChi, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Avartar", DbType="Image")] System.Data.Linq.Binary avartar)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), gSID, hOTEN, cMND, gIOITINH, nGAYSINH, sDT, qUEQUAN, tRUONGDAOTAO, tRINHDO, uUDIEM, diaChi, avartar);
-			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.update_lh")]
-		public int update_lh([global::System.Data.Linq.Mapping.ParameterAttribute(Name="LHID", DbType="Int")] System.Nullable<int> lHID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TENLOP", DbType="NVarChar(50)")] string tENLOP)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), lHID, tENLOP);
-			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.update_lsgd")]
-		public int update_lsgd([global::System.Data.Linq.Mapping.ParameterAttribute(Name="GDID", DbType="Int")] System.Nullable<int> gDID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="SOTIEN", DbType="Int")] System.Nullable<int> sOTIEN, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="THOIGIANGIAODICH", DbType="Date")] System.Nullable<System.DateTime> tHOIGIANGIAODICH)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), gDID, sOTIEN, tHOIGIANGIAODICH);
-			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.update_mh")]
-		public int update_mh([global::System.Data.Linq.Mapping.ParameterAttribute(Name="MHID", DbType="Int")] System.Nullable<int> mHID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TENMON", DbType="NVarChar(50)")] string tENMON)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), mHID, tENMON);
-			return ((int)(result.ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.authorization_acc", IsComposable=true)]
@@ -642,6 +474,174 @@ namespace QuanLyGiaSu.src.database
 		public IQueryable<timkiemph_PHIDResult> timkiemph_PHID([global::System.Data.Linq.Mapping.ParameterAttribute(Name="PHID", DbType="Int")] System.Nullable<int> pHID)
 		{
 			return this.CreateMethodCallQuery<timkiemph_PHIDResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), pHID);
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.delete_bangtin")]
+		public int delete_bangtin([global::System.Data.Linq.Mapping.ParameterAttribute(Name="BID", DbType="Int")] System.Nullable<int> bID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="CHUDE", DbType="NVarChar(100)")] string cHUDE, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="NOIDUNG", DbType="NVarChar(4000)")] string nOIDUNG)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), bID, cHUDE, nOIDUNG);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.update_ph")]
+		public int update_ph([global::System.Data.Linq.Mapping.ParameterAttribute(Name="PHID", DbType="Int")] System.Nullable<int> pHID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="HOTEN", DbType="NVarChar(100)")] string hOTEN, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="CMND", DbType="Char(20)")] string cMND, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="GIOITINH", DbType="NVarChar(20)")] string gIOITINH, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="NGAYSINH", DbType="Date")] System.Nullable<System.DateTime> nGAYSINH, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="SDT", DbType="Char(20)")] string sDT, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="NGHENGHIEP", DbType="NVarChar(300)")] string nGHENGHIEP, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DIACHI", DbType="NVarChar(60)")] string dIACHI)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), pHID, hOTEN, cMND, gIOITINH, nGAYSINH, sDT, nGHENGHIEP, dIACHI);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.insert_acc")]
+		public int insert_acc([global::System.Data.Linq.Mapping.ParameterAttribute(Name="PHANQUYEN", DbType="NVarChar(30)")] string pHANQUYEN, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="USERNAME", DbType="Char(100)")] string uSERNAME, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PASSWORD", DbType="Char(100)")] string pASSWORD, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="EMAIL", DbType="Char(50)")] string eMAIL, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="NganSach", DbType="Int")] System.Nullable<int> nganSach)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), pHANQUYEN, uSERNAME, pASSWORD, eMAIL, nganSach);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.insert_bangtin")]
+		public int insert_bangtin([global::System.Data.Linq.Mapping.ParameterAttribute(Name="CHUDE", DbType="NVarChar(100)")] string cHUDE, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="NOIDUNG", DbType="NVarChar(4000)")] string nOIDUNG)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), cHUDE, nOIDUNG);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.insert_dsdk")]
+		public int insert_dsdk([global::System.Data.Linq.Mapping.ParameterAttribute(Name="GSID", DbType="Int")] System.Nullable<int> gSID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="LMID", DbType="Int")] System.Nullable<int> lMID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TGDK", DbType="Date")] System.Nullable<System.DateTime> tGDK)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), gSID, lMID, tGDK);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.insert_dsml")]
+		public int insert_dsml([global::System.Data.Linq.Mapping.ParameterAttribute(Name="LHID", DbType="Int")] System.Nullable<int> lHID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PHID", DbType="Int")] System.Nullable<int> pHID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DIACHI", DbType="NVarChar(4000)")] string dIACHI, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="MUCLUONG", DbType="Int")] System.Nullable<int> mUCLUONG, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="SDT", DbType="Char(50)")] string sDT, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TGDK", DbType="DateTime")] System.Nullable<System.DateTime> tGDK, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="SUBUOI", DbType="Int")] System.Nullable<int> sUBUOI, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="HINHTHUC", DbType="NVarChar(50)")] string hINHTHUC, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TGHOC", DbType="NVarChar(50)")] string tGHOC, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TTHOCVIEN", DbType="NVarChar(50)")] string tTHOCVIEN, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="YEUCAU", DbType="NVarChar(300)")] string yEUCAU)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), lHID, pHID, dIACHI, mUCLUONG, sDT, tGDK, sUBUOI, hINHTHUC, tGHOC, tTHOCVIEN, yEUCAU);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.insert_gs")]
+		public int insert_gs([global::System.Data.Linq.Mapping.ParameterAttribute(Name="ACCID", DbType="Int")] System.Nullable<int> aCCID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="HOTEN", DbType="NVarChar(100)")] string hOTEN, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="CMND", DbType="Char(20)")] string cMND, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="GIOITINH", DbType="NVarChar(20)")] string gIOITINH, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="NGAYSINH", DbType="Date")] System.Nullable<System.DateTime> nGAYSINH, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="SDT", DbType="Char(20)")] string sDT, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="QUEQUAN", DbType="NVarChar(300)")] string qUEQUAN, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TRUONGDAOTAO", DbType="NVarChar(60)")] string tRUONGDAOTAO, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TRINHDO", DbType="NVarChar(4000)")] string tRINHDO, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="UUDIEM", DbType="NVarChar(4000)")] string uUDIEM, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DiaChi", DbType="NVarChar(4000)")] string diaChi, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Avartar", DbType="Image")] System.Data.Linq.Binary avartar)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), aCCID, hOTEN, cMND, gIOITINH, nGAYSINH, sDT, qUEQUAN, tRUONGDAOTAO, tRINHDO, uUDIEM, diaChi, avartar);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.insert_lh")]
+		public int insert_lh([global::System.Data.Linq.Mapping.ParameterAttribute(Name="TENLOP", DbType="NVarChar(50)")] string tENLOP)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), tENLOP);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.insert_lhgs")]
+		public int insert_lhgs([global::System.Data.Linq.Mapping.ParameterAttribute(Name="GSID", DbType="Int")] System.Nullable<int> gSID, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> lhid)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), gSID, lhid);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.insert_lsgd")]
+		public int insert_lsgd([global::System.Data.Linq.Mapping.ParameterAttribute(Name="ACCID", DbType="Int")] System.Nullable<int> aCCID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="LMID", DbType="Int")] System.Nullable<int> lMID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="SOTIEN", DbType="Int")] System.Nullable<int> sOTIEN, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="THOIGIANGIAODICH", DbType="Date")] System.Nullable<System.DateTime> tHOIGIANGIAODICH)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), aCCID, lMID, sOTIEN, tHOIGIANGIAODICH);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.insert_lsnt")]
+		public int insert_lsnt([global::System.Data.Linq.Mapping.ParameterAttribute(Name="ACCID", DbType="Int")] System.Nullable<int> aCCID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="SOTIEN", DbType="Int")] System.Nullable<int> sOTIEN, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TGGD", DbType="Date")] System.Nullable<System.DateTime> tGGD)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), aCCID, sOTIEN, tGGD);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.insert_mh")]
+		public int insert_mh([global::System.Data.Linq.Mapping.ParameterAttribute(Name="TENMON", DbType="NVarChar(50)")] string tENMON)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), tENMON);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.insert_mhgs")]
+		public int insert_mhgs([global::System.Data.Linq.Mapping.ParameterAttribute(Name="GSID", DbType="Int")] System.Nullable<int> gSID, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> mhid)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), gSID, mhid);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.insert_mhlm")]
+		public int insert_mhlm([global::System.Data.Linq.Mapping.ParameterAttribute(Name="LMID", DbType="Int")] System.Nullable<int> lMID, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> mhid)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), lMID, mhid);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.insert_ph")]
+		public int insert_ph([global::System.Data.Linq.Mapping.ParameterAttribute(Name="ACCID", DbType="Int")] System.Nullable<int> aCCID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="HOTEN", DbType="NVarChar(100)")] string hOTEN, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="CMND", DbType="Char(20)")] string cMND, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="GIOITINH", DbType="NVarChar(20)")] string gIOITINH, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="NGAYSINH", DbType="Date")] System.Nullable<System.DateTime> nGAYSINH, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="SDT", DbType="Char(20)")] string sDT, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="NGHENGHIEP", DbType="NVarChar(300)")] string nGHENGHIEP, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DIACHI", DbType="NVarChar(60)")] string dIACHI)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), aCCID, hOTEN, cMND, gIOITINH, nGAYSINH, sDT, nGHENGHIEP, dIACHI);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.update_acc")]
+		public int update_acc([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> accid, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="USERNAME", DbType="Char(100)")] string uSERNAME, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PASSWORD", DbType="Char(100)")] string pASSWORD, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="EMAIL", DbType="Char(50)")] string eMAIL)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), accid, uSERNAME, pASSWORD, eMAIL);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.update_admin")]
+		public int update_admin([global::System.Data.Linq.Mapping.ParameterAttribute(Name="USERNAME", DbType="Char(100)")] string uSERNAME, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PASSWORD", DbType="Char(100)")] string pASSWORD)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), uSERNAME, pASSWORD);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.update_bangtin")]
+		public int update_bangtin([global::System.Data.Linq.Mapping.ParameterAttribute(Name="BID", DbType="Int")] System.Nullable<int> bID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="CHUDE", DbType="NVarChar(100)")] string cHUDE, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="NOIDUNG", DbType="NVarChar(4000)")] string nOIDUNG)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), bID, cHUDE, nOIDUNG);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.update_dsdk")]
+		public int update_dsdk([global::System.Data.Linq.Mapping.ParameterAttribute(Name="DKID", DbType="Int")] System.Nullable<int> dKID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="GSID", DbType="Int")] System.Nullable<int> gSID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="LMID", DbType="Int")] System.Nullable<int> lMID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TGDK", DbType="Date")] System.Nullable<System.DateTime> tGDK)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), dKID, gSID, lMID, tGDK);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.update_dslm")]
+		public int update_dslm([global::System.Data.Linq.Mapping.ParameterAttribute(Name="LMID", DbType="Int")] System.Nullable<int> lMID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="LHID", DbType="Int")] System.Nullable<int> lHID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PHID", DbType="Int")] System.Nullable<int> pHID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DIACHI", DbType="NVarChar(4000)")] string dIACHI, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="MUCLUONG", DbType="Int")] System.Nullable<int> mUCLUONG, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="SDT", DbType="Char(50)")] string sDT, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TGDK", DbType="Date")] System.Nullable<System.DateTime> tGDK, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="SUBUOI", DbType="Int")] System.Nullable<int> sUBUOI, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="HINHTHUC", DbType="NVarChar(50)")] string hINHTHUC, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TGHOC", DbType="Date")] System.Nullable<System.DateTime> tGHOC, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TTHOCVIEN", DbType="NVarChar(50)")] string tTHOCVIEN, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="YEUCAU", DbType="NVarChar(300)")] string yEUCAU, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string trangthai, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string dadongtien)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), lMID, lHID, pHID, dIACHI, mUCLUONG, sDT, tGDK, sUBUOI, hINHTHUC, tGHOC, tTHOCVIEN, yEUCAU, trangthai, dadongtien);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.update_gs")]
+		public int update_gs([global::System.Data.Linq.Mapping.ParameterAttribute(Name="GSID", DbType="Int")] System.Nullable<int> gSID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="HOTEN", DbType="NVarChar(100)")] string hOTEN, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="CMND", DbType="Char(20)")] string cMND, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="GIOITINH", DbType="NVarChar(20)")] string gIOITINH, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="NGAYSINH", DbType="Date")] System.Nullable<System.DateTime> nGAYSINH, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="SDT", DbType="Char(20)")] string sDT, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="QUEQUAN", DbType="NVarChar(300)")] string qUEQUAN, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TRUONGDAOTAO", DbType="NVarChar(60)")] string tRUONGDAOTAO, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TRINHDO", DbType="NVarChar(4000)")] string tRINHDO, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="UUDIEM", DbType="NVarChar(4000)")] string uUDIEM, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DiaChi", DbType="NVarChar(4000)")] string diaChi, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Avartar", DbType="Image")] System.Data.Linq.Binary avartar)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), gSID, hOTEN, cMND, gIOITINH, nGAYSINH, sDT, qUEQUAN, tRUONGDAOTAO, tRINHDO, uUDIEM, diaChi, avartar);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.update_lh")]
+		public int update_lh([global::System.Data.Linq.Mapping.ParameterAttribute(Name="LHID", DbType="Int")] System.Nullable<int> lHID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TENLOP", DbType="NVarChar(50)")] string tENLOP)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), lHID, tENLOP);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.update_lsgd")]
+		public int update_lsgd([global::System.Data.Linq.Mapping.ParameterAttribute(Name="GDID", DbType="Int")] System.Nullable<int> gDID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="SOTIEN", DbType="Int")] System.Nullable<int> sOTIEN, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="THOIGIANGIAODICH", DbType="Date")] System.Nullable<System.DateTime> tHOIGIANGIAODICH)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), gDID, sOTIEN, tHOIGIANGIAODICH);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.update_mh")]
+		public int update_mh([global::System.Data.Linq.Mapping.ParameterAttribute(Name="MHID", DbType="Int")] System.Nullable<int> mHID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TENMON", DbType="NVarChar(50)")] string tENMON)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), mHID, tENMON);
+			return ((int)(result.ReturnValue));
 		}
 	}
 	
