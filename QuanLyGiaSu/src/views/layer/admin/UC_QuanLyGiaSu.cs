@@ -129,6 +129,7 @@ namespace QuanLyGiaSu.src.app.views.layer
 
 
                 suaGiaSu1.ShowThongTinGiaSu(dgvQuanLyGiaSu.CurrentRow.Cells[0].Value.ToString(),
+                    dgvQuanLyGiaSu.CurrentRow.Cells[1].Value.ToString(),
                                truongDT,
                                hoTen,
                                ngaySinh,
@@ -145,6 +146,7 @@ namespace QuanLyGiaSu.src.app.views.layer
                 MessageBox.Show(ex.Message);
                 return;
             }
+            //string accid = dgvQuanLyGiaSu.CurrentRow.Cells[1].Value.ToString();
             suaGiaSu1.Show();
         }
 
@@ -160,6 +162,11 @@ namespace QuanLyGiaSu.src.app.views.layer
             {
                 dgvQuanLyGiaSu.CurrentRow.Selected = true;
             }
+        }
+
+        private void UC_QuanLyGiaSu_MouseMove(object sender, MouseEventArgs e)
+        {
+            UC_QuanLyGiaSu_Load(sender, e);
         }
     }
 }

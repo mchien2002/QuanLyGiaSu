@@ -68,5 +68,10 @@ namespace DoAnCuoiKy_Nhom13
         {
 
         }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            Locator.server.updateInfoTutor(tbUser.Text,tbTen.Text,tbCMND.Text,cbbGioiTinh.Text,dtpNgaySinh.Value,tbSDT.Text,tbQueQuan.Text,tbDiaChi.Text,tbTruong.Text,tbTrinhDo.Text,null);
+        }
     }
 }

@@ -17,6 +17,7 @@ namespace QuanLyGiaSu.src.app.views.layer
         {
             InitializeComponent();
             tbUser.Enabled = false;
+            tbEmail.Enabled = false;
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -26,7 +27,7 @@ namespace QuanLyGiaSu.src.app.views.layer
 
         private void btn_Sua_Click(object sender, EventArgs e)
         {
-            //Locator.server.updateInfoTutor(Locator.author.UserName,tbHovaTen,)
+            Locator.server.updateInfoTutor(tbUser.Text, tbHoTen.Text, tbCMND.Text, cbbGioiTinh.Text, dtpNgaySinh.Value, tbSDT.Text, tbQueQuan.Text, tbDiaChi.Text, tbTruongDT.Text, tbTrinhDo.Text, null);
             this.Close();
         }
 
@@ -45,7 +46,7 @@ namespace QuanLyGiaSu.src.app.views.layer
 
         }
         
-        public void ShowThongTinGiaSu(string GSID,
+        public void ShowThongTinGiaSu(string GSID,string ACCID,
             string truongDT,
             string hoTen,
             string ngaySinh,
@@ -58,6 +59,10 @@ namespace QuanLyGiaSu.src.app.views.layer
             string trinhDo
             )
         {
+            int idgs = Int32.Parse(ACCID);
+            //tbUser.Text = Locator.server.getUsername(idgs);
+            tbUser.Text = Locator.server.getUsername(idgs);
+            tbEmail.Text = Locator.server.getEmail(idgs);
             tbGSID.Text = GSID;
             tbTruongDT.Text = truongDT;
             tbHoTen.Text = hoTen;
@@ -68,7 +73,7 @@ namespace QuanLyGiaSu.src.app.views.layer
             tbDiaChi.Text = diaChi;
             tbQueQuan.Text = queQuan;
             tbUuDiem.Text = uuDiem;
-            cbbsTrinhDo.Text = trinhDo;
+            tbTrinhDo.Text = trinhDo;
         }
     }
 }

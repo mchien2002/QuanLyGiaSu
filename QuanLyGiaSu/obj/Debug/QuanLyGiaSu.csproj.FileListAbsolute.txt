@@ -385,3 +385,5 @@ D:\MyProject\Winform\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.csproj.CoreCo
 D:\MyProject\Winform\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.csproj.CopyComplete
 D:\MyProject\Winform\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.exe
 D:\MyProject\Winform\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.pdb
+C:\Users\Admin\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.views.layer.admin.NapTienAdmin.resources
+C:\Users\Admin\Desktop\QuanLyGiaSu\QuanLyGiaSu\obj\Debug\QuanLyGiaSu.src.views.layer.admin.UC_QuanLyAccount.resources

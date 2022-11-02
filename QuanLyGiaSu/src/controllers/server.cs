@@ -643,7 +643,7 @@ namespace QuanLyGiaSu.src.server
                     job,
                     address
                 );
-                MessageBox.Show("Đăng ký thành công", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Cập nhập thông tin thành công", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return true;
             }
             catch
@@ -712,7 +712,16 @@ namespace QuanLyGiaSu.src.server
                 return 0;
             }
         }
+        public string getUsername(int accid)
+        {
+            
+            return _db.find_username_accid(accid);
+        }
+        public string getEmail(int accid)
+        {
 
-       
+            return _db.find_email_accid(accid);
+        }
+
     }
 }

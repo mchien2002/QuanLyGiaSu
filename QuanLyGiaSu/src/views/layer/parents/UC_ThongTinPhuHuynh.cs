@@ -51,5 +51,10 @@ namespace QuanLyGiaSu.src.app.views.layer
                 btnUpdate.Enabled = true;
             }
         }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            Locator.server.updateParent(tbUsername.Text, tbNamePH.Text, tbPhonePH.Text, dtpBirthDayPH.Value, tbAddressPH.Text, tbJobPH.Text, cbbGender.Text, tbCmndPH.Text);
+        }
     }
 }
