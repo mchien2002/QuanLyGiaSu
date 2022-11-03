@@ -62,19 +62,19 @@
             this.SuaThongTinLop,
             this.XoaLop});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(203, 52);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 80);
             // 
             // SuaThongTinLop
             // 
             this.SuaThongTinLop.Name = "SuaThongTinLop";
-            this.SuaThongTinLop.Size = new System.Drawing.Size(202, 24);
+            this.SuaThongTinLop.Size = new System.Drawing.Size(210, 24);
             this.SuaThongTinLop.Text = "Sửa Thông Tin Lớp";
             this.SuaThongTinLop.Click += new System.EventHandler(this.SuaThongTinLop_Click);
             // 
             // XoaLop
             // 
             this.XoaLop.Name = "XoaLop";
-            this.XoaLop.Size = new System.Drawing.Size(202, 24);
+            this.XoaLop.Size = new System.Drawing.Size(210, 24);
             this.XoaLop.Text = "Xóa Lớp";
             // 
             // label1

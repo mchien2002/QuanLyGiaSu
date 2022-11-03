@@ -50,13 +50,14 @@ namespace QuanLyGiaSu.src.app.views.layer
 
         private void DangKyMoLop_Load(object sender, EventArgs e)
         {
+            Locator.author.NganSach = Locator.server.getNganSach(Locator.author.UserName);
             foreach (string item in Locator.server.fetchLopHoc())
             {
                 cbbClasses.Items.Add(item);
             }
             foreach(string item in Locator.server.fetchMonHoc())
             {
-                clbSubjects.Items.Add((string)item);
+                clbSubjects.Items.Add(item);
             }
         }
 

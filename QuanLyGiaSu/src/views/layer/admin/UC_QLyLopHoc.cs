@@ -1,4 +1,5 @@
 ﻿using QuanLyGiaSu.src.app.views.layer;
+using QuanLyGiaSu.src.controller;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -44,7 +45,23 @@ namespace QuanLyGiaSu.src.views.layer.admin
 
         private void UC_QLyLopHoc_Load(object sender, EventArgs e)
         {
+            DataTable tb = new DataTable();
+            tb.Columns.Add("Tên lớp");
+            foreach(var x in Locator.server.fetchLopHoc())
+            {
+                tb.Rows.Add(x.ToString());
+            }
+            dgvQLyLopHoc.DataSource = tb;
 
+
+
+            DataTable tb2 = new DataTable(); 
+            tb2.Columns.Add("Tên môn");
+            foreach (var x in Locator.server.fetchMonHoc())
+            {
+                tb2.Rows.Add(x.ToString());
+            }
+            dgvQLyMonHoc.DataSource = tb2;
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using QuanLyGiaSu.src.controller;
+using QuanLyGiaSu.src.database;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,7 +27,8 @@ namespace QuanLyGiaSu.src.app.views.layer
 
 
         private void SuaThongTinLop_Click(object sender, EventArgs e)
-        {
+        {   
+            Locator.LMID=Int32.Parse( dgvQuanLyLopMoi.CurrentRow.Cells[0].Value.ToString());
             SuaThongTinLop suaThongTinLop = new SuaThongTinLop();
             suaThongTinLop.Show();
         }
@@ -51,5 +53,6 @@ namespace QuanLyGiaSu.src.app.views.layer
                 tb_TimKiemLM.Enabled = true;
         }
 
+        
     }
 }

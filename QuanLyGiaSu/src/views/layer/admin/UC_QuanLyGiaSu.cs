@@ -43,41 +43,41 @@ namespace QuanLyGiaSu.src.app.views.layer
                 string queQuan;
                 string uuDiem;
                 string trinhDo;
-                if (dgvQuanLyGiaSu.CurrentRow.Cells[11].Value.ToString() == null)
+                if (dgvQuanLyGiaSu.CurrentRow.Cells[11].Value == null)
                 {
                     truongDT = "";
                 }
                 else
                     truongDT = dgvQuanLyGiaSu.CurrentRow.Cells[11].Value.ToString();
 
-                if (dgvQuanLyGiaSu.CurrentRow.Cells[2].Value.ToString() == null)
+                if (dgvQuanLyGiaSu.CurrentRow.Cells[2].Value == null)
                 {
                     hoTen = "";
                 }
                 else
                     hoTen = dgvQuanLyGiaSu.CurrentRow.Cells[2].Value.ToString();
-                if (dgvQuanLyGiaSu.CurrentRow.Cells[5].Value.ToString() == null)
+                if (dgvQuanLyGiaSu.CurrentRow.Cells[5].Value == null)
                 {
                     ngaySinh = "";
                 }
                 else
                     ngaySinh = dgvQuanLyGiaSu.CurrentRow.Cells[5].Value.ToString();
 
-                if (dgvQuanLyGiaSu.CurrentRow.Cells[3].Value.ToString() == null)
+                if (dgvQuanLyGiaSu.CurrentRow.Cells[3].Value == null)
                 {
                     gioiTinh = "";
                 }
                 else
                     gioiTinh = dgvQuanLyGiaSu.CurrentRow.Cells[3].Value.ToString();
 
-                if (dgvQuanLyGiaSu.CurrentRow.Cells[6].Value.ToString() == null)
+                if (dgvQuanLyGiaSu.CurrentRow.Cells[6].Value == null)
                 {
                     soDienThoai = "";
                 }
                 else
                     soDienThoai = dgvQuanLyGiaSu.CurrentRow.Cells[6].Value.ToString();
 
-                if (dgvQuanLyGiaSu.CurrentRow.Cells[4].Value.ToString() == null)
+                if (dgvQuanLyGiaSu.CurrentRow.Cells[4].Value == null)
                 {
                     cmnd = "";
                 }
@@ -91,21 +91,21 @@ namespace QuanLyGiaSu.src.app.views.layer
                 else
                     diaChi = dgvQuanLyGiaSu.CurrentRow.Cells[13].Value.ToString();
 
-                if (dgvQuanLyGiaSu.CurrentRow.Cells[9].Value.ToString() == null)
+                if (dgvQuanLyGiaSu.CurrentRow.Cells[9].Value == null)
                 {
                     queQuan = "";
                 }
                 else
                     queQuan = dgvQuanLyGiaSu.CurrentRow.Cells[9].Value.ToString();
 
-                if (dgvQuanLyGiaSu.CurrentRow.Cells[12].Value.ToString() == null)
+                if (dgvQuanLyGiaSu.CurrentRow.Cells[12].Value == null)
                 {
                     uuDiem = "";
                 }
                 else
                     uuDiem = dgvQuanLyGiaSu.CurrentRow.Cells[12].Value.ToString();
 
-                if (dgvQuanLyGiaSu.CurrentRow.Cells[10].Value.ToString() == null)
+                if (dgvQuanLyGiaSu.CurrentRow.Cells[10].Value == null)
                 {
                     trinhDo = "";
                 }

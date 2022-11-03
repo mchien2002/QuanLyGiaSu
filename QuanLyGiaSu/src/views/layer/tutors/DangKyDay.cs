@@ -20,7 +20,34 @@ namespace QuanLyGiaSu.src.app.views.layer
 
         private void DangKyDay_Load(object sender, EventArgs e)
         {
+            string TenLop = "", DiaChi = "", MucLuong = "", TGDK = "", SDT = "", SB = "", HinhTDay = "", ThoiGH = "", TTHocVien = "", YeuCau = "", TrangThai = "";
+            string[] MonHoc = new string[100];
+            Locator.server.fetchLopMoiLMID(Locator.LMID, ref TenLop, ref DiaChi, ref MucLuong, ref TGDK, ref SDT, ref SB, ref HinhTDay, ref ThoiGH, ref TTHocVien, ref YeuCau, ref TrangThai, ref MonHoc);
+            tbClasses.Text = TenLop;
+            tbDiaChi.Text = DiaChi;
+            tbMucLuong.Text = MucLuong;
+            dtpTGDK.Value = Convert.ToDateTime(TGDK);
+            tbSDT.Text = SDT;
+            tbSoBuoi.Text = SB;
+            tbHinhThucDay.Text = HinhTDay;
+            tbThoiGianHoc.Text = ThoiGH;
+            tbThongTinHocVien.Text = TTHocVien;
+            tbYeuCau.Text = YeuCau;
             tbSoTien.Text = Convert.ToString(0.4 * Int32.Parse(tbMucLuong.Text.ToString()));
+
+            foreach (string x in Locator.server.fetchMonHoc())
+            {
+                clbSubjects.Items.Add(x);
+                foreach (string y in MonHoc)
+                {
+                    if (y != null)
+
+                        if (y.Trim() == x.Trim())
+                        {
+                            clbSubjects.SetItemCheckState(clbSubjects.Items.IndexOf(x), CheckState.Checked);
+                        }
+                }
+            }
         }
 
         private void btnRegister_Click(object sender, EventArgs e)

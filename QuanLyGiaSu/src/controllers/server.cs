@@ -180,7 +180,7 @@ namespace QuanLyGiaSu.src.server
                 return null;
             }
         }
-        
+
         /// <summary>
         /// Lấy dữ liệu account bằng UserName
         /// </summary>
@@ -195,7 +195,7 @@ namespace QuanLyGiaSu.src.server
                         select p;
                 return q;
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 MessageBox.Show(e.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
@@ -213,7 +213,7 @@ namespace QuanLyGiaSu.src.server
             {
                 return _db.ACCOUNTs.Select(p => p);
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 MessageBox.Show(e.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
@@ -224,17 +224,18 @@ namespace QuanLyGiaSu.src.server
         /// Lấy dữ liệu bảng tin
         /// </summary>
         /// <returns></returns>
-        public object fetchBangTinTable(){
+        public object fetchBangTinTable() {
             try
             {
                 return _db.BANGTINs.Select(p => p);
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 MessageBox.Show(e.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
         }
+
 
         /// <summary>
         /// Lấy dữ liệu lớp mới
@@ -246,24 +247,64 @@ namespace QuanLyGiaSu.src.server
             {
                 return _db.THONGTINLOPMOI_PH_Gs.Select(p => p);
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 MessageBox.Show(e.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
         }
-        //public object fetchLichSuGiaoDichTable(int id){
-        //    return _db.select_lichsugiaodich(id);
-        //}
-        //public object fetchLichSuGiaoDichNapTienTable(){
-        //    return _db.BANGTINs.Select(p => p);
-        //}
 
         /// <summary>
-        /// Lấy dữ liệu lớp mới cho AD
+        /// Lấy dữ liệu lớp mới theo id lớp
         /// </summary>
         /// <returns></returns>
-        public object fetchDanhSachLopMoiAD()
+        public bool fetchLopMoiLMID(int LMID, ref string TenLop, ref string DiaChi, 
+            ref string MucLuong, ref string TGDK, ref string SDT, ref string SoBuoi, 
+            ref string HinhThucDay, ref string ThoiGianHoc, ref string ThongTinHocVien,
+            ref string YeuCau, ref string TrangThai,ref string[] Monhoc)
+        {
+            try
+            {
+                var x = _db.select_lopmoi_lmid(LMID).Select(p=>p);
+                foreach (var p in x)
+                {
+                    TenLop = p.TenLop;
+                    DiaChi = p.DiaChi;
+                    MucLuong = p.MucLuong.ToString();
+                    TGDK = p.ThoiGianDangKy.ToString();
+                    SDT = p.SDTLienHe;
+                    SoBuoi = p.SoBuoi.ToString();
+                    HinhThucDay = p.HinhThucDay;
+                    ThoiGianHoc = p.ThoiGianHoc;
+                    ThongTinHocVien = p.ThongTinHocVien;
+                    YeuCau = p.YeuCauGiaSu;
+                    TrangThai = p.TrangThai;
+                    if(p.MONHOC_LIST!=null)
+                    Monhoc = p.MONHOC_LIST.Split(',');
+                }
+                return true;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+        }
+            
+
+//public object fetchLichSuGiaoDichTable(int id){
+//    return _db.select_lichsugiaodich(id);
+//}
+//public object fetchLichSuGiaoDichNapTienTable(){
+//    return _db.BANGTINs.Select(p => p);
+//}
+
+
+/// <summary>
+/// Lấy dữ liệu lớp mới cho AD
+/// </summary>
+/// <returns></returns>
+public object fetchDanhSachLopMoiAD()
         {
             try
             {
@@ -929,6 +970,8 @@ namespace QuanLyGiaSu.src.server
 
             return _db.find_email_accid(accid);
         }
+
+        
 
     }
 }
