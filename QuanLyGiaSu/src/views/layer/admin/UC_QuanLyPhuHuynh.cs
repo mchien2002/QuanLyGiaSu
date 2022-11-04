@@ -146,6 +146,9 @@ namespace QuanLyGiaSu.src.app.views.layer
                 tb_TimKiemPH.Enabled = true;
         }
 
-
+        private void refreshToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UC_QuanLyPhuHuynh_Load(sender, e);
+        }
     }
 }

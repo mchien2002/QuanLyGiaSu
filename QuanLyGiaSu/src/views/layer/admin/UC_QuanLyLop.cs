@@ -66,5 +66,10 @@ namespace QuanLyGiaSu.src.app.views.layer
             }
             else tb_TimKiemLM.Enabled = true;
         }
+
+        private void refreshToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UC_QuanLyLop_Load(sender, e);
+        }
     }
 }

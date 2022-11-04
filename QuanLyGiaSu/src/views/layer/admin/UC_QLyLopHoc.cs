@@ -63,5 +63,10 @@ namespace QuanLyGiaSu.src.views.layer.admin
             }
             dgvQLyMonHoc.DataSource = tb2;
         }
+
+        private void refreshToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UC_QLyLopHoc_Load(sender, e);
+        }
     }
 }

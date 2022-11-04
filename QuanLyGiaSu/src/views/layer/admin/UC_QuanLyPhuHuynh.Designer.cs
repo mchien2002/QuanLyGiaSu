@@ -39,6 +39,7 @@
             this.cbb_TimTheoPH = new System.Windows.Forms.ComboBox();
             this.tb_TimKiemPH = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuanLyPhuHuynh)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -63,9 +64,10 @@
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.SuaThongTinPhuHuynh,
             this.xóaPhụHuynhToolStripMenuItem,
-            this.ThemPhuHuynh});
+            this.ThemPhuHuynh,
+            this.refreshToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(248, 76);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(248, 128);
             // 
             // SuaThongTinPhuHuynh
             // 
@@ -145,6 +147,13 @@
             this.label2.TabIndex = 16;
             this.label2.Text = "Tìm Theo :";
             // 
+            // refreshToolStripMenuItem
+            // 
+            this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
+            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(247, 24);
+            this.refreshToolStripMenuItem.Text = "Refresh";
+            this.refreshToolStripMenuItem.Click += new System.EventHandler(this.refreshToolStripMenuItem_Click);
+            // 
             // UC_QuanLyPhuHuynh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -156,7 +165,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dgvQuanLyPhuHuynh);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UC_QuanLyPhuHuynh";
             this.Size = new System.Drawing.Size(1309, 533);
             this.Load += new System.EventHandler(this.UC_QuanLyPhuHuynh_Load);
@@ -179,5 +188,6 @@
         private System.Windows.Forms.TextBox tb_TimKiemPH;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ToolStripMenuItem ThemPhuHuynh;
+        private System.Windows.Forms.ToolStripMenuItem refreshToolStripMenuItem;
     }
 }

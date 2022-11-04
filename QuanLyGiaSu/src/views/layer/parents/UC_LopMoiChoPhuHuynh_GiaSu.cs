@@ -79,5 +79,10 @@ namespace QuanLyGiaSu.src.app.views.layer
         {
 
         }
+
+        private void refreshToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UC_LopMoi2_Load(sender, e);
+        }
     }
 }

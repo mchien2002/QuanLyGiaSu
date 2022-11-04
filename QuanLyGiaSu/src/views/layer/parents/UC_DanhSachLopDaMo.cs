@@ -22,5 +22,10 @@ namespace QuanLyGiaSu.src.app.views.layer
         {
             dgvDANHSACHMOLOP.DataSource = Locator.server.fetchDanhSachLopDaMo_PhuHuynh(Locator.author.UserName);
         }
+
+        private void refreshToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UC_DanhSachMoLop_Load(sender, e);
+        }
     }
 }

@@ -194,5 +194,10 @@ namespace QuanLyGiaSu.src.app.views.layer
         {
 
         }
+
+        private void refreshToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UC_QuanLyGiaSu_Load(sender, e);
+        }
     }
 }

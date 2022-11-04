@@ -22,5 +22,10 @@ namespace QuanLyGiaSu.src.views.layer.tutors
         {
             dgvDSDKD.DataSource = Locator.server.fetchDanhSachLopDaDangKyDayTable(Locator.author.UserName);
         }
+
+        private void refreshToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UC_DanhSachLopDaDangKyDay_Load(sender, e);
+        }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using QuanLyGiaSu.src.app.views.layer;
+using QuanLyGiaSu.src.app.views.Login;
 using QuanLyGiaSu.src.controller;
 using QuanLyGiaSu.src.views.layer.admin;
 using System;
@@ -71,6 +72,24 @@ namespace QuanLyGiaSu
             {
                 napTien.Show();
                 Locator.isOpenningNapTien = true;
+            }
+        }
+
+        private void formMainGiaSu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Bạn có muốn đăng xuất", "Thoát", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.Yes)
+            {
+                Login login = new Login();
+                login.ShowDialog();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                e.Cancel = false;
+            }
+            else if (dialogResult == DialogResult.Cancel)
+            {
+                e.Cancel = true;
             }
         }
     }

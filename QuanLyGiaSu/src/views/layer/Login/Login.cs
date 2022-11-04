@@ -17,6 +17,10 @@ namespace QuanLyGiaSu.src.app.views.Login
         public Login()
         {
             InitializeComponent();
+            Locator.author = new models.AccountModel();
+            Locator.LMID = 0;
+            Locator.idPH = 0;
+            Locator.MucLuong = 0;
         }
 
         private void Login_Load(object sender, EventArgs e)

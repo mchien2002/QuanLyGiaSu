@@ -131,7 +131,7 @@
             this.panel2.Controls.Add(this.lbSoDu);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(1132, 12);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(192, 62);
             this.panel2.TabIndex = 11;
@@ -194,7 +194,7 @@
             // 
             this.uC_ThongTinPhuHuynh1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.uC_ThongTinPhuHuynh1.Location = new System.Drawing.Point(16, 82);
-            this.uC_ThongTinPhuHuynh1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.uC_ThongTinPhuHuynh1.Margin = new System.Windows.Forms.Padding(5);
             this.uC_ThongTinPhuHuynh1.Name = "uC_ThongTinPhuHuynh1";
             this.uC_ThongTinPhuHuynh1.Size = new System.Drawing.Size(1309, 533);
             this.uC_ThongTinPhuHuynh1.TabIndex = 9;
@@ -203,7 +203,7 @@
             // 
             this.uC_LSGD_PH1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.uC_LSGD_PH1.Location = new System.Drawing.Point(16, 82);
-            this.uC_LSGD_PH1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.uC_LSGD_PH1.Margin = new System.Windows.Forms.Padding(5);
             this.uC_LSGD_PH1.Name = "uC_LSGD_PH1";
             this.uC_LSGD_PH1.Size = new System.Drawing.Size(1309, 533);
             this.uC_LSGD_PH1.TabIndex = 14;
@@ -212,7 +212,7 @@
             // 
             this.uC_LopMoiChoPhuHuynh1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.uC_LopMoiChoPhuHuynh1.Location = new System.Drawing.Point(16, 82);
-            this.uC_LopMoiChoPhuHuynh1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.uC_LopMoiChoPhuHuynh1.Margin = new System.Windows.Forms.Padding(5);
             this.uC_LopMoiChoPhuHuynh1.Name = "uC_LopMoiChoPhuHuynh1";
             this.uC_LopMoiChoPhuHuynh1.Size = new System.Drawing.Size(1309, 533);
             this.uC_LopMoiChoPhuHuynh1.TabIndex = 15;
@@ -231,10 +231,11 @@
             this.Controls.Add(this.uC_LSGD_PH1);
             this.Controls.Add(this.uC_DanhSachMoLop1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "formMainPhuHuynh";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Trung Tâm Gia Sư Anh Em";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.formMainPhuHuynh_FormClosing);
             this.Load += new System.EventHandler(this.formMainPhuHuynh_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -255,7 +256,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lbSoDu;
         private System.Windows.Forms.Label label1;
-        private src.app.views.layer.UC_LopMoiChoPhuHuynh uC_LopMoi21;
         private System.Windows.Forms.Button btn_DanhSachMoLop;
         private src.app.views.layer.UC_DanhSachLopDaMo uC_DanhSachMoLop1;
         private src.app.views.layer.UC_LichSuGiaoDichPhuHuynh_GiaSu uC_LSGD_PH1;

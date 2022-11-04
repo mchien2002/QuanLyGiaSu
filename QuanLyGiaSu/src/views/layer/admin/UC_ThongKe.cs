@@ -16,5 +16,15 @@ namespace QuanLyGiaSu.src.views.layer.admin
         {
             InitializeComponent();
         }
+
+        private void refreshToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UC_ThongKe_Load(sender, e);
+        }
+
+        private void UC_ThongKe_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

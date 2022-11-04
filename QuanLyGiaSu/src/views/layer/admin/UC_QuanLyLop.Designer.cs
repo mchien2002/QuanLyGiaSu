@@ -38,6 +38,7 @@
             this.cbb_TimTheoLM = new System.Windows.Forms.ComboBox();
             this.tb_TimKiemLM = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuanLyLopMoi)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -60,9 +61,10 @@
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.SuaThongTinLop,
-            this.XoaLop});
+            this.XoaLop,
+            this.refreshToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 80);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 104);
             // 
             // SuaThongTinLop
             // 
@@ -136,6 +138,13 @@
             this.label2.TabIndex = 11;
             this.label2.Text = "Tìm Theo :";
             // 
+            // refreshToolStripMenuItem
+            // 
+            this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
+            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.refreshToolStripMenuItem.Text = "Refresh";
+            this.refreshToolStripMenuItem.Click += new System.EventHandler(this.refreshToolStripMenuItem_Click);
+            // 
             // UC_QuanLyLop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -168,5 +177,6 @@
         private System.Windows.Forms.TextBox tb_TimKiemLM;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dgvQuanLyLopMoi;
+        private System.Windows.Forms.ToolStripMenuItem refreshToolStripMenuItem;
     }
 }

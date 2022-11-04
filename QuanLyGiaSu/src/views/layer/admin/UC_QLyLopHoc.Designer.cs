@@ -40,10 +40,13 @@
             this.ThemMonHoc = new System.Windows.Forms.ToolStripMenuItem();
             this.SuaMonHoc = new System.Windows.Forms.ToolStripMenuItem();
             this.XoaMonHoc = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextMenuStrip3 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQLyLopHoc)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQLyMonHoc)).BeginInit();
             this.contextMenuStrip2.SuspendLayout();
+            this.contextMenuStrip3.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvQLyLopHoc
@@ -51,51 +54,51 @@
             this.dgvQLyLopHoc.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvQLyLopHoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvQLyLopHoc.ContextMenuStrip = this.contextMenuStrip1;
-            this.dgvQLyLopHoc.Location = new System.Drawing.Point(158, 48);
-            this.dgvQLyLopHoc.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvQLyLopHoc.Location = new System.Drawing.Point(211, 59);
+            this.dgvQLyLopHoc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvQLyLopHoc.Name = "dgvQLyLopHoc";
             this.dgvQLyLopHoc.RowHeadersWidth = 51;
             this.dgvQLyLopHoc.RowTemplate.Height = 24;
-            this.dgvQLyLopHoc.Size = new System.Drawing.Size(302, 368);
+            this.dgvQLyLopHoc.Size = new System.Drawing.Size(403, 453);
             this.dgvQLyLopHoc.TabIndex = 26;
             // 
             // contextMenuStrip1
             // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ThemLopHoc,
             this.SuaLopHoc,
             this.XoaLopHoc});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(153, 70);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(176, 76);
             // 
             // ThemLopHoc
             // 
             this.ThemLopHoc.Name = "ThemLopHoc";
-            this.ThemLopHoc.Size = new System.Drawing.Size(152, 22);
+            this.ThemLopHoc.Size = new System.Drawing.Size(175, 24);
             this.ThemLopHoc.Text = "Thêm Lớp Học";
             this.ThemLopHoc.Click += new System.EventHandler(this.ThemLopHoc_Click);
             // 
             // SuaLopHoc
             // 
             this.SuaLopHoc.Name = "SuaLopHoc";
-            this.SuaLopHoc.Size = new System.Drawing.Size(152, 22);
+            this.SuaLopHoc.Size = new System.Drawing.Size(175, 24);
             this.SuaLopHoc.Text = "Sửa Lớp Học";
             this.SuaLopHoc.Click += new System.EventHandler(this.SuaLopHoc_Click);
             // 
             // XoaLopHoc
             // 
             this.XoaLopHoc.Name = "XoaLopHoc";
-            this.XoaLopHoc.Size = new System.Drawing.Size(152, 22);
+            this.XoaLopHoc.Size = new System.Drawing.Size(175, 24);
             this.XoaLopHoc.Text = "Xóa Lớp Học";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(21, 15);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(28, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(443, 31);
+            this.label1.Size = new System.Drawing.Size(542, 38);
             this.label1.TabIndex = 25;
             this.label1.Text = "QUẢN LÝ LỚP HỌC VÀ MÔN HỌC";
             // 
@@ -104,58 +107,77 @@
             this.dgvQLyMonHoc.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvQLyMonHoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvQLyMonHoc.ContextMenuStrip = this.contextMenuStrip2;
-            this.dgvQLyMonHoc.Location = new System.Drawing.Point(510, 48);
-            this.dgvQLyMonHoc.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvQLyMonHoc.Location = new System.Drawing.Point(680, 59);
+            this.dgvQLyMonHoc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvQLyMonHoc.Name = "dgvQLyMonHoc";
             this.dgvQLyMonHoc.RowHeadersWidth = 51;
             this.dgvQLyMonHoc.RowTemplate.Height = 24;
-            this.dgvQLyMonHoc.Size = new System.Drawing.Size(302, 368);
+            this.dgvQLyMonHoc.Size = new System.Drawing.Size(403, 453);
             this.dgvQLyMonHoc.TabIndex = 26;
             // 
             // contextMenuStrip2
             // 
+            this.contextMenuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ThemMonHoc,
             this.SuaMonHoc,
             this.XoaMonHoc});
             this.contextMenuStrip2.Name = "contextMenuStrip2";
-            this.contextMenuStrip2.Size = new System.Drawing.Size(158, 70);
+            this.contextMenuStrip2.Size = new System.Drawing.Size(181, 76);
             // 
             // ThemMonHoc
             // 
             this.ThemMonHoc.Name = "ThemMonHoc";
-            this.ThemMonHoc.Size = new System.Drawing.Size(157, 22);
+            this.ThemMonHoc.Size = new System.Drawing.Size(180, 24);
             this.ThemMonHoc.Text = "Thêm Môn Học";
             this.ThemMonHoc.Click += new System.EventHandler(this.ThemMonHoc_Click);
             // 
             // SuaMonHoc
             // 
             this.SuaMonHoc.Name = "SuaMonHoc";
-            this.SuaMonHoc.Size = new System.Drawing.Size(157, 22);
+            this.SuaMonHoc.Size = new System.Drawing.Size(180, 24);
             this.SuaMonHoc.Text = "Sửa Môn Học";
             this.SuaMonHoc.Click += new System.EventHandler(this.SuaMonHoc_Click);
             // 
             // XoaMonHoc
             // 
             this.XoaMonHoc.Name = "XoaMonHoc";
-            this.XoaMonHoc.Size = new System.Drawing.Size(157, 22);
+            this.XoaMonHoc.Size = new System.Drawing.Size(180, 24);
             this.XoaMonHoc.Text = "Xóa Môn Học";
+            // 
+            // contextMenuStrip3
+            // 
+            this.contextMenuStrip3.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.refreshToolStripMenuItem});
+            this.contextMenuStrip3.Name = "contextMenuStrip3";
+            this.contextMenuStrip3.Size = new System.Drawing.Size(211, 56);
+            // 
+            // refreshToolStripMenuItem
+            // 
+            this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
+            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.refreshToolStripMenuItem.Text = "Refresh";
+            this.refreshToolStripMenuItem.Click += new System.EventHandler(this.refreshToolStripMenuItem_Click);
             // 
             // UC_QLyLopHoc
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ContextMenuStrip = this.contextMenuStrip3;
             this.Controls.Add(this.dgvQLyMonHoc);
             this.Controls.Add(this.dgvQLyLopHoc);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "UC_QLyLopHoc";
-            this.Size = new System.Drawing.Size(982, 433);
+            this.Size = new System.Drawing.Size(1309, 533);
             this.Load += new System.EventHandler(this.UC_QLyLopHoc_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvQLyLopHoc)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvQLyMonHoc)).EndInit();
             this.contextMenuStrip2.ResumeLayout(false);
+            this.contextMenuStrip3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -174,5 +196,7 @@
         private System.Windows.Forms.ToolStripMenuItem ThemMonHoc;
         private System.Windows.Forms.ToolStripMenuItem SuaMonHoc;
         private System.Windows.Forms.ToolStripMenuItem XoaMonHoc;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip3;
+        private System.Windows.Forms.ToolStripMenuItem refreshToolStripMenuItem;
     }
 }

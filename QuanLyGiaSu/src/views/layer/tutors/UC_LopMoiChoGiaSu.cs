@@ -29,15 +29,24 @@ namespace QuanLyGiaSu.src.views.layer.tutors
         {
             
             var x = dgvTHONGTINLOPMOI.CurrentRow.Cells[0].Value;
+            string TrangThai = dgvTHONGTINLOPMOI.CurrentRow.Cells[11].Value.ToString().Trim();
             if (x != null)
             {
                 Int32.TryParse(x.ToString(), out Locator.LMID);
             }
-            if (Locator.LMID != 0)
+            if (TrangThai != "Đã nhận")
             {
-                DangKyDay dangKyDay = new DangKyDay();
-                dangKyDay.Show();
+                if (Locator.LMID != 0)
+                {
+                    DangKyDay dangKyDay = new DangKyDay();
+                    dangKyDay.Show();
+                }
             }
+            else
+            {
+                MessageBox.Show("Lớp đã được nhận không thể đăng ký lại");
+            }
+
 
         }
 

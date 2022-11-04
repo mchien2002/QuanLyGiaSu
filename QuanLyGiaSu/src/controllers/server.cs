@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Reflection.Emit;
 using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Security.Cryptography;
 using System.Text;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using QuanLyGiaSu.src.controller;
 using QuanLyGiaSu.src.database;
 using QuanLyGiaSu.src.models;
@@ -60,6 +63,10 @@ namespace QuanLyGiaSu.src.server
             return _db.timkiemlsgd_SoTien(SoTien);
         }
         //Tìm kiếm LSGD theo ThoiGianGiaoDich
+        public object TimKiemLSGD_TGGD(DateTime from, DateTime to)
+        {
+            return _db.timkiemlsgd_tggd(Convert.ToDateTime(from).Date, Convert.ToDateTime(to).Date);
+        }
         #endregion
 
         #region Tim Kiem Phu Huynh trong admin
@@ -499,7 +506,8 @@ public object fetchDanhSachLopMoiAD()
         /// false nếu không lấy được dữ liệu</returns>
         public bool getThongTinGiaSu_private(string UserName, ref int GSID, ref string HoTen,
             ref string GioiTinh, ref DateTime NgaySinh, ref string DiaChi, ref string Sdt, ref string Cmnd,
-            ref string QueQuan, ref string TrinhDo, ref string TruongDaoTao, ref string UuDiem, ref string Email, ref string Password)
+            ref string QueQuan, ref string TrinhDo, ref string TruongDaoTao, ref string UuDiem, ref string Email, ref string Password,
+            ref string[] MonHoc, ref string[] LopHoc)
         {
             try
             {
@@ -508,10 +516,10 @@ public object fetchDanhSachLopMoiAD()
                 if (a == null) return false ;
                 foreach (var x in a)
                 {
-                    GSID = x.GSID;
+                    GSID = (int)x.GSID;
                     HoTen = x.HoTen;
                     GioiTinh = x.GioiTinh;
-                    NgaySinh = x.NgaySinh;
+                    NgaySinh = (DateTime)x.NgaySinh;
                     DiaChi = x.DiaChi;
                     Sdt = x.SDT;
                     Cmnd = x.CMND;
@@ -521,6 +529,10 @@ public object fetchDanhSachLopMoiAD()
                     UuDiem = x.UuDiem;
                     Email = x.Email;
                     Password = x.Password;
+                    if (x.MONHOC_LIST != null)
+                        MonHoc = x.MONHOC_LIST.Split(',');
+                    if (x.LOPHOC_LIST != null)
+                        LopHoc = x.LOPHOC_LIST.Split(',');
                     break;
                 }
                 return true;
@@ -840,6 +852,7 @@ public object fetchDanhSachLopMoiAD()
                     address,
                     null
                 );
+                
                 MessageBox.Show("Cập nhật thông tin thành công", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return true;
 
@@ -850,6 +863,33 @@ public object fetchDanhSachLopMoiAD()
                 return false;
             }
 
+        }
+
+        public bool updateInfoTutor_MH_LH(string Username,List<string> MonHoc, List<string> LopHoc)
+        {
+            try
+            {
+                _db.delete_monhoc_giasu_gsid(_db.check_ph_gs(_db.find_accid_username(Username)));
+                _db.delete_lop_giasu_gsid(_db.check_ph_gs(_db.find_accid_username(Username)));
+
+
+                foreach (string item in MonHoc)
+                {
+                    _db.insert_mhgs(_db.check_ph_gs(_db.find_accid_username(Username)), _db.check_mhid(item));
+                }
+                foreach (string item in LopHoc)
+                {
+                    _db.insert_lhgs(_db.check_ph_gs(_db.find_accid_username(Username)), _db.check_lhid(item));
+                }
+               
+                return true;
+
+            }
+            catch
+            {
+                MessageBox.Show("Thiếu hoặc sai dữ liệu! \nXin vui lòng nhập đủ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
         }
 
         /// <summary>
@@ -1021,5 +1061,6 @@ public object fetchDanhSachLopMoiAD()
                 MessageBox.Show(e.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
     }
 }
