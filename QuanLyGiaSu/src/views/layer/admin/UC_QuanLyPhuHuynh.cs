@@ -16,8 +16,7 @@ namespace QuanLyGiaSu.src.app.views.layer
         public UC_QuanLyPhuHuynh()
         {
             InitializeComponent();
-            comboBox1.Text = comboBox1.Items[0].ToString();
-
+            cbb_TimTheoPH.Text = cbb_TimTheoPH.Items[0].ToString();
         }
 
 
@@ -111,10 +110,34 @@ namespace QuanLyGiaSu.src.app.views.layer
             }
             suaPhuHuynh.Show();
         }
-
-        private void dgvQuanLyPhuHuynh_MouseMove(object sender, MouseEventArgs e)
+        private void btn_TimPH_Click(object sender, EventArgs e)
         {
-            //UC_QuanLyPhuHuynh_Load(sender, e);
+            if (cbb_TimTheoPH.Text == "Mã Phụ Huynh")
+            {
+                dgvQuanLyPhuHuynh.DataSource = Locator.server.TimKiemPH_PHID(Convert.ToInt32(tb_TimKiemPH.Text));
+            }
+            else if (cbb_TimTheoPH.Text == "Account ID")
+            {
+                dgvQuanLyPhuHuynh.DataSource = Locator.server.TimKiemPH_ACCID(Convert.ToInt32(tb_TimKiemPH.Text));
+            }
+            else if (cbb_TimTheoPH.Text == "Tên Phụ Huynh")
+            {
+                dgvQuanLyPhuHuynh.DataSource = Locator.server.TimKiemPH_HoTen(tb_TimKiemPH.Text);
+            }
         }
+
+        private void cbb_TimTheoPH_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbb_TimTheoPH.Text == "Tất Cả")
+            {
+                tb_TimKiemPH.Text = "";
+                tb_TimKiemPH.Enabled = false;
+                dgvQuanLyPhuHuynh.DataSource = Locator.server.fetchPhuHuynhAD();
+            }
+            else
+                tb_TimKiemPH.Enabled = true;
+        }
+
+
     }
 }

@@ -23,18 +23,6 @@ namespace QuanLyGiaSu.src.views.layer.admin
             dgvQLyAccount.DataSource = Locator.server.fetchAccount();
         }
 
-        private void btnTimKiem_Click(object sender, EventArgs e)
-        {
-            if(cbbTimKiem.Text=="User Name")
-            {
-                dgvQLyAccount.DataSource = Locator.server.fetchAccountByUserName(tb_TimKiem.Text);
-            }
-            if (tb_TimKiem.Text == "")
-            {
-                dgvQLyAccount.DataSource = Locator.server.fetchAccount();
-            }
-        }
-
         private void NapTien_Click(object sender, EventArgs e)
         {
             NapTienAdmin napTienAdmin1 = new NapTienAdmin();
@@ -49,5 +37,30 @@ namespace QuanLyGiaSu.src.views.layer.admin
                 dgvQLyAccount.CurrentRow.Selected = true;
             }
         }
+      
+        private void cbbTimTheoAcount_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbb_TimTheoAccount.Text == "Tất Cả")
+            {
+                tb_TimKiemAccount.Text = "";
+                tb_TimKiemAccount.Enabled = false;
+                dgvQLyAccount.DataSource = Locator.server.fetchAccount();
+            }
+            else
+                tb_TimKiemAccount.Enabled = true;
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            if (cbb_TimTheoAccount.Text == "User Name")
+            {
+                dgvQLyAccount.DataSource = Locator.server.TimKiem_Account_UserName(tb_TimKiemAccount.Text);
+            }
+            else if (cbb_TimTheoAccount.Text == "Account ID")
+            {
+                dgvQLyAccount.DataSource = Locator.server.TimKiem_Account_ACCID(Convert.ToInt32(tb_TimKiemAccount.Text));
+            }
+        }
+
     }
 }

@@ -14,6 +14,7 @@ namespace QuanLyGiaSu.src.controller
         public static AccountModel author = new AccountModel();
         public static bool isOpenningNapTien = false;
         public static int LMID = 0;
+        public static int MucLuong = 0;
     }
 
     public enum UserType

@@ -84,7 +84,7 @@
             // 
             this.btnRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegister.Location = new System.Drawing.Point(534, 616);
-            this.btnRegister.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRegister.Margin = new System.Windows.Forms.Padding(4);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(116, 39);
             this.btnRegister.TabIndex = 0;
@@ -110,7 +110,7 @@
             this.tbSoTien.Enabled = false;
             this.tbSoTien.Font = new System.Drawing.Font("Tahoma", 12F);
             this.tbSoTien.Location = new System.Drawing.Point(252, 565);
-            this.tbSoTien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbSoTien.Margin = new System.Windows.Forms.Padding(4);
             this.tbSoTien.Name = "tbSoTien";
             this.tbSoTien.Size = new System.Drawing.Size(545, 25);
             this.tbSoTien.TabIndex = 205;
@@ -152,7 +152,7 @@
             this.tbSDT.Enabled = false;
             this.tbSDT.Font = new System.Drawing.Font("Tahoma", 12F);
             this.tbSDT.Location = new System.Drawing.Point(252, 220);
-            this.tbSDT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbSDT.Margin = new System.Windows.Forms.Padding(4);
             this.tbSDT.Name = "tbSDT";
             this.tbSDT.Size = new System.Drawing.Size(545, 25);
             this.tbSDT.TabIndex = 200;
@@ -163,7 +163,7 @@
             this.tbYeuCau.Enabled = false;
             this.tbYeuCau.Font = new System.Drawing.Font("Tahoma", 12F);
             this.tbYeuCau.Location = new System.Drawing.Point(252, 514);
-            this.tbYeuCau.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbYeuCau.Margin = new System.Windows.Forms.Padding(4);
             this.tbYeuCau.Name = "tbYeuCau";
             this.tbYeuCau.Size = new System.Drawing.Size(545, 25);
             this.tbYeuCau.TabIndex = 199;
@@ -174,7 +174,7 @@
             this.tbDiaChi.Enabled = false;
             this.tbDiaChi.Font = new System.Drawing.Font("Tahoma", 12F);
             this.tbDiaChi.Location = new System.Drawing.Point(252, 466);
-            this.tbDiaChi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbDiaChi.Margin = new System.Windows.Forms.Padding(4);
             this.tbDiaChi.Name = "tbDiaChi";
             this.tbDiaChi.Size = new System.Drawing.Size(545, 25);
             this.tbDiaChi.TabIndex = 198;
@@ -185,7 +185,7 @@
             this.tbThongTinHocVien.Enabled = false;
             this.tbThongTinHocVien.Font = new System.Drawing.Font("Tahoma", 12F);
             this.tbThongTinHocVien.Location = new System.Drawing.Point(252, 417);
-            this.tbThongTinHocVien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbThongTinHocVien.Margin = new System.Windows.Forms.Padding(4);
             this.tbThongTinHocVien.Name = "tbThongTinHocVien";
             this.tbThongTinHocVien.Size = new System.Drawing.Size(545, 25);
             this.tbThongTinHocVien.TabIndex = 197;
@@ -196,7 +196,7 @@
             this.tbMucLuong.Enabled = false;
             this.tbMucLuong.Font = new System.Drawing.Font("Tahoma", 12F);
             this.tbMucLuong.Location = new System.Drawing.Point(252, 118);
-            this.tbMucLuong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbMucLuong.Margin = new System.Windows.Forms.Padding(4);
             this.tbMucLuong.Name = "tbMucLuong";
             this.tbMucLuong.Size = new System.Drawing.Size(545, 25);
             this.tbMucLuong.TabIndex = 196;
@@ -218,7 +218,7 @@
             this.tbHinhThucDay.Enabled = false;
             this.tbHinhThucDay.Font = new System.Drawing.Font("Tahoma", 12F);
             this.tbHinhThucDay.Location = new System.Drawing.Point(252, 316);
-            this.tbHinhThucDay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbHinhThucDay.Margin = new System.Windows.Forms.Padding(4);
             this.tbHinhThucDay.Name = "tbHinhThucDay";
             this.tbHinhThucDay.Size = new System.Drawing.Size(545, 25);
             this.tbHinhThucDay.TabIndex = 166;
@@ -240,7 +240,7 @@
             this.tbSoBuoi.Enabled = false;
             this.tbSoBuoi.Font = new System.Drawing.Font("Tahoma", 12F);
             this.tbSoBuoi.Location = new System.Drawing.Point(252, 266);
-            this.tbSoBuoi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbSoBuoi.Margin = new System.Windows.Forms.Padding(4);
             this.tbSoBuoi.Name = "tbSoBuoi";
             this.tbSoBuoi.Size = new System.Drawing.Size(545, 25);
             this.tbSoBuoi.TabIndex = 167;
@@ -251,7 +251,7 @@
             this.tbThoiGianHoc.Enabled = false;
             this.tbThoiGianHoc.Font = new System.Drawing.Font("Tahoma", 12F);
             this.tbThoiGianHoc.Location = new System.Drawing.Point(252, 368);
-            this.tbThoiGianHoc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbThoiGianHoc.Margin = new System.Windows.Forms.Padding(4);
             this.tbThoiGianHoc.Name = "tbThoiGianHoc";
             this.tbThoiGianHoc.Size = new System.Drawing.Size(545, 25);
             this.tbThoiGianHoc.TabIndex = 168;
@@ -307,7 +307,7 @@
             this.dtpTGDK.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpTGDK.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.dtpTGDK.Location = new System.Drawing.Point(252, 161);
-            this.dtpTGDK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpTGDK.Margin = new System.Windows.Forms.Padding(4);
             this.dtpTGDK.Name = "dtpTGDK";
             this.dtpTGDK.Size = new System.Drawing.Size(240, 32);
             this.dtpTGDK.TabIndex = 165;
@@ -591,7 +591,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(825, 71);
+            this.label1.Location = new System.Drawing.Point(816, 71);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(87, 24);
@@ -654,7 +654,7 @@
             this.Controls.Add(this.label51);
             this.Controls.Add(this.btnRegister);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DangKyDay";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng Ký Dạy";

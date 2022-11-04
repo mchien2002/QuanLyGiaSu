@@ -21,39 +21,43 @@ namespace QuanLyGiaSu.src.views.layer.tutors
 
         private void UC_LopMoiChoGiaSu_Load(object sender, EventArgs e)
         {
-            cbbSearch.Hide();
             dgvTHONGTINLOPMOI.DataSource = Locator.server.fetchLopMoiPH_GSTable();
         }
 
-        private void cbbSearchType_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cbbSearchType.Text == "Lớp Học")
-            {
-                tb_TimKiem.Hide();
-                cbbSearch.Visible = true;
-                //cbb_TimKiem.Hide();
-            }
-            else if (cbbSearchType.Text == "Mã Lớp")
-            {
-                cbbSearch.Hide();
-                tb_TimKiem.Visible = true;
-            }
-            else
-            {
-                cbbSearch.Hide();
-                tb_TimKiem.Visible = true;
-            }
-        }
 
         private void DangKyDayHoc_Click(object sender, EventArgs e)
         {
-            var x = dgvTHONGTINLOPMOI.CurrentRow.Cells[1].Value;
+            
+            var x = dgvTHONGTINLOPMOI.CurrentRow.Cells[0].Value;
             if (x != null)
             {
                 Int32.TryParse(x.ToString(), out Locator.LMID);
+            }
+            if (Locator.LMID != 0)
+            {
                 DangKyDay dangKyDay = new DangKyDay();
                 dangKyDay.Show();
             }
+
+        }
+
+        private void btn_TimLM_Click(object sender, EventArgs e)
+        {
+            if (cbb_TimTheoLM.Text == "Mã Lớp")
+            {
+                dgvTHONGTINLOPMOI.DataSource = Locator.server.TimKiemLM_LMID(Convert.ToInt32(tb_TimKiemLM.Text));
+            }
+        }
+        private void cbb_TimTheoLM_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbb_TimTheoLM.Text == "Tất Cả")
+            {
+                tb_TimKiemLM.Text = "";
+                tb_TimKiemLM.Enabled = false;
+                dgvTHONGTINLOPMOI.DataSource = Locator.server.fetchLopMoiPH_GSTable();
+            }
+            else
+                tb_TimKiemLM.Enabled = true;
         }
     }
 }

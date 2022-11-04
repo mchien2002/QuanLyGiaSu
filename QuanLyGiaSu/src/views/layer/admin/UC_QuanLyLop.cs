@@ -1,4 +1,5 @@
 ﻿using QuanLyGiaSu.src.controller;
+using QuanLyGiaSu.src.database;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,24 +17,42 @@ namespace QuanLyGiaSu.src.app.views.layer
         public UC_QuanLyLop()
         {
             InitializeComponent();
-            comboBox1.Text = comboBox1.Items[0].ToString();
+            cbb_TimTheoLM.Text = cbb_TimTheoLM.Items[0].ToString();
         }
 
         private void UC_QuanLyLop_Load(object sender, EventArgs e)
         {
-            cbb_TimKiem.Hide();
             dgvQuanLyLopMoi.DataSource = Locator.server.fetchDanhSachLopMoiAD();
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void SuaThongTinLop_Click(object sender, EventArgs e)
-        {
+        {   
+            Locator.LMID=Int32.Parse( dgvQuanLyLopMoi.CurrentRow.Cells[0].Value.ToString());
             SuaThongTinLop suaThongTinLop = new SuaThongTinLop();
             suaThongTinLop.Show();
         }
+
+        private void btn_TimLM_Click(object sender, EventArgs e)
+        {
+            if (cbb_TimTheoLM.Text == "Mã Lớp")
+            {
+                dgvQuanLyLopMoi.DataSource = Locator.server.TimKiemLM_LMID(Convert.ToInt32(tb_TimKiemLM.Text));
+            }
+        }
+
+        private void cbb_TimTheoLM_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbb_TimTheoLM.Text == "Tất Cả")
+            {
+                tb_TimKiemLM.Text = "";
+                tb_TimKiemLM.Enabled = false;
+                dgvQuanLyLopMoi.DataSource = Locator.server.fetchDanhSachLopMoiAD();
+            }
+            else
+                tb_TimKiemLM.Enabled = true;
+        }
+
+        
     }
 }
