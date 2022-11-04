@@ -17,6 +17,7 @@ namespace QuanLyGiaSu.src.app.views.layer
         public SuaThongTinLop()
         {
             InitializeComponent();
+            
         }
 
         private void SuaTTLop_Load(object sender, EventArgs e)
@@ -24,7 +25,6 @@ namespace QuanLyGiaSu.src.app.views.layer
             string TenLop = "", DiaChi = "", MucLuong = "", TGDK = "", SDT = "", SB = "", HinhTDay = "", ThoiGH = "", TTHocVien = "", YeuCau = "", TrangThai = "";
             string[] MonHoc = new string[100];
             Locator.server.fetchLopMoiLMID(Locator.LMID, ref TenLop, ref DiaChi, ref MucLuong, ref TGDK, ref SDT, ref SB, ref HinhTDay, ref ThoiGH, ref TTHocVien, ref YeuCau, ref TrangThai, ref MonHoc);
-            tbTenLop.Text = TenLop;
             tbDiaChi.Text = DiaChi;
             tbMucLuong.Text = MucLuong;
             dtpTGDK.Value = Convert.ToDateTime(TGDK);
@@ -48,6 +48,11 @@ namespace QuanLyGiaSu.src.app.views.layer
                     }
                 }
             }
+            foreach(string item in Locator.server.fetchLopHoc())
+            {
+                cbbListClass.Items.Add(item);
+            }
+            cbbListClass.Text = TenLop;
         }
 
         private void label12_Click(object sender, EventArgs e)
@@ -62,7 +67,13 @@ namespace QuanLyGiaSu.src.app.views.layer
 
         private void btn_Sua_Click(object sender, EventArgs e)
         {
-            this.Close();
+            List<string> list = new List<string>();
+            foreach(string item in clbMonHoc.CheckedItems)
+            {
+                list.Add(item.ToString());
+            }
+            Locator.server.updateLM(Locator.LMID, cbbListClass.Text, Locator.idPH, tbDiaChi.Text, Int32.Parse(tbMucLuong.Text), tbSDT.Text, dtpTGDK.Value, Int32.Parse(tbSoBuoi.Text), tbHinhThucDay.Text, tbThoiGianHoc.Text, tbThongTinHocVien.Text, tbYeuCau.Text, tbTrangThai.Text, null, list);
+            
         }
 
 

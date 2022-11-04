@@ -68,7 +68,6 @@
             this.label45 = new System.Windows.Forms.Label();
             this.label46 = new System.Windows.Forms.Label();
             this.label47 = new System.Windows.Forms.Label();
-            this.tbTenLop = new System.Windows.Forms.TextBox();
             this.label49 = new System.Windows.Forms.Label();
             this.label50 = new System.Windows.Forms.Label();
             this.label51 = new System.Windows.Forms.Label();
@@ -76,6 +75,7 @@
             this.label53 = new System.Windows.Forms.Label();
             this.tbSDT = new System.Windows.Forms.TextBox();
             this.clbMonHoc = new System.Windows.Forms.CheckedListBox();
+            this.cbbListClass = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btn_Sua
@@ -474,16 +474,6 @@
             this.label47.Size = new System.Drawing.Size(650, 1);
             this.label47.TabIndex = 81;
             // 
-            // tbTenLop
-            // 
-            this.tbTenLop.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbTenLop.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.tbTenLop.Location = new System.Drawing.Point(160, 23);
-            this.tbTenLop.Margin = new System.Windows.Forms.Padding(4);
-            this.tbTenLop.Name = "tbTenLop";
-            this.tbTenLop.Size = new System.Drawing.Size(183, 25);
-            this.tbTenLop.TabIndex = 74;
-            // 
             // label49
             // 
             this.label49.AutoSize = true;
@@ -557,12 +547,21 @@
             this.clbMonHoc.Size = new System.Drawing.Size(204, 174);
             this.clbMonHoc.TabIndex = 116;
             // 
+            // cbbListClass
+            // 
+            this.cbbListClass.FormattingEnabled = true;
+            this.cbbListClass.Location = new System.Drawing.Point(145, 25);
+            this.cbbListClass.Name = "cbbListClass";
+            this.cbbListClass.Size = new System.Drawing.Size(221, 24);
+            this.cbbListClass.TabIndex = 117;
+            // 
             // SuaThongTinLop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1020, 610);
+            this.Controls.Add(this.cbbListClass);
             this.Controls.Add(this.clbMonHoc);
             this.Controls.Add(this.tbSDT);
             this.Controls.Add(this.label37);
@@ -603,7 +602,6 @@
             this.Controls.Add(this.label45);
             this.Controls.Add(this.label46);
             this.Controls.Add(this.label47);
-            this.Controls.Add(this.tbTenLop);
             this.Controls.Add(this.label49);
             this.Controls.Add(this.label50);
             this.Controls.Add(this.label51);
@@ -661,7 +659,6 @@
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.Label label46;
         private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.TextBox tbTenLop;
         private System.Windows.Forms.Label label49;
         private System.Windows.Forms.Label label50;
         private System.Windows.Forms.Label label51;
@@ -669,5 +666,6 @@
         private System.Windows.Forms.Label label53;
         private System.Windows.Forms.TextBox tbSDT;
         private System.Windows.Forms.CheckedListBox clbMonHoc;
+        private System.Windows.Forms.ComboBox cbbListClass;
     }
 }

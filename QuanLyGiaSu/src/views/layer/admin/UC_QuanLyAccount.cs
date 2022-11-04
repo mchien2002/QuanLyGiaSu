@@ -62,5 +62,9 @@ namespace QuanLyGiaSu.src.views.layer.admin
             }
         }
 
+        private void removeAccount_Click(object sender, EventArgs e)
+        {
+            Locator.server.removeAccount(Int32.Parse(dgvQLyAccount.CurrentRow.Cells[0].Value.ToString()));
+        }
     }
 }

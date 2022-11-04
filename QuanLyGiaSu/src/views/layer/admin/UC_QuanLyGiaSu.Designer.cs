@@ -65,7 +65,7 @@
             this.XoaGiaSu,
             this.ThemGiaSu});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(221, 76);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(221, 104);
             // 
             // SuaThongTinGiaSu
             // 
@@ -79,6 +79,7 @@
             this.XoaGiaSu.Name = "XoaGiaSu";
             this.XoaGiaSu.Size = new System.Drawing.Size(220, 24);
             this.XoaGiaSu.Text = "Xóa Gia Sư";
+            this.XoaGiaSu.Click += new System.EventHandler(this.XoaGiaSu_Click);
             // 
             // ThemGiaSu
             // 
@@ -156,7 +157,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dgvQuanLyGiaSu);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UC_QuanLyGiaSu";
             this.Size = new System.Drawing.Size(1309, 533);
             this.Load += new System.EventHandler(this.UC_QuanLyGiaSu_Load);

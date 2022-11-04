@@ -112,18 +112,26 @@ namespace QuanLyGiaSu.src.app.views.layer
         }
         private void btn_TimPH_Click(object sender, EventArgs e)
         {
-            if (cbb_TimTheoPH.Text == "Mã Phụ Huynh")
+            try
             {
-                dgvQuanLyPhuHuynh.DataSource = Locator.server.TimKiemPH_PHID(Convert.ToInt32(tb_TimKiemPH.Text));
+                if (cbb_TimTheoPH.Text == "Mã Phụ Huynh")
+                {
+                    dgvQuanLyPhuHuynh.DataSource = Locator.server.TimKiemPH_PHID(Convert.ToInt32(tb_TimKiemPH.Text));
+                }
+                else if (cbb_TimTheoPH.Text == "Account ID")
+                {
+                    dgvQuanLyPhuHuynh.DataSource = Locator.server.TimKiemPH_ACCID(Convert.ToInt32(tb_TimKiemPH.Text));
+                }
+                else if (cbb_TimTheoPH.Text == "Tên Phụ Huynh")
+                {
+                    dgvQuanLyPhuHuynh.DataSource = Locator.server.TimKiemPH_HoTen(tb_TimKiemPH.Text);
+                }
             }
-            else if (cbb_TimTheoPH.Text == "Account ID")
+            catch
             {
-                dgvQuanLyPhuHuynh.DataSource = Locator.server.TimKiemPH_ACCID(Convert.ToInt32(tb_TimKiemPH.Text));
+                dgvQuanLyPhuHuynh.DataSource = Locator.server.fetchPhuHuynhAD();
             }
-            else if (cbb_TimTheoPH.Text == "Tên Phụ Huynh")
-            {
-                dgvQuanLyPhuHuynh.DataSource = Locator.server.TimKiemPH_HoTen(tb_TimKiemPH.Text);
-            }
+
         }
 
         private void cbb_TimTheoPH_SelectedIndexChanged(object sender, EventArgs e)

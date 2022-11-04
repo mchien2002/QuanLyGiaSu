@@ -55,7 +55,7 @@
             this.cbb_TimTheoLSGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbb_TimTheoLSGD.FormattingEnabled = true;
             this.cbb_TimTheoLSGD.Items.AddRange(new object[] {
-            "Account ID",
+            "Giao dịch ID",
             "Số Tiền",
             "Tất Cả"});
             this.cbb_TimTheoLSGD.Location = new System.Drawing.Point(660, 25);

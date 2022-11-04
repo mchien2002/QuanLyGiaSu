@@ -33,7 +33,7 @@ namespace QuanLyGiaSu.src.app.views.Login
             {
                 loginPage();
             }
-            if (Locator.server.checkSignIn(tbUserName.Text, Locator.server.hashPassWord(tbPassword.Text, tbUserName.Text), Locator.author.PhanQuyen))
+            if (Locator.server.checkSignIn(tbUserName.Text, tbPassword.Text, Locator.author.PhanQuyen))
                 loginPage();
             else
             {

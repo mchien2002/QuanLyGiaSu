@@ -15,6 +15,7 @@ namespace QuanLyGiaSu.src.controller
         public static bool isOpenningNapTien = false;
         public static int LMID = 0;
         public static int MucLuong = 0;
+        public static int idPH;
     }
 
     public enum UserType

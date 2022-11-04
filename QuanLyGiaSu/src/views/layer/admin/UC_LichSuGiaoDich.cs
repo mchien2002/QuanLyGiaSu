@@ -27,17 +27,26 @@ namespace DoAnCuoiKy_Nhom13
 
         private void btn_TimLSGD_Click(object sender, EventArgs e)
         {
-            if (cbb_TimTheoLSGD.Text == "Mã Giao Dịch")
+            try
             {
-                dgvLICHSUGIAODICH.DataSource = Locator.server.TimKiemLSDG_GDID(Convert.ToInt32(tb_TimKiemLSGD.Text));
+
+                if (cbb_TimTheoLSGD.Text == "Giao dịch ID")
+                {
+                    dgvLICHSUGIAODICH.DataSource = Locator.server.TimKiemLSDG_GDID(Convert.ToInt32(tb_TimKiemLSGD.Text));
+                }
+                else if (cbb_TimTheoLSGD.Text == "Account ID")
+                {
+                    dgvLICHSUGIAODICH.DataSource = Locator.server.TimKiemLSDG_ACCID(Convert.ToInt32(tb_TimKiemLSGD.Text));
+                }
+                else if (cbb_TimTheoLSGD.Text == "Số Tiền")
+                {
+                    dgvLICHSUGIAODICH.DataSource = Locator.server.TimKiemLSDG_SoTien(Convert.ToInt32(tb_TimKiemLSGD.Text));
+                }
             }
-            else if (cbb_TimTheoLSGD.Text == "Account ID")
+            catch
             {
-                dgvLICHSUGIAODICH.DataSource = Locator.server.TimKiemLSDG_ACCID(Convert.ToInt32(tb_TimKiemLSGD.Text));
-            }
-            else if (cbb_TimTheoLSGD.Text == "Số Tiền")
-            {
-                dgvLICHSUGIAODICH.DataSource = Locator.server.TimKiemLSDG_SoTien(Convert.ToInt32(tb_TimKiemLSGD.Text));
+                dgvLICHSUGIAODICH.DataSource = Locator.server.fetchLishSuGiaoDich();
+
             }
         }
 

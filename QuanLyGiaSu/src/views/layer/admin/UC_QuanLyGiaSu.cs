@@ -171,9 +171,9 @@ namespace QuanLyGiaSu.src.app.views.layer
                 }
 
             }
-            catch (Exception ex)
+            catch 
             {
-                MessageBox.Show(ex.Message);
+                dgvQuanLyGiaSu.DataSource = Locator.server.fetchGiaSuTable();
             }
 
         }
@@ -190,7 +190,9 @@ namespace QuanLyGiaSu.src.app.views.layer
                 tb_TimKiemGS.Enabled = true;
         }
 
+        private void XoaGiaSu_Click(object sender, EventArgs e)
+        {
 
-
+        }
     }
 }

@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Security.Cryptography;
 using System.Text;
 using System.Windows.Forms;
+using QuanLyGiaSu.src.controller;
 using QuanLyGiaSu.src.database;
 using QuanLyGiaSu.src.models;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
@@ -404,7 +406,7 @@ public object fetchDanhSachLopMoiAD()
         /// <param name="UserName">Tên đăng nhập</param>
         /// <returns></returns>
 
-        public object fetchLishSuNapTienh()
+        public object fetchLishSuNapTien()
         {
             return _db.THONGTINLICHSUNAPTIEN_ADs.Select(p => p);
         }
@@ -627,13 +629,7 @@ public object fetchDanhSachLopMoiAD()
         /// <param name="pass">Mật khẩu</param>
         /// <param name="UserName">Tên đăng nhập</param>
         /// <returns></returns>
-        public string hashPassWord(string pass, string UserName)
-        {
-            var sha = SHA256.Create();
-            var asByteArray = Encoding.Default.GetBytes(pass + UserName);
-            var hashPassword = sha.ComputeHash(asByteArray);
-            return Convert.ToBase64String(hashPassword);
-        }
+        
 
         /// <summary>
         /// Kiểm tra tài khoản đã tồn tại hay chưa
@@ -789,7 +785,7 @@ public object fetchDanhSachLopMoiAD()
         {
             try
             {
-                _db.update_acc(_db.find_accid_username(acc.UserName), acc.UserName, hashPassWord(acc.Password, acc.UserName), acc.Email);
+                _db.update_acc(_db.find_accid_username(acc.UserName), acc.UserName, acc.Password, acc.Email);
                 return true;
             }
             catch(Exception e)
@@ -844,7 +840,7 @@ public object fetchDanhSachLopMoiAD()
                     address,
                     null
                 );
-                MessageBox.Show("Đăng ký thành công", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Cập nhật thông tin thành công", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return true;
 
             }
@@ -962,7 +958,6 @@ public object fetchDanhSachLopMoiAD()
         }
         public string getUsername(int accid)
         {
-            
             return _db.find_username_accid(accid);
         }
         public string getEmail(int accid)
@@ -971,7 +966,60 @@ public object fetchDanhSachLopMoiAD()
             return _db.find_email_accid(accid);
         }
 
-        
+        public void updateLM(int idLM, string lopHoc, int idPH, string address, int salary, string phone, DateTime date, int sobuoi, string hinhThuc, string thoigianHoc, string thongTinHV, string yeuCau, string status, string daDongTien, List<string> listSubjects)
+        {
+            try
+            {
+                _db.update_dslm(idLM, _db.check_lhid(lopHoc), Locator.idPH, address, salary, phone, date, sobuoi, hinhThuc, thoigianHoc, thongTinHV, yeuCau, status, daDongTien);
+                _db.delete_monhoc_lopmoi_lmid(idLM);
+                foreach(string item in listSubjects)
+                {
+                    _db.insert_mhlm(idLM, _db.check_mhid(item));
+                }
+                MessageBox.Show("Thành Công", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch
+            {
+                MessageBox.Show("Thất bại", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
+            }
+        }
+
+        public object searchByClass(string nameClass)
+        {
+            return _db.search_DSLM_LopHoc_AD(nameClass).Select(p => p);
+        }
+
+        public object searchBySubject(string nameSubject)
+        {
+            return _db.search_DSLM_MonHoc_AD(nameSubject).Select(p => p);
+        }
+
+        public void removeLM(int id)
+        {
+            try
+            {
+                _db.delete_lopmoi_lmid(id);
+                MessageBox.Show("Thành Công", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public void removeAccount(int id)
+        {
+            try
+            {
+                _db.delete_account_accid(id);
+                MessageBox.Show("Thành Công", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

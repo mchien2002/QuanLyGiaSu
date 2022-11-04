@@ -48,7 +48,7 @@ namespace QuanLyGiaSu.src.views.layer.admin
 
         private void UC_QLyLichSuNap_Load(object sender, EventArgs e)
         {
-            dgvQLyLichSuNap.DataSource = Locator.server.fetchLichSuNapTienUserTable(Locator.author.UserName);
+            dgvQLyLichSuNap.DataSource = Locator.server.fetchLishSuNapTien();
         }
     }
 }

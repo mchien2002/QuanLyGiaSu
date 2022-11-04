@@ -28,16 +28,31 @@ namespace QuanLyGiaSu.src.app.views.layer
 
         private void SuaThongTinLop_Click(object sender, EventArgs e)
         {   
-            Locator.LMID=Int32.Parse( dgvQuanLyLopMoi.CurrentRow.Cells[0].Value.ToString());
+            Locator.LMID=Int32.Parse(dgvQuanLyLopMoi.CurrentRow.Cells[0].Value.ToString());
+            Locator.idPH= Int32.Parse(dgvQuanLyLopMoi.CurrentRow.Cells[1].Value.ToString());
             SuaThongTinLop suaThongTinLop = new SuaThongTinLop();
             suaThongTinLop.Show();
         }
 
         private void btn_TimLM_Click(object sender, EventArgs e)
         {
-            if (cbb_TimTheoLM.Text == "Mã Lớp")
+            try
             {
-                dgvQuanLyLopMoi.DataSource = Locator.server.TimKiemLM_LMID(Convert.ToInt32(tb_TimKiemLM.Text));
+                if (cbb_TimTheoLM.Text == "Mã Lớp")
+                {
+                    dgvQuanLyLopMoi.DataSource = Locator.server.TimKiemLM_LMID(Convert.ToInt32(tb_TimKiemLM.Text));
+                }
+                else if (cbb_TimTheoLM.Text == "Môn Học")
+                {
+                    dgvQuanLyLopMoi.DataSource = Locator.server.searchBySubject(tb_TimKiemLM.Text.Trim());
+                } else if (cbb_TimTheoLM.Text == "Lớp Học")
+                {
+                    dgvQuanLyLopMoi.DataSource = Locator.server.searchByClass(tb_TimKiemLM.Text.Trim());
+                }
+            }
+            catch
+            {
+                dgvQuanLyLopMoi.DataSource = Locator.server.fetchDanhSachLopMoiAD();
             }
         }
 
@@ -49,10 +64,7 @@ namespace QuanLyGiaSu.src.app.views.layer
                 tb_TimKiemLM.Enabled = false;
                 dgvQuanLyLopMoi.DataSource = Locator.server.fetchDanhSachLopMoiAD();
             }
-            else
-                tb_TimKiemLM.Enabled = true;
+            else tb_TimKiemLM.Enabled = true;
         }
-
-        
     }
 }
