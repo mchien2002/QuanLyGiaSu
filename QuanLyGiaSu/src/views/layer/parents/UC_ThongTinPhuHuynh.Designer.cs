@@ -75,8 +75,8 @@
             // btnUpdate
             // 
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Location = new System.Drawing.Point(931, 475);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUpdate.Location = new System.Drawing.Point(888, 481);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(100, 34);
             this.btnUpdate.TabIndex = 65;
@@ -89,7 +89,7 @@
             this.tbCmndPH.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbCmndPH.Font = new System.Drawing.Font("Tahoma", 12F);
             this.tbCmndPH.Location = new System.Drawing.Point(492, 177);
-            this.tbCmndPH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbCmndPH.Margin = new System.Windows.Forms.Padding(4);
             this.tbCmndPH.Name = "tbCmndPH";
             this.tbCmndPH.Size = new System.Drawing.Size(545, 25);
             this.tbCmndPH.TabIndex = 157;
@@ -103,7 +103,7 @@
             "Nam ",
             "Nữ"});
             this.cbbGender.Location = new System.Drawing.Point(501, 267);
-            this.cbbGender.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbbGender.Margin = new System.Windows.Forms.Padding(4);
             this.cbbGender.Name = "cbbGender";
             this.cbbGender.Size = new System.Drawing.Size(109, 32);
             this.cbbGender.TabIndex = 136;
@@ -113,7 +113,7 @@
             this.tbJobPH.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbJobPH.Font = new System.Drawing.Font("Tahoma", 12F);
             this.tbJobPH.Location = new System.Drawing.Point(492, 374);
-            this.tbJobPH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbJobPH.Margin = new System.Windows.Forms.Padding(4);
             this.tbJobPH.Name = "tbJobPH";
             this.tbJobPH.Size = new System.Drawing.Size(545, 25);
             this.tbJobPH.TabIndex = 137;
@@ -123,7 +123,7 @@
             this.tbPhonePH.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbPhonePH.Font = new System.Drawing.Font("Tahoma", 12F);
             this.tbPhonePH.Location = new System.Drawing.Point(492, 325);
-            this.tbPhonePH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbPhonePH.Margin = new System.Windows.Forms.Padding(4);
             this.tbPhonePH.Name = "tbPhonePH";
             this.tbPhonePH.Size = new System.Drawing.Size(545, 25);
             this.tbPhonePH.TabIndex = 135;
@@ -133,7 +133,7 @@
             this.tbAddressPH.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbAddressPH.Font = new System.Drawing.Font("Tahoma", 12F);
             this.tbAddressPH.Location = new System.Drawing.Point(492, 423);
-            this.tbAddressPH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbAddressPH.Margin = new System.Windows.Forms.Padding(4);
             this.tbAddressPH.Name = "tbAddressPH";
             this.tbAddressPH.Size = new System.Drawing.Size(545, 25);
             this.tbAddressPH.TabIndex = 138;
@@ -176,7 +176,7 @@
             this.dtpBirthDayPH.Font = new System.Drawing.Font("Tahoma", 12F);
             this.dtpBirthDayPH.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpBirthDayPH.Location = new System.Drawing.Point(501, 219);
-            this.dtpBirthDayPH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpBirthDayPH.Margin = new System.Windows.Forms.Padding(4);
             this.dtpBirthDayPH.Name = "dtpBirthDayPH";
             this.dtpBirthDayPH.Size = new System.Drawing.Size(191, 32);
             this.dtpBirthDayPH.TabIndex = 134;
@@ -197,7 +197,7 @@
             this.tbNamePH.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbNamePH.Font = new System.Drawing.Font("Tahoma", 12F);
             this.tbNamePH.Location = new System.Drawing.Point(492, 128);
-            this.tbNamePH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbNamePH.Margin = new System.Windows.Forms.Padding(4);
             this.tbNamePH.Name = "tbNamePH";
             this.tbNamePH.Size = new System.Drawing.Size(545, 25);
             this.tbNamePH.TabIndex = 133;
@@ -408,7 +408,7 @@
             this.tbPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbPass.Font = new System.Drawing.Font("Tahoma", 12F);
             this.tbPass.Location = new System.Drawing.Point(616, 69);
-            this.tbPass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbPass.Margin = new System.Windows.Forms.Padding(4);
             this.tbPass.Name = "tbPass";
             this.tbPass.PasswordChar = '*';
             this.tbPass.Size = new System.Drawing.Size(215, 25);
@@ -420,7 +420,7 @@
             this.tbUsername.Enabled = false;
             this.tbUsername.Font = new System.Drawing.Font("Tahoma", 12F);
             this.tbUsername.Location = new System.Drawing.Point(323, 69);
-            this.tbUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbUsername.Margin = new System.Windows.Forms.Padding(4);
             this.tbUsername.Name = "tbUsername";
             this.tbUsername.Size = new System.Drawing.Size(195, 25);
             this.tbUsername.TabIndex = 163;
@@ -484,7 +484,7 @@
             this.tbEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbEmail.Font = new System.Drawing.Font("Tahoma", 12F);
             this.tbEmail.Location = new System.Drawing.Point(965, 66);
-            this.tbEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbEmail.Margin = new System.Windows.Forms.Padding(4);
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(272, 25);
             this.tbEmail.TabIndex = 168;
@@ -559,7 +559,7 @@
             this.Controls.Add(this.label44);
             this.Controls.Add(this.label45);
             this.Controls.Add(this.btnUpdate);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UC_ThongTinPhuHuynh";
             this.Size = new System.Drawing.Size(1309, 533);
             this.Load += new System.EventHandler(this.UC_ThongTinPhuHuynh_Load);
