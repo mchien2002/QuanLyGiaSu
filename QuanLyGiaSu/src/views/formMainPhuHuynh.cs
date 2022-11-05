@@ -77,6 +77,7 @@ namespace QuanLyGiaSu
             DialogResult dialogResult = MessageBox.Show("Bạn có muốn đăng xuất", "Thoát", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.Yes)
             {
+                this.Hide();
                 Login login = new Login();
                 login.ShowDialog();
             }
