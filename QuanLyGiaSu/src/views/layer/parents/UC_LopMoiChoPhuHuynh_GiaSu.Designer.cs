@@ -36,9 +36,9 @@
             this.tb_TimKiem = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvTHONGTINLOPMOI = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTHONGTINLOPMOI)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -71,6 +71,19 @@
             // 
             this.cbbSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbSearch.FormattingEnabled = true;
+            this.cbbSearch.Items.AddRange(new object[] {
+            "Lớp 1",
+            "Lớp 2",
+            "Lớp 3",
+            "Lớp 4",
+            "Lớp 5",
+            "Lớp 6",
+            "Lớp 7",
+            "Lớp 8",
+            "Lớp 9",
+            "Lớp 10",
+            "Lớp 11",
+            "Lớp 12"});
             this.cbbSearch.Location = new System.Drawing.Point(823, 23);
             this.cbbSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbSearch.Name = "cbbSearch";
@@ -86,7 +99,8 @@
             this.cbbSearchType.Items.AddRange(new object[] {
             "Mã Lớp",
             "Môn Học",
-            "Lớp Học"});
+            "Lớp Học",
+            "Tất Cả"});
             this.cbbSearchType.Location = new System.Drawing.Point(625, 22);
             this.cbbSearchType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbSearchType.Name = "cbbSearchType";
@@ -129,17 +143,6 @@
             this.dgvTHONGTINLOPMOI.TabIndex = 14;
             this.dgvTHONGTINLOPMOI.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTHONGTINLOPMOI_CellContentClick);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(28, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(153, 38);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "LỚP MỚI";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -151,9 +154,20 @@
             // refreshToolStripMenuItem
             // 
             this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
-            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(127, 24);
             this.refreshToolStripMenuItem.Text = "Refresh";
             this.refreshToolStripMenuItem.Click += new System.EventHandler(this.refreshToolStripMenuItem_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(28, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(153, 38);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "LỚP MỚI";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // UC_LopMoiChoPhuHuynh
             // 
@@ -168,7 +182,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dgvTHONGTINLOPMOI);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UC_LopMoiChoPhuHuynh";
             this.Size = new System.Drawing.Size(1309, 533);
             this.Load += new System.EventHandler(this.UC_LopMoi2_Load);

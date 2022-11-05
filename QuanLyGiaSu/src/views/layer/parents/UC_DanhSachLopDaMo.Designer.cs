@@ -31,13 +31,13 @@
             this.components = new System.ComponentModel.Container();
             this.btn_Tim = new System.Windows.Forms.Button();
             this.cbb_TimKiem = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbb_TimTheo = new System.Windows.Forms.ComboBox();
             this.tb_TimKiem = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvDANHSACHMOLOP = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDANHSACHMOLOP)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -52,31 +52,47 @@
             this.btn_Tim.TabIndex = 22;
             this.btn_Tim.Text = "Tìm";
             this.btn_Tim.UseVisualStyleBackColor = true;
+            this.btn_Tim.Click += new System.EventHandler(this.btn_Tim_Click);
             // 
             // cbb_TimKiem
             // 
             this.cbb_TimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbb_TimKiem.FormattingEnabled = true;
+            this.cbb_TimKiem.Items.AddRange(new object[] {
+            "Lớp 1",
+            "Lớp 2",
+            "Lớp 3",
+            "Lớp 4",
+            "Lớp 5",
+            "Lớp 6",
+            "Lớp 7",
+            "Lớp 8",
+            "Lớp 9",
+            "Lớp 10",
+            "Lớp 11",
+            "Lớp 12"});
             this.cbb_TimKiem.Location = new System.Drawing.Point(869, 18);
             this.cbb_TimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbb_TimKiem.Name = "cbb_TimKiem";
             this.cbb_TimKiem.Size = new System.Drawing.Size(256, 33);
             this.cbb_TimKiem.TabIndex = 21;
             // 
-            // comboBox1
+            // cbb_TimTheo
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbb_TimTheo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbb_TimTheo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbb_TimTheo.FormattingEnabled = true;
+            this.cbb_TimTheo.Items.AddRange(new object[] {
             "Mã Lớp",
             "Môn Học",
-            "Lớp Học"});
-            this.comboBox1.Location = new System.Drawing.Point(672, 18);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(192, 33);
-            this.comboBox1.TabIndex = 20;
+            "Lớp Học",
+            "Tất Cả"});
+            this.cbb_TimTheo.Location = new System.Drawing.Point(672, 18);
+            this.cbb_TimTheo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbb_TimTheo.Name = "cbb_TimTheo";
+            this.cbb_TimTheo.Size = new System.Drawing.Size(192, 33);
+            this.cbb_TimTheo.TabIndex = 20;
+            this.cbb_TimTheo.SelectedIndexChanged += new System.EventHandler(this.cbbTimTheo_SelectedIndexChanged);
             // 
             // tb_TimKiem
             // 
@@ -110,6 +126,21 @@
             this.dgvDANHSACHMOLOP.Size = new System.Drawing.Size(1277, 453);
             this.dgvDANHSACHMOLOP.TabIndex = 17;
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.refreshToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(128, 28);
+            // 
+            // refreshToolStripMenuItem
+            // 
+            this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
+            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(127, 24);
+            this.refreshToolStripMenuItem.Text = "Refresh";
+            this.refreshToolStripMenuItem.Click += new System.EventHandler(this.refreshToolStripMenuItem_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -120,21 +151,6 @@
             this.label1.TabIndex = 16;
             this.label1.Text = "DANH SÁCH LỚP ĐÃ MỞ";
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.refreshToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 56);
-            // 
-            // refreshToolStripMenuItem
-            // 
-            this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
-            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
-            this.refreshToolStripMenuItem.Text = "Refresh";
-            this.refreshToolStripMenuItem.Click += new System.EventHandler(this.refreshToolStripMenuItem_Click);
-            // 
             // UC_DanhSachLopDaMo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -142,7 +158,7 @@
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Controls.Add(this.btn_Tim);
             this.Controls.Add(this.cbb_TimKiem);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbb_TimTheo);
             this.Controls.Add(this.tb_TimKiem);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dgvDANHSACHMOLOP);
@@ -161,7 +177,7 @@
 
         private System.Windows.Forms.Button btn_Tim;
         private System.Windows.Forms.ComboBox cbb_TimKiem;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbb_TimTheo;
         private System.Windows.Forms.TextBox tb_TimKiem;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dgvDANHSACHMOLOP;

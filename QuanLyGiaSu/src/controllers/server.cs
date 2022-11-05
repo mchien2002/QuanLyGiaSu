@@ -136,8 +136,15 @@ namespace QuanLyGiaSu.src.server
             return _db.timkiemlm_LMID(LMID);
         }
         //Tìm kiếm lớp mới theo Lớp học
+        public object TimKiemLM_LopHoc(string nameClass)
+        {
+            return _db.search_DSLM_LopHoc_AD(nameClass).Select(p => p);
+        }
         //Tìm kiếm lớp mới theo Môn học
-
+        public object TimKiemLM_MonHoc(string nameSubject)
+        {
+            return _db.search_DSLM_MonHoc_AD(nameSubject).Select(p => p);
+        }
         #endregion
 
         #endregion
@@ -158,6 +165,42 @@ namespace QuanLyGiaSu.src.server
         #endregion
 
         #region Tim Kiem PHUHUYNH
+
+        #region Tim Kiem Lop Moi cho PHUHUYNH
+        //Tìm kiếm Lớp mới theo Mã lớp
+        public object TimKiemLM_PH_GS_LMID(int LMID)
+        {
+            return _db.timkiemlm_ph_gs_LMID(LMID);
+        }
+        //Tìm kiếm Lớp mới theo Lớp học
+        public object TimKiemLM_PH_GS_LopHoc(string LopHoc)
+        {
+            return _db.search_DSLM_LopHoc_PH_GS(LopHoc);
+        }
+        //Tìm kiếm Lớp mới theo môn học
+        public object TimKiemLM_PH_GS_MonHoc(string MonHoc)
+        {
+            return _db.search_DSLM_MonHoc_PH_GS(MonHoc);
+        }
+        #endregion
+
+        #region Tim Kiem Danh Sach Lop Da Mo
+        //Tìm kiếm DSLDM theo Mã lớp
+        public object TimKiem_DSLDM_LMID(string UserName, int LMID)
+        {
+            return _db.timkiem_DSLDM_LMID(_db.check_ph_gs(_db.find_accid_username(UserName)), LMID);
+        }
+        //Tìm kiếm DSLDM theo Môn học
+        public object TimKiem_DSLDM_MonHoc(string UserName, string MonHoc)
+        {
+            return _db.timkiem_DSLDM_MonHoc(_db.check_ph_gs(_db.find_accid_username(UserName)), MonHoc);
+        }
+        //Tìm kiếm DSLDM theo Lớp học
+        public object TimKiem_DSLDM_LopHoc(string UserName, string LopHoc)
+        {
+            return _db.timkiem_DSLDM_LopHoc(_db.check_ph_gs(_db.find_accid_username(UserName)), LopHoc);
+        }
+        #endregion
 
         #endregion
 
@@ -1023,16 +1066,6 @@ public object fetchDanhSachLopMoiAD()
                 MessageBox.Show("Thất bại", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
-        }
-
-        public object searchByClass(string nameClass)
-        {
-            return _db.search_DSLM_LopHoc_AD(nameClass).Select(p => p);
-        }
-
-        public object searchBySubject(string nameSubject)
-        {
-            return _db.search_DSLM_MonHoc_AD(nameSubject).Select(p => p);
         }
 
         public void removeLM(int id)

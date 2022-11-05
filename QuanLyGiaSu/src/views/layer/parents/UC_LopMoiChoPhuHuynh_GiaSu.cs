@@ -26,21 +26,25 @@ namespace QuanLyGiaSu.src.app.views.layer
 
         private void cbbSearchType_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbbSearchType.Text == "Lớp Học")
+            if(cbbSearchType.Text == "Tất Cả")
+            {
+                tb_TimKiem.Text = "";
+                tb_TimKiem.Enabled = false;
+                tb_TimKiem.Visible = true;
+                cbbSearch.Hide();
+                dgvTHONGTINLOPMOI.DataSource = Locator.server.fetchLopMoiPH_GSTable();
+            }
+            else if (cbbSearchType.Text == "Lớp Học")
             {
                 tb_TimKiem.Hide();
                 cbbSearch.Visible = true;
                 //cbb_TimKiem.Hide();
             }
-            else if (cbbSearchType.Text == "Mã Lớp")
-            {
-                cbbSearch.Hide();
-                tb_TimKiem.Visible = true;
-            }
             else
             {
                 cbbSearch.Hide();
                 tb_TimKiem.Visible = true;
+                tb_TimKiem.Enabled = true;
             }
         }
 
@@ -52,7 +56,25 @@ namespace QuanLyGiaSu.src.app.views.layer
 
         private void btnTim_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                if (cbbSearchType.Text == "Mã Lớp")
+                {
+                    dgvTHONGTINLOPMOI.DataSource = Locator.server.TimKiemLM_PH_GS_LMID(Convert.ToInt32(tb_TimKiem.Text));
+                }
+                else if (cbbSearchType.Text == "Môn Học")
+                {
+                    dgvTHONGTINLOPMOI.DataSource = Locator.server.TimKiemLM_PH_GS_MonHoc(tb_TimKiem.Text.Trim());
+                }
+                else if (cbbSearchType.Text == "Lớp Học")
+                {
+                    dgvTHONGTINLOPMOI.DataSource = Locator.server.TimKiemLM_PH_GS_LopHoc(cbbSearch.Text.Trim());
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Vui lòng điền thông tin cần tìm");
+            }               
         }
 
         private void cbbSearch_SelectedIndexChanged(object sender, EventArgs e)
