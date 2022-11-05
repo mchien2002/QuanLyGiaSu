@@ -151,14 +151,25 @@ namespace QuanLyGiaSu.src.server
 
         #region Tim Kiem GIASU
 
-        #region Tim kiem Lop Moi trong Gia Su(Đã có)
+        #region Tim kiem Lop Moi trong Gia Su(PH)
+
         #endregion
 
         #region Tim Kiem DSDK day trong Gia Su
         //Tìm kiếm DSDK Theo Mã Lớp
-        public object TimKiemDSDK_LMID(int LMID)
+        public object TimKiem_DSDK_LMID(string UserName, int LMID)
         {
-            return _db;
+            return _db.timkiem_DSDK_LMID(_db.check_ph_gs(_db.find_accid_username(UserName)), LMID);
+        }
+        //Tìm kiếm DSLDM theo Môn học
+        public object TimKiem_DSDK_MonHoc(string UserName, string MonHoc)
+        {
+            return _db.timkiem_DSDK_MonHoc(_db.check_ph_gs(_db.find_accid_username(UserName)), MonHoc);
+        }
+        //Tìm kiếm DSLDM theo Lớp học
+        public object TimKiem_DSDK_LopHoc(string UserName, string LopHoc)
+        {
+            return _db.timkiem_DSDK_LopHoc(_db.check_ph_gs(_db.find_accid_username(UserName)), LopHoc);
         }
         #endregion
 
