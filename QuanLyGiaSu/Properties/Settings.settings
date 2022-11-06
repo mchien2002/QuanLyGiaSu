@@ -50,5 +50,29 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=DESKTOP-3SM2096\SQLEXPRESS;Initial Catalog=TRUNGTAMGIASU;Integrated Security=True</Value>
     </Setting>
+    <Setting Name="TRUNGTAMGIASUConnectionString6" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;ConnectionString&gt;Data Source=DESKTOP-G67KDJT;Initial Catalog=TRUNGTAMGIASU;User ID=admin;Password=admin&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=DESKTOP-G67KDJT;Initial Catalog=TRUNGTAMGIASU;User ID=admin;Password=admin</Value>
+    </Setting>
+    <Setting Name="TRUNGTAMGIASUConnectionString7" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;ConnectionString&gt;Data Source=DESKTOP-G67KDJT;Initial Catalog=TRUNGTAMGIASU;User ID=giasu;Password=giasu&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=DESKTOP-G67KDJT;Initial Catalog=TRUNGTAMGIASU;User ID=giasu;Password=giasu</Value>
+    </Setting>
+    <Setting Name="TRUNGTAMGIASUConnectionString8" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;ConnectionString&gt;Data Source=DESKTOP-G67KDJT;Initial Catalog=TRUNGTAMGIASU;User ID=phuhuynh;Password=phuhuynh&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=DESKTOP-G67KDJT;Initial Catalog=TRUNGTAMGIASU;User ID=phuhuynh;Password=phuhuynh</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

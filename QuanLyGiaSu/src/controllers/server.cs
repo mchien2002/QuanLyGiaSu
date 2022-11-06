@@ -405,7 +405,7 @@ public object fetchDanhSachLopMoiAD()
         {
             try
             {
-                return _db.DANHSACHDANGKYDAYs.Select(p => p);
+                return _db.THONGTINDANHSACHDANGKYDAYs.Select(p => p);
             }
             catch(Exception e)
             {

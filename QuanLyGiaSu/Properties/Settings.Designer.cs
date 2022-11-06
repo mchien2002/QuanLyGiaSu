@@ -87,5 +87,38 @@ namespace QuanLyGiaSu.Properties {
                 return ((string)(this["TRUNGTAMGIASUConnectionString5"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-G67KDJT;Initial Catalog=TRUNGTAMGIASU;User ID=admin;Password=" +
+            "admin")]
+        public string TRUNGTAMGIASUConnectionString6 {
+            get {
+                return ((string)(this["TRUNGTAMGIASUConnectionString6"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-G67KDJT;Initial Catalog=TRUNGTAMGIASU;User ID=giasu;Password=" +
+            "giasu")]
+        public string TRUNGTAMGIASUConnectionString7 {
+            get {
+                return ((string)(this["TRUNGTAMGIASUConnectionString7"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-G67KDJT;Initial Catalog=TRUNGTAMGIASU;User ID=phuhuynh;Passwo" +
+            "rd=phuhuynh")]
+        public string TRUNGTAMGIASUConnectionString8 {
+            get {
+                return ((string)(this["TRUNGTAMGIASUConnectionString8"]));
+            }
+        }
     }
 }
