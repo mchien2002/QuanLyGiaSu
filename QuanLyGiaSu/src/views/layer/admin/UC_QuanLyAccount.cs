@@ -66,5 +66,10 @@ namespace QuanLyGiaSu.src.views.layer.admin
         {
             Locator.server.removeAccount(Int32.Parse(dgvQLyAccount.CurrentRow.Cells[0].Value.ToString()));
         }
+
+        private void refreshToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UC_QuanLyAccount_Load(sender, e);
+        }
     }
 }

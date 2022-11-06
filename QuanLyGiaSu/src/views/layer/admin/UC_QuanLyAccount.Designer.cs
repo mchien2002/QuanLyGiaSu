@@ -35,9 +35,10 @@
             this.dgvQLyAccount = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.NapTien = new System.Windows.Forms.ToolStripMenuItem();
+            this.removeAccount = new System.Windows.Forms.ToolStripMenuItem();
             this.lbTieuDe = new System.Windows.Forms.Label();
             this.btn_TimAccount = new System.Windows.Forms.Button();
-            this.removeAccount = new System.Windows.Forms.ToolStripMenuItem();
+            this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQLyAccount)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -96,16 +97,24 @@
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.NapTien,
-            this.removeAccount});
+            this.removeAccount,
+            this.refreshToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 80);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 104);
             // 
             // NapTien
             // 
             this.NapTien.Name = "NapTien";
-            this.NapTien.Size = new System.Drawing.Size(138, 24);
+            this.NapTien.Size = new System.Drawing.Size(210, 24);
             this.NapTien.Text = "Nạp Tiền";
             this.NapTien.Click += new System.EventHandler(this.NapTien_Click);
+            // 
+            // removeAccount
+            // 
+            this.removeAccount.Name = "removeAccount";
+            this.removeAccount.Size = new System.Drawing.Size(210, 24);
+            this.removeAccount.Text = "Xóa";
+            this.removeAccount.Click += new System.EventHandler(this.removeAccount_Click);
             // 
             // lbTieuDe
             // 
@@ -127,12 +136,12 @@
             this.btn_TimAccount.UseVisualStyleBackColor = true;
             this.btn_TimAccount.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
-            // removeAccount
+            // refreshToolStripMenuItem
             // 
-            this.removeAccount.Name = "removeAccount";
-            this.removeAccount.Size = new System.Drawing.Size(210, 24);
-            this.removeAccount.Text = "Xóa";
-            this.removeAccount.Click += new System.EventHandler(this.removeAccount_Click);
+            this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
+            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.refreshToolStripMenuItem.Text = "Refresh";
+            this.refreshToolStripMenuItem.Click += new System.EventHandler(this.refreshToolStripMenuItem_Click);
             // 
             // UC_QuanLyAccount
             // 
@@ -165,5 +174,6 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem NapTien;
         private System.Windows.Forms.ToolStripMenuItem removeAccount;
+        private System.Windows.Forms.ToolStripMenuItem refreshToolStripMenuItem;
     }
 }

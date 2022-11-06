@@ -29,6 +29,7 @@ namespace QuanLyGiaSu
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formMain));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnAccount = new System.Windows.Forms.Button();
@@ -327,6 +328,7 @@ namespace QuanLyGiaSu
             this.Name = "formMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Quản Lý Trung Tâm Gia Sư Anh Em";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.formMain_FormClosing);
             this.Load += new System.EventHandler(this.formMain_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

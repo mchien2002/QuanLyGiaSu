@@ -25,6 +25,8 @@ namespace DoAnCuoiKy_Nhom13
             int gsid=0;
             string GioiTinh="",DiaChi="", SDT="", Cmnd="", QueQuan="", TrinhDo="", TruongDT="", UuDiem="", HoTen="", Email="", Username="",Pw="";
             DateTime NgaySinh=DateTime.Now;
+            string[] MonHoc = new string[100];
+            string[] LopHoc = new string[100];
             if (Locator.server.getThongTinGiaSu_private(Locator.author.UserName,
                                                      ref gsid,
                                                     ref HoTen,
@@ -38,7 +40,9 @@ namespace DoAnCuoiKy_Nhom13
                                                     ref TruongDT,
                                                     ref UuDiem,
                                                     ref Email,
-                                                    ref Pw))
+                                                    ref Pw,
+                                                    ref MonHoc,
+                                                    ref LopHoc))
             {
                 tbTruong.Text = TruongDT;
                 tbTen.Text = HoTen;
@@ -56,7 +60,34 @@ namespace DoAnCuoiKy_Nhom13
                 tbEmail.Text = Locator.author.Email = Email;
                 btnUpdate.Enabled = true;
             }
-            
+
+            foreach (string x in Locator.server.fetchMonHoc())
+            {
+                clbMonDay.Items.Add(x);
+                foreach (string y in MonHoc)
+                {
+                    if (y != null)
+
+                        if (y.Trim() == x.Trim())
+                        {
+                            clbMonDay.SetItemCheckState(clbMonDay.Items.IndexOf(x), CheckState.Checked);
+                        }
+                }
+            }
+            foreach (string x in Locator.server.fetchLopHoc())
+            {
+                clbLopDay.Items.Add(x);
+                foreach (string y in LopHoc)
+                {
+                    if (y != null)
+
+                        if (y.Trim() == x.Trim())
+                        {
+                            clbLopDay.SetItemCheckState(clbLopDay.Items.IndexOf(x), CheckState.Checked);
+                        }
+                }
+            }
+
         }
 
         private void tbUuDiem_TextChanged(object sender, EventArgs e)
@@ -71,7 +102,19 @@ namespace DoAnCuoiKy_Nhom13
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            Locator.server.updateInfoTutor(tbUser.Text,tbTen.Text,tbCMND.Text,cbbGioiTinh.Text,dtpNgaySinh.Value,tbSDT.Text,tbQueQuan.Text,tbDiaChi.Text,tbTruong.Text,tbTrinhDo.Text,null);
+            List<string> MonHoc = new List<string>();
+            foreach (string item in clbMonDay.CheckedItems)
+            {
+                MonHoc.Add(item.ToString());
+            }
+
+            List<string> LopHoc = new List<string>();
+            foreach (string item in clbLopDay.CheckedItems)
+            {
+                LopHoc.Add(item.ToString());
+            }
+            Locator.server.updateInfoTutor(Locator.author.UserName, tbTen.Text, tbCMND.Text, cbbGioiTinh.Text, dtpNgaySinh.Value, tbSDT.Text, tbQueQuan.Text, tbDiaChi.Text, tbTruong.Text, tbTrinhDo.Text, tbDiemManh.Text);
+            Locator.server.updateInfoTutor_MH_LH(Locator.author.UserName, MonHoc, LopHoc);
         }
 
         private void tbTen_TextChanged(object sender, EventArgs e)

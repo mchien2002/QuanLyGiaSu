@@ -44,10 +44,10 @@ namespace QuanLyGiaSu.src.app.views.layer
                 }
                 else if (cbb_TimTheoLM.Text == "Môn Học")
                 {
-                    dgvQuanLyLopMoi.DataSource = Locator.server.searchBySubject(tb_TimKiemLM.Text.Trim());
+                    dgvQuanLyLopMoi.DataSource = Locator.server.TimKiemLM_MonHoc(tb_TimKiemLM.Text.Trim());
                 } else if (cbb_TimTheoLM.Text == "Lớp Học")
                 {
-                    dgvQuanLyLopMoi.DataSource = Locator.server.searchByClass(tb_TimKiemLM.Text.Trim());
+                    dgvQuanLyLopMoi.DataSource = Locator.server.TimKiemLM_LopHoc(tb_TimKiemLM.Text.Trim());
                 }
             }
             catch
@@ -65,6 +65,11 @@ namespace QuanLyGiaSu.src.app.views.layer
                 dgvQuanLyLopMoi.DataSource = Locator.server.fetchDanhSachLopMoiAD();
             }
             else tb_TimKiemLM.Enabled = true;
+        }
+
+        private void refreshToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UC_QuanLyLop_Load(sender, e);
         }
     }
 }

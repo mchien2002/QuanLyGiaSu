@@ -239,6 +239,7 @@
             this.Name = "formMainGiaSu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Trung Tâm Gia Sư Anh Em";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.formMainGiaSu_FormClosing);
             this.Load += new System.EventHandler(this.formMainGiaSu_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

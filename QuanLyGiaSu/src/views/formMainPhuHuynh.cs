@@ -1,4 +1,5 @@
-﻿using QuanLyGiaSu.src.controller;
+﻿using QuanLyGiaSu.src.app.views.Login;
+using QuanLyGiaSu.src.controller;
 using QuanLyGiaSu.src.views.layer.admin;
 using System;
 using System.Collections.Generic;
@@ -69,6 +70,25 @@ namespace QuanLyGiaSu
         private void formMainPhuHuynh_Load(object sender, EventArgs e)
         {
             lbSoDu.Text = Locator.server.getNganSach(Locator.author.UserName).ToString();
+        }
+
+        private void formMainPhuHuynh_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Bạn có muốn đăng xuất", "Thoát", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.Yes)
+            {
+                this.Hide();
+                Login login = new Login();
+                login.ShowDialog();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                e.Cancel = false;
+            }
+            else if (dialogResult == DialogResult.Cancel)
+            {
+                e.Cancel = true;
+            }
         }
     }
 }

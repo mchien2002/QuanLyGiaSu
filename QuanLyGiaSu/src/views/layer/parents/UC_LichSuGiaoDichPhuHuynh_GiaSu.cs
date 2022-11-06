@@ -42,5 +42,10 @@ namespace QuanLyGiaSu.src.app.views.layer
                 lbText.Text = "LỊCH SỬ GIAO DỊCH";
             }
         }
+
+        private void refreshToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UC_LichSuGiaoDichPhuHuynh_Load(sender, e);
+        }
     }
 }

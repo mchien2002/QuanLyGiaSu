@@ -50,5 +50,10 @@ namespace QuanLyGiaSu.src.views.layer.admin
         {
             dgvQLyLichSuNap.DataSource = Locator.server.fetchLishSuNapTien();
         }
+
+        private void refreshToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UC_QLyLichSuNap_Load(sender, e);
+        }
     }
 }

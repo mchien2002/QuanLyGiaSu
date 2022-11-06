@@ -28,19 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btn_TimLSGD = new System.Windows.Forms.Button();
             this.cbb_TimTheoLSGD = new System.Windows.Forms.ComboBox();
             this.tb_TimKiemLSGD = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvLICHSUGIAODICH = new System.Windows.Forms.DataGridView();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
+            this.lbFrom = new System.Windows.Forms.Label();
+            this.lbTo = new System.Windows.Forms.Label();
+            this.dtpFrom = new System.Windows.Forms.DateTimePicker();
+            this.dtpTo = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLICHSUGIAODICH)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_TimLSGD
             // 
             this.btn_TimLSGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_TimLSGD.Location = new System.Drawing.Point(1145, 25);
+            this.btn_TimLSGD.Location = new System.Drawing.Point(1208, 23);
             this.btn_TimLSGD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_TimLSGD.Name = "btn_TimLSGD";
             this.btn_TimLSGD.Size = new System.Drawing.Size(75, 33);
@@ -57,6 +65,7 @@
             this.cbb_TimTheoLSGD.Items.AddRange(new object[] {
             "Giao dịch ID",
             "Số Tiền",
+            "Thời Gian GD",
             "Tất Cả"});
             this.cbb_TimTheoLSGD.Location = new System.Drawing.Point(660, 25);
             this.cbb_TimTheoLSGD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -88,6 +97,7 @@
             // 
             this.dgvLICHSUGIAODICH.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvLICHSUGIAODICH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLICHSUGIAODICH.ContextMenuStrip = this.contextMenuStrip1;
             this.dgvLICHSUGIAODICH.Location = new System.Drawing.Point(16, 62);
             this.dgvLICHSUGIAODICH.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvLICHSUGIAODICH.Name = "dgvLICHSUGIAODICH";
@@ -95,6 +105,21 @@
             this.dgvLICHSUGIAODICH.RowTemplate.Height = 24;
             this.dgvLICHSUGIAODICH.Size = new System.Drawing.Size(1277, 453);
             this.dgvLICHSUGIAODICH.TabIndex = 17;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.refreshToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(128, 28);
+            // 
+            // refreshToolStripMenuItem
+            // 
+            this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
+            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(127, 24);
+            this.refreshToolStripMenuItem.Text = "Refresh";
+            this.refreshToolStripMenuItem.Click += new System.EventHandler(this.refreshToolStripMenuItem_Click);
             // 
             // label1
             // 
@@ -106,11 +131,51 @@
             this.label1.TabIndex = 16;
             this.label1.Text = "LỊCH SỬ GIAO DỊCH";
             // 
+            // lbFrom
+            // 
+            this.lbFrom.AutoSize = true;
+            this.lbFrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbFrom.Location = new System.Drawing.Point(858, 30);
+            this.lbFrom.Name = "lbFrom";
+            this.lbFrom.Size = new System.Drawing.Size(63, 20);
+            this.lbFrom.TabIndex = 23;
+            this.lbFrom.Text = "FROM:";
+            // 
+            // lbTo
+            // 
+            this.lbTo.AutoSize = true;
+            this.lbTo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTo.Location = new System.Drawing.Point(1040, 30);
+            this.lbTo.Name = "lbTo";
+            this.lbTo.Size = new System.Drawing.Size(42, 20);
+            this.lbTo.TabIndex = 24;
+            this.lbTo.Text = " TO:";
+            // 
+            // dtpFrom
+            // 
+            this.dtpFrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFrom.Location = new System.Drawing.Point(927, 28);
+            this.dtpFrom.Name = "dtpFrom";
+            this.dtpFrom.Size = new System.Drawing.Size(101, 22);
+            this.dtpFrom.TabIndex = 25;
+            // 
+            // dtpTo
+            // 
+            this.dtpTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpTo.Location = new System.Drawing.Point(1089, 28);
+            this.dtpTo.Name = "dtpTo";
+            this.dtpTo.Size = new System.Drawing.Size(101, 22);
+            this.dtpTo.TabIndex = 26;
+            // 
             // UC_LichSuGiaoDich
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Controls.Add(this.dtpTo);
+            this.Controls.Add(this.dtpFrom);
+            this.Controls.Add(this.lbTo);
+            this.Controls.Add(this.lbFrom);
             this.Controls.Add(this.btn_TimLSGD);
             this.Controls.Add(this.cbb_TimTheoLSGD);
             this.Controls.Add(this.tb_TimKiemLSGD);
@@ -122,6 +187,7 @@
             this.Size = new System.Drawing.Size(1309, 533);
             this.Load += new System.EventHandler(this.UC_LichSuGiaoDich_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLICHSUGIAODICH)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -135,5 +201,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dgvLICHSUGIAODICH;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem refreshToolStripMenuItem;
+        private System.Windows.Forms.Label lbFrom;
+        private System.Windows.Forms.Label lbTo;
+        private System.Windows.Forms.DateTimePicker dtpFrom;
+        private System.Windows.Forms.DateTimePicker dtpTo;
     }
 }

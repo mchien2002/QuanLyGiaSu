@@ -28,13 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btn_TimLSNT = new System.Windows.Forms.Button();
             this.tb_TimKiemLSNT = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvQLyLichSuNap = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.cbb_TimTheoLSNT = new System.Windows.Forms.ComboBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQLyLichSuNap)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_TimLSNT
@@ -72,6 +76,7 @@
             // 
             this.dgvQLyLichSuNap.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvQLyLichSuNap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvQLyLichSuNap.ContextMenuStrip = this.contextMenuStrip1;
             this.dgvQLyLichSuNap.Location = new System.Drawing.Point(16, 62);
             this.dgvQLyLichSuNap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvQLyLichSuNap.Name = "dgvQLyLichSuNap";
@@ -106,6 +111,21 @@
             this.cbb_TimTheoLSNT.TabIndex = 20;
             this.cbb_TimTheoLSNT.SelectedIndexChanged += new System.EventHandler(this.cbb_TimTheoLSNT_SelectedIndexChanged);
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.refreshToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 56);
+            // 
+            // refreshToolStripMenuItem
+            // 
+            this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
+            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.refreshToolStripMenuItem.Text = "Refresh";
+            this.refreshToolStripMenuItem.Click += new System.EventHandler(this.refreshToolStripMenuItem_Click);
+            // 
             // UC_QLyLichSuNap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -117,11 +137,12 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dgvQLyLichSuNap);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UC_QLyLichSuNap";
             this.Size = new System.Drawing.Size(1309, 533);
             this.Load += new System.EventHandler(this.UC_QLyLichSuNap_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvQLyLichSuNap)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -135,5 +156,7 @@
         private System.Windows.Forms.DataGridView dgvQLyLichSuNap;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbb_TimTheoLSNT;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem refreshToolStripMenuItem;
     }
 }
