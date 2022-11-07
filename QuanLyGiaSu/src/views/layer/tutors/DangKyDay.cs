@@ -62,6 +62,7 @@ namespace QuanLyGiaSu.src.app.views.layer
                 }
                 else MessageBox.Show("Đăng ký thất bại!");
             else MessageBox.Show("Nạp tiền để đăng kí");
+            this.Close();
         }
     }
 }

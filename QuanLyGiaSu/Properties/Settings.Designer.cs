@@ -12,7 +12,7 @@ namespace QuanLyGiaSu.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.3.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.1.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -118,6 +118,50 @@ namespace QuanLyGiaSu.Properties {
         public string TRUNGTAMGIASUConnectionString8 {
             get {
                 return ((string)(this["TRUNGTAMGIASUConnectionString8"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-3KTA3E7I\\HAIDANG;Initial Catalog=TRUNGTAMGIASU;Integrated Secu" +
+            "rity=True")]
+        public string TRUNGTAMGIASUConnectionString9 {
+            get {
+                return ((string)(this["TRUNGTAMGIASUConnectionString9"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-3KTA3E7I\\HAIDANG;Initial Catalog=TRUNGTAMGIASU;User ID=admin;P" +
+            "assword=admin")]
+        public string TRUNGTAMGIASUConnectionString10 {
+            get {
+                return ((string)(this["TRUNGTAMGIASUConnectionString10"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-3KTA3E7I\\HAIDANG;Initial Catalog=TRUNGTAMGIASU;User ID=phuhuyn" +
+            "h;Password=phuhuynh")]
+        public string TRUNGTAMGIASUConnectionString11 {
+            get {
+                return ((string)(this["TRUNGTAMGIASUConnectionString11"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-3KTA3E7I\\HAIDANG;Initial Catalog=TRUNGTAMGIASU;User ID=giasu;P" +
+            "assword=giasu")]
+        public string TRUNGTAMGIASUConnectionString12 {
+            get {
+                return ((string)(this["TRUNGTAMGIASUConnectionString12"]));
             }
         }
     }

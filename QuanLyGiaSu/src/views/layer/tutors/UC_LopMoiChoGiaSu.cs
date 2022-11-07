@@ -17,6 +17,7 @@ namespace QuanLyGiaSu.src.views.layer.tutors
         public UC_LopMoiChoGiaSu()
         {
             InitializeComponent();
+            timer1.Start();
         }
 
         private void UC_LopMoiChoGiaSu_Load(object sender, EventArgs e)
@@ -39,6 +40,7 @@ namespace QuanLyGiaSu.src.views.layer.tutors
                 if (Locator.LMID != 0)
                 {
                     DangKyDay dangKyDay = new DangKyDay();
+                    dangKyDay.FormClosing += new FormClosingEventHandler(this.DangKyDayHoc_FormClosing);
                     dangKyDay.Show();
                 }
             }
@@ -93,6 +95,26 @@ namespace QuanLyGiaSu.src.views.layer.tutors
                 cbb_TimKiem.Hide();
                 tb_TimKiem.Visible = true;
                 tb_TimKiem.Enabled = true;
+            }
+        }
+        private void DangKyDayHoc_FormClosing(object sender,FormClosingEventArgs e)
+        {
+            UC_LopMoiChoGiaSu_Load(sender, e);
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            for (int i = 0; i < dgvTHONGTINLOPMOI.Rows.Count - 1; i++)
+            {
+                if (dgvTHONGTINLOPMOI.Rows[i].Cells[11].Value.ToString() == "Đã nhận")
+                {
+                    dgvTHONGTINLOPMOI.Rows[i].DefaultCellStyle.BackColor = Color.FromArgb(246, 227, 227);
+                }
+                else
+                {
+                    dgvTHONGTINLOPMOI.Rows[i].DefaultCellStyle.BackColor = Color.FromArgb(225, 251, 206);
+
+                }
             }
         }
     }

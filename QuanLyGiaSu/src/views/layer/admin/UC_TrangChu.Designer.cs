@@ -65,6 +65,7 @@
             this.ptbLienHe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbLienHe.TabIndex = 0;
             this.ptbLienHe.TabStop = false;
+            this.ptbLienHe.Click += new System.EventHandler(this.ptbLienHe_Click);
             // 
             // pictureBox1
             // 

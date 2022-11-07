@@ -32,7 +32,6 @@
             this.btn_Sua = new System.Windows.Forms.Button();
             this.label37 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
-            this.tbTrangThai = new System.Windows.Forms.TextBox();
             this.tbYeuCau = new System.Windows.Forms.TextBox();
             this.tbThongTinHocVien = new System.Windows.Forms.TextBox();
             this.tbMucLuong = new System.Windows.Forms.TextBox();
@@ -76,6 +75,7 @@
             this.tbSDT = new System.Windows.Forms.TextBox();
             this.clbMonHoc = new System.Windows.Forms.CheckedListBox();
             this.cbbListClass = new System.Windows.Forms.ComboBox();
+            this.cbbTrangThai = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btn_Sua
@@ -106,16 +106,6 @@
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(650, 1);
             this.label35.TabIndex = 108;
-            // 
-            // tbTrangThai
-            // 
-            this.tbTrangThai.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbTrangThai.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.tbTrangThai.Location = new System.Drawing.Point(264, 513);
-            this.tbTrangThai.Margin = new System.Windows.Forms.Padding(4);
-            this.tbTrangThai.Name = "tbTrangThai";
-            this.tbTrangThai.Size = new System.Drawing.Size(430, 25);
-            this.tbTrangThai.TabIndex = 107;
             // 
             // tbYeuCau
             // 
@@ -541,10 +531,11 @@
             // 
             // clbMonHoc
             // 
+            this.clbMonHoc.Font = new System.Drawing.Font("Tahoma", 12F);
             this.clbMonHoc.FormattingEnabled = true;
             this.clbMonHoc.Location = new System.Drawing.Point(741, 57);
             this.clbMonHoc.Name = "clbMonHoc";
-            this.clbMonHoc.Size = new System.Drawing.Size(204, 174);
+            this.clbMonHoc.Size = new System.Drawing.Size(204, 166);
             this.clbMonHoc.TabIndex = 116;
             // 
             // cbbListClass
@@ -555,18 +546,32 @@
             this.cbbListClass.Size = new System.Drawing.Size(221, 24);
             this.cbbListClass.TabIndex = 117;
             // 
+            // cbbTrangThai
+            // 
+            this.cbbTrangThai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbbTrangThai.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.cbbTrangThai.FormattingEnabled = true;
+            this.cbbTrangThai.Items.AddRange(new object[] {
+            "Đã nhận",
+            "Chưa nhận"});
+            this.cbbTrangThai.Location = new System.Drawing.Point(264, 509);
+            this.cbbTrangThai.Margin = new System.Windows.Forms.Padding(4);
+            this.cbbTrangThai.Name = "cbbTrangThai";
+            this.cbbTrangThai.Size = new System.Drawing.Size(151, 32);
+            this.cbbTrangThai.TabIndex = 118;
+            // 
             // SuaThongTinLop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1020, 610);
+            this.Controls.Add(this.cbbTrangThai);
             this.Controls.Add(this.cbbListClass);
             this.Controls.Add(this.clbMonHoc);
             this.Controls.Add(this.tbSDT);
             this.Controls.Add(this.label37);
             this.Controls.Add(this.label35);
-            this.Controls.Add(this.tbTrangThai);
             this.Controls.Add(this.tbYeuCau);
             this.Controls.Add(this.tbThongTinHocVien);
             this.Controls.Add(this.tbMucLuong);
@@ -623,7 +628,6 @@
         private System.Windows.Forms.Button btn_Sua;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.TextBox tbTrangThai;
         private System.Windows.Forms.TextBox tbYeuCau;
         private System.Windows.Forms.TextBox tbThongTinHocVien;
         private System.Windows.Forms.TextBox tbMucLuong;
@@ -667,5 +671,6 @@
         private System.Windows.Forms.TextBox tbSDT;
         private System.Windows.Forms.CheckedListBox clbMonHoc;
         private System.Windows.Forms.ComboBox cbbListClass;
+        private System.Windows.Forms.ComboBox cbbTrangThai;
     }
 }

@@ -38,6 +38,7 @@
             this.DangKyDayHoc = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.cbb_TimKiem = new System.Windows.Forms.ComboBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTHONGTINLOPMOI)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -151,6 +152,11 @@
             this.cbb_TimKiem.Size = new System.Drawing.Size(256, 33);
             this.cbb_TimKiem.TabIndex = 29;
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 1;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // UC_LopMoiChoGiaSu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -184,5 +190,6 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem DangKyDayHoc;
         private System.Windows.Forms.ComboBox cbb_TimKiem;
+        private System.Windows.Forms.Timer timer1;
     }
 }

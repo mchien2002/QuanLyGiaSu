@@ -524,6 +524,7 @@
             // 
             // clbSubjects
             // 
+            this.clbSubjects.Font = new System.Drawing.Font("Tahoma", 12F);
             this.clbSubjects.FormattingEnabled = true;
             this.clbSubjects.Location = new System.Drawing.Point(930, 75);
             this.clbSubjects.Name = "clbSubjects";

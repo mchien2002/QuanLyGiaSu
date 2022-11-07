@@ -27,6 +27,7 @@ namespace QuanLyGiaSu.src.views.layer.admin
         {
             NapTienAdmin napTienAdmin1 = new NapTienAdmin();
             napTienAdmin1.ShowThongTinNapTien(dgvQLyAccount.CurrentRow.Cells[2].Value.ToString());
+            napTienAdmin1.FormClosing += new FormClosingEventHandler(this.NapTienAdmin_FormClosing);
             napTienAdmin1.Show();
         }
 
@@ -65,9 +66,15 @@ namespace QuanLyGiaSu.src.views.layer.admin
         private void removeAccount_Click(object sender, EventArgs e)
         {
             Locator.server.removeAccount(Int32.Parse(dgvQLyAccount.CurrentRow.Cells[0].Value.ToString()));
+            UC_QuanLyAccount_Load(sender, e);
         }
 
         private void refreshToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UC_QuanLyAccount_Load(sender, e);
+            //MessageBox.Show("Load");
+        }
+        private void NapTienAdmin_FormClosing(object sender, FormClosingEventArgs e)
         {
             UC_QuanLyAccount_Load(sender, e);
         }

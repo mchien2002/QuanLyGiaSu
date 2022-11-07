@@ -34,12 +34,12 @@
             this.SuaThongTinGiaSu = new System.Windows.Forms.ToolStripMenuItem();
             this.XoaGiaSu = new System.Windows.Forms.ToolStripMenuItem();
             this.ThemGiaSu = new System.Windows.Forms.ToolStripMenuItem();
+            this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_TimGS = new System.Windows.Forms.Button();
             this.cbb_TimTheoGS = new System.Windows.Forms.ComboBox();
             this.tb_TimKiemGS = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuanLyGiaSu)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -57,6 +57,7 @@
             this.dgvQuanLyGiaSu.Size = new System.Drawing.Size(1277, 453);
             this.dgvQuanLyGiaSu.TabIndex = 3;
             this.dgvQuanLyGiaSu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvQuanLyGiaSu_CellClick);
+            this.dgvQuanLyGiaSu.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvQuanLyGiaSu_CellValueChanged);
             // 
             // contextMenuStrip1
             // 
@@ -67,7 +68,7 @@
             this.ThemGiaSu,
             this.refreshToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(221, 128);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(221, 100);
             // 
             // SuaThongTinGiaSu
             // 
@@ -89,6 +90,13 @@
             this.ThemGiaSu.Size = new System.Drawing.Size(220, 24);
             this.ThemGiaSu.Text = "Thêm Gia Sư";
             this.ThemGiaSu.Click += new System.EventHandler(this.ThemGiaSu_Click);
+            // 
+            // refreshToolStripMenuItem
+            // 
+            this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
+            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(220, 24);
+            this.refreshToolStripMenuItem.Text = "Refresh";
+            this.refreshToolStripMenuItem.Click += new System.EventHandler(this.refreshToolStripMenuItem_Click);
             // 
             // label1
             // 
@@ -147,13 +155,6 @@
             this.label2.Size = new System.Drawing.Size(107, 25);
             this.label2.TabIndex = 11;
             this.label2.Text = "Tìm Theo :";
-            // 
-            // refreshToolStripMenuItem
-            // 
-            this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
-            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(220, 24);
-            this.refreshToolStripMenuItem.Text = "Refresh";
-            this.refreshToolStripMenuItem.Click += new System.EventHandler(this.refreshToolStripMenuItem_Click);
             // 
             // UC_QuanLyGiaSu
             // 

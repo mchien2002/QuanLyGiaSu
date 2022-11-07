@@ -70,27 +70,28 @@
             this.SuaLopHoc,
             this.XoaLopHoc});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(176, 76);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 104);
             // 
             // ThemLopHoc
             // 
             this.ThemLopHoc.Name = "ThemLopHoc";
-            this.ThemLopHoc.Size = new System.Drawing.Size(175, 24);
+            this.ThemLopHoc.Size = new System.Drawing.Size(210, 24);
             this.ThemLopHoc.Text = "Thêm Lớp Học";
             this.ThemLopHoc.Click += new System.EventHandler(this.ThemLopHoc_Click);
             // 
             // SuaLopHoc
             // 
             this.SuaLopHoc.Name = "SuaLopHoc";
-            this.SuaLopHoc.Size = new System.Drawing.Size(175, 24);
+            this.SuaLopHoc.Size = new System.Drawing.Size(210, 24);
             this.SuaLopHoc.Text = "Sửa Lớp Học";
             this.SuaLopHoc.Click += new System.EventHandler(this.SuaLopHoc_Click);
             // 
             // XoaLopHoc
             // 
             this.XoaLopHoc.Name = "XoaLopHoc";
-            this.XoaLopHoc.Size = new System.Drawing.Size(175, 24);
+            this.XoaLopHoc.Size = new System.Drawing.Size(210, 24);
             this.XoaLopHoc.Text = "Xóa Lớp Học";
+            this.XoaLopHoc.Click += new System.EventHandler(this.XoaLopHoc_Click);
             // 
             // label1
             // 
@@ -151,12 +152,12 @@
             this.contextMenuStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.refreshToolStripMenuItem});
             this.contextMenuStrip3.Name = "contextMenuStrip3";
-            this.contextMenuStrip3.Size = new System.Drawing.Size(211, 56);
+            this.contextMenuStrip3.Size = new System.Drawing.Size(128, 28);
             // 
             // refreshToolStripMenuItem
             // 
             this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
-            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(127, 24);
             this.refreshToolStripMenuItem.Text = "Refresh";
             this.refreshToolStripMenuItem.Click += new System.EventHandler(this.refreshToolStripMenuItem_Click);
             // 
@@ -169,7 +170,7 @@
             this.Controls.Add(this.dgvQLyMonHoc);
             this.Controls.Add(this.dgvQLyLopHoc);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UC_QLyLopHoc";
             this.Size = new System.Drawing.Size(1309, 533);
             this.Load += new System.EventHandler(this.UC_QLyLopHoc_Load);

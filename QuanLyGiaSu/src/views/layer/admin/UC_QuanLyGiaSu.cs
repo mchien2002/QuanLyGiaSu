@@ -132,12 +132,14 @@ namespace QuanLyGiaSu.src.app.views.layer
                 return;
             }
             //string accid = dgvQuanLyGiaSu.CurrentRow.Cells[1].Value.ToString();
+            suaGiaSu1.FormClosing += new FormClosingEventHandler(this.SuaThongTinGiaSu_FormClosing);
             suaGiaSu1.Show();
         }
 
         private void ThemGiaSu_Click(object sender, EventArgs e)
         {
             ThemAccount themAccount = new ThemAccount();
+            themAccount.FormClosing += new FormClosingEventHandler(this.SuaThongTinGiaSu_FormClosing);
             themAccount.Show();
         }
 
@@ -198,6 +200,15 @@ namespace QuanLyGiaSu.src.app.views.layer
         private void refreshToolStripMenuItem_Click(object sender, EventArgs e)
         {
             UC_QuanLyGiaSu_Load(sender, e);
+        }
+        private void SuaThongTinGiaSu_FormClosing(object sender,FormClosingEventArgs e)
+        {
+            UC_QuanLyGiaSu_Load(sender, e);
+        }
+
+        private void dgvQuanLyGiaSu_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

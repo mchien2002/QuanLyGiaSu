@@ -115,6 +115,7 @@ namespace DoAnCuoiKy_Nhom13
             }
             Locator.server.updateInfoTutor(Locator.author.UserName, tbTen.Text, tbCMND.Text, cbbGioiTinh.Text, dtpNgaySinh.Value, tbSDT.Text, tbQueQuan.Text, tbDiaChi.Text, tbTruong.Text, tbTrinhDo.Text, tbDiemManh.Text);
             Locator.server.updateInfoTutor_MH_LH(Locator.author.UserName, MonHoc, LopHoc);
+            UC_GiaSu_Load(sender, e);
         }
 
         private void tbTen_TextChanged(object sender, EventArgs e)

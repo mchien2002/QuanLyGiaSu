@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace QuanLyGiaSu.src.app.views.layer
 {
     public partial class UC_QuanLyLop : UserControl
@@ -17,6 +18,7 @@ namespace QuanLyGiaSu.src.app.views.layer
         public UC_QuanLyLop()
         {
             InitializeComponent();
+            timer1.Start();
             cbb_TimTheoLM.Text = cbb_TimTheoLM.Items[0].ToString();
         }
 
@@ -31,6 +33,7 @@ namespace QuanLyGiaSu.src.app.views.layer
             Locator.LMID=Int32.Parse(dgvQuanLyLopMoi.CurrentRow.Cells[0].Value.ToString());
             Locator.idPH= Int32.Parse(dgvQuanLyLopMoi.CurrentRow.Cells[1].Value.ToString());
             SuaThongTinLop suaThongTinLop = new SuaThongTinLop();
+            suaThongTinLop.FormClosing += new FormClosingEventHandler(this.SuaThongTinLop_FormClosing);
             suaThongTinLop.Show();
         }
 
@@ -70,6 +73,31 @@ namespace QuanLyGiaSu.src.app.views.layer
         private void refreshToolStripMenuItem_Click(object sender, EventArgs e)
         {
             UC_QuanLyLop_Load(sender, e);
+        }
+        private void SuaThongTinLop_FormClosing(object sender,FormClosingEventArgs e)
+        {
+            UC_QuanLyLop_Load(sender, e);
+        }
+
+        private void XoaLop_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            for (int i = 0; i < dgvQuanLyLopMoi.Rows.Count - 1; i++)
+            {
+                if (dgvQuanLyLopMoi.Rows[i].Cells[13].Value.ToString() == "Đã nhận")
+                {
+                    dgvQuanLyLopMoi.Rows[i].DefaultCellStyle.BackColor = Color.FromArgb(246, 227, 227);
+                }
+                else
+                {
+                    dgvQuanLyLopMoi.Rows[i].DefaultCellStyle.BackColor = Color.FromArgb(225, 251, 206);
+
+                }
+            }
         }
     }
 }

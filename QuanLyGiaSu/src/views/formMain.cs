@@ -98,5 +98,10 @@ namespace QuanLyGiaSu
                 e.Cancel = true;
             }
         }
+
+        private void uC_TrangChu1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

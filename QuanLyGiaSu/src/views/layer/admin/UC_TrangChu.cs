@@ -16,5 +16,10 @@ namespace DoAnCuoiKy_Nhom13
         {
             InitializeComponent();
         }
+
+        private void ptbLienHe_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

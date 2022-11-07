@@ -225,6 +225,7 @@ namespace QuanLyGiaSu
             this.uC_TrangChu1.Name = "uC_TrangChu1";
             this.uC_TrangChu1.Size = new System.Drawing.Size(1309, 533);
             this.uC_TrangChu1.TabIndex = 2;
+            this.uC_TrangChu1.Load += new System.EventHandler(this.uC_TrangChu1_Load);
             // 
             // uC_GiaSu1
             // 

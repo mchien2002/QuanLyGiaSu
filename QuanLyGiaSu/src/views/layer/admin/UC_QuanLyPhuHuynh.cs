@@ -28,6 +28,7 @@ namespace QuanLyGiaSu.src.app.views.layer
         private void ThemPhuHuynh_Click(object sender, EventArgs e)
         {
             ThemAccount themAccount = new ThemAccount("THÊM PHỤ HUYNH");
+            themAccount.FormClosing += new FormClosingEventHandler(this.ThemPhuHuynh_FormClosing);
             themAccount.Show();
         }
 
@@ -108,6 +109,7 @@ namespace QuanLyGiaSu.src.app.views.layer
                 MessageBox.Show(ex.Message);
                 return;
             }
+            suaPhuHuynh.FormClosing += new FormClosingEventHandler(this.ThemPhuHuynh_FormClosing);
             suaPhuHuynh.Show();
         }
         private void btn_TimPH_Click(object sender, EventArgs e)
@@ -147,6 +149,10 @@ namespace QuanLyGiaSu.src.app.views.layer
         }
 
         private void refreshToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UC_QuanLyPhuHuynh_Load(sender, e);
+        }
+        private void ThemPhuHuynh_FormClosing(object sender,FormClosingEventArgs e)
         {
             UC_QuanLyPhuHuynh_Load(sender, e);
         }

@@ -16,11 +16,13 @@ namespace QuanLyGiaSu.src.app.views.layer
         public UC_LopMoiChoPhuHuynh()
         {
             InitializeComponent();
+            timer1.Start();
         }
 
         private void btnDangKyMoLop_Click(object sender, EventArgs e)
         {
             DangKyMoLop dangKyMoLop = new DangKyMoLop();
+            dangKyMoLop.FormClosing += new FormClosingEventHandler(this.DangKyMoLop_FormClosing);
             dangKyMoLop.Show();
         }
 
@@ -51,7 +53,20 @@ namespace QuanLyGiaSu.src.app.views.layer
         private void UC_LopMoi2_Load(object sender, EventArgs e)
         {
             cbbSearch.Hide();
+            //Int32 selectedCellCount = dgvTHONGTINLOPMOI.GetCellCount(DataGridViewElementStates.Selected);
             dgvTHONGTINLOPMOI.DataSource = Locator.server.fetchLopMoiPH_GSTable();
+            for (int i = 0; i < dgvTHONGTINLOPMOI.Rows.Count - 1; i++)
+            {
+                if (dgvTHONGTINLOPMOI.Rows[i].Cells[11].Value.ToString() == "Đã nhận")
+                {
+                    dgvTHONGTINLOPMOI.Rows[i].DefaultCellStyle.BackColor = Color.FromArgb(246, 227, 227);
+                }
+                else
+                {
+                    dgvTHONGTINLOPMOI.Rows[i].DefaultCellStyle.BackColor = Color.FromArgb(225, 251, 206);
+
+                }
+            }
         }
 
         private void btnTim_Click(object sender, EventArgs e)
@@ -105,6 +120,27 @@ namespace QuanLyGiaSu.src.app.views.layer
         private void refreshToolStripMenuItem_Click(object sender, EventArgs e)
         {
             UC_LopMoi2_Load(sender, e);
+        }
+        private void DangKyMoLop_FormClosing(object sender,FormClosingEventArgs e)
+        {
+            UC_LopMoi2_Load(sender, e);
+        }
+
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            for (int i = 0; i < dgvTHONGTINLOPMOI.Rows.Count - 1; i++)
+            {
+                if (dgvTHONGTINLOPMOI.Rows[i].Cells[11].Value.ToString() == "Đã nhận")
+                {
+                    dgvTHONGTINLOPMOI.Rows[i].DefaultCellStyle.BackColor = Color.FromArgb(246, 227, 227);
+                }
+                else
+                {
+                    dgvTHONGTINLOPMOI.Rows[i].DefaultCellStyle.BackColor = Color.FromArgb(225, 251, 206);
+
+                }
+            }
         }
     }
 }

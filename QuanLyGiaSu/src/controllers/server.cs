@@ -274,7 +274,7 @@ namespace QuanLyGiaSu.src.server
         {
             try
             {
-                return _db.ACCOUNTs.Select(p => p);
+                return _db.THONGTINACCOUNTs.Select(p => p);
             }
             catch (Exception e)
             {
@@ -1072,9 +1072,9 @@ public object fetchDanhSachLopMoiAD()
                 }
                 MessageBox.Show("Thành Công", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            catch
+            catch(Exception ex)
             {
-                MessageBox.Show("Thất bại", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
         }
@@ -1105,6 +1105,64 @@ public object fetchDanhSachLopMoiAD()
                 MessageBox.Show(e.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        public void insertLH(string lop)
+        {
+            try
+            {
+                _db.insert_lh(lop);
+                MessageBox.Show("Thành Công", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public void updateLH(int lhid,string lop)
+        {
+            try
+            {
+                _db.update_lh(lhid,lop);
+                MessageBox.Show("Thành Công", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
+        public int checkLHID(string lop)
+        {
+            return (int)_db.check_lhid(lop);
+
+        }
+        public void updateMH(int mhid, string mon)
+        {
+            try
+            {
+                _db.update_mh(mhid, mon);
+                MessageBox.Show("Thành Công", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public void insertMH(string mon)
+        {
+            try
+            {
+                _db.insert_mh(mon);
+                MessageBox.Show("Thành Công", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public int checkMHID(string mon)
+        {
+            return (int)_db.check_mhid(mon);
+
+        }
     }
 }

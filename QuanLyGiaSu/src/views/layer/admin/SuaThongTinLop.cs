@@ -34,7 +34,7 @@ namespace QuanLyGiaSu.src.app.views.layer
             tbThoiGianHoc.Text = ThoiGH;
             tbThongTinHocVien.Text = TTHocVien;
             tbYeuCau.Text = YeuCau;
-            tbTrangThai.Text = TrangThai;
+            cbbTrangThai.Text = TrangThai;
             foreach(string x in Locator.server.fetchMonHoc())
             {
                 clbMonHoc.Items.Add(x);
@@ -72,10 +72,10 @@ namespace QuanLyGiaSu.src.app.views.layer
             {
                 list.Add(item.ToString());
             }
-            Locator.server.updateLM(Locator.LMID, cbbListClass.Text, Locator.idPH, tbDiaChi.Text, Int32.Parse(tbMucLuong.Text), tbSDT.Text, dtpTGDK.Value, Int32.Parse(tbSoBuoi.Text), tbHinhThucDay.Text, tbThoiGianHoc.Text, tbThongTinHocVien.Text, tbYeuCau.Text, tbTrangThai.Text, null, list);
-            
+            Locator.server.updateLM(Locator.LMID, cbbListClass.Text, Locator.idPH, tbDiaChi.Text, Int32.Parse(tbMucLuong.Text), tbSDT.Text, dtpTGDK.Value, Int32.Parse(tbSoBuoi.Text), tbHinhThucDay.Text, tbThoiGianHoc.Text, tbThongTinHocVien.Text, tbYeuCau.Text, cbbTrangThai.Text, null, list);
+            this.Close();
         }
-
+        
 
     }
 }

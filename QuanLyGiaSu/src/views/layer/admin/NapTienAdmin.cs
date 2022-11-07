@@ -31,7 +31,7 @@ namespace QuanLyGiaSu.src.views.layer.admin
                 MessageBox.Show("Giao dịch thất bại", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
-
+            this.Close();
         }
 
         public void ShowThongTinNapTien(string username)
@@ -52,6 +52,11 @@ namespace QuanLyGiaSu.src.views.layer.admin
             {
                 e.Handled = true;
             }
+        }
+
+        private void NapTienAdmin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
