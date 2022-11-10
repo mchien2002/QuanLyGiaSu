@@ -39,6 +39,7 @@
             this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lbTieuDe = new System.Windows.Forms.Label();
             this.btn_TimAccount = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvQLyAccount)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -52,29 +53,30 @@
             "User Name",
             "Account ID",
             "Tất Cả"});
-            this.cbb_TimTheoAccount.Location = new System.Drawing.Point(672, 18);
-            this.cbb_TimTheoAccount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbb_TimTheoAccount.Location = new System.Drawing.Point(504, 15);
+            this.cbb_TimTheoAccount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbb_TimTheoAccount.Name = "cbb_TimTheoAccount";
-            this.cbb_TimTheoAccount.Size = new System.Drawing.Size(192, 33);
+            this.cbb_TimTheoAccount.Size = new System.Drawing.Size(145, 28);
             this.cbb_TimTheoAccount.TabIndex = 25;
             this.cbb_TimTheoAccount.SelectedIndexChanged += new System.EventHandler(this.cbbTimTheoAcount_SelectedIndexChanged);
             // 
             // tb_TimKiemAccount
             // 
             this.tb_TimKiemAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_TimKiemAccount.Location = new System.Drawing.Point(883, 21);
-            this.tb_TimKiemAccount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tb_TimKiemAccount.Location = new System.Drawing.Point(662, 17);
+            this.tb_TimKiemAccount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tb_TimKiemAccount.Name = "tb_TimKiemAccount";
-            this.tb_TimKiemAccount.Size = new System.Drawing.Size(256, 30);
+            this.tb_TimKiemAccount.Size = new System.Drawing.Size(193, 26);
             this.tb_TimKiemAccount.TabIndex = 24;
             // 
             // lbTimKiem
             // 
             this.lbTimKiem.AutoSize = true;
             this.lbTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTimKiem.Location = new System.Drawing.Point(559, 22);
+            this.lbTimKiem.Location = new System.Drawing.Point(419, 18);
+            this.lbTimKiem.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbTimKiem.Name = "lbTimKiem";
-            this.lbTimKiem.Size = new System.Drawing.Size(107, 25);
+            this.lbTimKiem.Size = new System.Drawing.Size(82, 20);
             this.lbTimKiem.TabIndex = 23;
             this.lbTimKiem.Text = "Tìm Theo :";
             // 
@@ -83,12 +85,12 @@
             this.dgvQLyAccount.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvQLyAccount.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvQLyAccount.ContextMenuStrip = this.contextMenuStrip1;
-            this.dgvQLyAccount.Location = new System.Drawing.Point(16, 62);
-            this.dgvQLyAccount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvQLyAccount.Location = new System.Drawing.Point(12, 50);
+            this.dgvQLyAccount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvQLyAccount.Name = "dgvQLyAccount";
             this.dgvQLyAccount.RowHeadersWidth = 51;
             this.dgvQLyAccount.RowTemplate.Height = 24;
-            this.dgvQLyAccount.Size = new System.Drawing.Size(1277, 453);
+            this.dgvQLyAccount.Size = new System.Drawing.Size(958, 368);
             this.dgvQLyAccount.TabIndex = 22;
             this.dgvQLyAccount.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvQLyAccount_CellClick);
             // 
@@ -100,26 +102,26 @@
             this.removeAccount,
             this.refreshToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(139, 76);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(122, 70);
             // 
             // NapTien
             // 
             this.NapTien.Name = "NapTien";
-            this.NapTien.Size = new System.Drawing.Size(138, 24);
+            this.NapTien.Size = new System.Drawing.Size(121, 22);
             this.NapTien.Text = "Nạp Tiền";
             this.NapTien.Click += new System.EventHandler(this.NapTien_Click);
             // 
             // removeAccount
             // 
             this.removeAccount.Name = "removeAccount";
-            this.removeAccount.Size = new System.Drawing.Size(138, 24);
+            this.removeAccount.Size = new System.Drawing.Size(121, 22);
             this.removeAccount.Text = "Xóa";
             this.removeAccount.Click += new System.EventHandler(this.removeAccount_Click);
             // 
             // refreshToolStripMenuItem
             // 
             this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
-            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(138, 24);
+            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.refreshToolStripMenuItem.Text = "Refresh";
             this.refreshToolStripMenuItem.Click += new System.EventHandler(this.refreshToolStripMenuItem_Click);
             // 
@@ -127,25 +129,32 @@
             // 
             this.lbTieuDe.AutoSize = true;
             this.lbTieuDe.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTieuDe.Location = new System.Drawing.Point(28, 20);
+            this.lbTieuDe.Location = new System.Drawing.Point(21, 16);
+            this.lbTieuDe.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbTieuDe.Name = "lbTieuDe";
-            this.lbTieuDe.Size = new System.Drawing.Size(335, 38);
+            this.lbTieuDe.Size = new System.Drawing.Size(276, 31);
             this.lbTieuDe.TabIndex = 21;
             this.lbTieuDe.Text = "QUẢN LÝ ACCOUNT";
             // 
             // btn_TimAccount
             // 
-            this.btn_TimAccount.Location = new System.Drawing.Point(1174, 22);
+            this.btn_TimAccount.Location = new System.Drawing.Point(880, 18);
+            this.btn_TimAccount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_TimAccount.Name = "btn_TimAccount";
-            this.btn_TimAccount.Size = new System.Drawing.Size(92, 29);
+            this.btn_TimAccount.Size = new System.Drawing.Size(69, 24);
             this.btn_TimAccount.TabIndex = 26;
             this.btn_TimAccount.Text = "Tìm";
             this.btn_TimAccount.UseVisualStyleBackColor = true;
             this.btn_TimAccount.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 1;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // UC_QuanLyAccount
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btn_TimAccount);
             this.Controls.Add(this.cbb_TimTheoAccount);
@@ -153,8 +162,9 @@
             this.Controls.Add(this.lbTimKiem);
             this.Controls.Add(this.dgvQLyAccount);
             this.Controls.Add(this.lbTieuDe);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "UC_QuanLyAccount";
-            this.Size = new System.Drawing.Size(1309, 533);
+            this.Size = new System.Drawing.Size(982, 433);
             this.Load += new System.EventHandler(this.UC_QuanLyAccount_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvQLyAccount)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
@@ -175,5 +185,6 @@
         private System.Windows.Forms.ToolStripMenuItem NapTien;
         private System.Windows.Forms.ToolStripMenuItem removeAccount;
         private System.Windows.Forms.ToolStripMenuItem refreshToolStripMenuItem;
+        private System.Windows.Forms.Timer timer1;
     }
 }

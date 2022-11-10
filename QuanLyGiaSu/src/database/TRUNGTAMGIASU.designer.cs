@@ -75,7 +75,7 @@ namespace QuanLyGiaSu.src.database
     #endregion
 		
 		public TRUNGTAMGIASUDataContext() : 
-				base(global::QuanLyGiaSu.Properties.Settings.Default.TRUNGTAMGIASUConnectionString9, mappingSource)
+				base(global::QuanLyGiaSu.Properties.Settings.Default.TRUNGTAMGIASUConnectionString2, mappingSource)
 		{
 			OnCreated();
 		}
@@ -216,11 +216,11 @@ namespace QuanLyGiaSu.src.database
 			}
 		}
 		
-		public System.Data.Linq.Table<THONGTINDANHSACHDANGKYDAY> THONGTINDANHSACHDANGKYDAYs
+		public System.Data.Linq.Table<THONGTINACCOUNT> THONGTINACCOUNTs
 		{
 			get
 			{
-				return this.GetTable<THONGTINDANHSACHDANGKYDAY>();
+				return this.GetTable<THONGTINACCOUNT>();
 			}
 		}
 		
@@ -229,6 +229,14 @@ namespace QuanLyGiaSu.src.database
 			get
 			{
 				return this.GetTable<THONGTINPHUHUYNH_AD>();
+			}
+		}
+		
+		public System.Data.Linq.Table<THONGTINDANHSACHDANGKYDAY> THONGTINDANHSACHDANGKYDAYs
+		{
+			get
+			{
+				return this.GetTable<THONGTINDANHSACHDANGKYDAY>();
 			}
 		}
 		
@@ -277,14 +285,6 @@ namespace QuanLyGiaSu.src.database
 			get
 			{
 				return this.GetTable<THONGTINLOPMOI_PH_G>();
-			}
-		}
-		
-		public System.Data.Linq.Table<THONGTINACCOUNT> THONGTINACCOUNTs
-		{
-			get
-			{
-				return this.GetTable<THONGTINACCOUNT>();
 			}
 		}
 		
@@ -4046,82 +4046,118 @@ namespace QuanLyGiaSu.src.database
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.THONGTINDANHSACHDANGKYDAY")]
-	public partial class THONGTINDANHSACHDANGKYDAY
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.THONGTINACCOUNT")]
+	public partial class THONGTINACCOUNT
 	{
 		
-		private int _DKID;
+		private int _ACCID;
 		
-		private int _GSID;
+		private string _PhanQuyen;
 		
-		private int _LMID;
+		private string _Username;
 		
-		private System.Nullable<System.DateTime> _ThoiGianDangKy;
+		private string _Password;
 		
-		public THONGTINDANHSACHDANGKYDAY()
+		private string _Email;
+		
+		private int _NganSach;
+		
+		public THONGTINACCOUNT()
 		{
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DKID", AutoSync=AutoSync.Always, DbType="Int NOT NULL IDENTITY", IsDbGenerated=true)]
-		public int DKID
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ACCID", AutoSync=AutoSync.Always, DbType="Int NOT NULL IDENTITY", IsDbGenerated=true)]
+		public int ACCID
 		{
 			get
 			{
-				return this._DKID;
+				return this._ACCID;
 			}
 			set
 			{
-				if ((this._DKID != value))
+				if ((this._ACCID != value))
 				{
-					this._DKID = value;
+					this._ACCID = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GSID", DbType="Int NOT NULL")]
-		public int GSID
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PhanQuyen", DbType="NVarChar(30)")]
+		public string PhanQuyen
 		{
 			get
 			{
-				return this._GSID;
+				return this._PhanQuyen;
 			}
 			set
 			{
-				if ((this._GSID != value))
+				if ((this._PhanQuyen != value))
 				{
-					this._GSID = value;
+					this._PhanQuyen = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LMID", DbType="Int NOT NULL")]
-		public int LMID
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Username", DbType="Char(100) NOT NULL", CanBeNull=false)]
+		public string Username
 		{
 			get
 			{
-				return this._LMID;
+				return this._Username;
 			}
 			set
 			{
-				if ((this._LMID != value))
+				if ((this._Username != value))
 				{
-					this._LMID = value;
+					this._Username = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ThoiGianDangKy", DbType="Date")]
-		public System.Nullable<System.DateTime> ThoiGianDangKy
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Password", DbType="Char(100) NOT NULL", CanBeNull=false)]
+		public string Password
 		{
 			get
 			{
-				return this._ThoiGianDangKy;
+				return this._Password;
 			}
 			set
 			{
-				if ((this._ThoiGianDangKy != value))
+				if ((this._Password != value))
 				{
-					this._ThoiGianDangKy = value;
+					this._Password = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="Char(100) NOT NULL", CanBeNull=false)]
+		public string Email
+		{
+			get
+			{
+				return this._Email;
+			}
+			set
+			{
+				if ((this._Email != value))
+				{
+					this._Email = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NganSach", DbType="Int NOT NULL")]
+		public int NganSach
+		{
+			get
+			{
+				return this._NganSach;
+			}
+			set
+			{
+				if ((this._NganSach != value))
+				{
+					this._NganSach = value;
 				}
 			}
 		}
@@ -4293,6 +4329,87 @@ namespace QuanLyGiaSu.src.database
 				if ((this._CMND != value))
 				{
 					this._CMND = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.THONGTINDANHSACHDANGKYDAY")]
+	public partial class THONGTINDANHSACHDANGKYDAY
+	{
+		
+		private int _DKID;
+		
+		private int _GSID;
+		
+		private int _LMID;
+		
+		private System.Nullable<System.DateTime> _ThoiGianDangKy;
+		
+		public THONGTINDANHSACHDANGKYDAY()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DKID", AutoSync=AutoSync.Always, DbType="Int NOT NULL IDENTITY", IsDbGenerated=true)]
+		public int DKID
+		{
+			get
+			{
+				return this._DKID;
+			}
+			set
+			{
+				if ((this._DKID != value))
+				{
+					this._DKID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GSID", DbType="Int NOT NULL")]
+		public int GSID
+		{
+			get
+			{
+				return this._GSID;
+			}
+			set
+			{
+				if ((this._GSID != value))
+				{
+					this._GSID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LMID", DbType="Int NOT NULL")]
+		public int LMID
+		{
+			get
+			{
+				return this._LMID;
+			}
+			set
+			{
+				if ((this._LMID != value))
+				{
+					this._LMID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ThoiGianDangKy", DbType="Date")]
+		public System.Nullable<System.DateTime> ThoiGianDangKy
+		{
+			get
+			{
+				return this._ThoiGianDangKy;
+			}
+			set
+			{
+				if ((this._ThoiGianDangKy != value))
+				{
+					this._ThoiGianDangKy = value;
 				}
 			}
 		}
@@ -5463,123 +5580,6 @@ namespace QuanLyGiaSu.src.database
 				if ((this._TrangThai != value))
 				{
 					this._TrangThai = value;
-				}
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.THONGTINACCOUNT")]
-	public partial class THONGTINACCOUNT
-	{
-		
-		private int _ACCID;
-		
-		private string _PhanQuyen;
-		
-		private string _Username;
-		
-		private string _Password;
-		
-		private string _Email;
-		
-		private int _NganSach;
-		
-		public THONGTINACCOUNT()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ACCID", AutoSync=AutoSync.Always, DbType="Int NOT NULL IDENTITY", IsDbGenerated=true)]
-		public int ACCID
-		{
-			get
-			{
-				return this._ACCID;
-			}
-			set
-			{
-				if ((this._ACCID != value))
-				{
-					this._ACCID = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PhanQuyen", DbType="NVarChar(30)")]
-		public string PhanQuyen
-		{
-			get
-			{
-				return this._PhanQuyen;
-			}
-			set
-			{
-				if ((this._PhanQuyen != value))
-				{
-					this._PhanQuyen = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Username", DbType="Char(100) NOT NULL", CanBeNull=false)]
-		public string Username
-		{
-			get
-			{
-				return this._Username;
-			}
-			set
-			{
-				if ((this._Username != value))
-				{
-					this._Username = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Password", DbType="Char(100) NOT NULL", CanBeNull=false)]
-		public string Password
-		{
-			get
-			{
-				return this._Password;
-			}
-			set
-			{
-				if ((this._Password != value))
-				{
-					this._Password = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="Char(100) NOT NULL", CanBeNull=false)]
-		public string Email
-		{
-			get
-			{
-				return this._Email;
-			}
-			set
-			{
-				if ((this._Email != value))
-				{
-					this._Email = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NganSach", DbType="Int NOT NULL")]
-		public int NganSach
-		{
-			get
-			{
-				return this._NganSach;
-			}
-			set
-			{
-				if ((this._NganSach != value))
-				{
-					this._NganSach = value;
 				}
 			}
 		}

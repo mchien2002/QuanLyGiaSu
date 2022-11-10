@@ -16,11 +16,18 @@ namespace QuanLyGiaSu.src.views.layer.admin
         public UC_QuanLyAccount()
         {
             InitializeComponent();
+            timer1.Start();
         }
 
         private void UC_QuanLyAccount_Load(object sender, EventArgs e)
         {
             dgvQLyAccount.DataSource = Locator.server.fetchAccount();
+            dgvQLyAccount.Columns["ACCID"].Width = 60;
+            dgvQLyAccount.Columns["PhanQuyen"].Width = 100;
+            dgvQLyAccount.Columns["Username"].Width = 150;
+            dgvQLyAccount.Columns["Password"].Width = 150;
+            dgvQLyAccount.Columns["Email"].Width = 250;
+            dgvQLyAccount.Columns["NganSach"].Width = 200;
         }
 
         private void NapTien_Click(object sender, EventArgs e)
@@ -77,6 +84,22 @@ namespace QuanLyGiaSu.src.views.layer.admin
         private void NapTienAdmin_FormClosing(object sender, FormClosingEventArgs e)
         {
             UC_QuanLyAccount_Load(sender, e);
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            for (int i = 0; i < dgvQLyAccount.Rows.Count - 1; i++)
+            {
+                if (dgvQLyAccount.Rows[i].Cells[1].Value.ToString() == "Gia sư")
+                {
+                    dgvQLyAccount.Rows[i].DefaultCellStyle.BackColor = Color.FromArgb(0, 255, 255);
+                }
+                else
+                {
+                    dgvQLyAccount.Rows[i].DefaultCellStyle.BackColor = Color.FromArgb(255, 228, 181);
+
+                }
+            }
         }
     }
 }
