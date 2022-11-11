@@ -107,12 +107,12 @@ namespace QuanLyGiaSu.src.server
         //Tìm kiếm gia sư theo môn dạy
         public object TimKiemGiaSu_MonDay(string monDay)
         {
-            return _db;
+            return _db.timkiemgs_MonHoc(monDay);
         }
         //Tìm kiếm gia sư theo lớp dạy
-        public object TimKiemGiaSu_LopDay()
+        public object TimKiemGiaSu_LopDay(string tenLop)
         {
-            return _db;
+            return _db.timkiemgs_LopHoc(tenLop);
         }
         #endregion
 
@@ -144,6 +144,13 @@ namespace QuanLyGiaSu.src.server
         public object TimKiemLM_MonHoc(string nameSubject)
         {
             return _db.search_DSLM_MonHoc_AD(nameSubject).Select(p => p);
+        }
+        #endregion
+
+        #region Tim Kiem Danh Sach Dang Ky Dang trong admin
+        public object TimKiemDSDKD_DKID(int DKID)
+        {
+            return _db.timkiem_DSDKD_DKID(DKID);
         }
         #endregion
 

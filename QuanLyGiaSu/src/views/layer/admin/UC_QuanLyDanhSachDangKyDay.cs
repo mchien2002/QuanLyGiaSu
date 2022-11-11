@@ -55,5 +55,20 @@ namespace QuanLyGiaSu.src.views.layer.admin
                 dgvDSDKD.Rows[i].DefaultCellStyle.BackColor = Color.FromArgb(64, 224, 208);
             }
         }
+
+        private void btn_Tim_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (cbbTimTheo.Text == " ")
+                    dgvDSDKD.DataSource = Locator.server.fetchDanhSachDangKyDayAD();
+                else
+                    dgvDSDKD.DataSource = Locator.server.TimKiemDSDKD_DKID(Convert.ToInt32(tb_TimKiem.Text));
+            }
+            catch
+            {
+                dgvDSDKD.DataSource = Locator.server.fetchDanhSachDangKyDayAD();
+            }
+        }
     }
 }

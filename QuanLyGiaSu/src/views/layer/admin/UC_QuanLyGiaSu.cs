@@ -19,7 +19,7 @@ namespace QuanLyGiaSu.src.app.views.layer
         {
             InitializeComponent();
             db = new TRUNGTAMGIASUDataContext();
-            cbb_TimTheoGS.Text = cbb_TimTheoGS.Items[0].ToString();
+            cbb_TimTheo.Text = cbb_TimTheo.Items[0].ToString();
             timer1.Start();
         }
 
@@ -27,6 +27,7 @@ namespace QuanLyGiaSu.src.app.views.layer
         private void UC_QuanLyGiaSu_Load(object sender, EventArgs e)
         {
             dgvQuanLyGiaSu.DataSource=Locator.server.fetchGiaSuTable();
+            cbb_TimTheo.Text = "Tất Cả";
         }
 
         private void SuaThongTinGiaSu_Click(object sender, EventArgs e)
@@ -156,17 +157,25 @@ namespace QuanLyGiaSu.src.app.views.layer
         {
             try
             {
-                if (cbb_TimTheoGS.Text == "Mã Gia Sư")
+                if (cbb_TimTheo.Text == "Mã Gia Sư")
                 {
-                    dgvQuanLyGiaSu.DataSource = Locator.server.TimKiemGiaSu_GSID(Convert.ToInt32(tb_TimKiemGS.Text));
+                    dgvQuanLyGiaSu.DataSource = Locator.server.TimKiemGiaSu_GSID(Convert.ToInt32(tb_TimKiem.Text));
                 }
-                else if (cbb_TimTheoGS.Text == "Account ID")
+                else if (cbb_TimTheo.Text == "Account ID")
                 {
-                    dgvQuanLyGiaSu.DataSource = Locator.server.TimKiemGiaSu_ACCID(Convert.ToInt32(tb_TimKiemGS.Text));
+                    dgvQuanLyGiaSu.DataSource = Locator.server.TimKiemGiaSu_ACCID(Convert.ToInt32(tb_TimKiem.Text));
                 }
-                else if (cbb_TimTheoGS.Text == "Tên Gia Sư")
+                else if (cbb_TimTheo.Text == "Tên Gia Sư")
                 {
-                    dgvQuanLyGiaSu.DataSource = Locator.server.TimKiemGiaSu_TenGS(tb_TimKiemGS.Text);
+                    dgvQuanLyGiaSu.DataSource = Locator.server.TimKiemGiaSu_TenGS(tb_TimKiem.Text);
+                }
+                else if (cbb_TimTheo.Text == "Môn Dạy")
+                {
+                    dgvQuanLyGiaSu.DataSource = Locator.server.TimKiemGiaSu_MonDay(tb_TimKiem.Text.Trim());
+                }
+                else if (cbb_TimTheo.Text == "Lớp Dạy")
+                {
+                    dgvQuanLyGiaSu.DataSource = Locator.server.TimKiemGiaSu_LopDay(cbb_TimKiem.Text.Trim());
                 }
                 else
                 {
@@ -183,14 +192,26 @@ namespace QuanLyGiaSu.src.app.views.layer
 
         private void cbbTimTheoGS_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbb_TimTheoGS.Text == "Tất Cả")
+            if (cbb_TimTheo.Text == "Tất Cả")
             {
-                tb_TimKiemGS.Text = "";
-                tb_TimKiemGS.Enabled = false;
+                tb_TimKiem.Text = "";
+                tb_TimKiem.Enabled = false;
+                tb_TimKiem.Visible = true;
+                cbb_TimKiem.Hide();
                 dgvQuanLyGiaSu.DataSource = Locator.server.fetchGiaSuTable();
             }
+            else if (cbb_TimTheo.Text == "Lớp Dạy")
+            {
+                tb_TimKiem.Hide();
+                cbb_TimKiem.Visible = true;
+                //cbb_TimKiem.Hide();
+            }
             else
-                tb_TimKiemGS.Enabled = true;
+            {
+                cbb_TimKiem.Hide();
+                tb_TimKiem.Visible = true;
+                tb_TimKiem.Enabled = true;
+            }
         }
 
         private void XoaGiaSu_Click(object sender, EventArgs e)
@@ -207,10 +228,6 @@ namespace QuanLyGiaSu.src.app.views.layer
             UC_QuanLyGiaSu_Load(sender, e);
         }
 
-        private void dgvQuanLyGiaSu_CellValueChanged(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
 
         private void timer1_Tick(object sender, EventArgs e)
         {

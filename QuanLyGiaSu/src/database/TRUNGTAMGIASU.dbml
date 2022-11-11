@@ -1088,4 +1088,53 @@
       <Column Name="CMND" Type="System.String" DbType="Char(20) NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
+  <Function Name="dbo.timkiemgs_MonHoc" Method="timkiemgs_MonHoc" IsComposable="true">
+    <Parameter Name="MonHoc" Parameter="monHoc" Type="System.String" DbType="NVarChar(1)" />
+    <ElementType Name="timkiemgs_MonHocResult">
+      <Column Name="GSID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ACCID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="GioiTinh" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="CMND" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="NgaySinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="SDT" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="MONHOC_LIST" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="LOPHOC_LIST" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="QueQuan" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="TrinhDo" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="TruongDaoTao" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="UuDiem" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="Avartar" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.timkiemgs_LopHoc" Method="timkiemgs_LopHoc" IsComposable="true">
+    <Parameter Name="TenLop" Parameter="tenLop" Type="System.String" DbType="NVarChar(20)" />
+    <ElementType Name="timkiemgs_LopHocResult">
+      <Column Name="GSID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ACCID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="GioiTinh" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="CMND" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="NgaySinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="SDT" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="MONHOC_LIST" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="LOPHOC_LIST" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="QueQuan" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="TrinhDo" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="TruongDaoTao" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="UuDiem" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="Avartar" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.timkiem_DSDKD_DKID" Method="timkiem_DSDKD_DKID" IsComposable="true">
+    <Parameter Name="DKID" Parameter="dKID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="timkiem_DSDKD_DKIDResult">
+      <Column Name="DKID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="GSID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LMID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ThoiGianDangKy" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </ElementType>
+  </Function>
 </Database>
