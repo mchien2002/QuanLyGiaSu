@@ -31,21 +31,37 @@ namespace QuanLyGiaSu.src.views.layer.admin
 
         private void dgvDSDKD_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow row = new DataGridViewRow();
-            row = dgvDSDKD.Rows[e.RowIndex];
-            int gsid = Int32.Parse(row.Cells[1].Value.ToString());
-            int lmid = Int32.Parse(row.Cells[2].Value.ToString());
-            dgvGS.DataSource = Locator.server.TimKiemGiaSu_GSID(gsid);
-            dgvLop.DataSource = Locator.server.TimKiemLM_LMID(lmid);
-            tbHoTen.Text = dgvGS.Rows[0].Cells[2].Value.ToString();
-            tbCMND.Text = dgvGS.Rows[0].Cells[3].Value.ToString();
-            tbSDT.Text = dgvGS.Rows[0].Cells[6].Value.ToString();
-            tbMonHoc.Text = dgvLop.Rows[0].Cells[2].Value.ToString();
-            tbLop.Text = dgvLop.Rows[0].Cells[3].Value.ToString();
-            tbDiaChi.Text = dgvLop.Rows[0].Cells[4].Value.ToString();
-            tbSDTph.Text = dgvLop.Rows[0].Cells[5].Value.ToString();
-            tbSoBuoi.Text = dgvLop.Rows[0].Cells[9].Value.ToString();
-            tbHinhThuc.Text = dgvLop.Rows[0].Cells[10].Value.ToString();
+            try
+            {
+                DataGridViewRow row = new DataGridViewRow();
+                row = dgvDSDKD.Rows[e.RowIndex];
+                int gsid = Int32.Parse(row.Cells[1].Value.ToString());
+                int lmid = Int32.Parse(row.Cells[2].Value.ToString());
+                dgvGS.DataSource = Locator.server.TimKiemGiaSu_GSID(gsid);
+                dgvLop.DataSource = Locator.server.TimKiemLM_LMID(lmid);
+                if(dgvGS.Rows[0].Cells[2].Value!=null)
+                tbHoTen.Text = dgvGS.Rows[0].Cells[2].Value.ToString();
+                if(dgvGS.Rows[0].Cells[3].Value!=null)
+                tbCMND.Text = dgvGS.Rows[0].Cells[3].Value.ToString();
+                if(dgvGS.Rows[0].Cells[6].Value!=null)
+                tbSDT.Text = dgvGS.Rows[0].Cells[6].Value.ToString();
+                if(dgvLop.Rows[0].Cells[2].Value!=null)
+                tbMonHoc.Text = dgvLop.Rows[0].Cells[2].Value.ToString();
+                if(dgvLop.Rows[0].Cells[3].Value!=null)
+                tbLop.Text = dgvLop.Rows[0].Cells[3].Value.ToString();
+                if(dgvLop.Rows[0].Cells[4].Value!=null)
+                tbDiaChi.Text = dgvLop.Rows[0].Cells[4].Value.ToString();
+                if(dgvLop.Rows[0].Cells[5].Value!=null)
+                tbSDTph.Text = dgvLop.Rows[0].Cells[5].Value.ToString();
+                if(dgvLop.Rows[0].Cells[9].Value!=null)
+                tbSoBuoi.Text = dgvLop.Rows[0].Cells[9].Value.ToString();
+                if(dgvLop.Rows[0].Cells[10].Value!=null)
+                tbHinhThuc.Text = dgvLop.Rows[0].Cells[10].Value.ToString();
+            }
+            catch
+            {
+
+            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
