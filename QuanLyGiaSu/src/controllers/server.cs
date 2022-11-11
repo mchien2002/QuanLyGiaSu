@@ -1182,5 +1182,24 @@ public object fetchDanhSachLopMoiAD()
             return (int)_db.check_mhid(mon);
 
         }
+        public List<(string time, string total)> total_Monthly()
+        {
+            List<(string time, string total)> result = new List<(string time, string total)>();
+            foreach (var x in _db.total_Monthly())
+            {
+                result.Add((x.month.ToString(), x.total.ToString()));
+            }
+            return result;
+        }
+
+        public List<(string time, string total)> total_annual()
+        {
+            List<(string time, string total)> result = new List<(string time, string total)>();
+            foreach (var x in _db.total_annual())
+            {
+                result.Add((x.month.ToString(), x.total.ToString()));
+            }
+            return result;
+        }
     }
 }
