@@ -16,6 +16,7 @@ namespace QuanLyGiaSu.src.app.views.layer
         public UC_DanhSachLopDaMo()
         {
             InitializeComponent();
+            timer1.Start();
         }
 
         private void UC_DanhSachMoLop_Load(object sender, EventArgs e)
@@ -73,6 +74,14 @@ namespace QuanLyGiaSu.src.app.views.layer
                 cbb_TimKiem.Hide();
                 tb_TimKiem.Visible = true;
                 tb_TimKiem.Enabled = true;
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            for (int i = 0; i < dgvDANHSACHMOLOP.Rows.Count - 1; i++)
+            {
+                dgvDANHSACHMOLOP.Rows[i].DefaultCellStyle.BackColor = Color.FromArgb(246, 227, 227);
             }
         }
     }

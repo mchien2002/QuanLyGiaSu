@@ -16,6 +16,7 @@ namespace QuanLyGiaSu.src.views.layer.admin
         public UC_QLyLichSuNap()
         {
             InitializeComponent();
+            timer1.Start();
         }
 
         private void btn_TimLSNT_Click(object sender, EventArgs e)
@@ -40,7 +41,7 @@ namespace QuanLyGiaSu.src.views.layer.admin
             {
                 tb_TimKiemLSNT.Text = "";
                 tb_TimKiemLSNT.Enabled = false;
-                dgvQLyLichSuNap.DataSource = Locator.server.fetchLichSuNapTienUserTable(Locator.author.UserName);
+                dgvQLyLichSuNap.DataSource = Locator.server.fetchLishSuNapTien();
             }
             else
                 tb_TimKiemLSNT.Enabled = true;
@@ -54,6 +55,27 @@ namespace QuanLyGiaSu.src.views.layer.admin
         private void refreshToolStripMenuItem_Click(object sender, EventArgs e)
         {
             UC_QLyLichSuNap_Load(sender, e);
+        }
+
+        private void dgvQLyLichSuNap_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = new DataGridViewRow();
+            row = dgvQLyLichSuNap.Rows[e.RowIndex];
+            int accid = Int32.Parse(row.Cells[1].Value.ToString());
+            dgvAccount.DataSource = Locator.server.TimKiem_Account_ACCID(accid);
+            tbUser.Text = dgvAccount.Rows[0].Cells[2].Value.ToString();
+            tbEmail.Text = dgvAccount.Rows[0].Cells[4].Value.ToString();
+            tbPhanQuyen.Text = dgvAccount.Rows[0].Cells[1].Value.ToString();
+            tbSoDu.Text = dgvAccount.Rows[0].Cells[5].Value.ToString();
+            tbThoiGianNap.Text = dgvQLyLichSuNap.Rows[0].Cells[3].Value.ToString();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            for (int i = 0; i < dgvQLyLichSuNap.Rows.Count - 1; i++)
+            {
+                dgvQLyLichSuNap.Rows[i].DefaultCellStyle.BackColor = Color.FromArgb(64, 224, 208);
+            }
         }
     }
 }

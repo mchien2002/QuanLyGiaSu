@@ -20,6 +20,7 @@ namespace QuanLyGiaSu.src.app.views.layer
             InitializeComponent();
             db = new TRUNGTAMGIASUDataContext();
             cbb_TimTheoGS.Text = cbb_TimTheoGS.Items[0].ToString();
+            timer1.Start();
         }
 
 
@@ -209,6 +210,22 @@ namespace QuanLyGiaSu.src.app.views.layer
         private void dgvQuanLyGiaSu_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            for (int i = 0; i < dgvQuanLyGiaSu.Rows.Count - 1; i++)
+            {
+                if (dgvQuanLyGiaSu.Rows[i].Cells[3].Value.ToString() == "Nữ")
+                {
+                    dgvQuanLyGiaSu.Rows[i].DefaultCellStyle.BackColor = Color.FromArgb(255, 193, 193);
+                }
+                else
+                {
+                    dgvQuanLyGiaSu.Rows[i].DefaultCellStyle.BackColor = Color.FromArgb(255, 246, 143);
+
+                }
+            }
         }
     }
 }

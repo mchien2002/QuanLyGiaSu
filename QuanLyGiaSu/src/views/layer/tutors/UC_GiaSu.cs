@@ -50,7 +50,7 @@ namespace DoAnCuoiKy_Nhom13
                 tbQueQuan.Text = QueQuan;
                 dtpNgaySinh.Value = NgaySinh;
                 tbSDT.Text = SDT;
-                tbUuDiem.Text = UuDiem;
+                tbDiemManh.Text = UuDiem;
                 cbbGioiTinh.Text = GioiTinh;
                 tbTrinhDo.Text = TrinhDo;
                 lbGSID.Text = gsid.ToString();

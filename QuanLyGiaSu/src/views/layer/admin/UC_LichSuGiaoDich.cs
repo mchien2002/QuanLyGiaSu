@@ -17,7 +17,8 @@ namespace DoAnCuoiKy_Nhom13
         {
             InitializeComponent();
             cbb_TimTheoLSGD.Text = cbb_TimTheoLSGD.Items[0].ToString();
-            //comboBox1.Text = this.Items[0].ToString();
+            timer1.Start();
+            
         }
 
         private void UC_LichSuGiaoDich_Load(object sender, EventArgs e)
@@ -28,6 +29,13 @@ namespace DoAnCuoiKy_Nhom13
             lbTo.Visible = false;
             cbb_TimTheoLSGD.Text = "Tất Cả";
             dgvLICHSUGIAODICH.DataSource = Locator.server.fetchLishSuGiaoDich();
+            dgvLICHSUGIAODICH.Columns["GDID"].Width = 60;
+            dgvLICHSUGIAODICH.Columns["ACCID"].Width = 60;
+            dgvLICHSUGIAODICH.Columns["LMID"].Width = 60;
+            dgvLICHSUGIAODICH.Columns["SoTien"].Width = 100;
+            dgvLICHSUGIAODICH.Columns["ThoiGianGiaoDich"].Width = 200;
+
+            
         }
 
         private void btn_TimLSGD_Click(object sender, EventArgs e)
@@ -75,8 +83,24 @@ namespace DoAnCuoiKy_Nhom13
                 tb_TimKiemLSGD.Enabled = false;
                 dgvLICHSUGIAODICH.DataSource = Locator.server.fetchLishSuGiaoDich();
             }
-            else
+            else if(cbb_TimTheoLSGD.Text=="Số Tiền")
+            {
+                dtpFrom.Visible = false;
+                dtpTo.Visible = false;
+                lbFrom.Visible = false;
+                lbTo.Visible = false;
+                tb_TimKiemLSGD.Visible = true;
                 tb_TimKiemLSGD.Enabled = true;
+            }    
+            else
+            {
+                dtpFrom.Visible = false;
+                dtpTo.Visible = false;
+                lbFrom.Visible = false;
+                lbTo.Visible = false;
+                tb_TimKiemLSGD.Visible = true;
+                tb_TimKiemLSGD.Enabled = true;
+            }    
         }
 
         private void refreshToolStripMenuItem_Click(object sender, EventArgs e)
@@ -85,6 +109,31 @@ namespace DoAnCuoiKy_Nhom13
             cbb_TimTheoLSGD.Text = "Tất Cả";
         }
 
+        private void dgvLICHSUGIAODICH_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = new DataGridViewRow();
+            row = dgvLICHSUGIAODICH.Rows[e.RowIndex];
+            int accid = Int32.Parse(row.Cells[1].Value.ToString());
+            int lmid = Int32.Parse(row.Cells[2].Value.ToString());
+            dgvAccount.DataSource = Locator.server.TimKiem_Account_ACCID(accid);
+            dgvLop.DataSource = Locator.server.TimKiemLM_LMID(lmid);
+            tbMonHoc.Text = dgvLop.Rows[0].Cells[2].Value.ToString();
+            tbLop.Text = dgvLop.Rows[0].Cells[3].Value.ToString();
+            tbDiaChi.Text = dgvLop.Rows[0].Cells[4].Value.ToString();
+            tbSDTph.Text = dgvLop.Rows[0].Cells[5].Value.ToString();
+            tbSoBuoi.Text = dgvLop.Rows[0].Cells[9].Value.ToString();
+            tbHinhThuc.Text = dgvLop.Rows[0].Cells[10].Value.ToString();
+            tbUser.Text = dgvAccount.Rows[0].Cells[2].Value.ToString();
+            tbEmail.Text = dgvAccount.Rows[0].Cells[4].Value.ToString();
+            tbPhanQuyen.Text = dgvAccount.Rows[0].Cells[1].Value.ToString();
+        }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            for (int i = 0; i < dgvLICHSUGIAODICH.Rows.Count - 1; i++)
+            {
+                dgvLICHSUGIAODICH.Rows[i].DefaultCellStyle.BackColor = Color.FromArgb(64, 224, 208);
+            }
+        }
     }
 }

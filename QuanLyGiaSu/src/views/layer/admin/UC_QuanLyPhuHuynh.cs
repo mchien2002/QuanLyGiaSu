@@ -17,6 +17,7 @@ namespace QuanLyGiaSu.src.app.views.layer
         {
             InitializeComponent();
             cbb_TimTheoPH.Text = cbb_TimTheoPH.Items[0].ToString();
+            timer1.Start();
         }
 
 
@@ -155,6 +156,22 @@ namespace QuanLyGiaSu.src.app.views.layer
         private void ThemPhuHuynh_FormClosing(object sender,FormClosingEventArgs e)
         {
             UC_QuanLyPhuHuynh_Load(sender, e);
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            for (int i = 0; i < dgvQuanLyPhuHuynh.Rows.Count - 1; i++)
+            {
+                if (dgvQuanLyPhuHuynh.Rows[i].Cells[3].Value.ToString() == "Nữ")
+                {
+                    dgvQuanLyPhuHuynh.Rows[i].DefaultCellStyle.BackColor = Color.FromArgb(255, 193, 193);
+                }
+                else
+                {
+                    dgvQuanLyPhuHuynh.Rows[i].DefaultCellStyle.BackColor = Color.FromArgb(255, 246, 143);
+
+                }
+            }
         }
     }
 }
