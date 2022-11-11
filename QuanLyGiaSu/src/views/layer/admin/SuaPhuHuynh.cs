@@ -20,13 +20,12 @@ namespace QuanLyGiaSu.src.app.views.layer
             tbUser.Enabled = false;
         }
 
-        private void SuaPhuHuynh_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void btn_Sua_Click(object sender, EventArgs e)
         {
+            Locator.server.updateParent(tbUser.Text, tbHoTen.Text, tbSDT.Text, dtpNgaySinh.Value, tbDiaChi.Text, tbNgheNghiep.Text, cbbGioiTinh.Text, tbCMND.Text);
+
+            Locator.server.updateAccount(tbUser.Text, tbPass.Text, tbEmail.Text);
             this.Close();
         }
         public void ShowThongTinPhuHuynh(string PHID,
@@ -51,9 +50,6 @@ namespace QuanLyGiaSu.src.app.views.layer
             tbDiaChi.Text = diaChi;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Locator.server.updateParent(tbUser.Text, tbHoTen.Text, tbSDT.Text, dtpNgaySinh.Value, tbDiaChi.Text, tbNgheNghiep.Text, cbbGioiTinh.Text, tbCMND.Text);
-        }
+
     }
 }

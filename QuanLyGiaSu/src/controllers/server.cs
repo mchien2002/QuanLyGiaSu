@@ -215,6 +215,7 @@ namespace QuanLyGiaSu.src.server
 
         #endregion
 
+        
         public void setLSNTByUSerName(String userName, int value, DateTime date)
         {
             _db.insert_lsnt(_db.find_accid_username(userName), value, date);
@@ -847,11 +848,21 @@ public object fetchDanhSachLopMoiAD()
             }
         }
 
-        public bool updateAccount(AccountModel acc)
+        public bool updateAccount(string username, string password, string email)
         {
             try
-            {
-                _db.update_acc(_db.find_accid_username(acc.UserName), acc.UserName, acc.Password, acc.Email);
+            {               
+                if (password == "********" || password == "")
+                {
+                    var a = from acc in _db.ACCOUNTs
+                            where acc.Username == username
+                            select acc;
+                    foreach (var x in a)
+                    {
+                        password = x.Password;
+                    }
+                }
+                _db.update_acc(_db.find_accid_username(username), username, password, email);
                 return true;
             }
             catch(Exception e)

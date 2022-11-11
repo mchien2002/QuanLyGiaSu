@@ -17,35 +17,16 @@ namespace QuanLyGiaSu.src.app.views.layer
         {
             InitializeComponent();
             tbUser.Enabled = false;
-            tbEmail.Enabled = false;
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-            
         }
 
         private void btn_Sua_Click(object sender, EventArgs e)
         {
             Locator.server.updateInfoTutor(tbUser.Text, tbHoTen.Text, tbCMND.Text, cbbGioiTinh.Text, dtpNgaySinh.Value, tbSDT.Text, tbQueQuan.Text, tbDiaChi.Text, tbTruongDT.Text, tbTrinhDo.Text, null);
+
+            Locator.server.updateAccount(tbUser.Text, tbPass.Text, tbEmail.Text);
             this.Close();
         }
 
-        private void label14_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void SuaGiaSu_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cbbGioiTinh_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-        
         public void ShowThongTinGiaSu(string GSID,string ACCID,
             string truongDT,
             string hoTen,
@@ -75,5 +56,7 @@ namespace QuanLyGiaSu.src.app.views.layer
             tbUuDiem.Text = uuDiem;
             tbTrinhDo.Text = trinhDo;
         }
+
+
     }
 }
