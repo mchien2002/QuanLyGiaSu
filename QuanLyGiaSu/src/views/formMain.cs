@@ -1,4 +1,5 @@
 ﻿using QuanLyGiaSu.src.app.views.Login;
+using QuanLyGiaSu.src.controller;
 using QuanLyGiaSu.src.views.layer.admin;
 using System;
 using System.Collections.Generic;
@@ -229,6 +230,7 @@ namespace QuanLyGiaSu
             DialogResult dialogResult = MessageBox.Show("Bạn có muốn đăng xuất", "Thoát", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.Yes)
             {
+                Locator.author.PhanQuyen="";
                 this.Hide();
                 Login login = new Login();
                 login.ShowDialog();

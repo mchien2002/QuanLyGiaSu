@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 10.5" name="Admin">
+  <DataContextMoniker Name="/AdminDataContext" />
+  <nestedChildShapes>
+    <classShape Id="5ca76a7f-4a5a-4e68-9ba2-c61c3beeaeca" absoluteBounds="0.75, 0.75, 2, 1.9631982421875">
+      <DataClassMoniker Name="/AdminDataContext/THONGTINACCOUNT" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cefd8f5a-bb24-463d-a003-fe1bccaebeee" absoluteBounds="0.765, 1.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fdb3960b-883c-4487-a2f2-7bd256125258" absoluteBounds="3.75, 0.75, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/AdminDataContext/THONGTINPHUHUYNH_AD" />
+      <nestedChildShapes>
+        <elementListCompartment Id="41250e73-82c1-43bd-a2d1-9bee1dbae95d" absoluteBounds="3.765, 1.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c36126a4-7b90-496a-bb2e-a2f8d53dbe63" absoluteBounds="0.75, 4.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/AdminDataContext/THONGTINDANHSACHDANGKYDAY" />
+      <nestedChildShapes>
+        <elementListCompartment Id="656dd476-4579-4655-948b-f53606c62733" absoluteBounds="0.765, 5.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4eda5e8b-448c-4696-a4d6-55268b03dfc2" absoluteBounds="3.75, 4.75, 2, 3.6939111328124987">
+      <DataClassMoniker Name="/AdminDataContext/THONGTINGIASU_AD" />
+      <nestedChildShapes>
+        <elementListCompartment Id="caf79e86-debb-4ead-91d8-43ec6398e89a" absoluteBounds="3.765, 5.21, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3caf35d8-81e8-46bd-87de-6856fc7154ec" absoluteBounds="6.75, 0.75, 2, 1.7708968098958329">
+      <DataClassMoniker Name="/AdminDataContext/THONGTINLICHSUGIAODICH_AD" />
+      <nestedChildShapes>
+        <elementListCompartment Id="885dc3cf-73d8-41a9-bf2d-013efb0b9be1" absoluteBounds="6.765, 1.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fec2470f-d92e-4926-9cf5-1e3e3ee2878d" absoluteBounds="6.75, 3.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/AdminDataContext/THONGTINLICHSUNAPTIEN_AD" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b78f7d29-2c15-4c78-bfec-0222a53de830" absoluteBounds="6.765, 4.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="01b2f478-0d1c-49ae-ac2b-188c790f1fbb" absoluteBounds="6.75, 6.75, 2, 3.5016097005208318">
+      <DataClassMoniker Name="/AdminDataContext/THONGTINLOPMOI_AD" />
+      <nestedChildShapes>
+        <elementListCompartment Id="43d25550-918f-4e7f-ba6e-2ce23274c0dd" absoluteBounds="6.765, 7.21, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

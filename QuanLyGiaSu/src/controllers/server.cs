@@ -19,7 +19,26 @@ namespace QuanLyGiaSu.src.server
     public class Server
     {
         public TRUNGTAMGIASUDataContext _db = new TRUNGTAMGIASUDataContext();
-        public Server() { }
+        public AdminDataContext _dbAdmin = new AdminDataContext();
+        public UserDataContext _dbUser = new UserDataContext();
+        public Server() {
+            
+        }
+
+        public void LoadServer()
+        {
+            
+            if (Locator.author.PhanQuyen == "Admin")
+            {
+                _dbUser.Dispose();
+                _dbAdmin = new AdminDataContext();
+            }
+            else
+            {
+                _dbUser = new UserDataContext();
+                _dbAdmin.Dispose();
+            }
+        }
 
         #region Tim Kiem ADMIN
 
@@ -27,17 +46,17 @@ namespace QuanLyGiaSu.src.server
         //Tìm kiếm LSNT theo Giao dịch ID
         public object TimKiemLSNT_GDID(int GDID)
         {
-            return _db.timkiemlsnt_GDID(GDID);
+            return _dbAdmin.timkiemlsnt_GDID(GDID);
         }
         //Tìm kiếm LSNT theo Account ID
         public object TimKiemLSNT_ACCID(int ACCID)
         {
-            return _db.timkiemlsnt_ACCID(ACCID);
+            return _dbAdmin.timkiemlsnt_ACCID(ACCID);
         }
         //Tìm kiếm LSNT theo Số tiền
         public object TimKiemLSNT_SoTien(int soTien)
         {
-            return _db.timkiemlsnt_SoTien(soTien);
+            return _dbAdmin.timkiemlsnt_SoTien(soTien);
         }
         #endregion
 
@@ -45,27 +64,27 @@ namespace QuanLyGiaSu.src.server
         //Tìm kiếm LSGD theo GDID
         public object TimKiemLSDG_GDID(int GDID)
         {
-            return _db.timkiemlsgd_GDID(GDID);
+            return _dbAdmin.timkiemlsgd_GDID(GDID);
         }
         //Tìm kiếm LSGD theo ACCID
         public object TimKiemLSDG_ACCID(int ACCID)
         {
-            return _db.timkiemlsgd_ACCID(ACCID);
+            return _dbAdmin.timkiemlsgd_ACCID(ACCID);
         }
         //Tìm kiếm LSGD theo LMID
         public object TimKiemLSDG_LMID(int LMID)
         {
-            return _db.timkiemlsgd_LMID(LMID);
+            return _dbAdmin.timkiemlsgd_LMID(LMID);
         }
         //Tìm kiếm LSGD theo SoTien
         public object TimKiemLSDG_SoTien(int SoTien)
         {
-            return _db.timkiemlsgd_SoTien(SoTien);
+            return _dbAdmin.timkiemlsgd_SoTien(SoTien);
         }
         //Tìm kiếm LSGD theo ThoiGianGiaoDich
         public object TimKiemLSGD_TGGD(DateTime from, DateTime to)
         {
-            return _db.timkiemlsgd_tggd(Convert.ToDateTime(from).Date, Convert.ToDateTime(to).Date);
+            return _dbAdmin.timkiemlsgd_tggd(Convert.ToDateTime(from).Date, Convert.ToDateTime(to).Date);
         }
         #endregion
 
@@ -73,17 +92,17 @@ namespace QuanLyGiaSu.src.server
         //Tìm kiếm phụ huynh theo PHID
         public object TimKiemPH_PHID(int PHID)
         {
-            return _db.timkiemph_PHID(PHID);
+            return _dbAdmin.timkiemph_PHID(PHID);
         }
         //Tìm kiếm phụ huynh theo ACCID
         public object TimKiemPH_ACCID(int ACCID)
         {
-            return _db.timkiemph_ACCID(ACCID);
+            return _dbAdmin.timkiemph_ACCID(ACCID);
         }
         //Tìm kiếm phụ huynh theo HoTen
         public object TimKiemPH_HoTen(string TenPH)
         {
-            return _db.timkiemph_tenPH(TenPH);
+            return _dbAdmin.timkiemph_tenPH(TenPH);
         }
         #endregion
 
@@ -91,28 +110,28 @@ namespace QuanLyGiaSu.src.server
         //Tìm kiếm gia sư theo gsid
         public object TimKiemGiaSu_GSID(int GSID)
         {
-            return _db.timkiemgs_GSID(GSID).Select(p => p);
+            return _dbAdmin.timkiemgs_GSID(GSID).Select(p => p);
         }
 
         //Tìm kiếm gia sư theo accid
         public object TimKiemGiaSu_ACCID(int ACCID)
         {
-            return _db.timkiemgs_ACCID(ACCID);
+            return _dbAdmin.timkiemgs_ACCID(ACCID);
         }
         //Tìm kiếm gia sư theo tên gia sư
         public object TimKiemGiaSu_TenGS(string tenGS)
         {
-            return _db.timkiemgs_tenGS(tenGS);
+            return _dbAdmin.timkiemgs_tenGS(tenGS);
         }
         //Tìm kiếm gia sư theo môn dạy
         public object TimKiemGiaSu_MonDay(string monDay)
         {
-            return _db.timkiemgs_MonHoc(monDay);
+            return _dbAdmin.timkiemgs_MonHoc(monDay);
         }
         //Tìm kiếm gia sư theo lớp dạy
         public object TimKiemGiaSu_LopDay(string tenLop)
         {
-            return _db.timkiemgs_LopHoc(tenLop);
+            return _dbAdmin.timkiemgs_LopHoc(tenLop);
         }
         #endregion
 
@@ -120,12 +139,12 @@ namespace QuanLyGiaSu.src.server
         //Tìm kiếm account theo accid
         public object TimKiem_Account_ACCID(int accid)
         {
-            return _db.timkiemaccount_accid(accid);
+            return _dbAdmin.timkiemaccount_accid(accid);
         }
         //Tìm kiếm account theo username
         public object TimKiem_Account_UserName(string username)
         {
-            return _db.timkiemaccount_username(username);
+            return _dbAdmin.timkiemaccount_username(username);
         }
         #endregion
 
@@ -133,24 +152,24 @@ namespace QuanLyGiaSu.src.server
         //Tìm kiếm lớp mới theo Mã lớp
         public object TimKiemLM_LMID(int LMID)
         {
-            return _db.timkiemlm_LMID(LMID);
+            return _dbAdmin.timkiemlm_LMID(LMID);
         }
         //Tìm kiếm lớp mới theo Lớp học
         public object TimKiemLM_LopHoc(string nameClass)
         {
-            return _db.search_DSLM_LopHoc_AD(nameClass).Select(p => p);
+            return _dbAdmin.search_DSLM_LopHoc_AD(nameClass).Select(p => p);
         }
         //Tìm kiếm lớp mới theo Môn học
         public object TimKiemLM_MonHoc(string nameSubject)
         {
-            return _db.search_DSLM_MonHoc_AD(nameSubject).Select(p => p);
+            return _dbAdmin.search_DSLM_MonHoc_AD(nameSubject).Select(p => p);
         }
         #endregion
 
         #region Tim Kiem Danh Sach Dang Ky Dang trong admin
         public object TimKiemDSDKD_DKID(int DKID)
         {
-            return _db.timkiem_DSDKD_DKID(DKID);
+            return _dbAdmin.timkiem_DSDKD_DKID(DKID);
         }
         #endregion
 
@@ -166,17 +185,17 @@ namespace QuanLyGiaSu.src.server
         //Tìm kiếm DSDK Theo Mã Lớp
         public object TimKiem_DSDK_LMID(string UserName, int LMID)
         {
-            return _db.timkiem_DSDK_LMID(_db.check_ph_gs(_db.find_accid_username(UserName)), LMID);
+            return _dbUser.timkiem_DSDK_LMID(_db.check_ph_gs(_db.find_accid_username(UserName)), LMID);
         }
         //Tìm kiếm DSLDM theo Môn học
         public object TimKiem_DSDK_MonHoc(string UserName, string MonHoc)
         {
-            return _db.timkiem_DSDK_MonHoc(_db.check_ph_gs(_db.find_accid_username(UserName)), MonHoc);
+            return _dbUser.timkiem_DSDK_MonHoc(_db.check_ph_gs(_db.find_accid_username(UserName)), MonHoc);
         }
         //Tìm kiếm DSLDM theo Lớp học
         public object TimKiem_DSDK_LopHoc(string UserName, string LopHoc)
         {
-            return _db.timkiem_DSDK_LopHoc(_db.check_ph_gs(_db.find_accid_username(UserName)), LopHoc);
+            return _dbUser.timkiem_DSDK_LopHoc(_db.check_ph_gs(_db.find_accid_username(UserName)), LopHoc);
         }
         #endregion
 
@@ -188,17 +207,17 @@ namespace QuanLyGiaSu.src.server
         //Tìm kiếm Lớp mới theo Mã lớp
         public object TimKiemLM_PH_GS_LMID(int LMID)
         {
-            return _db.timkiemlm_ph_gs_LMID(LMID);
+            return _dbUser.timkiemlm_ph_gs_LMID(LMID);
         }
         //Tìm kiếm Lớp mới theo Lớp học
         public object TimKiemLM_PH_GS_LopHoc(string LopHoc)
         {
-            return _db.search_DSLM_LopHoc_PH_GS(LopHoc);
+            return _dbUser.search_DSLM_LopHoc_PH_GS(LopHoc);
         }
         //Tìm kiếm Lớp mới theo môn học
         public object TimKiemLM_PH_GS_MonHoc(string MonHoc)
         {
-            return _db.search_DSLM_MonHoc_PH_GS(MonHoc);
+            return _dbUser.search_DSLM_MonHoc_PH_GS(MonHoc);
         }
         #endregion
 
@@ -206,17 +225,17 @@ namespace QuanLyGiaSu.src.server
         //Tìm kiếm DSLDM theo Mã lớp
         public object TimKiem_DSLDM_LMID(string UserName, int LMID)
         {
-            return _db.timkiem_DSLDM_LMID(_db.check_ph_gs(_db.find_accid_username(UserName)), LMID);
+            return _dbUser.timkiem_DSLDM_LMID(_db.check_ph_gs(_db.find_accid_username(UserName)), LMID);
         }
         //Tìm kiếm DSLDM theo Môn học
         public object TimKiem_DSLDM_MonHoc(string UserName, string MonHoc)
         {
-            return _db.timkiem_DSLDM_MonHoc(_db.check_ph_gs(_db.find_accid_username(UserName)), MonHoc);
+            return _dbUser.timkiem_DSLDM_MonHoc(_db.check_ph_gs(_db.find_accid_username(UserName)), MonHoc);
         }
         //Tìm kiếm DSLDM theo Lớp học
         public object TimKiem_DSLDM_LopHoc(string UserName, string LopHoc)
         {
-            return _db.timkiem_DSLDM_LopHoc(_db.check_ph_gs(_db.find_accid_username(UserName)), LopHoc);
+            return _dbUser.timkiem_DSLDM_LopHoc(_db.check_ph_gs(_db.find_accid_username(UserName)), LopHoc);
         }
         #endregion
 
@@ -225,7 +244,7 @@ namespace QuanLyGiaSu.src.server
         
         public void setLSNTByUSerName(String userName, int value, DateTime date)
         {
-            _db.insert_lsnt(_db.find_accid_username(userName), value, date);
+            _dbAdmin.insert_lsnt(_db.find_accid_username(userName), value, date);
         }
 
         public List<string> fetchLopHoc()
@@ -282,7 +301,7 @@ namespace QuanLyGiaSu.src.server
         {
             try
             {
-                return _db.THONGTINACCOUNTs.Select(p => p);
+                return _dbAdmin.THONGTINACCOUNTs.Select(p => p);
             }
             catch (Exception e)
             {
@@ -291,21 +310,6 @@ namespace QuanLyGiaSu.src.server
             }
         }
 
-        /// <summary>
-        /// Lấy dữ liệu bảng tin
-        /// </summary>
-        /// <returns></returns>
-        public object fetchBangTinTable() {
-            try
-            {
-                return _db.BANGTINs.Select(p => p);
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return null;
-            }
-        }
 
 
         /// <summary>
@@ -316,7 +320,7 @@ namespace QuanLyGiaSu.src.server
         {
             try
             {
-                return _db.THONGTINLOPMOI_PH_Gs.Select(p => p);
+                return _dbUser.THONGTINLOPMOI_PH_Gs.Select(p => p);
             }
             catch (Exception e)
             {
@@ -379,7 +383,7 @@ public object fetchDanhSachLopMoiAD()
         {
             try
             {
-                return _db.THONGTINLOPMOI_ADs.Select(p => p);
+                return _dbAdmin.THONGTINLOPMOI_ADs.Select(p => p);
             }
             catch(Exception e)
             {
@@ -396,7 +400,7 @@ public object fetchDanhSachLopMoiAD()
         {
             try
             {
-                return _db.THONGTINPHUHUYNH_ADs.Select(p => p);
+                return _dbAdmin.THONGTINPHUHUYNH_ADs.Select(p => p);
             }
             catch(Exception e)
             {
@@ -413,7 +417,7 @@ public object fetchDanhSachLopMoiAD()
         {
             try
             {
-                return _db.THONGTINDANHSACHDANGKYDAYs.Select(p => p);
+                return _dbAdmin.THONGTINDANHSACHDANGKYDAYs.Select(p => p);
             }
             catch(Exception e)
             {
@@ -431,7 +435,7 @@ public object fetchDanhSachLopMoiAD()
         {
             try
             {
-                return _db.select_danhsachlopmoi_dadangkyday(_db.check_ph_gs(_db.find_accid_username(UserName)));
+                return _dbUser.select_danhsachlopmoi_dadangkyday(_db.check_ph_gs(_db.find_accid_username(UserName)));
             }
             catch(Exception e)
             {
@@ -449,7 +453,7 @@ public object fetchDanhSachLopMoiAD()
         {
             try
             {
-                return _db.danhsachlop_damo(_db.check_ph_gs(_db.find_accid_username(UserName)));
+                return _dbUser.danhsachlop_damo(_db.check_ph_gs(_db.find_accid_username(UserName)));
             }
             catch(Exception e)
             {
@@ -466,7 +470,7 @@ public object fetchDanhSachLopMoiAD()
         
         public object fetchLishSuGiaoDich()
         {
-            return _db.THONGTINLICHSUGIAODICH_ADs.Select(p => p);
+            return _dbAdmin.THONGTINLICHSUGIAODICH_ADs.Select(p => p);
         }
 
         /// <summary>
@@ -477,13 +481,13 @@ public object fetchDanhSachLopMoiAD()
 
         public object fetchLishSuNapTien()
         {
-            return _db.THONGTINLICHSUNAPTIEN_ADs.Select(p => p);
+            return _dbAdmin.THONGTINLICHSUNAPTIEN_ADs.Select(p => p);
         }
         public object fetchLichSuGiaoDichUserTable(string UserName)
         {
             try
             {
-                return _db.select_lichsugiaodich(_db.find_accid_username(UserName));
+                return _dbUser.select_lichsugiaodich(_db.find_accid_username(UserName));
             }
             catch(Exception e)
             {
@@ -501,7 +505,7 @@ public object fetchDanhSachLopMoiAD()
         {
             try
             {
-                return _db.select_lichsunaptien(_db.find_accid_username(UserName));
+                return _dbUser.select_lichsunaptien(_db.find_accid_username(UserName));
             }
             catch (Exception e)
             {
@@ -518,7 +522,7 @@ public object fetchDanhSachLopMoiAD()
         {
             try
             {
-                return _db.THONGTINGIASU_ADs.Select(p => p);
+                return _dbAdmin.THONGTINGIASU_ADs.Select(p => p);
             }
             catch(Exception e)
             {
@@ -573,7 +577,7 @@ public object fetchDanhSachLopMoiAD()
         {
             try
             {
-                var a = _db.thongtingiasu_private(_db.find_accid_username(UserName));
+                var a = _dbUser.thongtingiasu_private(_db.find_accid_username(UserName));
 
                 if (a == null) return false ;
                 foreach (var x in a)
@@ -629,7 +633,7 @@ public object fetchDanhSachLopMoiAD()
         {
             try
             {
-                var a = _db.thongtinphuhuynh_private(_db.find_accid_username(UserName));
+                var a = _dbUser.thongtinphuhuynh_private(_db.find_accid_username(UserName));
 
                 if (a == null) return false;
                 foreach (var x in a)
@@ -753,7 +757,7 @@ public object fetchDanhSachLopMoiAD()
         {
             try
             {
-                _db.insert_dsdk(_db.check_ph_gs(_db.find_accid_username(Username)), LMID, TGDK);
+                _dbUser.insert_dsdk(_db.check_ph_gs(_db.find_accid_username(Username)), LMID, TGDK);
                 return true;
             }
             catch (Exception e)
@@ -773,7 +777,7 @@ public object fetchDanhSachLopMoiAD()
         {
             try
             {
-                _db.insert_lhgs(_db.check_ph_gs(_db.find_accid_username(UserName)), _db.check_lhid(tenLop));
+                _dbUser.insert_lhgs(_db.check_ph_gs(_db.find_accid_username(UserName)), _db.check_lhid(tenLop));
                 return true;
             }
             catch(Exception e)
@@ -793,7 +797,7 @@ public object fetchDanhSachLopMoiAD()
         {
             try
             {
-                _db.insert_mhgs(_db.check_ph_gs(_db.find_accid_username(UserName)), _db.check_mhid(tenMon));
+                _dbUser.insert_mhgs(_db.check_ph_gs(_db.find_accid_username(UserName)), _db.check_mhid(tenMon));
                 return true;
             }
             catch (Exception e)
@@ -844,7 +848,7 @@ public object fetchDanhSachLopMoiAD()
         {
             try
             {
-                LMID=_db.insert_dsml(_db.check_lhid(TenLop), _db.check_ph_gs(_db.find_accid_username(UserName)), DiaChi, MucLuong, Sdt, ThoiGianDK, SoBuoi, HinhThuc, ThoiGianHoc, ThongTinHocVien, YeuCau);
+                LMID=_dbUser.insert_dsml(_db.check_lhid(TenLop), _db.check_ph_gs(_db.find_accid_username(UserName)), DiaChi, MucLuong, Sdt, ThoiGianDK, SoBuoi, HinhThuc, ThoiGianHoc, ThongTinHocVien, YeuCau);
                 return true;
             }
             catch (Exception e)
@@ -869,7 +873,7 @@ public object fetchDanhSachLopMoiAD()
                         password = x.Password;
                     }
                 }
-                _db.update_acc(_db.find_accid_username(username), username, password, email);
+                _dbAdmin.update_acc(_db.find_accid_username(username), username, password, email);
                 return true;
             }
             catch(Exception e)
@@ -941,17 +945,17 @@ public object fetchDanhSachLopMoiAD()
         {
             try
             {
-                _db.delete_monhoc_giasu_gsid(_db.check_ph_gs(_db.find_accid_username(Username)));
-                _db.delete_lop_giasu_gsid(_db.check_ph_gs(_db.find_accid_username(Username)));
+                _dbUser.delete_monhoc_giasu_gsid(_db.check_ph_gs(_db.find_accid_username(Username)));
+                _dbUser.delete_lop_giasu_gsid(_db.check_ph_gs(_db.find_accid_username(Username)));
 
 
                 foreach (string item in MonHoc)
                 {
-                    _db.insert_mhgs(_db.check_ph_gs(_db.find_accid_username(Username)), _db.check_mhid(item));
+                    _dbUser.insert_mhgs(_db.check_ph_gs(_db.find_accid_username(Username)), _db.check_mhid(item));
                 }
                 foreach (string item in LopHoc)
                 {
-                    _db.insert_lhgs(_db.check_ph_gs(_db.find_accid_username(Username)), _db.check_lhid(item));
+                    _dbUser.insert_lhgs(_db.check_ph_gs(_db.find_accid_username(Username)), _db.check_lhid(item));
                 }
                
                 return true;
@@ -1057,7 +1061,7 @@ public object fetchDanhSachLopMoiAD()
         {
             try
             {
-                var temp = _db.select_ngansach(_db.find_accid_username(UserName));
+                var temp = _dbUser.select_ngansach(_db.find_accid_username(UserName));
                 if (temp != null)
                     return (int)temp;
                 return 0;
@@ -1070,20 +1074,20 @@ public object fetchDanhSachLopMoiAD()
         }
         public string getUsername(int accid)
         {
-            return _db.find_username_accid(accid);
+            return _dbAdmin.find_username_accid(accid);
         }
         public string getEmail(int accid)
         {
 
-            return _db.find_email_accid(accid);
+            return _dbAdmin.find_email_accid(accid);
         }
 
         public void updateLM(int idLM, string lopHoc, int idPH, string address, int salary, string phone, DateTime date, int sobuoi, string hinhThuc, string thoigianHoc, string thongTinHV, string yeuCau, string status, string daDongTien, List<string> listSubjects)
         {
             try
             {
-                _db.update_dslm(idLM, _db.check_lhid(lopHoc), Locator.idPH, address, salary, phone, date, sobuoi, hinhThuc, thoigianHoc, thongTinHV, yeuCau, status, daDongTien);
-                _db.delete_monhoc_lopmoi_lmid(idLM);
+                _dbAdmin.update_dslm(idLM, _db.check_lhid(lopHoc), Locator.idPH, address, salary, phone, date, sobuoi, hinhThuc, thoigianHoc, thongTinHV, yeuCau, status, daDongTien);
+                _dbAdmin.delete_monhoc_lopmoi_lmid(idLM);
                 foreach(string item in listSubjects)
                 {
                     _db.insert_mhlm(idLM, _db.check_mhid(item));
@@ -1097,24 +1101,11 @@ public object fetchDanhSachLopMoiAD()
             }
         }
 
-        public void removeLM(int id)
-        {
-            try
-            {
-                _db.delete_lopmoi_lmid(id);
-                MessageBox.Show("Thành Công", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            }
-            catch(Exception e)
-            {
-                MessageBox.Show(e.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
         public void removeAccount(int id)
         {
             try
             {
-                _db.delete_account_accid(id);
+                _dbAdmin.delete_account_accid(id);
                 MessageBox.Show("Thành Công", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
@@ -1127,7 +1118,7 @@ public object fetchDanhSachLopMoiAD()
         {
             try
             {
-                _db.insert_lh(lop);
+                _dbAdmin.insert_lh(lop);
                 MessageBox.Show("Thành Công", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch(Exception e)
@@ -1139,7 +1130,7 @@ public object fetchDanhSachLopMoiAD()
         {
             try
             {
-                _db.update_lh(lhid,lop);
+                _dbAdmin.update_lh(lhid,lop);
                 MessageBox.Show("Thành Công", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception e)
@@ -1157,7 +1148,7 @@ public object fetchDanhSachLopMoiAD()
         {
             try
             {
-                _db.update_mh(mhid, mon);
+                _dbAdmin.update_mh(mhid, mon);
                 MessageBox.Show("Thành Công", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception e)
@@ -1169,7 +1160,7 @@ public object fetchDanhSachLopMoiAD()
         {
             try
             {
-                _db.insert_mh(mon);
+                _dbAdmin.insert_mh(mon);
                 MessageBox.Show("Thành Công", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception e)
@@ -1185,7 +1176,7 @@ public object fetchDanhSachLopMoiAD()
         public List<(string time, string total)> total_Monthly()
         {
             List<(string time, string total)> result = new List<(string time, string total)>();
-            foreach (var x in _db.total_Monthly())
+            foreach (var x in _dbAdmin.total_Monthly())
             {
                 result.Add((x.month.ToString(), x.total.ToString()));
             }
@@ -1195,7 +1186,7 @@ public object fetchDanhSachLopMoiAD()
         public List<(string time, string total)> total_annual()
         {
             List<(string time, string total)> result = new List<(string time, string total)>();
-            foreach (var x in _db.total_annual())
+            foreach (var x in _dbAdmin.total_annual())
             {
                 result.Add((x.month.ToString(), x.total.ToString()));
             }

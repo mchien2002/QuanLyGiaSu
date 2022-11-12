@@ -126,6 +126,7 @@ namespace QuanLyGiaSu
             DialogResult dialogResult = MessageBox.Show("Bạn có muốn đăng xuất", "Thoát", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.Yes)
             {
+                Locator.author.PhanQuyen = "";
                 this.Hide();
                 Login login = new Login();
                 login.ShowDialog();

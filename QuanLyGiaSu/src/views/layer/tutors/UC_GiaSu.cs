@@ -27,6 +27,7 @@ namespace DoAnCuoiKy_Nhom13
             DateTime NgaySinh=DateTime.Now;
             string[] MonHoc = new string[100];
             string[] LopHoc = new string[100];
+            MessageBox.Show("a");
             if (Locator.server.getThongTinGiaSu_private(Locator.author.UserName,
                                                      ref gsid,
                                                     ref HoTen,

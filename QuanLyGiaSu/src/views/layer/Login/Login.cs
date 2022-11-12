@@ -32,12 +32,13 @@ namespace QuanLyGiaSu.src.app.views.Login
         {
             Locator.author.UserName = tbUserName.Text;
             Locator.author.PhanQuyen = Locator.server.checkAuthorization(Locator.author.UserName);
+            Locator.server.LoadServer();
 
             if (Locator.author.PhanQuyen == "Admin" && Locator.server.checkAdmin(tbUserName.Text, tbPassword.Text))
             {
                 loginPage();
             }
-            if (Locator.server.checkSignIn(tbUserName.Text, tbPassword.Text, Locator.author.PhanQuyen))
+            else if (Locator.server.checkSignIn(tbUserName.Text, tbPassword.Text, Locator.author.PhanQuyen))
                 loginPage();
             else
             {
