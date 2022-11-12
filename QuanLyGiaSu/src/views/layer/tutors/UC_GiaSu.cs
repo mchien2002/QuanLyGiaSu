@@ -1,12 +1,6 @@
 ﻿using QuanLyGiaSu.src.controller;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DoAnCuoiKy_Nhom13
@@ -27,7 +21,6 @@ namespace DoAnCuoiKy_Nhom13
             DateTime NgaySinh=DateTime.Now;
             string[] MonHoc = new string[100];
             string[] LopHoc = new string[100];
-            MessageBox.Show("a");
             if (Locator.server.getThongTinGiaSu_private(Locator.author.UserName,
                                                      ref gsid,
                                                     ref HoTen,
@@ -45,6 +38,7 @@ namespace DoAnCuoiKy_Nhom13
                                                     ref MonHoc,
                                                     ref LopHoc))
             {
+                Locator.author.UserName = Username;
                 tbTruong.Text = TruongDT;
                 tbTen.Text = HoTen;
                 tbDiaChi.Text = DiaChi;

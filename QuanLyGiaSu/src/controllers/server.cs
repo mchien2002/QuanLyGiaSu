@@ -603,9 +603,9 @@ public object fetchDanhSachLopMoiAD()
                 }
                 return true;
             }
-            catch(Exception e)
+            catch
             {
-                MessageBox.Show(e.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show(e.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
         }
