@@ -297,6 +297,13 @@ namespace QuanLyGiaSu.src.database
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), pHANQUYEN, uSERNAME, pASSWORD, eMAIL, nganSach);
 			return ((int)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.update_acc")]
+		public int update_acc([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> accid, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="USERNAME", DbType="Char(100)")] string uSERNAME, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PASSWORD", DbType="Char(100)")] string pASSWORD, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="EMAIL", DbType="Char(50)")] string eMAIL)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), accid, uSERNAME, pASSWORD, eMAIL);
+			return ((int)(result.ReturnValue));
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ACCOUNT")]

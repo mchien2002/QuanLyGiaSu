@@ -873,7 +873,7 @@ public object fetchDanhSachLopMoiAD()
                         password = x.Password;
                     }
                 }
-                _dbAdmin.update_acc(_db.find_accid_username(username), username, password, email);
+                _db.update_acc(_db.find_accid_username(username), username, password, email);
                 return true;
             }
             catch(Exception e)

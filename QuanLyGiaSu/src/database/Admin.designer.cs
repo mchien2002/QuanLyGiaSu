@@ -167,13 +167,6 @@ namespace QuanLyGiaSu.src.database
 			return ((int)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.update_acc")]
-		public int update_acc([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> accid, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="USERNAME", DbType="Char(100)")] string uSERNAME, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PASSWORD", DbType="Char(100)")] string pASSWORD, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="EMAIL", DbType="Char(50)")] string eMAIL)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), accid, uSERNAME, pASSWORD, eMAIL);
-			return ((int)(result.ReturnValue));
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.update_dslm")]
 		public int update_dslm([global::System.Data.Linq.Mapping.ParameterAttribute(Name="LMID", DbType="Int")] System.Nullable<int> lMID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="LHID", DbType="Int")] System.Nullable<int> lHID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PHID", DbType="Int")] System.Nullable<int> pHID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DIACHI", DbType="NVarChar(4000)")] string dIACHI, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="MUCLUONG", DbType="Int")] System.Nullable<int> mUCLUONG, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="SDT", DbType="Char(50)")] string sDT, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TGDK", DbType="Date")] System.Nullable<System.DateTime> tGDK, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="SUBUOI", DbType="Int")] System.Nullable<int> sUBUOI, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="HINHTHUC", DbType="NVarChar(50)")] string hINHTHUC, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TGHOC", DbType="NVarChar(50)")] string tGHOC, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TTHOCVIEN", DbType="NVarChar(50)")] string tTHOCVIEN, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="YEUCAU", DbType="NVarChar(300)")] string yEUCAU, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string trangthai, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string dadongtien)
 		{

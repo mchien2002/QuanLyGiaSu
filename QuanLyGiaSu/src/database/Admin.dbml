@@ -120,13 +120,6 @@
     <Parameter Name="TENMON" Parameter="tENMON" Type="System.String" DbType="NVarChar(50)" />
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.update_acc" Method="update_acc">
-    <Parameter Name="accid" Type="System.Int32" DbType="Int" />
-    <Parameter Name="USERNAME" Parameter="uSERNAME" Type="System.String" DbType="Char(100)" />
-    <Parameter Name="PASSWORD" Parameter="pASSWORD" Type="System.String" DbType="Char(100)" />
-    <Parameter Name="EMAIL" Parameter="eMAIL" Type="System.String" DbType="Char(50)" />
-    <Return Type="System.Int32" />
-  </Function>
   <Function Name="dbo.update_dslm" Method="update_dslm">
     <Parameter Name="LMID" Parameter="lMID" Type="System.Int32" DbType="Int" />
     <Parameter Name="LHID" Parameter="lHID" Type="System.Int32" DbType="Int" />

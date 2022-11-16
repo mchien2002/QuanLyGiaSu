@@ -250,4 +250,11 @@
     <Parameter Name="NganSach" Parameter="nganSach" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
   </Function>
+  <Function Name="dbo.update_acc" Method="update_acc">
+    <Parameter Name="accid" Type="System.Int32" DbType="Int" />
+    <Parameter Name="USERNAME" Parameter="uSERNAME" Type="System.String" DbType="Char(100)" />
+    <Parameter Name="PASSWORD" Parameter="pASSWORD" Type="System.String" DbType="Char(100)" />
+    <Parameter Name="EMAIL" Parameter="eMAIL" Type="System.String" DbType="Char(50)" />
+    <Return Type="System.Int32" />
+  </Function>
 </Database>

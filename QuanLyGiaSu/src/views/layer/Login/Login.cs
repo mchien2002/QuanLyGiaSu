@@ -17,7 +17,6 @@ namespace QuanLyGiaSu.src.app.views.Login
         public Login()
         {
             InitializeComponent();
-            Locator.author = new models.AccountModel();
             Locator.LMID = 0;
             Locator.idPH = 0;
             Locator.MucLuong = 0;
@@ -30,7 +29,10 @@ namespace QuanLyGiaSu.src.app.views.Login
 
         private void button_Login_Click(object sender, EventArgs e)
         {
-            Locator.author.UserName = tbUserName.Text;
+            
+            Locator.author.UserName = tbUserName.Text.Trim();
+            //MessageBox.Show(Locator.author.UserName);
+
             Locator.author.PhanQuyen = Locator.server.checkAuthorization(Locator.author.UserName);
             Locator.server.LoadServer();
 

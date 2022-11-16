@@ -68,6 +68,7 @@ namespace QuanLyGiaSu.src.app.views.layer
             //    Locator.author.Password=tbPass.Text;
             //    Locator.server.updateAccount(Locator.author);
             //}
+            Locator.server.updateAccount(tbUsername.Text, tbPass.Text, tbEmail.Text);
             Locator.server.updateParent(tbUsername.Text, tbNamePH.Text, tbPhonePH.Text, dtpBirthDayPH.Value, tbAddressPH.Text, tbJobPH.Text, cbbGender.Text, tbCmndPH.Text);
             UC_ThongTinPhuHuynh_Load(sender, e);
         }

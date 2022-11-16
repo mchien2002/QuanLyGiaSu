@@ -17,7 +17,7 @@ namespace DoAnCuoiKy_Nhom13
         {
             //tbTruong.Focus();
             int gsid=0;
-            string GioiTinh="",DiaChi="", SDT="", Cmnd="", QueQuan="", TrinhDo="", TruongDT="", UuDiem="", HoTen="", Email="", Username="",Pw="";
+            string GioiTinh="",DiaChi="", SDT="", Cmnd="", QueQuan="", TrinhDo="", TruongDT="", UuDiem="", HoTen="", Email="",Pw="";
             DateTime NgaySinh=DateTime.Now;
             string[] MonHoc = new string[100];
             string[] LopHoc = new string[100];
@@ -38,7 +38,7 @@ namespace DoAnCuoiKy_Nhom13
                                                     ref MonHoc,
                                                     ref LopHoc))
             {
-                Locator.author.UserName = Username;
+                tbUser.Text = Locator.author.UserName;
                 tbTruong.Text = TruongDT;
                 tbTen.Text = HoTen;
                 tbDiaChi.Text = DiaChi;
@@ -97,6 +97,7 @@ namespace DoAnCuoiKy_Nhom13
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            Locator.server.updateAccount(tbUser.Text, tbPass.Text, tbEmail.Text);
             List<string> MonHoc = new List<string>();
             foreach (string item in clbMonDay.CheckedItems)
             {

@@ -22,6 +22,7 @@ namespace QuanLyGiaSu
         {
             InitializeComponent();
             uC_TrangChu1.BringToFront();
+            lbSoDu.Text = Locator.server.getNganSach(Locator.author.UserName).ToString();
         }
 
         #region Trang chủ
@@ -39,6 +40,7 @@ namespace QuanLyGiaSu
         #region Lớp mới
         private void btn_LopMoi_Click(object sender, EventArgs e)
         {
+
             uC_LopMoiChoGiaSu1.BringToFront();
             btnTrangchu.BackColor = Color.FromArgb(255, 250, 250);
             btn_DanhSachLopMoi.BackColor = Color.FromArgb(30, 144, 255);
@@ -64,6 +66,7 @@ namespace QuanLyGiaSu
         #region Quản lý danh sách lớp
         private void btn_QlyDSLOP_Click(object sender, EventArgs e)
         {
+
             uC_DanhSachLopDaDangKyDay1.BringToFront();
             btnTrangchu.BackColor = Color.FromArgb(255, 250, 250);
             btn_DanhSachLopMoi.BackColor = Color.FromArgb(255, 250, 250);
@@ -74,9 +77,8 @@ namespace QuanLyGiaSu
         #endregion
 
         #region Load form
-        private void formMainGiaSu_Load(object sender, EventArgs e)
+        public void formMainGiaSu_Load(object sender, EventArgs e)
         {
-            lbSoDu.Text = Locator.server.getNganSach(Locator.author.UserName).ToString();
             btnTrangchu.BackColor = Color.FromArgb(30, 144, 255);
             btn_DanhSachLopMoi.BackColor = Color.FromArgb(255, 250, 250);
             btn_GiaSu.BackColor = Color.FromArgb(255, 250, 250);
