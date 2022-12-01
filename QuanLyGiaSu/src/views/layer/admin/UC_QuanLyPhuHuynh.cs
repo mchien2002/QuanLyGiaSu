@@ -35,10 +35,17 @@ namespace QuanLyGiaSu.src.app.views.layer
 
         private void dgvQuanLyPhuHuynh_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgvQuanLyPhuHuynh.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null )
+            try
             {
-                dgvQuanLyPhuHuynh.CurrentRow.Selected = true;
-            }    
+                if (dgvQuanLyPhuHuynh.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+                {
+                    dgvQuanLyPhuHuynh.CurrentRow.Selected = true;
+                }
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
 
         private void SuaThongTinPhuHuynh_Click(object sender, EventArgs e)

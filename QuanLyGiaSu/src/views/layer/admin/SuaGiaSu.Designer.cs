@@ -83,6 +83,10 @@
             this.label39 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
             this.tbTrinhDo = new System.Windows.Forms.TextBox();
+            this.clbMonDay = new System.Windows.Forms.CheckedListBox();
+            this.clbLopDay = new System.Windows.Forms.CheckedListBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btn_Sua
@@ -646,12 +650,60 @@
             this.tbTrinhDo.Size = new System.Drawing.Size(545, 25);
             this.tbTrinhDo.TabIndex = 126;
             // 
+            // clbMonDay
+            // 
+            this.clbMonDay.CheckOnClick = true;
+            this.clbMonDay.Enabled = false;
+            this.clbMonDay.FormattingEnabled = true;
+            this.clbMonDay.Location = new System.Drawing.Point(1060, 172);
+            this.clbMonDay.Margin = new System.Windows.Forms.Padding(4);
+            this.clbMonDay.Name = "clbMonDay";
+            this.clbMonDay.Size = new System.Drawing.Size(196, 242);
+            this.clbMonDay.TabIndex = 129;
+            // 
+            // clbLopDay
+            // 
+            this.clbLopDay.CheckOnClick = true;
+            this.clbLopDay.Enabled = false;
+            this.clbLopDay.FormattingEnabled = true;
+            this.clbLopDay.Location = new System.Drawing.Point(836, 172);
+            this.clbLopDay.Margin = new System.Windows.Forms.Padding(4);
+            this.clbLopDay.Name = "clbLopDay";
+            this.clbLopDay.Size = new System.Drawing.Size(167, 242);
+            this.clbLopDay.TabIndex = 130;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(1054, 138);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(88, 25);
+            this.label2.TabIndex = 127;
+            this.label2.Text = "Môn dạy";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.Location = new System.Drawing.Point(830, 138);
+            this.label41.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(85, 25);
+            this.label41.TabIndex = 128;
+            this.label41.Text = "Lớp Dạy";
+            // 
             // SuaGiaSu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(844, 670);
+            this.ClientSize = new System.Drawing.Size(1280, 670);
+            this.Controls.Add(this.clbMonDay);
+            this.Controls.Add(this.clbLopDay);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label41);
             this.Controls.Add(this.tbTrinhDo);
             this.Controls.Add(this.tbEmail);
             this.Controls.Add(this.label38);
@@ -772,5 +824,9 @@
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.TextBox tbTrinhDo;
+        private System.Windows.Forms.CheckedListBox clbMonDay;
+        private System.Windows.Forms.CheckedListBox clbLopDay;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label41;
     }
 }

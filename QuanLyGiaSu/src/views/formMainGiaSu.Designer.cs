@@ -262,7 +262,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lbSoDu;
         private System.Windows.Forms.Label label1;
-        private src.app.views.layer.UC_LopMoiChoPhuHuynh uC_LopMoiChoPhuHuynh_GiaSu1;
         private src.app.views.layer.UC_LichSuGiaoDichPhuHuynh_GiaSu uC_LichSuGiaoDichPhuHuynh_GiaSu1;
         private src.views.layer.tutors.UC_DanhSachLopDaDangKyDay uC_DanhSachLopDaDangKyDay1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;

@@ -111,30 +111,37 @@ namespace DoAnCuoiKy_Nhom13
 
         private void dgvLICHSUGIAODICH_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow row = new DataGridViewRow();
-            row = dgvLICHSUGIAODICH.Rows[e.RowIndex];
-            int accid = Int32.Parse(row.Cells[1].Value.ToString());
-            int lmid = Int32.Parse(row.Cells[2].Value.ToString());
-            dgvAccount.DataSource = Locator.server.TimKiem_Account_ACCID(accid);
-            dgvLop.DataSource = Locator.server.TimKiemLM_LMID(lmid);
-            if (dgvLop.Rows[0].Cells[2].Value != null)
-            tbMonHoc.Text = dgvLop.Rows[0].Cells[2].Value.ToString();
-            if(dgvLop.Rows[0].Cells[3].Value != null)
-            tbLop.Text = dgvLop.Rows[0].Cells[3].Value.ToString();
-            if(dgvLop.Rows[0].Cells[4].Value!=null)
-            tbDiaChi.Text = dgvLop.Rows[0].Cells[4].Value.ToString();
-            if(dgvLop.Rows[0].Cells[5].Value!=null)
-            tbSDTph.Text = dgvLop.Rows[0].Cells[5].Value.ToString();
-            if (dgvLop.Rows[0].Cells[9].Value!=null)
-            tbSoBuoi.Text = dgvLop.Rows[0].Cells[9].Value.ToString();
-            if(dgvLop.Rows[0].Cells[10].Value!=null)
-            tbHinhThuc.Text = dgvLop.Rows[0].Cells[10].Value.ToString();
-            if(dgvAccount.Rows[0].Cells[2].Value!=null)
-            tbUser.Text = dgvAccount.Rows[0].Cells[2].Value.ToString();
-            if(dgvAccount.Rows[0].Cells[4].Value!=null)
-            tbEmail.Text = dgvAccount.Rows[0].Cells[4].Value.ToString();
-            if(dgvAccount.Rows[0].Cells[1].Value != null)
-            tbPhanQuyen.Text = dgvAccount.Rows[0].Cells[1].Value.ToString();
+            try
+            {
+                DataGridViewRow row = new DataGridViewRow();
+                row = dgvLICHSUGIAODICH.Rows[e.RowIndex];
+                int accid = Int32.Parse(row.Cells[1].Value.ToString());
+                int lmid = Int32.Parse(row.Cells[2].Value.ToString());
+                dgvAccount.DataSource = Locator.server.TimKiem_Account_ACCID(accid);
+                dgvLop.DataSource = Locator.server.TimKiemLM_LMID(lmid);
+                if (dgvLop.Rows[0].Cells[2].Value != null)
+                    tbMonHoc.Text = dgvLop.Rows[0].Cells[2].Value.ToString();
+                if (dgvLop.Rows[0].Cells[3].Value != null)
+                    tbLop.Text = dgvLop.Rows[0].Cells[3].Value.ToString();
+                if (dgvLop.Rows[0].Cells[4].Value != null)
+                    tbDiaChi.Text = dgvLop.Rows[0].Cells[4].Value.ToString();
+                if (dgvLop.Rows[0].Cells[5].Value != null)
+                    tbSDTph.Text = dgvLop.Rows[0].Cells[5].Value.ToString();
+                if (dgvLop.Rows[0].Cells[9].Value != null)
+                    tbSoBuoi.Text = dgvLop.Rows[0].Cells[9].Value.ToString();
+                if (dgvLop.Rows[0].Cells[10].Value != null)
+                    tbHinhThuc.Text = dgvLop.Rows[0].Cells[10].Value.ToString();
+                if (dgvAccount.Rows[0].Cells[2].Value != null)
+                    tbUser.Text = dgvAccount.Rows[0].Cells[2].Value.ToString();
+                if (dgvAccount.Rows[0].Cells[4].Value != null)
+                    tbEmail.Text = dgvAccount.Rows[0].Cells[4].Value.ToString();
+                if (dgvAccount.Rows[0].Cells[1].Value != null)
+                    tbPhanQuyen.Text = dgvAccount.Rows[0].Cells[1].Value.ToString();
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)

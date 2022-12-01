@@ -29,12 +29,15 @@ namespace QuanLyGiaSu.src.app.views.layer
 
 
         private void SuaThongTinLop_Click(object sender, EventArgs e)
-        {   
-            Locator.LMID=Int32.Parse(dgvQuanLyLopMoi.CurrentRow.Cells[0].Value.ToString());
-            Locator.idPH= Int32.Parse(dgvQuanLyLopMoi.CurrentRow.Cells[1].Value.ToString());
-            SuaThongTinLop suaThongTinLop = new SuaThongTinLop();
-            suaThongTinLop.FormClosing += new FormClosingEventHandler(this.SuaThongTinLop_FormClosing);
-            suaThongTinLop.Show();
+        {
+            if (dgvQuanLyLopMoi.CurrentRow.Cells[0].Value != null && dgvQuanLyLopMoi.CurrentRow.Cells[1].Value != null)
+            {
+                Locator.LMID = Int32.Parse(dgvQuanLyLopMoi.CurrentRow.Cells[0].Value.ToString());
+                Locator.idPH = Int32.Parse(dgvQuanLyLopMoi.CurrentRow.Cells[1].Value.ToString());
+                SuaThongTinLop suaThongTinLop = new SuaThongTinLop();
+                suaThongTinLop.FormClosing += new FormClosingEventHandler(this.SuaThongTinLop_FormClosing);
+                suaThongTinLop.Show();
+            }
         }
 
         private void btn_TimLM_Click(object sender, EventArgs e)

@@ -50,12 +50,12 @@ namespace DoAnCuoiKy_Nhom13
                 tbTrinhDo.Text = TrinhDo;
                 lbGSID.Text = gsid.ToString();
                 tbUser.Text = Locator.author.UserName;
-                tbPass.Text = "*********";
+                tbPass.Text = "********";
                 tbCMND.Text = Cmnd;
                 tbEmail.Text = Locator.author.Email = Email;
                 btnUpdate.Enabled = true;
             }
-
+            clbMonDay.Items.Clear();
             foreach (string x in Locator.server.fetchMonHoc())
             {
                 clbMonDay.Items.Add(x);
@@ -69,6 +69,7 @@ namespace DoAnCuoiKy_Nhom13
                         }
                 }
             }
+            clbLopDay.Items.Clear();
             foreach (string x in Locator.server.fetchLopHoc())
             {
                 clbLopDay.Items.Add(x);

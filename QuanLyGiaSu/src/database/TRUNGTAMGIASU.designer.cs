@@ -30,18 +30,12 @@ namespace QuanLyGiaSu.src.database
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
-    partial void InsertACCOUNT(ACCOUNT instance);
-    partial void UpdateACCOUNT(ACCOUNT instance);
-    partial void DeleteACCOUNT(ACCOUNT instance);
     partial void InsertPHUHUYNH(PHUHUYNH instance);
     partial void UpdatePHUHUYNH(PHUHUYNH instance);
     partial void DeletePHUHUYNH(PHUHUYNH instance);
     partial void InsertAdmin(Admin instance);
     partial void UpdateAdmin(Admin instance);
     partial void DeleteAdmin(Admin instance);
-    partial void InsertBANGTIN(BANGTIN instance);
-    partial void UpdateBANGTIN(BANGTIN instance);
-    partial void DeleteBANGTIN(BANGTIN instance);
     partial void InsertDANHSACHDANGKYDAY(DANHSACHDANGKYDAY instance);
     partial void UpdateDANHSACHDANGKYDAY(DANHSACHDANGKYDAY instance);
     partial void DeleteDANHSACHDANGKYDAY(DANHSACHDANGKYDAY instance);
@@ -72,6 +66,9 @@ namespace QuanLyGiaSu.src.database
     partial void InsertMONHOC_LOPMOI(MONHOC_LOPMOI instance);
     partial void UpdateMONHOC_LOPMOI(MONHOC_LOPMOI instance);
     partial void DeleteMONHOC_LOPMOI(MONHOC_LOPMOI instance);
+    partial void InsertACCOUNT(ACCOUNT instance);
+    partial void UpdateACCOUNT(ACCOUNT instance);
+    partial void DeleteACCOUNT(ACCOUNT instance);
     #endregion
 		
 		public TRUNGTAMGIASUDataContext() : 
@@ -104,14 +101,6 @@ namespace QuanLyGiaSu.src.database
 			OnCreated();
 		}
 		
-		public System.Data.Linq.Table<ACCOUNT> ACCOUNTs
-		{
-			get
-			{
-				return this.GetTable<ACCOUNT>();
-			}
-		}
-		
 		public System.Data.Linq.Table<PHUHUYNH> PHUHUYNHs
 		{
 			get
@@ -125,14 +114,6 @@ namespace QuanLyGiaSu.src.database
 			get
 			{
 				return this.GetTable<Admin>();
-			}
-		}
-		
-		public System.Data.Linq.Table<BANGTIN> BANGTINs
-		{
-			get
-			{
-				return this.GetTable<BANGTIN>();
 			}
 		}
 		
@@ -213,6 +194,14 @@ namespace QuanLyGiaSu.src.database
 			get
 			{
 				return this.GetTable<MONHOC_LOPMOI>();
+			}
+		}
+		
+		public System.Data.Linq.Table<ACCOUNT> ACCOUNTs
+		{
+			get
+			{
+				return this.GetTable<ACCOUNT>();
 			}
 		}
 		
@@ -303,300 +292,6 @@ namespace QuanLyGiaSu.src.database
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), accid, uSERNAME, pASSWORD, eMAIL);
 			return ((int)(result.ReturnValue));
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ACCOUNT")]
-	public partial class ACCOUNT : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _ACCID;
-		
-		private string _PhanQuyen;
-		
-		private string _Username;
-		
-		private string _Password;
-		
-		private string _Email;
-		
-		private int _NganSach;
-		
-		private EntitySet<PHUHUYNH> _PHUHUYNHs;
-		
-		private EntitySet<GIASU> _GIASUs;
-		
-		private EntitySet<LICHSUGIAODICH> _LICHSUGIAODICHes;
-		
-		private EntitySet<LICHSUNAPTIEN> _LICHSUNAPTIENs;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnACCIDChanging(int value);
-    partial void OnACCIDChanged();
-    partial void OnPhanQuyenChanging(string value);
-    partial void OnPhanQuyenChanged();
-    partial void OnUsernameChanging(string value);
-    partial void OnUsernameChanged();
-    partial void OnPasswordChanging(string value);
-    partial void OnPasswordChanged();
-    partial void OnEmailChanging(string value);
-    partial void OnEmailChanged();
-    partial void OnNganSachChanging(int value);
-    partial void OnNganSachChanged();
-    #endregion
-		
-		public ACCOUNT()
-		{
-			this._PHUHUYNHs = new EntitySet<PHUHUYNH>(new Action<PHUHUYNH>(this.attach_PHUHUYNHs), new Action<PHUHUYNH>(this.detach_PHUHUYNHs));
-			this._GIASUs = new EntitySet<GIASU>(new Action<GIASU>(this.attach_GIASUs), new Action<GIASU>(this.detach_GIASUs));
-			this._LICHSUGIAODICHes = new EntitySet<LICHSUGIAODICH>(new Action<LICHSUGIAODICH>(this.attach_LICHSUGIAODICHes), new Action<LICHSUGIAODICH>(this.detach_LICHSUGIAODICHes));
-			this._LICHSUNAPTIENs = new EntitySet<LICHSUNAPTIEN>(new Action<LICHSUNAPTIEN>(this.attach_LICHSUNAPTIENs), new Action<LICHSUNAPTIEN>(this.detach_LICHSUNAPTIENs));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ACCID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int ACCID
-		{
-			get
-			{
-				return this._ACCID;
-			}
-			set
-			{
-				if ((this._ACCID != value))
-				{
-					this.OnACCIDChanging(value);
-					this.SendPropertyChanging();
-					this._ACCID = value;
-					this.SendPropertyChanged("ACCID");
-					this.OnACCIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PhanQuyen", DbType="NVarChar(30)")]
-		public string PhanQuyen
-		{
-			get
-			{
-				return this._PhanQuyen;
-			}
-			set
-			{
-				if ((this._PhanQuyen != value))
-				{
-					this.OnPhanQuyenChanging(value);
-					this.SendPropertyChanging();
-					this._PhanQuyen = value;
-					this.SendPropertyChanged("PhanQuyen");
-					this.OnPhanQuyenChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Username", DbType="Char(100) NOT NULL", CanBeNull=false)]
-		public string Username
-		{
-			get
-			{
-				return this._Username;
-			}
-			set
-			{
-				if ((this._Username != value))
-				{
-					this.OnUsernameChanging(value);
-					this.SendPropertyChanging();
-					this._Username = value;
-					this.SendPropertyChanged("Username");
-					this.OnUsernameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Password", DbType="Char(100) NOT NULL", CanBeNull=false)]
-		public string Password
-		{
-			get
-			{
-				return this._Password;
-			}
-			set
-			{
-				if ((this._Password != value))
-				{
-					this.OnPasswordChanging(value);
-					this.SendPropertyChanging();
-					this._Password = value;
-					this.SendPropertyChanged("Password");
-					this.OnPasswordChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="Char(100) NOT NULL", CanBeNull=false)]
-		public string Email
-		{
-			get
-			{
-				return this._Email;
-			}
-			set
-			{
-				if ((this._Email != value))
-				{
-					this.OnEmailChanging(value);
-					this.SendPropertyChanging();
-					this._Email = value;
-					this.SendPropertyChanged("Email");
-					this.OnEmailChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NganSach", DbType="Int NOT NULL")]
-		public int NganSach
-		{
-			get
-			{
-				return this._NganSach;
-			}
-			set
-			{
-				if ((this._NganSach != value))
-				{
-					this.OnNganSachChanging(value);
-					this.SendPropertyChanging();
-					this._NganSach = value;
-					this.SendPropertyChanged("NganSach");
-					this.OnNganSachChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ACCOUNT_PHUHUYNH", Storage="_PHUHUYNHs", ThisKey="ACCID", OtherKey="ACCID")]
-		public EntitySet<PHUHUYNH> PHUHUYNHs
-		{
-			get
-			{
-				return this._PHUHUYNHs;
-			}
-			set
-			{
-				this._PHUHUYNHs.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ACCOUNT_GIASU", Storage="_GIASUs", ThisKey="ACCID", OtherKey="ACCID")]
-		public EntitySet<GIASU> GIASUs
-		{
-			get
-			{
-				return this._GIASUs;
-			}
-			set
-			{
-				this._GIASUs.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ACCOUNT_LICHSUGIAODICH", Storage="_LICHSUGIAODICHes", ThisKey="ACCID", OtherKey="ACCID")]
-		public EntitySet<LICHSUGIAODICH> LICHSUGIAODICHes
-		{
-			get
-			{
-				return this._LICHSUGIAODICHes;
-			}
-			set
-			{
-				this._LICHSUGIAODICHes.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ACCOUNT_LICHSUNAPTIEN", Storage="_LICHSUNAPTIENs", ThisKey="ACCID", OtherKey="ACCID")]
-		public EntitySet<LICHSUNAPTIEN> LICHSUNAPTIENs
-		{
-			get
-			{
-				return this._LICHSUNAPTIENs;
-			}
-			set
-			{
-				this._LICHSUNAPTIENs.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_PHUHUYNHs(PHUHUYNH entity)
-		{
-			this.SendPropertyChanging();
-			entity.ACCOUNT = this;
-		}
-		
-		private void detach_PHUHUYNHs(PHUHUYNH entity)
-		{
-			this.SendPropertyChanging();
-			entity.ACCOUNT = null;
-		}
-		
-		private void attach_GIASUs(GIASU entity)
-		{
-			this.SendPropertyChanging();
-			entity.ACCOUNT = this;
-		}
-		
-		private void detach_GIASUs(GIASU entity)
-		{
-			this.SendPropertyChanging();
-			entity.ACCOUNT = null;
-		}
-		
-		private void attach_LICHSUGIAODICHes(LICHSUGIAODICH entity)
-		{
-			this.SendPropertyChanging();
-			entity.ACCOUNT = this;
-		}
-		
-		private void detach_LICHSUGIAODICHes(LICHSUGIAODICH entity)
-		{
-			this.SendPropertyChanging();
-			entity.ACCOUNT = null;
-		}
-		
-		private void attach_LICHSUNAPTIENs(LICHSUNAPTIEN entity)
-		{
-			this.SendPropertyChanging();
-			entity.ACCOUNT = this;
-		}
-		
-		private void detach_LICHSUNAPTIENs(LICHSUNAPTIEN entity)
-		{
-			this.SendPropertyChanging();
-			entity.ACCOUNT = null;
 		}
 	}
 	
@@ -1008,116 +703,6 @@ namespace QuanLyGiaSu.src.database
 					this._Password = value;
 					this.SendPropertyChanged("Password");
 					this.OnPasswordChanged();
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.BANGTIN")]
-	public partial class BANGTIN : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _BID;
-		
-		private string _ChuDe;
-		
-		private string _NoiDung;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnBIDChanging(int value);
-    partial void OnBIDChanged();
-    partial void OnChuDeChanging(string value);
-    partial void OnChuDeChanged();
-    partial void OnNoiDungChanging(string value);
-    partial void OnNoiDungChanged();
-    #endregion
-		
-		public BANGTIN()
-		{
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int BID
-		{
-			get
-			{
-				return this._BID;
-			}
-			set
-			{
-				if ((this._BID != value))
-				{
-					this.OnBIDChanging(value);
-					this.SendPropertyChanging();
-					this._BID = value;
-					this.SendPropertyChanged("BID");
-					this.OnBIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ChuDe", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
-		public string ChuDe
-		{
-			get
-			{
-				return this._ChuDe;
-			}
-			set
-			{
-				if ((this._ChuDe != value))
-				{
-					this.OnChuDeChanging(value);
-					this.SendPropertyChanging();
-					this._ChuDe = value;
-					this.SendPropertyChanged("ChuDe");
-					this.OnChuDeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NoiDung", DbType="NVarChar(4000) NOT NULL", CanBeNull=false)]
-		public string NoiDung
-		{
-			get
-			{
-				return this._NoiDung;
-			}
-			set
-			{
-				if ((this._NoiDung != value))
-				{
-					this.OnNoiDungChanging(value);
-					this.SendPropertyChanging();
-					this._NoiDung = value;
-					this.SendPropertyChanged("NoiDung");
-					this.OnNoiDungChanged();
 				}
 			}
 		}
@@ -2366,9 +1951,9 @@ namespace QuanLyGiaSu.src.database
 		
 		private System.Nullable<System.DateTime> _ThoiGianGiaoDich;
 		
-		private EntityRef<ACCOUNT> _ACCOUNT;
-		
 		private EntityRef<DANHSACHMOLOP> _DANHSACHMOLOP;
+		
+		private EntityRef<ACCOUNT> _ACCOUNT;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -2388,8 +1973,8 @@ namespace QuanLyGiaSu.src.database
 		
 		public LICHSUGIAODICH()
 		{
-			this._ACCOUNT = default(EntityRef<ACCOUNT>);
 			this._DANHSACHMOLOP = default(EntityRef<DANHSACHMOLOP>);
+			this._ACCOUNT = default(EntityRef<ACCOUNT>);
 			OnCreated();
 		}
 		
@@ -2501,40 +2086,6 @@ namespace QuanLyGiaSu.src.database
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ACCOUNT_LICHSUGIAODICH", Storage="_ACCOUNT", ThisKey="ACCID", OtherKey="ACCID", IsForeignKey=true)]
-		public ACCOUNT ACCOUNT
-		{
-			get
-			{
-				return this._ACCOUNT.Entity;
-			}
-			set
-			{
-				ACCOUNT previousValue = this._ACCOUNT.Entity;
-				if (((previousValue != value) 
-							|| (this._ACCOUNT.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._ACCOUNT.Entity = null;
-						previousValue.LICHSUGIAODICHes.Remove(this);
-					}
-					this._ACCOUNT.Entity = value;
-					if ((value != null))
-					{
-						value.LICHSUGIAODICHes.Add(this);
-						this._ACCID = value.ACCID;
-					}
-					else
-					{
-						this._ACCID = default(int);
-					}
-					this.SendPropertyChanged("ACCOUNT");
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="DANHSACHMOLOP_LICHSUGIAODICH", Storage="_DANHSACHMOLOP", ThisKey="LMID", OtherKey="LMID", IsForeignKey=true)]
 		public DANHSACHMOLOP DANHSACHMOLOP
 		{
@@ -2565,6 +2116,40 @@ namespace QuanLyGiaSu.src.database
 						this._LMID = default(int);
 					}
 					this.SendPropertyChanged("DANHSACHMOLOP");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ACCOUNT_LICHSUGIAODICH", Storage="_ACCOUNT", ThisKey="ACCID", OtherKey="ACCID", IsForeignKey=true)]
+		public ACCOUNT ACCOUNT
+		{
+			get
+			{
+				return this._ACCOUNT.Entity;
+			}
+			set
+			{
+				ACCOUNT previousValue = this._ACCOUNT.Entity;
+				if (((previousValue != value) 
+							|| (this._ACCOUNT.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._ACCOUNT.Entity = null;
+						previousValue.LICHSUGIAODICHes.Remove(this);
+					}
+					this._ACCOUNT.Entity = value;
+					if ((value != null))
+					{
+						value.LICHSUGIAODICHes.Add(this);
+						this._ACCID = value.ACCID;
+					}
+					else
+					{
+						this._ACCID = default(int);
+					}
+					this.SendPropertyChanged("ACCOUNT");
 				}
 			}
 		}
@@ -3550,6 +3135,300 @@ namespace QuanLyGiaSu.src.database
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ACCOUNT")]
+	public partial class ACCOUNT : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _ACCID;
+		
+		private string _PhanQuyen;
+		
+		private string _Username;
+		
+		private string _Password;
+		
+		private string _Email;
+		
+		private int _NganSach;
+		
+		private EntitySet<PHUHUYNH> _PHUHUYNHs;
+		
+		private EntitySet<GIASU> _GIASUs;
+		
+		private EntitySet<LICHSUGIAODICH> _LICHSUGIAODICHes;
+		
+		private EntitySet<LICHSUNAPTIEN> _LICHSUNAPTIENs;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnACCIDChanging(int value);
+    partial void OnACCIDChanged();
+    partial void OnPhanQuyenChanging(string value);
+    partial void OnPhanQuyenChanged();
+    partial void OnUsernameChanging(string value);
+    partial void OnUsernameChanged();
+    partial void OnPasswordChanging(string value);
+    partial void OnPasswordChanged();
+    partial void OnEmailChanging(string value);
+    partial void OnEmailChanged();
+    partial void OnNganSachChanging(int value);
+    partial void OnNganSachChanged();
+    #endregion
+		
+		public ACCOUNT()
+		{
+			this._PHUHUYNHs = new EntitySet<PHUHUYNH>(new Action<PHUHUYNH>(this.attach_PHUHUYNHs), new Action<PHUHUYNH>(this.detach_PHUHUYNHs));
+			this._GIASUs = new EntitySet<GIASU>(new Action<GIASU>(this.attach_GIASUs), new Action<GIASU>(this.detach_GIASUs));
+			this._LICHSUGIAODICHes = new EntitySet<LICHSUGIAODICH>(new Action<LICHSUGIAODICH>(this.attach_LICHSUGIAODICHes), new Action<LICHSUGIAODICH>(this.detach_LICHSUGIAODICHes));
+			this._LICHSUNAPTIENs = new EntitySet<LICHSUNAPTIEN>(new Action<LICHSUNAPTIEN>(this.attach_LICHSUNAPTIENs), new Action<LICHSUNAPTIEN>(this.detach_LICHSUNAPTIENs));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ACCID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int ACCID
+		{
+			get
+			{
+				return this._ACCID;
+			}
+			set
+			{
+				if ((this._ACCID != value))
+				{
+					this.OnACCIDChanging(value);
+					this.SendPropertyChanging();
+					this._ACCID = value;
+					this.SendPropertyChanged("ACCID");
+					this.OnACCIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PhanQuyen", DbType="NVarChar(30)")]
+		public string PhanQuyen
+		{
+			get
+			{
+				return this._PhanQuyen;
+			}
+			set
+			{
+				if ((this._PhanQuyen != value))
+				{
+					this.OnPhanQuyenChanging(value);
+					this.SendPropertyChanging();
+					this._PhanQuyen = value;
+					this.SendPropertyChanged("PhanQuyen");
+					this.OnPhanQuyenChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Username", DbType="Char(100) NOT NULL", CanBeNull=false)]
+		public string Username
+		{
+			get
+			{
+				return this._Username;
+			}
+			set
+			{
+				if ((this._Username != value))
+				{
+					this.OnUsernameChanging(value);
+					this.SendPropertyChanging();
+					this._Username = value;
+					this.SendPropertyChanged("Username");
+					this.OnUsernameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Password", DbType="Char(100) NOT NULL", CanBeNull=false)]
+		public string Password
+		{
+			get
+			{
+				return this._Password;
+			}
+			set
+			{
+				if ((this._Password != value))
+				{
+					this.OnPasswordChanging(value);
+					this.SendPropertyChanging();
+					this._Password = value;
+					this.SendPropertyChanged("Password");
+					this.OnPasswordChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="Char(100) NOT NULL", CanBeNull=false)]
+		public string Email
+		{
+			get
+			{
+				return this._Email;
+			}
+			set
+			{
+				if ((this._Email != value))
+				{
+					this.OnEmailChanging(value);
+					this.SendPropertyChanging();
+					this._Email = value;
+					this.SendPropertyChanged("Email");
+					this.OnEmailChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NganSach", DbType="Int NOT NULL")]
+		public int NganSach
+		{
+			get
+			{
+				return this._NganSach;
+			}
+			set
+			{
+				if ((this._NganSach != value))
+				{
+					this.OnNganSachChanging(value);
+					this.SendPropertyChanging();
+					this._NganSach = value;
+					this.SendPropertyChanged("NganSach");
+					this.OnNganSachChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ACCOUNT_PHUHUYNH", Storage="_PHUHUYNHs", ThisKey="ACCID", OtherKey="ACCID")]
+		public EntitySet<PHUHUYNH> PHUHUYNHs
+		{
+			get
+			{
+				return this._PHUHUYNHs;
+			}
+			set
+			{
+				this._PHUHUYNHs.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ACCOUNT_GIASU", Storage="_GIASUs", ThisKey="ACCID", OtherKey="ACCID")]
+		public EntitySet<GIASU> GIASUs
+		{
+			get
+			{
+				return this._GIASUs;
+			}
+			set
+			{
+				this._GIASUs.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ACCOUNT_LICHSUGIAODICH", Storage="_LICHSUGIAODICHes", ThisKey="ACCID", OtherKey="ACCID")]
+		public EntitySet<LICHSUGIAODICH> LICHSUGIAODICHes
+		{
+			get
+			{
+				return this._LICHSUGIAODICHes;
+			}
+			set
+			{
+				this._LICHSUGIAODICHes.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ACCOUNT_LICHSUNAPTIEN", Storage="_LICHSUNAPTIENs", ThisKey="ACCID", OtherKey="ACCID")]
+		public EntitySet<LICHSUNAPTIEN> LICHSUNAPTIENs
+		{
+			get
+			{
+				return this._LICHSUNAPTIENs;
+			}
+			set
+			{
+				this._LICHSUNAPTIENs.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_PHUHUYNHs(PHUHUYNH entity)
+		{
+			this.SendPropertyChanging();
+			entity.ACCOUNT = this;
+		}
+		
+		private void detach_PHUHUYNHs(PHUHUYNH entity)
+		{
+			this.SendPropertyChanging();
+			entity.ACCOUNT = null;
+		}
+		
+		private void attach_GIASUs(GIASU entity)
+		{
+			this.SendPropertyChanging();
+			entity.ACCOUNT = this;
+		}
+		
+		private void detach_GIASUs(GIASU entity)
+		{
+			this.SendPropertyChanging();
+			entity.ACCOUNT = null;
+		}
+		
+		private void attach_LICHSUGIAODICHes(LICHSUGIAODICH entity)
+		{
+			this.SendPropertyChanging();
+			entity.ACCOUNT = this;
+		}
+		
+		private void detach_LICHSUGIAODICHes(LICHSUGIAODICH entity)
+		{
+			this.SendPropertyChanging();
+			entity.ACCOUNT = null;
+		}
+		
+		private void attach_LICHSUNAPTIENs(LICHSUNAPTIEN entity)
+		{
+			this.SendPropertyChanging();
+			entity.ACCOUNT = this;
+		}
+		
+		private void detach_LICHSUNAPTIENs(LICHSUNAPTIEN entity)
+		{
+			this.SendPropertyChanging();
+			entity.ACCOUNT = null;
 		}
 	}
 	

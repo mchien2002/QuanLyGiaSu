@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -45,6 +46,16 @@ namespace QuanLyGiaSu.src.app.views.layer
                 string queQuan;
                 string uuDiem;
                 string trinhDo;
+                string[] monHoc = new string[100];
+                string[] lopHoc=new string[100];
+                if(dgvQuanLyGiaSu.CurrentRow.Cells[7].Value != null)
+                {
+                    monHoc = dgvQuanLyGiaSu.CurrentRow.Cells[7].Value.ToString().Split(new Char[] { ' ', ','});
+                }
+                if(dgvQuanLyGiaSu.CurrentRow.Cells[8].Value != null)
+                {
+                    lopHoc = dgvQuanLyGiaSu.CurrentRow.Cells[8].Value.ToString().Split(new Char[] { ' ', ',' });
+                }
                 if (dgvQuanLyGiaSu.CurrentRow.Cells[11].Value == null)
                 {
                     truongDT = "";
@@ -126,7 +137,9 @@ namespace QuanLyGiaSu.src.app.views.layer
                                diaChi,
                                queQuan,
                                uuDiem,
-                               trinhDo
+                               trinhDo,
+                               monHoc,
+                               lopHoc
                                );
             } catch(Exception ex)
             {
@@ -147,9 +160,16 @@ namespace QuanLyGiaSu.src.app.views.layer
 
         private void dgvQuanLyGiaSu_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgvQuanLyGiaSu.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            try
             {
-                dgvQuanLyGiaSu.CurrentRow.Selected = true;
+                if (dgvQuanLyGiaSu.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+                {
+                    dgvQuanLyGiaSu.CurrentRow.Selected = true;
+                }
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
             }
         }
 

@@ -1,4 +1,5 @@
 ﻿using QuanLyGiaSu.src.controller;
+using QuanLyGiaSu.src.database;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,8 +22,8 @@ namespace QuanLyGiaSu.src.app.views.layer
 
         private void btn_Sua_Click(object sender, EventArgs e)
         {
-            Locator.server.updateInfoTutor(tbUser.Text, tbHoTen.Text, tbCMND.Text, cbbGioiTinh.Text, dtpNgaySinh.Value, tbSDT.Text, tbQueQuan.Text, tbDiaChi.Text, tbTruongDT.Text, tbTrinhDo.Text, null);
-
+            Locator.server.updateInfoTutor(tbUser.Text, tbHoTen.Text, tbCMND.Text, cbbGioiTinh.Text, dtpNgaySinh.Value, tbSDT.Text, tbQueQuan.Text, tbDiaChi.Text, tbTruongDT.Text, tbTrinhDo.Text, tbUuDiem.Text);
+            
             Locator.server.updateAccount(tbUser.Text, tbPass.Text, tbEmail.Text);
             this.Close();
         }
@@ -37,9 +38,12 @@ namespace QuanLyGiaSu.src.app.views.layer
             string diaChi,
             string queQuan,
             string uuDiem,
-            string trinhDo
+            string trinhDo,
+            string[] monHoc,
+            string[] lopHoc
             )
         {
+
             int idgs = Int32.Parse(ACCID);
             //tbUser.Text = Locator.server.getUsername(idgs);
             tbUser.Text = Locator.server.getUsername(idgs);
@@ -55,6 +59,33 @@ namespace QuanLyGiaSu.src.app.views.layer
             tbQueQuan.Text = queQuan;
             tbUuDiem.Text = uuDiem;
             tbTrinhDo.Text = trinhDo;
+
+            foreach (string x in Locator.server.fetchMonHoc())
+            {
+                clbMonDay.Items.Add(x);
+                foreach (string y in monHoc)
+                {
+                    if (y != null)
+
+                        if (y.Trim() == x.Trim())
+                        {
+                            clbMonDay.SetItemCheckState(clbMonDay.Items.IndexOf(x), CheckState.Checked);
+                        }
+                }
+            }
+            foreach (string x in Locator.server.fetchLopHoc())
+            {
+                clbLopDay.Items.Add(x);
+                foreach (string y in lopHoc)
+                {
+                    if (y != null)
+
+                        if (y.Trim() == x.Trim())
+                        {
+                            clbLopDay.SetItemCheckState(clbLopDay.Items.IndexOf(x), CheckState.Checked);
+                        }
+                }
+            }
         }
 
 

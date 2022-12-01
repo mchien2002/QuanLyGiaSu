@@ -59,15 +59,22 @@ namespace QuanLyGiaSu.src.views.layer.admin
 
         private void dgvQLyLichSuNap_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow row = new DataGridViewRow();
-            row = dgvQLyLichSuNap.Rows[e.RowIndex];
-            int accid = Int32.Parse(row.Cells[1].Value.ToString());
-            dgvAccount.DataSource = Locator.server.TimKiem_Account_ACCID(accid);
-            tbUser.Text = dgvAccount.Rows[0].Cells[2].Value.ToString();
-            tbEmail.Text = dgvAccount.Rows[0].Cells[4].Value.ToString();
-            tbPhanQuyen.Text = dgvAccount.Rows[0].Cells[1].Value.ToString();
-            tbSoDu.Text = dgvAccount.Rows[0].Cells[5].Value.ToString();
-            tbThoiGianNap.Text = dgvQLyLichSuNap.Rows[0].Cells[3].Value.ToString();
+            try
+            {
+                DataGridViewRow row = new DataGridViewRow();
+                row = dgvQLyLichSuNap.Rows[e.RowIndex];
+                int accid = Int32.Parse(row.Cells[1].Value.ToString());
+                dgvAccount.DataSource = Locator.server.TimKiem_Account_ACCID(accid);
+                tbUser.Text = dgvAccount.Rows[0].Cells[2].Value.ToString();
+                tbEmail.Text = dgvAccount.Rows[0].Cells[4].Value.ToString();
+                tbPhanQuyen.Text = dgvAccount.Rows[0].Cells[1].Value.ToString();
+                tbSoDu.Text = dgvAccount.Rows[0].Cells[5].Value.ToString();
+                tbThoiGianNap.Text = dgvQLyLichSuNap.Rows[0].Cells[3].Value.ToString();
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)

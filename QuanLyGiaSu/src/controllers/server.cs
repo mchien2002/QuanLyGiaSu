@@ -941,7 +941,7 @@ public object fetchDanhSachLopMoiAD()
 
         }
 
-        public bool updateInfoTutor_MH_LH(string Username,List<string> MonHoc, List<string> LopHoc)
+        public bool update_MH_LH(string Username, List<string> MonHoc, List<string> LopHoc)
         {
             try
             {
@@ -957,7 +957,34 @@ public object fetchDanhSachLopMoiAD()
                 {
                     _dbUser.insert_lhgs(_db.check_ph_gs(_db.find_accid_username(Username)), _db.check_lhid(item));
                 }
-               
+
+                return true;
+
+            }
+            catch
+            {
+                MessageBox.Show("Thiếu hoặc sai dữ liệu! \nXin vui lòng nhập đủ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+        }
+
+        public bool updateInfoTutor_MH_LH(string Username, List<string> MonHoc, List<string> LopHoc)
+        {
+            try
+            {
+                _dbUser.delete_monhoc_giasu_gsid(_db.check_ph_gs(_db.find_accid_username(Username)));
+                _dbUser.delete_lop_giasu_gsid(_db.check_ph_gs(_db.find_accid_username(Username)));
+
+
+                foreach (string item in MonHoc)
+                {
+                    _dbUser.insert_mhgs(_db.check_ph_gs(_db.find_accid_username(Username)), _db.check_mhid(item));
+                }
+                foreach (string item in LopHoc)
+                {
+                    _dbUser.insert_lhgs(_db.check_ph_gs(_db.find_accid_username(Username)), _db.check_lhid(item));
+                }
+
                 return true;
 
             }
