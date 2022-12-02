@@ -29,6 +29,7 @@ namespace QuanLyGiaSu.src.views.layer.admin
             chart1.Series.Add("Monthly");
 
             List<(string time, string total)> totalList = Locator.server.total_Monthly();
+               
             foreach (var x in totalList)
             {
                 chart1.Series["Monthly"].Points.AddXY(x.time, x.total);

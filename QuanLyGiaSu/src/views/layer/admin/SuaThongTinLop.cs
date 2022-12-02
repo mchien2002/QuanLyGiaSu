@@ -22,37 +22,44 @@ namespace QuanLyGiaSu.src.app.views.layer
 
         private void SuaTTLop_Load(object sender, EventArgs e)
         {
-            string TenLop = "", DiaChi = "", MucLuong = "", TGDK = "", SDT = "", SB = "", HinhTDay = "", ThoiGH = "", TTHocVien = "", YeuCau = "", TrangThai = "";
-            string[] MonHoc = new string[100];
-            Locator.server.fetchLopMoiLMID(Locator.LMID, ref TenLop, ref DiaChi, ref MucLuong, ref TGDK, ref SDT, ref SB, ref HinhTDay, ref ThoiGH, ref TTHocVien, ref YeuCau, ref TrangThai, ref MonHoc);
-            tbDiaChi.Text = DiaChi;
-            tbMucLuong.Text = MucLuong;
-            dtpTGDK.Value = Convert.ToDateTime(TGDK);
-            tbSDT.Text = SDT;
-            tbSoBuoi.Text = SB;
-            tbHinhThucDay.Text =HinhTDay;
-            tbThoiGianHoc.Text = ThoiGH;
-            tbThongTinHocVien.Text = TTHocVien;
-            tbYeuCau.Text = YeuCau;
-            cbbTrangThai.Text = TrangThai;
-            foreach(string x in Locator.server.fetchMonHoc())
+            try
             {
-                clbMonHoc.Items.Add(x);
-                foreach (string y in MonHoc)
-                {           
-                    if(y!=null)
-
-                    if (y.Trim() == x.Trim())
+                string TenLop = "", DiaChi = "", MucLuong = "", TGDK = "", SDT = "", SB = "", HinhTDay = "", ThoiGH = "", TTHocVien = "", YeuCau = "", TrangThai = "";
+                string[] MonHoc = new string[100];
+                Locator.server.fetchLopMoiLMID(Locator.LMID, ref TenLop, ref DiaChi, ref MucLuong, ref TGDK, ref SDT, ref SB, ref HinhTDay, ref ThoiGH, ref TTHocVien, ref YeuCau, ref TrangThai, ref MonHoc);
+                tbDiaChi.Text = DiaChi;
+                tbMucLuong.Text = MucLuong;
+                dtpTGDK.Value = Convert.ToDateTime(TGDK);
+                tbSDT.Text = SDT;
+                tbSoBuoi.Text = SB;
+                tbHinhThucDay.Text = HinhTDay;
+                tbThoiGianHoc.Text = ThoiGH;
+                tbThongTinHocVien.Text = TTHocVien;
+                tbYeuCau.Text = YeuCau;
+                cbbTrangThai.Text = TrangThai;
+                foreach (string x in Locator.server.fetchMonHoc())
+                {
+                    clbMonHoc.Items.Add(x);
+                    foreach (string y in MonHoc)
                     {
-                        clbMonHoc.SetItemCheckState(clbMonHoc.Items.IndexOf(x), CheckState.Checked);
+                        if (y != null)
+
+                            if (y.Trim() == x.Trim())
+                            {
+                                clbMonHoc.SetItemCheckState(clbMonHoc.Items.IndexOf(x), CheckState.Checked);
+                            }
                     }
                 }
+                foreach (string item in Locator.server.fetchLopHoc())
+                {
+                    cbbListClass.Items.Add(item);
+                }
+                cbbListClass.Text = TenLop;
             }
-            foreach(string item in Locator.server.fetchLopHoc())
+            catch(Exception ex)
             {
-                cbbListClass.Items.Add(item);
+                Console.WriteLine(ex.Message);
             }
-            cbbListClass.Text = TenLop;
         }
 
         private void label12_Click(object sender, EventArgs e)
