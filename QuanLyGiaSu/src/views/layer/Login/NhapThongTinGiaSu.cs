@@ -32,16 +32,10 @@ namespace QuanLyGiaSu.src.app.views.Login
                 // UPDATE THÔNG TIN
 
                 List<string> MonHoc = new List<string>();
-                foreach (string item in clbMonDay.CheckedItems)
-                {
-                    MonHoc.Add(item.ToString());
-                }
+                
 
                 List<string> LopHoc = new List<string>();
-                foreach (string item in clbLopDay.CheckedItems)
-                {
-                    LopHoc.Add(item.ToString());
-                }
+                
                 if (!Locator.server.updateInfoTutor(
                     Locator.author.UserName,
                     tbName.Text,
@@ -58,6 +52,14 @@ namespace QuanLyGiaSu.src.app.views.Login
                 {
                     
                     return;
+                }
+                foreach (string item in clbMonDay.CheckedItems)
+                {
+                    Locator.server.insertMonHocGiaSu(Locator.author.UserName, item.ToString());
+                }
+                foreach (string item in clbLopDay.CheckedItems)
+                {
+                    Locator.server.insertLopHocGiaSu(Locator.author.UserName, item.ToString());
                 }
             }
             else
